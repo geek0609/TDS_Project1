@@ -16,8 +16,8 @@
         "reply_to_post_number": null,
         "quote_count": 0,
         "incoming_link_count": 1,
-        "reads": 102,
-        "readers_count": 101,
+        "reads": 105,
+        "readers_count": 104,
         "score": 17.2,
         "yours": false,
         "topic_id": 166189,
@@ -107,8 +107,8 @@
         "reply_to_post_number": null,
         "quote_count": 0,
         "incoming_link_count": 0,
-        "reads": 94,
-        "readers_count": 93,
+        "reads": 97,
+        "readers_count": 96,
         "score": 35.6,
         "yours": false,
         "topic_id": 166189,
@@ -216,8 +216,8 @@
         "reply_to_post_number": 4,
         "quote_count": 0,
         "incoming_link_count": 0,
-        "reads": 67,
-        "readers_count": 66,
+        "reads": 68,
+        "readers_count": 67,
         "score": 16.2,
         "yours": false,
         "topic_id": 166189,
@@ -312,8 +312,8 @@
         "reply_to_post_number": 5,
         "quote_count": 0,
         "incoming_link_count": 0,
-        "reads": 60,
-        "readers_count": 59,
+        "reads": 61,
+        "readers_count": 60,
         "score": 40.2,
         "yours": false,
         "topic_id": 166189,
@@ -418,8 +418,8 @@
         "reply_to_post_number": null,
         "quote_count": 0,
         "incoming_link_count": 0,
-        "reads": 42,
-        "readers_count": 41,
+        "reads": 43,
+        "readers_count": 42,
         "score": 7.6,
         "yours": false,
         "topic_id": 166189,
@@ -1903,111 +1903,6 @@
         "can_unaccept_answer": false,
         "accepted_answer": false,
         "topic_accepted_answer": true
-      },
-      {
-        "id": 633608,
-        "name": "Carlton D'Silva",
-        "username": "carlton",
-        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/carlton/{size}/56317_2.png",
-        "created_at": "2025-05-31T09:14:12.326Z",
-        "cooked": "<p>Hi Satish,</p>\n<p>Your last submitted score is the only valid score. You have to check before submitting that the score is correct. There is a reload button to load previous answers. But some answers require a live service. If the live service is not running at the time of the check (when you hit the submit button), you will not be scored for those questions. Please make sure that you have any live services running when the submit button is used and check that the last saved score is correct.</p>\n<p>Kind regards</p>",
-        "post_number": 25,
-        "post_type": 1,
-        "posts_count": 21,
-        "updated_at": "2025-05-31T09:14:12.326Z",
-        "reply_count": 0,
-        "reply_to_post_number": 24,
-        "quote_count": 0,
-        "incoming_link_count": 0,
-        "reads": 22,
-        "readers_count": 21,
-        "score": 18.0,
-        "yours": false,
-        "topic_id": 166189,
-        "topic_slug": "tds-assignment-is-not-submitting",
-        "display_username": "Carlton D'Silva",
-        "primary_group_name": "ds-students",
-        "flair_name": "ds-students",
-        "flair_url": null,
-        "flair_bg_color": "",
-        "flair_color": "",
-        "flair_group_id": 294,
-        "badges_granted": [],
-        "version": 1,
-        "can_edit": false,
-        "can_delete": false,
-        "can_recover": false,
-        "can_see_hidden_post": false,
-        "can_wiki": false,
-        "read": false,
-        "user_title": "Regular",
-        "title_is_group": false,
-        "reply_to_user": {
-          "id": 7189,
-          "username": "21f3000697",
-          "name": "SATISH KUMAR",
-          "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/21f3000697/{size}/8382_2.png"
-        },
-        "bookmarked": false,
-        "actions_summary": [
-          {
-            "id": 2,
-            "count": 1,
-            "can_act": true
-          },
-          {
-            "id": 6,
-            "can_act": true
-          },
-          {
-            "id": 3,
-            "can_act": true
-          },
-          {
-            "id": 4,
-            "can_act": true
-          },
-          {
-            "id": 8,
-            "can_act": true
-          },
-          {
-            "id": 10,
-            "can_act": true
-          },
-          {
-            "id": 7,
-            "can_act": true
-          }
-        ],
-        "moderator": false,
-        "admin": false,
-        "staff": false,
-        "group_moderator": true,
-        "user_id": 16094,
-        "hidden": false,
-        "trust_level": 3,
-        "deleted_at": null,
-        "user_deleted": false,
-        "edit_reason": null,
-        "can_view_edit_history": true,
-        "wiki": false,
-        "post_url": "/t/tds-assignment-is-not-submitting/166189/25",
-        "user_cakedate": "2023-01-25",
-        "reactions": [
-          {
-            "id": "heart",
-            "type": "emoji",
-            "count": 1
-          }
-        ],
-        "current_user_reaction": null,
-        "reaction_users_count": 1,
-        "current_user_used_main_reaction": false,
-        "can_accept_answer": false,
-        "can_unaccept_answer": false,
-        "accepted_answer": false,
-        "topic_accepted_answer": true
       }
     ],
     "stream": [
@@ -2053,14 +1948,22 @@
     ],
     [
       6,
+      128
+    ],
+    [
+      7,
       127
+    ],
+    [
+      8,
+      128
     ],
     [
       10,
       131
     ],
     [
-      11,
+      13,
       130
     ],
     [
@@ -2068,7 +1971,7 @@
       129
     ],
     [
-      15,
+      16,
       128
     ],
     [
@@ -2094,7 +1997,7 @@
   "fancy_title": "Tds: assignment is not submitting",
   "posts_count": 21,
   "created_at": "2025-02-03T06:54:27.692Z",
-  "views": 148,
+  "views": 151,
   "reply_count": 5,
   "like_count": 7,
   "last_posted_at": "2025-05-31T09:14:12.326Z",

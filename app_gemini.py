@@ -13,10 +13,9 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional
 from datetime import datetime
 import logging
+import pickle
 
 import google.generativeai as genai
-from sentence_transformers import SentenceTransformer
-from sklearn.metrics.pairwise import cosine_similarity
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from dotenv import load_dotenv
@@ -37,9 +36,6 @@ if not GEMINI_API_KEY:
     raise ValueError("Please set GEMINI_API_KEY environment variable")
 genai.configure(api_key=GEMINI_API_KEY)
 
-# Initialize embedding model
-EMBEDDING_MODEL = SentenceTransformer('all-MiniLM-L6-v2')
-
 # Load knowledge base
 SCRIPTS_DIR = Path(__file__).resolve().parent / "scripts"
 PROCESSED_DIR = SCRIPTS_DIR / "processed"
@@ -47,25 +43,205 @@ COURSE_DIR = SCRIPTS_DIR / "processed_course"
 
 class EnhancedVirtualTA:
     def __init__(self):
-        self.discourse_kb = None
-        self.discourse_qa = None
-        self.course_topics = None
-        self.course_code = None
+        """Initialize the Enhanced Virtual TA with Gemini embeddings and caching support"""
         
-        # Embeddings storage
-        self.discourse_embeddings = None
-        self.course_embeddings = None
-        self.qa_embeddings = None
-        self.code_embeddings = None
+        # Cache directory for embeddings
+        self.cache_dir = "embeddings_cache"
+        os.makedirs(self.cache_dir, exist_ok=True)
+        
+        # Data storage
+        self.discourse_kb = {}
+        self.discourse_qa = {}
+        self.course_topics = []
+        self.course_code = []
         
         # Text storage for embedding lookup
         self.discourse_texts = []
-        self.course_texts = []
         self.qa_texts = []
+        self.course_texts = []
         self.code_texts = []
         
+        # Embeddings
+        self.discourse_embeddings = None
+        self.qa_embeddings = None
+        self.course_embeddings = None
+        self.code_embeddings = None
+        
+        # Load data and embeddings
         self.load_data()
+        self.load_or_create_embeddings()
+    
+    def get_cache_path(self, cache_name: str) -> str:
+        """Get the cache file path for a given cache name"""
+        return os.path.join(self.cache_dir, f"{cache_name}.pkl")
+    
+    def chunk_text(self, text: str, max_chars: int = 30000) -> str:
+        """Chunk text to fit within Gemini's payload limits"""
+        if len(text) <= max_chars:
+            return text
+        
+        # Try to split at sentence boundaries first
+        sentences = text.split('. ')
+        result = ""
+        for sentence in sentences:
+            if len(result + sentence + '. ') <= max_chars:
+                result += sentence + '. '
+            else:
+                break
+        
+        # If no sentences fit, just truncate
+        if not result:
+            result = text[:max_chars]
+        
+        return result.strip()
+    
+    def get_gemini_embeddings(self, texts: List[str]) -> np.ndarray:
+        """Get embeddings using Gemini's embedding API"""
+        try:
+            embeddings = []
+            batch_size = 50  # Smaller batch size to avoid rate limits
+            
+            for i in range(0, len(texts), batch_size):
+                batch = texts[i:i + batch_size]
+                logger.info(f"🔄 Processing embedding batch {i//batch_size + 1}/{(len(texts) + batch_size - 1)//batch_size}")
+                
+                batch_embeddings = []
+                for text in batch:
+                    try:
+                        # Chunk text to fit within limits
+                        chunked_text = self.chunk_text(text)
+                        
+                        # Use Gemini's embedding model
+                        result = genai.embed_content(
+                            model="models/text-embedding-004",
+                            content=chunked_text,
+                            task_type="retrieval_document"
+                        )
+                        batch_embeddings.append(result['embedding'])
+                    except Exception as e:
+                        logger.warning(f"Error embedding text (length: {len(text)}): {e}")
+                        # Use zero vector as fallback
+                        batch_embeddings.append([0.0] * 768)  # Standard embedding dimension
+                
+                embeddings.extend(batch_embeddings)
+            
+            return np.array(embeddings)
+            
+        except Exception as e:
+            logger.error(f"Error getting Gemini embeddings: {e}")
+            # Return zero embeddings as fallback
+            return np.zeros((len(texts), 768))
+    
+    def get_query_embedding(self, query: str) -> np.ndarray:
+        """Get embedding for a single query using Gemini"""
+        try:
+            # Chunk query if too long
+            chunked_query = self.chunk_text(query)
+            
+            result = genai.embed_content(
+                model="models/text-embedding-004",
+                content=chunked_query,
+                task_type="retrieval_query"
+            )
+            return np.array([result['embedding']])
+        except Exception as e:
+            logger.error(f"Error getting query embedding: {e}")
+            return np.zeros((1, 768))
+    
+    def cosine_similarity(self, a: np.ndarray, b: np.ndarray) -> np.ndarray:
+        """Calculate cosine similarity between embeddings"""
+        # Normalize vectors
+        a_norm = a / (np.linalg.norm(a, axis=1, keepdims=True) + 1e-8)
+        b_norm = b / (np.linalg.norm(b, axis=1, keepdims=True) + 1e-8)
+        
+        # Calculate cosine similarity
+        return np.dot(a_norm, b_norm.T)
+    
+    def save_embeddings_to_cache(self):
+        """Save all embeddings to cache files"""
+        try:
+            cache_data = {
+                'discourse_embeddings': self.discourse_embeddings,
+                'qa_embeddings': self.qa_embeddings,
+                'course_embeddings': self.course_embeddings,
+                'code_embeddings': self.code_embeddings,
+                'discourse_texts': self.discourse_texts,
+                'qa_texts': self.qa_texts,
+                'course_texts': self.course_texts,
+                'code_texts': self.code_texts,
+                'timestamp': datetime.now().isoformat(),
+                'embedding_model': 'gemini-text-embedding-004',
+                'data_sizes': {
+                    'discourse_topics': len(self.discourse_kb.get("topics", [])),
+                    'qa_pairs': len(self.discourse_qa.get("qa_pairs", [])),
+                    'course_topics': len(self.course_topics),
+                    'code_examples': len(self.course_code)
+                }
+            }
+            
+            cache_path = self.get_cache_path("gemini_embeddings")
+            with open(cache_path, 'wb') as f:
+                pickle.dump(cache_data, f)
+            
+            logger.info(f"✅ Gemini embeddings saved to cache: {cache_path}")
+            
+        except Exception as e:
+            logger.error(f"❌ Error saving embeddings to cache: {e}")
+    
+    def load_embeddings_from_cache(self) -> bool:
+        """Load embeddings from cache if available and valid"""
+        try:
+            cache_path = self.get_cache_path("gemini_embeddings")
+            
+            if not os.path.exists(cache_path):
+                logger.info("📁 No Gemini embeddings cache found")
+                return False
+            
+            with open(cache_path, 'rb') as f:
+                cache_data = pickle.load(f)
+            
+            # Verify cache is still valid (data sizes match)
+            current_sizes = {
+                'discourse_topics': len(self.discourse_kb.get("topics", [])),
+                'qa_pairs': len(self.discourse_qa.get("qa_pairs", [])),
+                'course_topics': len(self.course_topics),
+                'code_examples': len(self.course_code)
+            }
+            
+            cached_sizes = cache_data.get('data_sizes', {})
+            
+            if current_sizes != cached_sizes:
+                logger.info("📊 Data size mismatch, cache invalid")
+                return False
+            
+            # Load embeddings and texts
+            self.discourse_embeddings = cache_data['discourse_embeddings']
+            self.qa_embeddings = cache_data['qa_embeddings']
+            self.course_embeddings = cache_data['course_embeddings']
+            self.code_embeddings = cache_data['code_embeddings']
+            self.discourse_texts = cache_data.get('discourse_texts', [])
+            self.qa_texts = cache_data.get('qa_texts', [])
+            self.course_texts = cache_data.get('course_texts', [])
+            self.code_texts = cache_data.get('code_texts', [])
+            
+            cache_time = cache_data.get('timestamp', 'unknown')
+            embedding_model = cache_data.get('embedding_model', 'unknown')
+            logger.info(f"✅ Gemini embeddings loaded from cache (model: {embedding_model}, created: {cache_time})")
+            return True
+            
+        except Exception as e:
+            logger.error(f"❌ Error loading embeddings from cache: {e}")
+            return False
+    
+    def load_or_create_embeddings(self):
+        """Load embeddings from cache or create them if not available"""
+        if self.load_embeddings_from_cache():
+            logger.info("🚀 Using cached Gemini embeddings - fast startup!")
+            return
+        
+        logger.info("🔄 Creating new Gemini embeddings...")
         self.create_embeddings()
+        self.save_embeddings_to_cache()
     
     def load_data(self):
         """Load all knowledge base data"""
@@ -109,7 +285,7 @@ class EnhancedVirtualTA:
                 self.discourse_texts.append(text)
             
             if self.discourse_texts:
-                self.discourse_embeddings = EMBEDDING_MODEL.encode(self.discourse_texts)
+                self.discourse_embeddings = self.get_gemini_embeddings(self.discourse_texts)
             
             # Q&A embeddings
             self.qa_texts = []
@@ -118,7 +294,7 @@ class EnhancedVirtualTA:
                 self.qa_texts.append(text)
             
             if self.qa_texts:
-                self.qa_embeddings = EMBEDDING_MODEL.encode(self.qa_texts)
+                self.qa_embeddings = self.get_gemini_embeddings(self.qa_texts)
             
             # Course topics embeddings
             self.course_texts = []
@@ -130,7 +306,7 @@ class EnhancedVirtualTA:
                 self.course_texts.append(text)
             
             if self.course_texts:
-                self.course_embeddings = EMBEDDING_MODEL.encode(self.course_texts)
+                self.course_embeddings = self.get_gemini_embeddings(self.course_texts)
             
             # Code examples embeddings
             self.code_texts = []
@@ -139,7 +315,7 @@ class EnhancedVirtualTA:
                 self.code_texts.append(text)
             
             if self.code_texts:
-                self.code_embeddings = EMBEDDING_MODEL.encode(self.code_texts)
+                self.code_embeddings = self.get_gemini_embeddings(self.code_texts)
             
             logger.info("Embeddings created successfully")
             
@@ -148,7 +324,7 @@ class EnhancedVirtualTA:
     
     def semantic_search(self, query: str, top_k: int = 5) -> Dict[str, List[Dict]]:
         """Perform semantic search across all content"""
-        query_embedding = EMBEDDING_MODEL.encode([query])
+        query_embedding = self.get_query_embedding(query)
         results = {
             "discourse_topics": [],
             "qa_pairs": [],
@@ -159,7 +335,7 @@ class EnhancedVirtualTA:
         try:
             # Search Discourse topics
             if self.discourse_embeddings is not None and len(self.discourse_embeddings) > 0:
-                similarities = cosine_similarity(query_embedding, self.discourse_embeddings)[0]
+                similarities = self.cosine_similarity(query_embedding, self.discourse_embeddings)[0]
                 top_indices = np.argsort(similarities)[::-1][:top_k]
                 
                 for idx in top_indices:
@@ -170,7 +346,7 @@ class EnhancedVirtualTA:
             
             # Search Q&A pairs
             if self.qa_embeddings is not None and len(self.qa_embeddings) > 0:
-                similarities = cosine_similarity(query_embedding, self.qa_embeddings)[0]
+                similarities = self.cosine_similarity(query_embedding, self.qa_embeddings)[0]
                 top_indices = np.argsort(similarities)[::-1][:top_k]
                 
                 for idx in top_indices:
@@ -181,7 +357,7 @@ class EnhancedVirtualTA:
             
             # Search course topics
             if self.course_embeddings is not None and len(self.course_embeddings) > 0:
-                similarities = cosine_similarity(query_embedding, self.course_embeddings)[0]
+                similarities = self.cosine_similarity(query_embedding, self.course_embeddings)[0]
                 top_indices = np.argsort(similarities)[::-1][:top_k]
                 
                 for idx in top_indices:
@@ -192,7 +368,7 @@ class EnhancedVirtualTA:
             
             # Search code examples
             if self.code_embeddings is not None and len(self.code_embeddings) > 0:
-                similarities = cosine_similarity(query_embedding, self.code_embeddings)[0]
+                similarities = self.cosine_similarity(query_embedding, self.code_embeddings)[0]
                 top_indices = np.argsort(similarities)[::-1][:top_k]
                 
                 for idx in top_indices:
@@ -501,7 +677,7 @@ def get_stats():
         "combined_total_topics": len(virtual_ta.discourse_kb["topics"]) + len(virtual_ta.course_topics),
         "combined_total_content": len(virtual_ta.discourse_qa["qa_pairs"]) + len(virtual_ta.course_code),
         "ai_model": "Gemini 2.5 Flash",
-        "embedding_model": "all-MiniLM-L6-v2"
+        "embedding_model": "gemini-text-embedding-004"
     })
 
 @app.route('/api/search', methods=['POST'])
@@ -541,4 +717,7 @@ if __name__ == '__main__':
     print(f"🔍 Using semantic embeddings for search")
     print("✅ Ready to answer questions!")
     
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    # Use debug=False for production, debug=True for development
+    import os
+    debug_mode = os.getenv('FLASK_ENV') == 'development'
+    app.run(debug=debug_mode, host='0.0.0.0', port=5000)

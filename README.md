@@ -12,9 +12,10 @@
 ### 🧠 AI-Powered Answer Generation
 - **Gemini 2.5 Flash Integration**: Uses Google's latest language model for intelligent, contextual responses
 - **Image Processing**: Full support for image analysis using Gemini Vision (screenshots, diagrams, code images)
-- **Semantic Search**: Advanced embedding-based search using `sentence-transformers`
+- **Gemini Embeddings**: Advanced semantic search using Google's text-embedding-004 model
 - **Multi-source Knowledge**: Combines Discourse forum discussions with official course materials
 - **Smart Prioritization**: Staff answers → Course content → Community discussions → Code examples
+- **Lightweight Deployment**: No heavy ML dependencies, uses Gemini API for all AI tasks
 
 ### 📚 Comprehensive Knowledge Base
 - **163 Discourse Topics**: Historical student discussions and Q&A from Jan-Apr 2025

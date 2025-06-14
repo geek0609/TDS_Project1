@@ -451,7 +451,7 @@
 
     <script>
         // API Configuration
-        const DEPLOYED_API = 'https://tds-project1-5e44.onrender.com/api/';
+        const DEPLOYED_API = 'https://p1-jhmvr9emt-geek0609s-projects.vercel.app/api/';
         const LOCAL_API = 'http://127.0.0.1:5000/api/';
         let API_URL = DEPLOYED_API; // Start with deployed API (working one)
         
@@ -615,7 +615,7 @@
         });
 
         // Test API connection on load
-        fetch('https://tds-project1-5e44.onrender.com/api/health')
+        fetch('https://p1-jhmvr9emt-geek0609s-projects.vercel.app/api/health')
             .then(response => response.json())
             .then(data => {
                 console.log('API Status:', data);

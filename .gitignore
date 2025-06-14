@@ -64,17 +64,18 @@ logs/
 *.tmp
 *.temp
 
-# Cloudflare Workers
-.wrangler/
-wrangler.toml
+# Vercel
+.vercel
 
 # Data files (optional - uncomment if you want to exclude processed data)
 scripts/processed/
 scripts/processed_course/ 
 scripts/raw/
-scripts\topics_summary.json
-
-
-wrangler.toml
 
 tools-in-data-science-public/
+
+sample/
+
+scripts/topics_summary.json
+
+project-tds-virtual-ta-promptfoo.yaml

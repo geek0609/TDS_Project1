@@ -2,6 +2,8 @@
 """
 Enhanced TDS Virtual TA using Gemini 2.5 Flash with embeddings.
 This version provides semantic search and intelligent answer generation.
+
+Version: 2.1.0 - Fixed deployment with knowledge base files
 """
 
 import json

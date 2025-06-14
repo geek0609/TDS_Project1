@@ -246,27 +246,50 @@ class EnhancedVirtualTA:
     def load_data(self):
         """Load all knowledge base data"""
         try:
+            # Check if directories exist
+            logger.info(f"PROCESSED_DIR path: {PROCESSED_DIR}")
+            logger.info(f"COURSE_DIR path: {COURSE_DIR}")
+            logger.info(f"PROCESSED_DIR exists: {PROCESSED_DIR.exists()}")
+            logger.info(f"COURSE_DIR exists: {COURSE_DIR.exists()}")
+            
+            if PROCESSED_DIR.exists():
+                logger.info(f"Files in PROCESSED_DIR: {list(PROCESSED_DIR.iterdir())}")
+            if COURSE_DIR.exists():
+                logger.info(f"Files in COURSE_DIR: {list(COURSE_DIR.iterdir())}")
+            
             # Load Discourse data
-            with open(PROCESSED_DIR / "knowledge_base.json", 'r', encoding='utf-8') as f:
+            kb_file = PROCESSED_DIR / "knowledge_base.json"
+            qa_file = PROCESSED_DIR / "qa_pairs.json"
+            logger.info(f"Trying to load: {kb_file} (exists: {kb_file.exists()})")
+            logger.info(f"Trying to load: {qa_file} (exists: {qa_file.exists()})")
+            
+            with open(kb_file, 'r', encoding='utf-8') as f:
                 self.discourse_kb = json.load(f)
             
-            with open(PROCESSED_DIR / "qa_pairs.json", 'r', encoding='utf-8') as f:
+            with open(qa_file, 'r', encoding='utf-8') as f:
                 self.discourse_qa = json.load(f)
             
             # Load course content data
-            with open(COURSE_DIR / "course_topics.json", 'r', encoding='utf-8') as f:
+            topics_file = COURSE_DIR / "course_topics.json"
+            code_file = COURSE_DIR / "course_code_examples.json"
+            logger.info(f"Trying to load: {topics_file} (exists: {topics_file.exists()})")
+            logger.info(f"Trying to load: {code_file} (exists: {code_file.exists()})")
+            
+            with open(topics_file, 'r', encoding='utf-8') as f:
                 self.course_topics = json.load(f)
             
-            with open(COURSE_DIR / "course_code_examples.json", 'r', encoding='utf-8') as f:
+            with open(code_file, 'r', encoding='utf-8') as f:
                 self.course_code = json.load(f)
             
-            logger.info(f"Loaded {len(self.discourse_kb['topics'])} Discourse topics")
-            logger.info(f"Loaded {len(self.discourse_qa['qa_pairs'])} Q&A pairs")
-            logger.info(f"Loaded {len(self.course_topics)} course topics")
-            logger.info(f"Loaded {len(self.course_code)} code examples")
+            logger.info(f"✅ Loaded {len(self.discourse_kb['topics'])} Discourse topics")
+            logger.info(f"✅ Loaded {len(self.discourse_qa['qa_pairs'])} Q&A pairs")
+            logger.info(f"✅ Loaded {len(self.course_topics)} course topics")
+            logger.info(f"✅ Loaded {len(self.course_code)} code examples")
             
         except Exception as e:
-            logger.error(f"Error loading data: {e}")
+            logger.error(f"❌ Error loading data: {e}")
+            logger.error(f"Current working directory: {os.getcwd()}")
+            logger.error(f"Files in current directory: {os.listdir('.')}")
             # Initialize empty data structures
             self.discourse_kb = {"topics": []}
             self.discourse_qa = {"qa_pairs": []}
@@ -706,6 +729,39 @@ def semantic_search_endpoint():
     except Exception as e:
         logger.error(f"Error in semantic_search_endpoint: {e}")
         return jsonify({"error": f"Internal server error: {str(e)}"}), 500
+
+@app.route('/api/debug', methods=['GET'])
+def debug_info():
+    """Debug endpoint to check knowledge base loading"""
+    import os
+    from pathlib import Path
+    
+    debug_info = {
+        "current_directory": os.getcwd(),
+        "files_in_current_dir": os.listdir('.'),
+        "scripts_dir_exists": os.path.exists('scripts'),
+        "processed_dir_exists": os.path.exists('scripts/processed'),
+        "processed_course_dir_exists": os.path.exists('scripts/processed_course'),
+        "knowledge_base_loaded": len(virtual_ta.discourse_kb.get("topics", [])),
+        "qa_pairs_loaded": len(virtual_ta.discourse_qa.get("qa_pairs", [])),
+        "course_topics_loaded": len(virtual_ta.course_topics),
+        "code_examples_loaded": len(virtual_ta.course_code),
+        "embeddings_status": {
+            "discourse": virtual_ta.discourse_embeddings is not None,
+            "qa": virtual_ta.qa_embeddings is not None,
+            "course": virtual_ta.course_embeddings is not None,
+            "code": virtual_ta.code_embeddings is not None
+        }
+    }
+    
+    # Check specific files
+    if os.path.exists('scripts/processed'):
+        debug_info["processed_files"] = os.listdir('scripts/processed')
+    
+    if os.path.exists('scripts/processed_course'):
+        debug_info["processed_course_files"] = os.listdir('scripts/processed_course')
+    
+    return jsonify(debug_info)
 
 if __name__ == '__main__':
     print("🚀 Starting Enhanced TDS Virtual TA with Gemini 2.5 Flash...")

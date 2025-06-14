@@ -320,6 +320,45 @@
             font-size: 14px;
         }
 
+        .api-toggle {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 40px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .toggle-switch.active {
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        .toggle-slider {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 16px;
+            height: 16px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .toggle-switch.active .toggle-slider {
+            transform: translateX(20px);
+        }
+
         @media (max-width: 768px) {
             .chat-container {
                 width: 100%;
@@ -344,7 +383,14 @@
             <p>Your AI assistant for The Data Science course</p>
             <div class="status-indicator">
                 <div class="status-dot"></div>
-                <span>Online</span>
+                <span>Online (Deployed)</span>
+            </div>
+            <div class="api-toggle">
+                <span>Local</span>
+                <div class="toggle-switch" onclick="toggleAPI()" title="Toggle between Local and Deployed API">
+                    <div class="toggle-slider"></div>
+                </div>
+                <span>Deployed</span>
             </div>
         </div>
 
@@ -404,7 +450,11 @@
     </div>
 
     <script>
-        const API_URL = 'https://tds-project1-5e44.onrender.com/api/';
+        // API Configuration
+        const DEPLOYED_API = 'https://tds-project1-5e44.onrender.com/api/';
+        const LOCAL_API = 'http://127.0.0.1:5000/api/';
+        let API_URL = DEPLOYED_API; // Start with deployed API (working one)
+        
         const chatMessages = document.getElementById('chatMessages');
         const chatInput = document.getElementById('chatInput');
         const sendButton = document.getElementById('sendButton');
@@ -573,6 +623,29 @@
             .catch(error => {
                 console.warn('API connection test failed:', error);
             });
+
+        function toggleAPI() {
+            const toggle = document.querySelector('.toggle-switch');
+            const isLocal = toggle.classList.contains('active');
+            
+            if (isLocal) {
+                // Switch to deployed API
+                API_URL = DEPLOYED_API;
+                toggle.classList.remove('active');
+                console.log('Switched to Deployed API:', API_URL);
+                
+                // Update status
+                document.querySelector('.status-indicator span').textContent = 'Online (Deployed)';
+            } else {
+                // Switch to local API
+                API_URL = LOCAL_API;
+                toggle.classList.add('active');
+                console.log('Switched to Local API:', API_URL);
+                
+                // Update status
+                document.querySelector('.status-indicator span').textContent = 'Local Server';
+            }
+        }
     </script>
 </body>
 </html> 

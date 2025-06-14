@@ -1,1 +1,24 @@
- 
+# Development and testing files
+test_*.py
+debug_*.py
+quick_test.py
+*.log
+.env
+.venv/
+__pycache__/
+node_modules/
+.git/
+
+# Test results and temporary files  
+evaluation_results.json
+api_test_results_*.json
+test_results_*.md
+search_out.json
+tds_virtual_ta.log
+
+# Large files not needed for deployment
+scripts/raw/
+.vercel/
+
+# Keep embeddings cache for serverless deployment
+!embeddings_cache/ 

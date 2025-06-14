@@ -773,7 +773,7 @@ def health():
         'optimization': 'Advanced Semantic Search + Dynamic Context Ranking'
     })
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print("🚀 Starting Flask server...")
     print("✅ Ready to serve requests!")
-    app.run(host='0.0.0.0', port=5000, debug=False) 
+    app.run(host="0.0.0.0", port=5000, debug=False) 

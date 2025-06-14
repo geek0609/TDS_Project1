@@ -1,0 +1,1494 @@
+{
+  "post_stream": {
+    "posts": [
+      {
+        "id": 625318,
+        "name": "Ashish Raj",
+        "username": "22f3000982",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/22f3000982/{size}/78201_2.png",
+        "created_at": "2025-05-11T11:52:06.715Z",
+        "cooked": "<p>sir, i am not able to do this<br>\nllm \u201cWhat is 2 + 2\u201d<br>\nError: Error code: 401 - {\u2018message\u2019: \u2018Bearer\u2026<br>\nbMA is invalid: JWSInvalid: Invalid Compact JWS\u2019}</p>\n<p>i am getting this error <a class=\"mention\" href=\"/u/carlton\">@carlton</a></p>",
+        "post_number": 1,
+        "post_type": 1,
+        "posts_count": 7,
+        "updated_at": "2025-05-11T11:52:06.715Z",
+        "reply_count": 2,
+        "reply_to_post_number": null,
+        "quote_count": 0,
+        "incoming_link_count": 5,
+        "reads": 69,
+        "readers_count": 68,
+        "score": 48.0,
+        "yours": false,
+        "topic_id": 174255,
+        "topic_slug": "getting-error-ai-pipe",
+        "display_username": "Ashish Raj",
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_bg_color": "",
+        "flair_color": "",
+        "flair_group_id": 294,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "read": false,
+        "user_title": null,
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "user_id": 21636,
+        "hidden": false,
+        "trust_level": 1,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/getting-error-ai-pipe/174255/1",
+        "user_cakedate": "2023-09-18",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": true,
+        "can_vote": false
+      },
+      {
+        "id": 625399,
+        "name": "Advaith Sanil Kumar",
+        "username": "Advaith52",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/advaith52/{size}/67172_2.png",
+        "created_at": "2025-05-12T00:49:16.270Z",
+        "cooked": "<aside class=\"quote group-ds-students\" data-username=\"22f3000982\" data-post=\"1\" data-topic=\"174255\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n<img alt=\"\" width=\"24\" height=\"24\" src=\"https://dub1.discourse-cdn.com/flex013/user_avatar/discourse.onlinedegree.iitm.ac.in/22f3000982/48/78201_2.png\" class=\"avatar\"> 22f3000982:</div>\n<blockquote>\n<p>llm \u201cWhat is 2 + 2\u201d<br>\nError: Error code: 401 - {\u2018message\u2019: \u2018Bearer\u2026<br>\nbMA is invalid: JWSInvalid: Invalid Compact JWS\u2019}</p>\n</blockquote>\n</aside>\n<p>Did you set your API key correctly? This would show up if your API key is invalid or messed up somehow.</p>\n<p>Also, this should probably be in the GA 1 thread</p>",
+        "post_number": 2,
+        "post_type": 1,
+        "posts_count": 7,
+        "updated_at": "2025-05-12T00:49:16.270Z",
+        "reply_count": 0,
+        "reply_to_post_number": null,
+        "quote_count": 1,
+        "incoming_link_count": 0,
+        "reads": 61,
+        "readers_count": 60,
+        "score": 11.4,
+        "yours": false,
+        "topic_id": 174255,
+        "topic_slug": "getting-error-ai-pipe",
+        "display_username": "Advaith Sanil Kumar",
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_bg_color": "",
+        "flair_color": "",
+        "flair_group_id": 294,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "read": false,
+        "user_title": null,
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "user_id": 22472,
+        "hidden": false,
+        "trust_level": 1,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/getting-error-ai-pipe/174255/2",
+        "user_cakedate": "2023-09-22",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": true
+      },
+      {
+        "id": 625452,
+        "name": "Sujal Raj Pradhan",
+        "username": "23f2004759",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f2004759/{size}/66893_2.png",
+        "created_at": "2025-05-12T06:29:01.348Z",
+        "cooked": "<aside class=\"quote group-ds-students\" data-username=\"22f3000982\" data-post=\"1\" data-topic=\"174255\">\n<div class=\"title\">\n<div class=\"quote-controls\"></div>\n<img alt=\"\" width=\"24\" height=\"24\" src=\"https://dub1.discourse-cdn.com/flex013/user_avatar/discourse.onlinedegree.iitm.ac.in/22f3000982/48/78201_2.png\" class=\"avatar\"> 22f3000982:</div>\n<blockquote>\n<p>sir, i am not able to do this<br>\nllm \u201cWhat is 2 + 2\u201d<br>\nError: Error code: 401 - {\u2018message\u2019: \u2018Bearer\u2026<br>\nbMA is invalid: JWSInvalid: Invalid Compact JWS\u2019}</p>\n</blockquote>\n</aside>\n<p>means <strong>your API request to the LLM (Large Language Model) is being rejected due to an invalid or expired token</strong>. The <code>401</code> status code stands for <em>Unauthorized</em>. Check if you have set your API Key correctly</p>",
+        "post_number": 3,
+        "post_type": 1,
+        "posts_count": 7,
+        "updated_at": "2025-05-12T06:29:01.348Z",
+        "reply_count": 0,
+        "reply_to_post_number": null,
+        "quote_count": 1,
+        "incoming_link_count": 0,
+        "reads": 50,
+        "readers_count": 49,
+        "score": 9.8,
+        "yours": false,
+        "topic_id": 174255,
+        "topic_slug": "getting-error-ai-pipe",
+        "display_username": "Sujal Raj Pradhan",
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_bg_color": "",
+        "flair_color": "",
+        "flair_group_id": 294,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "read": false,
+        "user_title": "Course TA",
+        "title_is_group": false,
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "user_id": 22623,
+        "hidden": false,
+        "trust_level": 1,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/getting-error-ai-pipe/174255/3",
+        "user_cakedate": "2023-09-25",
+        "user_birthdate": "1904-11-28",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": true
+      },
+      {
+        "id": 625503,
+        "name": "Sahil kumar",
+        "username": "Sahil_singh",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/sahil_singh/{size}/110463_2.png",
+        "created_at": "2025-05-12T11:08:00.296Z",
+        "cooked": "<p><span class=\"math\"> export OPENAI_BASE_URL=https://aipipe.org/openai/v1  kumar@sahili MINGW64 ~ </span> llm embed -c \u2018What is 2 + 2\u2019 -m 3-small Traceback (most recent call last):   File \u201c\u201d, line 198, in _run_module_as_main   File \u201c\u201d, line 88, in <em>run_code   File \"C:\\Users\\kumar\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\llm.exe_<em>main</em></em>.py\", line 7, in      sys.exit(cli())              ~~~^^   File \u201cC:\\Users\\kumar\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\click\\core.py\u201d, line 1161, in <strong>call</strong>     return self.main(*args, **kwargs)            ~~~~~~~~~^^^^^^^^^^^^^^^^^   File \u201cC:\\Users\\kumar\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\click\\core.py\u201d, line 1082, in main     rv = self.invoke(ctx)   File \u201cC:\\Users\\kumar\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\click\\core.py\u201d, line 1697, in invoke     return _process_result(sub_ctx.command.invoke(sub_ctx))                            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^   File \u201cC:\\Users\\kumar\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\click\\core.py\u201d, line 1443, in invoke     return ctx.invoke(self.callback, **ctx.params)            ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^   File \u201cC:\\Users\\kumar\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\click\\core.py\u201d, line 788, in invoke     return __callback(*args, **kwargs)   File \u201cC:\\Users\\kumar\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\llm\\cli.py\u201d, line 2513, in embed     embedding = model_obj.embed(content)   File \u201cC:\\Users\\kumar\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\llm\\models.py\u201d, line 961, in embed     return next(iter(self.embed_batch([item])))                      ~~~~~~~~~~~~~~~~^^^^^^^^   File \u201cC:\\Users\\kumar\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\llm\\default_plugins\\openai_models.py\u201d, line 240, in embed_batch     results = client.embeddings.create(**kwargs).data               ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^   File \u201cC:\\Users\\kumar\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\resources\\embeddings.py\u201d, line 128, in create     return self._post(            ~~~~~~~~~~^         \u201c/embeddings\u201d,         ^^^^^^^^^^^^^^     \u2026&lt;8 lines&gt;\u2026         cast_to=CreateEmbeddingResponse,         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^     )     ^   File \u201cC:\\Users\\kumar\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai_base_client.py\u201d, line 1242, in post     return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))                            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^   File \u201cC:\\Users\\kumar\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai_base_client.py\u201d, line 919, in request     return self._request(            ~~~~~~~~~~~~~^         cast_to=cast_to,         ^^^^^^^^^^^^^^^^     \u2026&lt;3 lines&gt;\u2026         retries_taken=retries_taken,         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^     )     ^   File \u201cC:\\Users\\kumar\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai_base_client.py\u201d, line 1023, in _request     raise self._make_status_error_from_response(err.response) from None openai.AuthenticationError: Error code: 401 - {\u2018message\u2019: \u2018Bearer .eyJlbWFpbCI6IjI0ZjIwMDAxNjRAZHMuc3R1ZHkuaWl0bS5hYy5pbiJ9.ctFb6WLOXZQksR-pdWDAaE8Bfah5LCIJ-c7pY-8t41c is invalid: JWSInvalid: JWS \u201calg\u201d (Algorithm) Header Parameter missing or invalid\u2019}  kumar@sahili MINGW64 ~ $ i get this error when export  i also get this error again and again how i resolve it</p>",
+        "post_number": 4,
+        "post_type": 1,
+        "posts_count": 7,
+        "updated_at": "2025-05-12T11:08:00.296Z",
+        "reply_count": 1,
+        "reply_to_post_number": null,
+        "quote_count": 0,
+        "incoming_link_count": 0,
+        "reads": 43,
+        "readers_count": 42,
+        "score": 13.2,
+        "yours": false,
+        "topic_id": 174255,
+        "topic_slug": "getting-error-ai-pipe",
+        "display_username": "Sahil kumar",
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_bg_color": "",
+        "flair_color": "",
+        "flair_group_id": 294,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "read": false,
+        "user_title": null,
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "user_id": 31928,
+        "hidden": false,
+        "trust_level": 1,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/getting-error-ai-pipe/174255/4",
+        "user_cakedate": "2024-06-04",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": true
+      },
+      {
+        "id": 625563,
+        "name": "Jivraj Singh Shekhawat",
+        "username": "Jivraj",
+        "avatar_template": "https://avatars.discourse-cdn.com/v4/letter/j/b9bd4f/{size}.png",
+        "created_at": "2025-05-12T14:34:19.866Z",
+        "cooked": "<p>It\u2019s problem with the way you are using llm, request needs to go via proxy (aipipe).</p>\n<p>Find documentation below <a href=\"https://github.com/sanand0/aipipe\" rel=\"noopener nofollow ugc\">sanand0/aipipe: Gives anyone access to an OpenAI/OpenRouter API key free at 10 cents/week. Self-hostable. Useful as a backend if you\u2019re building pure front-end LLM apps</a></p>\n<p><a class=\"mention\" href=\"/u/22f3000982\">@22f3000982</a> <a class=\"mention\" href=\"/u/sahil_singh\">@Sahil_singh</a></p>\n<p>If you follow steps in above documentation carefully then you will get not face invalid token issues.</p>",
+        "post_number": 5,
+        "post_type": 1,
+        "posts_count": 7,
+        "updated_at": "2025-05-12T14:35:42.411Z",
+        "reply_count": 2,
+        "reply_to_post_number": 4,
+        "quote_count": 0,
+        "incoming_link_count": 0,
+        "reads": 36,
+        "readers_count": 35,
+        "score": 16.8,
+        "yours": false,
+        "topic_id": 174255,
+        "topic_slug": "getting-error-ai-pipe",
+        "display_username": "Jivraj Singh Shekhawat",
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_bg_color": "",
+        "flair_color": "",
+        "flair_group_id": 294,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "link_counts": [
+          {
+            "url": "https://github.com/sanand0/aipipe",
+            "internal": false,
+            "reflection": false,
+            "title": "GitHub - sanand0/aipipe: Gives anyone access to an OpenAI/OpenRouter API key free at 10 cents/week. Self-hostable. Useful as a backend if you're building pure front-end LLM apps",
+            "clicks": 11
+          }
+        ],
+        "read": false,
+        "user_title": "Course TA",
+        "title_is_group": false,
+        "reply_to_user": {
+          "id": 31928,
+          "username": "Sahil_singh",
+          "name": "Sahil kumar",
+          "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/sahil_singh/{size}/110463_2.png"
+        },
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "group_moderator": true,
+        "user_id": 15651,
+        "hidden": false,
+        "trust_level": 2,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/getting-error-ai-pipe/174255/5",
+        "user_cakedate": "2023-01-25",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": true,
+        "topic_accepted_answer": true
+      },
+      {
+        "id": 625577,
+        "name": "Ashish Raj",
+        "username": "22f3000982",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/22f3000982/{size}/78201_2.png",
+        "created_at": "2025-05-12T15:47:03.294Z",
+        "cooked": "<p>done , thankyu everyone</p>",
+        "post_number": 6,
+        "post_type": 1,
+        "posts_count": 7,
+        "updated_at": "2025-05-12T15:47:03.294Z",
+        "reply_count": 0,
+        "reply_to_post_number": 5,
+        "quote_count": 0,
+        "incoming_link_count": 0,
+        "reads": 40,
+        "readers_count": 39,
+        "score": 7.4,
+        "yours": false,
+        "topic_id": 174255,
+        "topic_slug": "getting-error-ai-pipe",
+        "display_username": "Ashish Raj",
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_bg_color": "",
+        "flair_color": "",
+        "flair_group_id": 294,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "read": false,
+        "user_title": null,
+        "reply_to_user": {
+          "id": 15651,
+          "username": "Jivraj",
+          "name": "Jivraj Singh Shekhawat",
+          "avatar_template": "https://avatars.discourse-cdn.com/v4/letter/j/b9bd4f/{size}.png"
+        },
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "user_id": 21636,
+        "hidden": false,
+        "trust_level": 1,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/getting-error-ai-pipe/174255/6",
+        "user_cakedate": "2023-09-18",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": true
+      },
+      {
+        "id": 627485,
+        "name": "Nitish bhatt",
+        "username": "Nitish007",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/nitish007/{size}/14042_2.png",
+        "created_at": "2025-05-17T08:11:34.206Z",
+        "cooked": "<p>I am not able to do this . Please help me</p>",
+        "post_number": 7,
+        "post_type": 1,
+        "posts_count": 7,
+        "updated_at": "2025-05-17T08:11:34.206Z",
+        "reply_count": 0,
+        "reply_to_post_number": 5,
+        "quote_count": 0,
+        "incoming_link_count": 1,
+        "reads": 29,
+        "readers_count": 28,
+        "score": 10.2,
+        "yours": false,
+        "topic_id": 174255,
+        "topic_slug": "getting-error-ai-pipe",
+        "display_username": "Nitish bhatt",
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_bg_color": "",
+        "flair_color": "",
+        "flair_group_id": 294,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "read": false,
+        "user_title": "",
+        "reply_to_user": {
+          "id": 15651,
+          "username": "Jivraj",
+          "name": "Jivraj Singh Shekhawat",
+          "avatar_template": "https://avatars.discourse-cdn.com/v4/letter/j/b9bd4f/{size}.png"
+        },
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "user_id": 13069,
+        "hidden": false,
+        "trust_level": 1,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/getting-error-ai-pipe/174255/7",
+        "user_cakedate": "2022-05-02",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": true
+      }
+    ],
+    "stream": [
+      625318,
+      625399,
+      625452,
+      625503,
+      625563,
+      625577,
+      627485
+    ]
+  },
+  "timeline_lookup": [
+    [
+      1,
+      34
+    ],
+    [
+      2,
+      33
+    ],
+    [
+      6,
+      32
+    ],
+    [
+      7,
+      28
+    ]
+  ],
+  "suggested_topics": [
+    {
+      "id": 179135,
+      "title": "TDS Project 1 2025 issue in submitting the project",
+      "fancy_title": "TDS Project 1 2025 issue in submitting the project",
+      "slug": "tds-project-1-2025-issue-in-submitting-the-project",
+      "posts_count": 1,
+      "reply_count": 0,
+      "highest_post_number": 1,
+      "image_url": null,
+      "created_at": "2025-06-14T02:52:12.918Z",
+      "last_posted_at": "2025-06-14T02:52:13.156Z",
+      "bumped": true,
+      "bumped_at": "2025-06-14T02:53:17.328Z",
+      "archetype": "regular",
+      "unseen": true,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": true,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "diploma-level",
+        "term2-2025"
+      ],
+      "tags_descriptions": {},
+      "like_count": 0,
+      "views": 1,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": "latest single",
+          "description": "Original Poster, Most Recent Poster",
+          "user": {
+            "id": 23906,
+            "username": "23f3001930",
+            "name": "Pragati Anshuman Chandra",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f3001930/{size}/67084_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 179104,
+      "title": "Drop Course Window",
+      "fancy_title": "Drop Course Window",
+      "slug": "drop-course-window",
+      "posts_count": 1,
+      "reply_count": 0,
+      "highest_post_number": 1,
+      "image_url": null,
+      "created_at": "2025-06-13T15:28:35.695Z",
+      "last_posted_at": "2025-06-13T15:28:35.924Z",
+      "bumped": true,
+      "bumped_at": "2025-06-13T15:28:35.924Z",
+      "archetype": "regular",
+      "unseen": true,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "clarification",
+        "diploma-level",
+        "term2-2025"
+      ],
+      "tags_descriptions": {},
+      "like_count": 0,
+      "views": 26,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": "latest single",
+          "description": "Original Poster, Most Recent Poster",
+          "user": {
+            "id": 22658,
+            "username": "23f2005404",
+            "name": "Nitin Dixit ",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f2005404/{size}/67257_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 179010,
+      "title": "Hoe to get disclosure api",
+      "fancy_title": "Hoe to get disclosure api",
+      "slug": "hoe-to-get-disclosure-api",
+      "posts_count": 3,
+      "reply_count": 1,
+      "highest_post_number": 3,
+      "image_url": null,
+      "created_at": "2025-06-12T18:04:05.077Z",
+      "last_posted_at": "2025-06-13T12:38:08.487Z",
+      "bumped": true,
+      "bumped_at": "2025-06-13T12:38:08.487Z",
+      "archetype": "regular",
+      "unseen": true,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "clarification",
+        "term2-2025"
+      ],
+      "tags_descriptions": {},
+      "like_count": 0,
+      "views": 55,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 14785,
+            "username": "Mohit173",
+            "name": "Mohit dey",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/mohit173/{size}/121666_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 0
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 25754,
+            "username": "24f1001200",
+            "name": "K Gokul ",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/24f1001200/{size}/68306_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 0
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster",
+          "user": {
+            "id": 15651,
+            "username": "Jivraj",
+            "name": "Jivraj Singh Shekhawat",
+            "avatar_template": "https://avatars.discourse-cdn.com/v4/letter/j/b9bd4f/{size}.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 2
+          }
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "operational",
+    "diploma-level",
+    "term1-2025"
+  ],
+  "tags_descriptions": {},
+  "id": 174255,
+  "title": "Getting error AI PIPE",
+  "fancy_title": "Getting error AI PIPE",
+  "posts_count": 7,
+  "created_at": "2025-05-11T11:52:06.454Z",
+  "views": 103,
+  "reply_count": 3,
+  "like_count": 0,
+  "last_posted_at": "2025-05-17T08:11:34.206Z",
+  "visible": true,
+  "closed": false,
+  "archived": false,
+  "has_summary": false,
+  "archetype": "regular",
+  "slug": "getting-error-ai-pipe",
+  "category_id": 34,
+  "word_count": 656,
+  "deleted_at": null,
+  "user_id": 21636,
+  "featured_link": null,
+  "pinned_globally": false,
+  "pinned_at": null,
+  "pinned_until": null,
+  "image_url": null,
+  "slow_mode_seconds": 0,
+  "draft": null,
+  "draft_key": "topic_174255",
+  "draft_sequence": 0,
+  "unpinned": null,
+  "pinned": false,
+  "current_post_number": 1,
+  "highest_post_number": 7,
+  "deleted_by": null,
+  "actions_summary": [
+    {
+      "id": 4,
+      "count": 0,
+      "hidden": false,
+      "can_act": true
+    },
+    {
+      "id": 8,
+      "count": 0,
+      "hidden": false,
+      "can_act": true
+    },
+    {
+      "id": 10,
+      "count": 0,
+      "hidden": false,
+      "can_act": true
+    },
+    {
+      "id": 7,
+      "count": 0,
+      "hidden": false,
+      "can_act": true
+    }
+  ],
+  "chunk_size": 20,
+  "bookmarked": false,
+  "topic_timer": null,
+  "message_bus_last_id": 1,
+  "participant_count": 6,
+  "show_read_indicator": false,
+  "thumbnails": null,
+  "slow_mode_enabled_until": null,
+  "tags_disable_ads": false,
+  "related_topics": [
+    {
+      "id": 176603,
+      "title": "LLM CLI Tool Error\u2013 Model Authentication Issue with Models other OpenAI models",
+      "fancy_title": "LLM CLI Tool Error\u2013 Model Authentication Issue with Models other OpenAI models",
+      "slug": "llm-cli-tool-error-model-authentication-issue-with-models-other-openai-models",
+      "posts_count": 1,
+      "reply_count": 0,
+      "highest_post_number": 1,
+      "image_url": null,
+      "created_at": "2025-05-28T16:16:14.588Z",
+      "last_posted_at": "2025-05-28T16:16:14.815Z",
+      "bumped": true,
+      "bumped_at": "2025-05-28T16:16:14.815Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "clarification",
+        "term2-2025"
+      ],
+      "tags_descriptions": {},
+      "like_count": 0,
+      "views": 51,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": "latest single",
+          "description": "Original Poster, Most Recent Poster",
+          "user": {
+            "id": 21488,
+            "username": "Meikanda_Sivam",
+            "name": "Siva.Meikanda Sivam",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/meikanda_sivam/{size}/67712_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 139431,
+      "title": "GA 5 LLM KEY Not working",
+      "fancy_title": "GA 5 LLM KEY Not working",
+      "slug": "ga-5-llm-key-not-working",
+      "posts_count": 2,
+      "reply_count": 0,
+      "highest_post_number": 2,
+      "image_url": null,
+      "created_at": "2024-07-11T17:50:02.844Z",
+      "last_posted_at": "2024-07-11T20:44:21.089Z",
+      "bumped": true,
+      "bumped_at": "2024-07-11T20:44:21.089Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "clarification"
+      ],
+      "tags_descriptions": {},
+      "like_count": 0,
+      "views": 41,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": true,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 16472,
+            "username": "22f3000766",
+            "name": "Walesh Kumar",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/22f3000766/{size}/109473_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster, Accepted Answer",
+          "user": {
+            "id": 356,
+            "username": "Arif",
+            "name": "SM Arif Ali",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/arif/{size}/103679_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 139854,
+      "title": "OpenAI week 5 API Key issue",
+      "fancy_title": "OpenAI week 5 API Key issue",
+      "slug": "openai-week-5-api-key-issue",
+      "posts_count": 11,
+      "reply_count": 9,
+      "highest_post_number": 11,
+      "image_url": null,
+      "created_at": "2024-07-15T10:26:18.418Z",
+      "last_posted_at": "2024-07-16T11:30:36.148Z",
+      "bumped": true,
+      "bumped_at": "2024-07-16T11:30:36.148Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "clarification",
+        "week-5"
+      ],
+      "tags_descriptions": {},
+      "like_count": 2,
+      "views": 105,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": true,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 11418,
+            "username": "Suresh_Umapathi",
+            "name": "Suresh Umapathi",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/suresh_umapathi/{size}/31173_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster, Accepted Answer",
+          "user": {
+            "id": 356,
+            "username": "Arif",
+            "name": "SM Arif Ali",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/arif/{size}/103679_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 12800,
+            "username": "Himanshu_Kumar",
+            "name": "Himanshu Kumar",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/himanshu_kumar/{size}/1158_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 22300,
+            "username": "23f2004819",
+            "name": "himanshu.garg ",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f2004819/{size}/132320_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster",
+          "user": {
+            "id": 19319,
+            "username": "23f2001384",
+            "name": "NAGA SAI SREE SAILESH CHITTELA",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f2001384/{size}/69896_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 156249,
+      "title": "Issue with OPEN AI KEY to complete GA5",
+      "fancy_title": "Issue with OPEN AI KEY to complete GA5",
+      "slug": "issue-with-open-ai-key-to-complete-ga5",
+      "posts_count": 9,
+      "reply_count": 8,
+      "highest_post_number": 15,
+      "image_url": null,
+      "created_at": "2024-11-13T01:10:23.594Z",
+      "last_posted_at": "2024-11-13T11:03:20.407Z",
+      "bumped": true,
+      "bumped_at": "2024-11-13T11:03:20.407Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "clarification",
+        "operational",
+        "graded-assignment",
+        "term3-2024",
+        "week-5"
+      ],
+      "tags_descriptions": {},
+      "like_count": 2,
+      "views": 124,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 16118,
+            "username": "23ds1000051",
+            "name": "Ramakrishna Dudi",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23ds1000051/{size}/67270_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 16094,
+            "username": "carlton",
+            "name": "Carlton D'Silva",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/carlton/{size}/56317_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 3
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 17941,
+            "username": "23ds2000095",
+            "name": "obama_diploma",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23ds2000095/{size}/68610_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 40077,
+            "username": "24ds3000100",
+            "name": "Bahni Roy",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/24ds3000100/{size}/113366_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster",
+          "user": {
+            "id": 22456,
+            "username": "23f2004005",
+            "name": "Aman",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f2004005/{size}/80434_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 174414,
+      "title": "When running this 'llm embed -c 'My email is 23f2001697@ds.study.iitm.ac.in' -m 3-small' this shows insufficient_quota but I have prompt the model just 2-3 times",
+      "fancy_title": "When running this &lsquo;llm embed -c &lsquo;My email is 23f2001697@ds.study.iitm.ac.in&rsquo; -m 3-small&rsquo; this shows insufficient_quota but I have prompt the model just 2-3 times",
+      "slug": "when-running-this-llm-embed-c-my-email-is-23f2001697-ds-study-iitm-ac-in-m-3-small-this-shows-insufficient-quota-but-i-have-prompt-the-model-just-2-3-times",
+      "posts_count": 3,
+      "reply_count": 0,
+      "highest_post_number": 3,
+      "image_url": null,
+      "created_at": "2025-05-13T13:13:53.210Z",
+      "last_posted_at": "2025-05-18T18:10:33.609Z",
+      "bumped": true,
+      "bumped_at": "2025-05-18T18:16:55.627Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "clarification",
+        "term1-2025"
+      ],
+      "tags_descriptions": {},
+      "like_count": 1,
+      "views": 67,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 20612,
+            "username": "23f2001697",
+            "name": "jai tyagi",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f2001697/{size}/67345_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 15651,
+            "username": "Jivraj",
+            "name": "Jivraj Singh Shekhawat",
+            "avatar_template": "https://avatars.discourse-cdn.com/v4/letter/j/b9bd4f/{size}.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 2
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster",
+          "user": {
+            "id": 14803,
+            "username": "aruntiwari",
+            "name": "Arun Kumar Tiwari",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/aruntiwari/{size}/113680_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        }
+      ]
+    }
+  ],
+  "summarizable": false,
+  "valid_reactions": [
+    "heart",
+    "+1",
+    "laughing",
+    "open_mouth",
+    "clap",
+    "confetti_ball",
+    "rocket",
+    "-1"
+  ],
+  "accepted_answer": {
+    "post_number": 5,
+    "username": "Jivraj",
+    "name": null,
+    "excerpt": "It\u2019s problem with the way you are using llm, request needs to go via proxy (aipipe). \nFind documentation below <a href=\"https://github.com/sanand0/aipipe\" rel=\"noopener nofollow ugc\">sanand0/aipipe: Gives anyone access to an OpenAI/OpenRouter API key free at 10 cents/week. Self-hostable. Useful as a backend if you\u2019re building pure front-end LLM apps</a> \n<a class=\"mention\" href=\"/u/22f3000982\">@22f3000982</a> <a class=\"mention\" href=\"/u/sahil_singh\">@Sahil_&hellip;</a>",
+    "accepter_name": null,
+    "accepter_username": "22f3000982"
+  },
+  "can_vote": false,
+  "vote_count": 0,
+  "user_voted": false,
+  "discourse_zendesk_plugin_zendesk_id": null,
+  "discourse_zendesk_plugin_zendesk_url": "https://your-url.zendesk.com/agent/tickets/",
+  "details": {
+    "can_edit": false,
+    "notification_level": 1,
+    "can_create_post": true,
+    "can_reply_as_new_topic": true,
+    "can_flag_topic": true,
+    "participants": [
+      {
+        "id": 21636,
+        "username": "22f3000982",
+        "name": "Ashish Raj",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/22f3000982/{size}/78201_2.png",
+        "post_count": 2,
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_color": "",
+        "flair_bg_color": "",
+        "flair_group_id": 294,
+        "trust_level": 1
+      },
+      {
+        "id": 13069,
+        "username": "Nitish007",
+        "name": "Nitish bhatt",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/nitish007/{size}/14042_2.png",
+        "post_count": 1,
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_color": "",
+        "flair_bg_color": "",
+        "flair_group_id": 294,
+        "trust_level": 1
+      },
+      {
+        "id": 22472,
+        "username": "Advaith52",
+        "name": "Advaith Sanil Kumar",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/advaith52/{size}/67172_2.png",
+        "post_count": 1,
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_color": "",
+        "flair_bg_color": "",
+        "flair_group_id": 294,
+        "trust_level": 1
+      },
+      {
+        "id": 15651,
+        "username": "Jivraj",
+        "name": "Jivraj Singh Shekhawat",
+        "avatar_template": "https://avatars.discourse-cdn.com/v4/letter/j/b9bd4f/{size}.png",
+        "post_count": 1,
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_color": "",
+        "flair_bg_color": "",
+        "flair_group_id": 294,
+        "trust_level": 2
+      },
+      {
+        "id": 31928,
+        "username": "Sahil_singh",
+        "name": "Sahil kumar",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/sahil_singh/{size}/110463_2.png",
+        "post_count": 1,
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_color": "",
+        "flair_bg_color": "",
+        "flair_group_id": 294,
+        "trust_level": 1
+      },
+      {
+        "id": 22623,
+        "username": "23f2004759",
+        "name": "Sujal Raj Pradhan",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f2004759/{size}/66893_2.png",
+        "post_count": 1,
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_color": "",
+        "flair_bg_color": "",
+        "flair_group_id": 294,
+        "trust_level": 1
+      }
+    ],
+    "created_by": {
+      "id": 21636,
+      "username": "22f3000982",
+      "name": "Ashish Raj",
+      "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/22f3000982/{size}/78201_2.png"
+    },
+    "last_poster": {
+      "id": 13069,
+      "username": "Nitish007",
+      "name": "Nitish bhatt",
+      "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/nitish007/{size}/14042_2.png"
+    },
+    "links": [
+      {
+        "url": "https://github.com/sanand0/aipipe",
+        "title": "GitHub - sanand0/aipipe: Gives anyone access to an OpenAI/OpenRouter API key free at 10 cents/week. Self-hostable. Useful as a backend if you're building pure front-end LLM apps",
+        "internal": false,
+        "attachment": false,
+        "reflection": false,
+        "clicks": 11,
+        "user_id": 15651,
+        "domain": "github.com",
+        "root_domain": "github.com"
+      }
+    ]
+  },
+  "pending_posts": [],
+  "bookmarks": []
+}

@@ -1,0 +1,927 @@
+{
+  "post_stream": {
+    "posts": [
+      {
+        "id": 621668,
+        "name": "PREMDEEP MAITI",
+        "username": "23f1001231",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f1001231/{size}/67068_2.png",
+        "created_at": "2025-04-20T08:00:38.446Z",
+        "cooked": "<p><a class=\"mention\" href=\"/u/carlton\">@carlton</a> <a class=\"mention\" href=\"/u/jivraj\">@Jivraj</a> <a class=\"mention\" href=\"/u/saransh_saini\">@Saransh_Saini</a></p>\n<p>I have discrepency in two questions.</p>\n<h1><a name=\"p-621668-h-1-ga2_q3-1\" class=\"anchor\" href=\"#p-621668-h-1-ga2_q3-1\"></a>1. GA2_q3</h1>\n<p>In GA2_q3 my answer is correct. The github page link is <a href=\"https://23f1001231.github.io/testsite/\" rel=\"noopener nofollow ugc\">https://23f1001231.github.io/testsite/</a> and github repo link is <a href=\"https://github.com/23f1001231/testsite\" class=\"inline-onebox\" rel=\"noopener nofollow ugc\">GitHub - 23f1001231/testsite</a>.</p>\n<p>The error in the log is that <code>&lt;!--email_off--&gt;</code> tag is missing.</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://europe1.discourse-cdn.com/flex013/uploads/iitm/original/3X/8/3/8377bbe918707bf3c306dc456301b60748cb3ee0.png\" data-download-href=\"/uploads/short-url/iL14Oh9gyrXcAAOQQkAbGT545Da.png?dl=1\" title=\"image\" rel=\"noopener nofollow ugc\"><img src=\"https://europe1.discourse-cdn.com/flex013/uploads/iitm/original/3X/8/3/8377bbe918707bf3c306dc456301b60748cb3ee0.png\" alt=\"image\" data-base62-sha1=\"iL14Oh9gyrXcAAOQQkAbGT545Da\" width=\"690\" height=\"114\" data-dominant-color=\"FAFAFA\"><div class=\"meta\"><svg class=\"fa d-icon d-icon-far-image svg-icon\" aria-hidden=\"true\"><use href=\"#far-image\"></use></svg><span class=\"filename\">image</span><span class=\"informations\">965\u00d7160 7.52 KB</span><svg class=\"fa d-icon d-icon-discourse-expand svg-icon\" aria-hidden=\"true\"><use href=\"#discourse-expand\"></use></svg></div></a></div></p>\n<p>But  the <code>&lt;!--email_off--&gt;</code> tag is present as you can see below</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://europe1.discourse-cdn.com/flex013/uploads/iitm/original/3X/8/2/82128d8e10a7c90eac338770680339e467b4ff37.png\" data-download-href=\"/uploads/short-url/iyFOSEe3rYnYYafWAJwCJm1QzMr.png?dl=1\" title=\"image\" rel=\"noopener nofollow ugc\"><img src=\"https://europe1.discourse-cdn.com/flex013/uploads/iitm/optimized/3X/8/2/82128d8e10a7c90eac338770680339e467b4ff37_2_690x154.png\" alt=\"image\" data-base62-sha1=\"iyFOSEe3rYnYYafWAJwCJm1QzMr\" width=\"690\" height=\"154\" srcset=\"https://europe1.discourse-cdn.com/flex013/uploads/iitm/optimized/3X/8/2/82128d8e10a7c90eac338770680339e467b4ff37_2_690x154.png, https://europe1.discourse-cdn.com/flex013/uploads/iitm/original/3X/8/2/82128d8e10a7c90eac338770680339e467b4ff37.png 1.5x, https://europe1.discourse-cdn.com/flex013/uploads/iitm/original/3X/8/2/82128d8e10a7c90eac338770680339e467b4ff37.png 2x\" data-dominant-color=\"232228\"><div class=\"meta\"><svg class=\"fa d-icon d-icon-far-image svg-icon\" aria-hidden=\"true\"><use href=\"#far-image\"></use></svg><span class=\"filename\">image</span><span class=\"informations\">915\u00d7205 14.4 KB</span><svg class=\"fa d-icon d-icon-discourse-expand svg-icon\" aria-hidden=\"true\"><use href=\"#discourse-expand\"></use></svg></div></a></div></p>\n<p>Not only that, this solution has also passed in the Graded Assignment 2.</p>\n<p>Proof:</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://europe1.discourse-cdn.com/flex013/uploads/iitm/original/3X/0/0/0081bc0b8fe1a584be6ad3dc2982e7db95a136ec.png\" data-download-href=\"/uploads/short-url/4tXcZVJxwJg52mM3eNTJ9Pcfdq.png?dl=1\" title=\"image\" rel=\"noopener nofollow ugc\"><img src=\"https://europe1.discourse-cdn.com/flex013/uploads/iitm/optimized/3X/0/0/0081bc0b8fe1a584be6ad3dc2982e7db95a136ec_2_690x278.png\" alt=\"image\" data-base62-sha1=\"4tXcZVJxwJg52mM3eNTJ9Pcfdq\" width=\"690\" height=\"278\" srcset=\"https://europe1.discourse-cdn.com/flex013/uploads/iitm/optimized/3X/0/0/0081bc0b8fe1a584be6ad3dc2982e7db95a136ec_2_690x278.png, https://europe1.discourse-cdn.com/flex013/uploads/iitm/optimized/3X/0/0/0081bc0b8fe1a584be6ad3dc2982e7db95a136ec_2_1035x417.png 1.5x, https://europe1.discourse-cdn.com/flex013/uploads/iitm/optimized/3X/0/0/0081bc0b8fe1a584be6ad3dc2982e7db95a136ec_2_1380x556.png 2x\" data-dominant-color=\"22262A\"><div class=\"meta\"><svg class=\"fa d-icon d-icon-far-image svg-icon\" aria-hidden=\"true\"><use href=\"#far-image\"></use></svg><span class=\"filename\">image</span><span class=\"informations\">1805\u00d7728 99.8 KB</span><svg class=\"fa d-icon d-icon-discourse-expand svg-icon\" aria-hidden=\"true\"><use href=\"#discourse-expand\"></use></svg></div></a></div></p>\n<p>I think the evaluation script failed because <code>&lt;!--email_off--&gt;</code> was inside a tag and the regex in script could not determined it.</p>\n<h1><a name=\"p-621668-h-2-ga1_q18-2\" class=\"anchor\" href=\"#p-621668-h-2-ga1_q18-2\"></a>2. GA1_q18</h1>\n<p>In GA1_q18 my answer is correct. The escaping character in the answer string of the response json which contains the SQL query  is causing the Syntax error in evaluation script\u2019s end as it has not handled those escaping characters properly while running the SQL query .</p>\n<p>The SQL query is correct and passed the Graded Assignment 1 which can be seen below.</p>\n<p>Proof:</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://europe1.discourse-cdn.com/flex013/uploads/iitm/original/3X/9/c/9c618fd3f8cd0f9fbc4992316d653a6b3828b745.png\" data-download-href=\"/uploads/short-url/mjpvEUvoXtzMXltMcuPyDTH4R01.png?dl=1\" title=\"image\" rel=\"noopener nofollow ugc\"><img src=\"https://europe1.discourse-cdn.com/flex013/uploads/iitm/optimized/3X/9/c/9c618fd3f8cd0f9fbc4992316d653a6b3828b745_2_690x376.png\" alt=\"image\" data-base62-sha1=\"mjpvEUvoXtzMXltMcuPyDTH4R01\" width=\"690\" height=\"376\" srcset=\"https://europe1.discourse-cdn.com/flex013/uploads/iitm/optimized/3X/9/c/9c618fd3f8cd0f9fbc4992316d653a6b3828b745_2_690x376.png, https://europe1.discourse-cdn.com/flex013/uploads/iitm/optimized/3X/9/c/9c618fd3f8cd0f9fbc4992316d653a6b3828b745_2_1035x564.png 1.5x, https://europe1.discourse-cdn.com/flex013/uploads/iitm/optimized/3X/9/c/9c618fd3f8cd0f9fbc4992316d653a6b3828b745_2_1380x752.png 2x\" data-dominant-color=\"24282C\"><div class=\"meta\"><svg class=\"fa d-icon d-icon-far-image svg-icon\" aria-hidden=\"true\"><use href=\"#far-image\"></use></svg><span class=\"filename\">image</span><span class=\"informations\">1686\u00d7920 68.1 KB</span><svg class=\"fa d-icon d-icon-discourse-expand svg-icon\" aria-hidden=\"true\"><use href=\"#discourse-expand\"></use></svg></div></a></div></p>\n<p>Error in the evaluation log due to improper handling of escape characters in the answer string of the response json which contains the SQL query is causing the Syntax error which can be seen below:</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://europe1.discourse-cdn.com/flex013/uploads/iitm/original/3X/9/e/9ec078accbbdffcb012d67d7f7284455dc219f66.png\" data-download-href=\"/uploads/short-url/mEnO7opbXxMfS1fMkAfg3IZGPZk.png?dl=1\" title=\"image\" rel=\"noopener nofollow ugc\"><img src=\"https://europe1.discourse-cdn.com/flex013/uploads/iitm/optimized/3X/9/e/9ec078accbbdffcb012d67d7f7284455dc219f66_2_690x76.png\" alt=\"image\" data-base62-sha1=\"mEnO7opbXxMfS1fMkAfg3IZGPZk\" width=\"690\" height=\"76\" srcset=\"https://europe1.discourse-cdn.com/flex013/uploads/iitm/optimized/3X/9/e/9ec078accbbdffcb012d67d7f7284455dc219f66_2_690x76.png, https://europe1.discourse-cdn.com/flex013/uploads/iitm/optimized/3X/9/e/9ec078accbbdffcb012d67d7f7284455dc219f66_2_1035x114.png 1.5x, https://europe1.discourse-cdn.com/flex013/uploads/iitm/optimized/3X/9/e/9ec078accbbdffcb012d67d7f7284455dc219f66_2_1380x152.png 2x\" data-dominant-color=\"FBFBFB\"><div class=\"meta\"><svg class=\"fa d-icon d-icon-far-image svg-icon\" aria-hidden=\"true\"><use href=\"#far-image\"></use></svg><span class=\"filename\">image</span><span class=\"informations\">1438\u00d7159 8.23 KB</span><svg class=\"fa d-icon d-icon-discourse-expand svg-icon\" aria-hidden=\"true\"><use href=\"#discourse-expand\"></use></svg></div></a></div></p>\n<p>These discrepancies have been reported to the discrepancy form also <a href=\"http://64.227.131.20:4200/\" rel=\"noopener nofollow ugc\">http://64.227.131.20:4200/</a></p>\n<p>Please do the needful and the update the marks for the above correct answers. These discrepancies will badly affect by my course grade overall.</p>",
+        "post_number": 1,
+        "post_type": 1,
+        "posts_count": 1,
+        "updated_at": "2025-04-20T08:13:18.448Z",
+        "reply_count": 0,
+        "reply_to_post_number": null,
+        "quote_count": 0,
+        "incoming_link_count": 0,
+        "reads": 59,
+        "readers_count": 58,
+        "score": 11.2,
+        "yours": false,
+        "topic_id": 173113,
+        "topic_slug": "urgent-attn-needed-project-2-discrepency-for-ga2-q3-and-ga1-q18",
+        "display_username": "PREMDEEP MAITI",
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_bg_color": "",
+        "flair_color": "",
+        "flair_group_id": 294,
+        "badges_granted": [],
+        "version": 3,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "link_counts": [
+          {
+            "url": "https://23f1001231.github.io/testsite/",
+            "internal": false,
+            "reflection": false,
+            "clicks": 3
+          },
+          {
+            "url": "http://64.227.131.20:4200/",
+            "internal": false,
+            "reflection": false,
+            "clicks": 3
+          },
+          {
+            "url": "https://github.com/23f1001231/testsite",
+            "internal": false,
+            "reflection": false,
+            "title": "GitHub - 23f1001231/testsite",
+            "clicks": 1
+          },
+          {
+            "url": "https://discourse.onlinedegree.iitm.ac.in/t/project-2-tds-solver-discussion-thread/169029/713",
+            "internal": true,
+            "reflection": true,
+            "title": "Project 2 - TDS Solver - Discussion Thread",
+            "clicks": 0
+          }
+        ],
+        "read": false,
+        "user_title": null,
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "user_id": 18074,
+        "hidden": false,
+        "trust_level": 1,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/urgent-attn-needed-project-2-discrepency-for-ga2-q3-and-ga1-q18/173113/1",
+        "user_cakedate": "2023-06-03",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": null,
+        "can_vote": false
+      }
+    ],
+    "stream": [
+      621668
+    ]
+  },
+  "timeline_lookup": [
+    [
+      1,
+      55
+    ]
+  ],
+  "suggested_topics": [
+    {
+      "id": 179135,
+      "title": "TDS Project 1 2025 issue in submitting the project",
+      "fancy_title": "TDS Project 1 2025 issue in submitting the project",
+      "slug": "tds-project-1-2025-issue-in-submitting-the-project",
+      "posts_count": 1,
+      "reply_count": 0,
+      "highest_post_number": 1,
+      "image_url": null,
+      "created_at": "2025-06-14T02:52:12.918Z",
+      "last_posted_at": "2025-06-14T02:52:13.156Z",
+      "bumped": true,
+      "bumped_at": "2025-06-14T02:53:17.328Z",
+      "archetype": "regular",
+      "unseen": true,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": true,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "diploma-level",
+        "term2-2025"
+      ],
+      "tags_descriptions": {},
+      "like_count": 0,
+      "views": 1,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": "latest single",
+          "description": "Original Poster, Most Recent Poster",
+          "user": {
+            "id": 23906,
+            "username": "23f3001930",
+            "name": "Pragati Anshuman Chandra",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f3001930/{size}/67084_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 179104,
+      "title": "Drop Course Window",
+      "fancy_title": "Drop Course Window",
+      "slug": "drop-course-window",
+      "posts_count": 1,
+      "reply_count": 0,
+      "highest_post_number": 1,
+      "image_url": null,
+      "created_at": "2025-06-13T15:28:35.695Z",
+      "last_posted_at": "2025-06-13T15:28:35.924Z",
+      "bumped": true,
+      "bumped_at": "2025-06-13T15:28:35.924Z",
+      "archetype": "regular",
+      "unseen": true,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "clarification",
+        "diploma-level",
+        "term2-2025"
+      ],
+      "tags_descriptions": {},
+      "like_count": 0,
+      "views": 26,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": "latest single",
+          "description": "Original Poster, Most Recent Poster",
+          "user": {
+            "id": 22658,
+            "username": "23f2005404",
+            "name": "Nitin Dixit ",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f2005404/{size}/67257_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 179010,
+      "title": "Hoe to get disclosure api",
+      "fancy_title": "Hoe to get disclosure api",
+      "slug": "hoe-to-get-disclosure-api",
+      "posts_count": 3,
+      "reply_count": 1,
+      "highest_post_number": 3,
+      "image_url": null,
+      "created_at": "2025-06-12T18:04:05.077Z",
+      "last_posted_at": "2025-06-13T12:38:08.487Z",
+      "bumped": true,
+      "bumped_at": "2025-06-13T12:38:08.487Z",
+      "archetype": "regular",
+      "unseen": true,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "clarification",
+        "term2-2025"
+      ],
+      "tags_descriptions": {},
+      "like_count": 0,
+      "views": 55,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 14785,
+            "username": "Mohit173",
+            "name": "Mohit dey",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/mohit173/{size}/121666_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 0
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 25754,
+            "username": "24f1001200",
+            "name": "K Gokul ",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/24f1001200/{size}/68306_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 0
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster",
+          "user": {
+            "id": 15651,
+            "username": "Jivraj",
+            "name": "Jivraj Singh Shekhawat",
+            "avatar_template": "https://avatars.discourse-cdn.com/v4/letter/j/b9bd4f/{size}.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 2
+          }
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "diploma-level"
+  ],
+  "tags_descriptions": {},
+  "id": 173113,
+  "title": "Urgent Attn Needed: Project 2 Discrepency for GA2_q3 and GA1_q18",
+  "fancy_title": "Urgent Attn Needed: Project 2 Discrepency for GA2_q3 and GA1_q18",
+  "posts_count": 1,
+  "created_at": "2025-04-20T08:00:38.239Z",
+  "views": 66,
+  "reply_count": 0,
+  "like_count": 0,
+  "last_posted_at": "2025-04-20T08:00:38.446Z",
+  "visible": true,
+  "closed": false,
+  "archived": false,
+  "has_summary": false,
+  "archetype": "regular",
+  "slug": "urgent-attn-needed-project-2-discrepency-for-ga2-q3-and-ga1-q18",
+  "category_id": 34,
+  "word_count": 259,
+  "deleted_at": null,
+  "user_id": 18074,
+  "featured_link": null,
+  "pinned_globally": false,
+  "pinned_at": null,
+  "pinned_until": null,
+  "image_url": "https://europe1.discourse-cdn.com/flex013/uploads/iitm/original/3X/8/3/8377bbe918707bf3c306dc456301b60748cb3ee0.png",
+  "slow_mode_seconds": 0,
+  "draft": null,
+  "draft_key": "topic_173113",
+  "draft_sequence": 0,
+  "unpinned": null,
+  "pinned": false,
+  "current_post_number": 1,
+  "highest_post_number": 1,
+  "deleted_by": null,
+  "actions_summary": [
+    {
+      "id": 4,
+      "count": 0,
+      "hidden": false,
+      "can_act": true
+    },
+    {
+      "id": 8,
+      "count": 0,
+      "hidden": false,
+      "can_act": true
+    },
+    {
+      "id": 10,
+      "count": 0,
+      "hidden": false,
+      "can_act": true
+    },
+    {
+      "id": 7,
+      "count": 0,
+      "hidden": false,
+      "can_act": true
+    }
+  ],
+  "chunk_size": 20,
+  "bookmarked": false,
+  "topic_timer": null,
+  "message_bus_last_id": 1,
+  "participant_count": 1,
+  "show_read_indicator": false,
+  "thumbnails": [
+    {
+      "max_width": null,
+      "max_height": null,
+      "width": 965,
+      "height": 160,
+      "url": "https://europe1.discourse-cdn.com/flex013/uploads/iitm/original/3X/8/3/8377bbe918707bf3c306dc456301b60748cb3ee0.png"
+    }
+  ],
+  "slow_mode_enabled_until": null,
+  "tags_disable_ads": false,
+  "related_topics": [
+    {
+      "id": 173172,
+      "title": "URGENT ATTN REQ: technical discrepancy and inconsistency in the evaluation scripts of graded assignment and project 2",
+      "fancy_title": "URGENT ATTN REQ: technical discrepancy and inconsistency in the evaluation scripts of graded assignment and project 2",
+      "slug": "urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2",
+      "posts_count": 30,
+      "reply_count": 25,
+      "highest_post_number": 32,
+      "image_url": "https://europe1.discourse-cdn.com/flex013/uploads/iitm/original/3X/5/1/514ac690e9a0d891497501d503827232690f2745.png",
+      "created_at": "2025-04-21T12:06:38.276Z",
+      "last_posted_at": "2025-04-29T15:17:42.651Z",
+      "bumped": true,
+      "bumped_at": "2025-04-29T15:17:42.651Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "diploma-level"
+      ],
+      "tags_descriptions": {},
+      "like_count": 6,
+      "views": 254,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 18074,
+            "username": "23f1001231",
+            "name": "PREMDEEP MAITI",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f1001231/{size}/67068_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 17649,
+            "username": "23f1002643",
+            "name": "Saini Nirmal",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f1002643/{size}/66835_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 13078,
+            "username": "Saransh_Saini",
+            "name": "Saransh Saini",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/saransh_saini/{size}/123495_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 16094,
+            "username": "carlton",
+            "name": "Carlton D'Silva",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/carlton/{size}/56317_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 3
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster",
+          "user": {
+            "id": 15651,
+            "username": "Jivraj",
+            "name": "Jivraj Singh Shekhawat",
+            "avatar_template": "https://avatars.discourse-cdn.com/v4/letter/j/b9bd4f/{size}.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": 173175,
+      "title": "URGENT ATTN REQ: Another technical discrepancy and inconsistency in the evaluation scripts of graded assignment and project 2",
+      "fancy_title": "URGENT ATTN REQ: Another technical discrepancy and inconsistency in the evaluation scripts of graded assignment and project 2",
+      "slug": "urgent-attn-req-another-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2",
+      "posts_count": 2,
+      "reply_count": 0,
+      "highest_post_number": 2,
+      "image_url": null,
+      "created_at": "2025-04-21T13:38:36.775Z",
+      "last_posted_at": "2025-04-23T10:03:05.001Z",
+      "bumped": true,
+      "bumped_at": "2025-04-23T10:03:05.001Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "diploma-level"
+      ],
+      "tags_descriptions": {},
+      "like_count": 0,
+      "views": 72,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": true,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 18074,
+            "username": "23f1001231",
+            "name": "PREMDEEP MAITI",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f1001231/{size}/67068_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster, Accepted Answer",
+          "user": {
+            "id": 13078,
+            "username": "Saransh_Saini",
+            "name": "Saransh Saini",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/saransh_saini/{size}/123495_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 151150,
+      "title": "GA week 1 Question 9 and Question 10",
+      "fancy_title": "GA week 1 Question 9 and Question 10",
+      "slug": "ga-week-1-question-9-and-question-10",
+      "posts_count": 2,
+      "reply_count": 0,
+      "highest_post_number": 2,
+      "image_url": "https://europe1.discourse-cdn.com/flex013/uploads/iitm/optimized/3X/4/4/448afc1294de504bf6feffea5844dd72d6adaf6f_2_1023x305.png",
+      "created_at": "2024-10-05T07:24:12.069Z",
+      "last_posted_at": "2024-10-05T09:37:08.615Z",
+      "bumped": true,
+      "bumped_at": "2024-10-05T09:37:08.615Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "clarification",
+        "diploma-level",
+        "tds"
+      ],
+      "tags_descriptions": {},
+      "like_count": 1,
+      "views": 55,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 12528,
+            "username": "Chinmoy_Das",
+            "name": "Chinmoy Das",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/chinmoy_das/{size}/19501_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster",
+          "user": {
+            "id": 16094,
+            "username": "carlton",
+            "name": "Carlton D'Silva",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/carlton/{size}/56317_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": 143073,
+      "title": "Project2 Answer issue",
+      "fancy_title": "Project2 Answer issue",
+      "slug": "project2-answer-issue",
+      "posts_count": 32,
+      "reply_count": 27,
+      "highest_post_number": 34,
+      "image_url": "https://europe1.discourse-cdn.com/flex013/uploads/iitm/original/3X/4/9/497093607cd12a3b0294dd02b4d1e7f8849443a1.png",
+      "created_at": "2024-08-16T03:16:34.619Z",
+      "last_posted_at": "2024-08-22T09:20:32.127Z",
+      "bumped": true,
+      "bumped_at": "2024-08-22T09:20:32.127Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "clarification",
+        "diploma-level"
+      ],
+      "tags_descriptions": {},
+      "like_count": 4,
+      "views": 271,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 13115,
+            "username": "LALLUPRASANTH",
+            "name": "LALLUPRASANTH P",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/lalluprasanth/{size}/1273_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 16094,
+            "username": "carlton",
+            "name": "Carlton D'Silva",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/carlton/{size}/56317_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 3
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 1363,
+            "username": "ShreyaJ",
+            "name": "Shreya Joshi",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/shreyaj/{size}/189_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 16187,
+            "username": "22f3002487",
+            "name": "ektabansal",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/22f3002487/{size}/87326_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster",
+          "user": {
+            "id": 8282,
+            "username": "21f3002243",
+            "name": "Palash_H",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/21f3002243/{size}/13054_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 161120,
+      "title": "GA2 - Deployment Tools - Discussion Thread [TDS Jan 2025]",
+      "fancy_title": "GA2 - Deployment Tools - Discussion Thread [TDS Jan 2025]",
+      "slug": "ga2-deployment-tools-discussion-thread-tds-jan-2025",
+      "posts_count": 170,
+      "reply_count": 112,
+      "highest_post_number": 178,
+      "image_url": null,
+      "created_at": "2025-01-03T07:12:14.287Z",
+      "last_posted_at": "2025-02-06T13:21:38.546Z",
+      "bumped": true,
+      "bumped_at": "2025-02-06T13:21:38.546Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "announcement",
+        "term1-2025",
+        "graded-assignment",
+        "week-2"
+      ],
+      "tags_descriptions": {},
+      "like_count": 40,
+      "views": 1031,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 9419,
+            "username": "s.anand",
+            "name": "Anand S",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/s.anand/{size}/15264_2.png",
+            "primary_group_name": "faculty",
+            "flair_name": "faculty",
+            "flair_url": "chalkboard-user",
+            "flair_bg_color": "f2c26e",
+            "flair_color": "000",
+            "flair_group_id": 54,
+            "trust_level": 4
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 27771,
+            "username": "23F300327",
+            "name": "Mishkat Chougule",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f300327/{size}/91361_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 29311,
+            "username": "daksh76",
+            "name": "Daksh Agarwal",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/daksh76/{size}/67052_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 16094,
+            "username": "carlton",
+            "name": "Carlton D'Silva",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/carlton/{size}/56317_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 3
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster",
+          "user": {
+            "id": 29424,
+            "username": "Pratiyush",
+            "name": "Pratiyush Pathak",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/pratiyush/{size}/122467_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 0
+          }
+        }
+      ]
+    }
+  ],
+  "summarizable": false,
+  "valid_reactions": [
+    "heart",
+    "+1",
+    "laughing",
+    "open_mouth",
+    "clap",
+    "confetti_ball",
+    "rocket",
+    "-1"
+  ],
+  "can_vote": false,
+  "vote_count": 0,
+  "user_voted": false,
+  "discourse_zendesk_plugin_zendesk_id": null,
+  "discourse_zendesk_plugin_zendesk_url": "https://your-url.zendesk.com/agent/tickets/",
+  "details": {
+    "can_edit": false,
+    "notification_level": 1,
+    "can_create_post": true,
+    "can_reply_as_new_topic": true,
+    "can_flag_topic": true,
+    "participants": [
+      {
+        "id": 18074,
+        "username": "23f1001231",
+        "name": "PREMDEEP MAITI",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f1001231/{size}/67068_2.png",
+        "post_count": 1,
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_color": "",
+        "flair_bg_color": "",
+        "flair_group_id": 294,
+        "trust_level": 1
+      }
+    ],
+    "created_by": {
+      "id": 18074,
+      "username": "23f1001231",
+      "name": "PREMDEEP MAITI",
+      "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f1001231/{size}/67068_2.png"
+    },
+    "last_poster": {
+      "id": 18074,
+      "username": "23f1001231",
+      "name": "PREMDEEP MAITI",
+      "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f1001231/{size}/67068_2.png"
+    },
+    "links": [
+      {
+        "url": "http://64.227.131.20:4200/",
+        "title": null,
+        "internal": false,
+        "attachment": false,
+        "reflection": false,
+        "clicks": 3,
+        "user_id": 18074,
+        "domain": "64.227.131.20",
+        "root_domain": "131.20"
+      },
+      {
+        "url": "https://23f1001231.github.io/testsite/",
+        "title": null,
+        "internal": false,
+        "attachment": false,
+        "reflection": false,
+        "clicks": 3,
+        "user_id": 18074,
+        "domain": "23f1001231.github.io",
+        "root_domain": "23f1001231.github.io"
+      },
+      {
+        "url": "https://github.com/23f1001231/testsite",
+        "title": "GitHub - 23f1001231/testsite",
+        "internal": false,
+        "attachment": false,
+        "reflection": false,
+        "clicks": 1,
+        "user_id": 18074,
+        "domain": "github.com",
+        "root_domain": "github.com"
+      }
+    ]
+  },
+  "pending_posts": [],
+  "bookmarks": []
+}

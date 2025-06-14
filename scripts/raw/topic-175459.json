@@ -1,0 +1,893 @@
+{
+  "post_stream": {
+    "posts": [
+      {
+        "id": 628126,
+        "name": "Amit kumar pandey",
+        "username": "21f3002439",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/21f3002439/{size}/42182_2.png",
+        "created_at": "2025-05-19T11:46:25.006Z",
+        "cooked": "<p>Hello , I<code>m facing problem in TDS GA2; Que 11.  I</code>m not able to create GCP account with college ID &amp; with personal ID it is asking to set up the auto pay.<br>\nI`m attached the screenshot. Please explain how to solve thie problem &amp;  do this question ?</p>\n<aside class=\"onebox allowlistedgeneric\" data-onebox-src=\"https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fconsole.cloud.google.com%2Fwelcome%2Fnew%3Finv%3D1%26invt%3DAbxziw&amp;followup=https%3A%2F%2Fconsole.cloud.google.com%2Fwelcome%2Fnew%3Finv%3D1%26invt%3DAbxziw&amp;ifkv=ASKV5MhZBUw2n-rRawCkPjJMYWgFOCWNPPxKHgkLJGZTtnuNlpi9I3tAeNn3eNPJ02nFtabd-kPuZQ&amp;osid=1&amp;passive=1209600&amp;service=cloudconsole&amp;flowName=GlifWebSignIn&amp;flowEntry=ServiceLogin&amp;dsh=S573663526%3A1747654891915612\">\n  <header class=\"source\">\n\n      <a href=\"https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fconsole.cloud.google.com%2Fwelcome%2Fnew%3Finv%3D1%26invt%3DAbxziw&amp;followup=https%3A%2F%2Fconsole.cloud.google.com%2Fwelcome%2Fnew%3Finv%3D1%26invt%3DAbxziw&amp;ifkv=ASKV5MhZBUw2n-rRawCkPjJMYWgFOCWNPPxKHgkLJGZTtnuNlpi9I3tAeNn3eNPJ02nFtabd-kPuZQ&amp;osid=1&amp;passive=1209600&amp;service=cloudconsole&amp;flowName=GlifWebSignIn&amp;flowEntry=ServiceLogin&amp;dsh=S573663526%3A1747654891915612\" target=\"_blank\" rel=\"noopener nofollow ugc\">accounts.google.com</a>\n  </header>\n\n  <article class=\"onebox-body\">\n    \n\n<h3><a href=\"https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fconsole.cloud.google.com%2Fwelcome%2Fnew%3Finv%3D1%26invt%3DAbxziw&amp;followup=https%3A%2F%2Fconsole.cloud.google.com%2Fwelcome%2Fnew%3Finv%3D1%26invt%3DAbxziw&amp;ifkv=ASKV5MhZBUw2n-rRawCkPjJMYWgFOCWNPPxKHgkLJGZTtnuNlpi9I3tAeNn3eNPJ02nFtabd-kPuZQ&amp;osid=1&amp;passive=1209600&amp;service=cloudconsole&amp;flowName=GlifWebSignIn&amp;flowEntry=ServiceLogin&amp;dsh=S573663526%3A1747654891915612\" target=\"_blank\" rel=\"noopener nofollow ugc\">Google Cloud Platform</a></h3>\n\n  <p>Google Cloud Platform lets you build, deploy, and scale applications, websites, and services on the same infrastructure as Google.</p>\n\n\n  </article>\n\n  <div class=\"onebox-metadata\">\n    \n    \n  </div>\n\n  <div style=\"clear: both\"></div>\n</aside>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://europe1.discourse-cdn.com/flex013/uploads/iitm/original/3X/5/a/5ac0070e91309bd5a6854f3cac98262ea61e5f11.png\" data-download-href=\"/uploads/short-url/cWOo9fw2rGcp69Tj5nRNrIWbeQV.png?dl=1\" title=\"Screenshot from 2025-05-19 17-11-01\" rel=\"noopener nofollow ugc\"><img src=\"https://europe1.discourse-cdn.com/flex013/uploads/iitm/optimized/3X/5/a/5ac0070e91309bd5a6854f3cac98262ea61e5f11_2_690x388.png\" alt=\"Screenshot from 2025-05-19 17-11-01\" data-base62-sha1=\"cWOo9fw2rGcp69Tj5nRNrIWbeQV\" width=\"690\" height=\"388\" srcset=\"https://europe1.discourse-cdn.com/flex013/uploads/iitm/optimized/3X/5/a/5ac0070e91309bd5a6854f3cac98262ea61e5f11_2_690x388.png, https://europe1.discourse-cdn.com/flex013/uploads/iitm/optimized/3X/5/a/5ac0070e91309bd5a6854f3cac98262ea61e5f11_2_1035x582.png 1.5x, https://europe1.discourse-cdn.com/flex013/uploads/iitm/optimized/3X/5/a/5ac0070e91309bd5a6854f3cac98262ea61e5f11_2_1380x776.png 2x\" data-dominant-color=\"B0B2B2\"><div class=\"meta\"><svg class=\"fa d-icon d-icon-far-image svg-icon\" aria-hidden=\"true\"><use href=\"#far-image\"></use></svg><span class=\"filename\">Screenshot from 2025-05-19 17-11-01</span><span class=\"informations\">1920\u00d71080 126 KB</span><svg class=\"fa d-icon d-icon-discourse-expand svg-icon\" aria-hidden=\"true\"><use href=\"#discourse-expand\"></use></svg></div></a></div></p>",
+        "post_number": 1,
+        "post_type": 1,
+        "posts_count": 2,
+        "updated_at": "2025-05-19T11:46:25.006Z",
+        "reply_count": 0,
+        "reply_to_post_number": null,
+        "quote_count": 0,
+        "incoming_link_count": 0,
+        "reads": 51,
+        "readers_count": 50,
+        "score": 9.2,
+        "yours": false,
+        "topic_id": 175459,
+        "topic_slug": "google-cloud-platform",
+        "display_username": "Amit kumar pandey",
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_bg_color": "",
+        "flair_color": "",
+        "flair_group_id": 294,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "link_counts": [
+          {
+            "url": "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fconsole.cloud.google.com%2Fwelcome%2Fnew%3Finv%3D1%26invt%3DAbxziw&followup=https%3A%2F%2Fconsole.cloud.google.com%2Fwelcome%2Fnew%3Finv%3D1%26invt%3DAbxziw&ifkv=ASKV5MhZBUw2n-rRawCkPjJMYWgFOCWNPPxKHgkLJGZTtnuNlpi9I3tAeNn3eNPJ02nFtabd-kPuZQ&osid=1&passive=1209600&service=cloudconsole&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S573663526%3A1747654891915612",
+            "internal": false,
+            "reflection": false,
+            "clicks": 0
+          }
+        ],
+        "read": false,
+        "user_title": null,
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "user_id": 12994,
+        "hidden": false,
+        "trust_level": 1,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/google-cloud-platform/175459/1",
+        "user_cakedate": "2022-05-02",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": null,
+        "can_vote": false
+      },
+      {
+        "id": 628128,
+        "name": "Carlton D'Silva",
+        "username": "carlton",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/carlton/{size}/56317_2.png",
+        "created_at": "2025-05-19T12:05:02.626Z",
+        "cooked": "<p>You have to do the google auth question with your personal email (not student id).</p>\n<p>Kind regards</p>",
+        "post_number": 2,
+        "post_type": 1,
+        "posts_count": 2,
+        "updated_at": "2025-05-19T12:05:02.626Z",
+        "reply_count": 0,
+        "reply_to_post_number": null,
+        "quote_count": 0,
+        "incoming_link_count": 0,
+        "reads": 39,
+        "readers_count": 38,
+        "score": 6.8,
+        "yours": false,
+        "topic_id": 175459,
+        "topic_slug": "google-cloud-platform",
+        "display_username": "Carlton D'Silva",
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_bg_color": "",
+        "flair_color": "",
+        "flair_group_id": 294,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "read": false,
+        "user_title": "Regular",
+        "title_is_group": false,
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "group_moderator": true,
+        "user_id": 16094,
+        "hidden": false,
+        "trust_level": 3,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/google-cloud-platform/175459/2",
+        "user_cakedate": "2023-01-25",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": null
+      }
+    ],
+    "stream": [
+      628126,
+      628128
+    ]
+  },
+  "timeline_lookup": [
+    [
+      1,
+      26
+    ]
+  ],
+  "suggested_topics": [
+    {
+      "id": 179135,
+      "title": "TDS Project 1 2025 issue in submitting the project",
+      "fancy_title": "TDS Project 1 2025 issue in submitting the project",
+      "slug": "tds-project-1-2025-issue-in-submitting-the-project",
+      "posts_count": 1,
+      "reply_count": 0,
+      "highest_post_number": 1,
+      "image_url": null,
+      "created_at": "2025-06-14T02:52:12.918Z",
+      "last_posted_at": "2025-06-14T02:52:13.156Z",
+      "bumped": true,
+      "bumped_at": "2025-06-14T02:53:17.328Z",
+      "archetype": "regular",
+      "unseen": true,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": true,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "diploma-level",
+        "term2-2025"
+      ],
+      "tags_descriptions": {},
+      "like_count": 0,
+      "views": 1,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": "latest single",
+          "description": "Original Poster, Most Recent Poster",
+          "user": {
+            "id": 23906,
+            "username": "23f3001930",
+            "name": "Pragati Anshuman Chandra",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f3001930/{size}/67084_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 179104,
+      "title": "Drop Course Window",
+      "fancy_title": "Drop Course Window",
+      "slug": "drop-course-window",
+      "posts_count": 1,
+      "reply_count": 0,
+      "highest_post_number": 1,
+      "image_url": null,
+      "created_at": "2025-06-13T15:28:35.695Z",
+      "last_posted_at": "2025-06-13T15:28:35.924Z",
+      "bumped": true,
+      "bumped_at": "2025-06-13T15:28:35.924Z",
+      "archetype": "regular",
+      "unseen": true,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "clarification",
+        "diploma-level",
+        "term2-2025"
+      ],
+      "tags_descriptions": {},
+      "like_count": 0,
+      "views": 26,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": "latest single",
+          "description": "Original Poster, Most Recent Poster",
+          "user": {
+            "id": 22658,
+            "username": "23f2005404",
+            "name": "Nitin Dixit ",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f2005404/{size}/67257_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 179010,
+      "title": "Hoe to get disclosure api",
+      "fancy_title": "Hoe to get disclosure api",
+      "slug": "hoe-to-get-disclosure-api",
+      "posts_count": 3,
+      "reply_count": 1,
+      "highest_post_number": 3,
+      "image_url": null,
+      "created_at": "2025-06-12T18:04:05.077Z",
+      "last_posted_at": "2025-06-13T12:38:08.487Z",
+      "bumped": true,
+      "bumped_at": "2025-06-13T12:38:08.487Z",
+      "archetype": "regular",
+      "unseen": true,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "clarification",
+        "term2-2025"
+      ],
+      "tags_descriptions": {},
+      "like_count": 0,
+      "views": 55,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 14785,
+            "username": "Mohit173",
+            "name": "Mohit dey",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/mohit173/{size}/121666_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 0
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 25754,
+            "username": "24f1001200",
+            "name": "K Gokul ",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/24f1001200/{size}/68306_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 0
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster",
+          "user": {
+            "id": 15651,
+            "username": "Jivraj",
+            "name": "Jivraj Singh Shekhawat",
+            "avatar_template": "https://avatars.discourse-cdn.com/v4/letter/j/b9bd4f/{size}.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 2
+          }
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "diploma-level",
+    "term2-2025",
+    "tds"
+  ],
+  "tags_descriptions": {},
+  "id": 175459,
+  "title": "Google Cloud Platform",
+  "fancy_title": "Google Cloud Platform",
+  "posts_count": 2,
+  "created_at": "2025-05-19T11:46:24.823Z",
+  "views": 57,
+  "reply_count": 0,
+  "like_count": 0,
+  "last_posted_at": "2025-05-19T12:05:02.626Z",
+  "visible": true,
+  "closed": false,
+  "archived": false,
+  "has_summary": false,
+  "archetype": "regular",
+  "slug": "google-cloud-platform",
+  "category_id": 34,
+  "word_count": 88,
+  "deleted_at": null,
+  "user_id": 12994,
+  "featured_link": "https://console.cloud.google.com/welcome/new?inv=1&invt=Abxziw",
+  "featured_link_root_domain": "google.com",
+  "pinned_globally": false,
+  "pinned_at": null,
+  "pinned_until": null,
+  "image_url": "https://europe1.discourse-cdn.com/flex013/uploads/iitm/optimized/3X/5/a/5ac0070e91309bd5a6854f3cac98262ea61e5f11_2_1024x576.png",
+  "slow_mode_seconds": 0,
+  "draft": null,
+  "draft_key": "topic_175459",
+  "draft_sequence": 0,
+  "unpinned": null,
+  "pinned": false,
+  "current_post_number": 1,
+  "highest_post_number": 2,
+  "deleted_by": null,
+  "actions_summary": [
+    {
+      "id": 4,
+      "count": 0,
+      "hidden": false,
+      "can_act": true
+    },
+    {
+      "id": 8,
+      "count": 0,
+      "hidden": false,
+      "can_act": true
+    },
+    {
+      "id": 10,
+      "count": 0,
+      "hidden": false,
+      "can_act": true
+    },
+    {
+      "id": 7,
+      "count": 0,
+      "hidden": false,
+      "can_act": true
+    }
+  ],
+  "chunk_size": 20,
+  "bookmarked": false,
+  "topic_timer": null,
+  "message_bus_last_id": 0,
+  "participant_count": 2,
+  "show_read_indicator": false,
+  "thumbnails": [
+    {
+      "max_width": null,
+      "max_height": null,
+      "width": 1920,
+      "height": 1080,
+      "url": "https://europe1.discourse-cdn.com/flex013/uploads/iitm/original/3X/5/a/5ac0070e91309bd5a6854f3cac98262ea61e5f11.png"
+    },
+    {
+      "max_width": 1024,
+      "max_height": 1024,
+      "width": 1024,
+      "height": 576,
+      "url": "https://europe1.discourse-cdn.com/flex013/uploads/iitm/optimized/3X/5/a/5ac0070e91309bd5a6854f3cac98262ea61e5f11_2_1024x576.png"
+    }
+  ],
+  "slow_mode_enabled_until": null,
+  "tags_disable_ads": false,
+  "related_topics": [
+    {
+      "id": 176223,
+      "title": "Issue Creating Google Cloud Project \u2013 \"You must select a parent organization or folder\" (Module 2, Q11 - TDS)",
+      "fancy_title": "Issue Creating Google Cloud Project \u2013 &ldquo;You must select a parent organization or folder&rdquo; (Module 2, Q11 - TDS)",
+      "slug": "issue-creating-google-cloud-project-you-must-select-a-parent-organization-or-folder-module-2-q11-tds",
+      "posts_count": 3,
+      "reply_count": 0,
+      "highest_post_number": 5,
+      "image_url": null,
+      "created_at": "2025-05-24T09:00:29.447Z",
+      "last_posted_at": "2025-05-25T04:28:43.440Z",
+      "bumped": true,
+      "bumped_at": "2025-05-25T04:28:43.440Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "diploma-level",
+        "term2-2025",
+        "graded-assignment"
+      ],
+      "tags_descriptions": {},
+      "like_count": 3,
+      "views": 83,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 7189,
+            "username": "21f3000697",
+            "name": "SATISH KUMAR",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/21f3000697/{size}/8382_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 3230,
+            "username": "shriaviator",
+            "name": "Srinivas Chilukuri",
+            "avatar_template": "https://avatars.discourse-cdn.com/v4/letter/s/59ef9b/{size}.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "Community-TA",
+            "flair_url": "handshake-angle",
+            "flair_bg_color": "717BF7",
+            "flair_color": "6BEE3D",
+            "flair_group_id": 89,
+            "trust_level": 2
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster",
+          "user": {
+            "id": 16094,
+            "username": "carlton",
+            "name": "Carlton D'Silva",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/carlton/{size}/56317_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": 139983,
+      "title": "Google Cloud Education Credits",
+      "fancy_title": "Google Cloud Education Credits",
+      "slug": "google-cloud-education-credits",
+      "posts_count": 1,
+      "reply_count": 0,
+      "highest_post_number": 1,
+      "image_url": null,
+      "created_at": "2024-07-15T21:34:17.998Z",
+      "last_posted_at": "2024-07-15T21:34:18.060Z",
+      "bumped": true,
+      "bumped_at": "2024-07-15T21:34:18.060Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "miscellaneous",
+        "programming"
+      ],
+      "tags_descriptions": {},
+      "like_count": 0,
+      "views": 72,
+      "category_id": 75,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": "latest single",
+          "description": "Original Poster, Most Recent Poster",
+          "user": {
+            "id": 30571,
+            "username": "shreyasdeshmukh",
+            "name": "Shreyas Deshmukh",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/shreyasdeshmukh/{size}/99208_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 55624,
+      "title": "TDS- Project-1 - Good Form Not Accessible",
+      "fancy_title": "TDS- Project-1 - Good Form Not Accessible",
+      "slug": "tds-project-1-good-form-not-accessible",
+      "posts_count": 3,
+      "reply_count": 0,
+      "highest_post_number": 3,
+      "image_url": null,
+      "created_at": "2022-06-29T13:59:26.958Z",
+      "last_posted_at": "2022-06-29T15:58:15.550Z",
+      "bumped": true,
+      "bumped_at": "2022-06-29T15:58:15.550Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "clarification"
+      ],
+      "tags_descriptions": {},
+      "like_count": 1,
+      "views": 58,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 686,
+            "username": "nmaddala",
+            "name": "Narayana Maddala",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/nmaddala/{size}/67626_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 2076,
+            "username": "lehani",
+            "name": "lehani raj mohanta",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/lehani/{size}/131523_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster",
+          "user": {
+            "id": 7907,
+            "username": "dibujohn",
+            "name": "Dibu Philip",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/dibujohn/{size}/12560_2.png",
+            "primary_group_name": "course_support",
+            "flair_name": "course_support",
+            "flair_url": "scale-balanced",
+            "flair_bg_color": "0040ff",
+            "flair_color": "1affc6",
+            "flair_group_id": 41,
+            "trust_level": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": 176323,
+      "title": "Clarification on Email ID for GitHub Account Submission for TDS Course Assignment",
+      "fancy_title": "Clarification on Email ID for GitHub Account Submission for TDS Course Assignment",
+      "slug": "clarification-on-email-id-for-github-account-submission-for-tds-course-assignment",
+      "posts_count": 2,
+      "reply_count": 0,
+      "highest_post_number": 2,
+      "image_url": null,
+      "created_at": "2025-05-25T10:42:16.326Z",
+      "last_posted_at": "2025-05-25T11:12:21.484Z",
+      "bumped": true,
+      "bumped_at": "2025-05-25T11:12:21.484Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "clarification",
+        "diploma-level",
+        "term2-2025"
+      ],
+      "tags_descriptions": {},
+      "like_count": 1,
+      "views": 50,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 19016,
+            "username": "Priyank",
+            "name": "Priyank Solanki ",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/priyank/{size}/66833_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 0
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster",
+          "user": {
+            "id": 16656,
+            "username": "22f3003023",
+            "name": "Sanvi Sneh",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/22f3003023/{size}/119245_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 163335,
+      "title": "Accidentally created a NPTEL account instead of signing in with Google, will there be a problem?",
+      "fancy_title": "Accidentally created a NPTEL account instead of signing in with Google, will there be a problem?",
+      "slug": "accidentally-created-a-nptel-account-instead-of-signing-in-with-google-will-there-be-a-problem",
+      "posts_count": 4,
+      "reply_count": 2,
+      "highest_post_number": 4,
+      "image_url": null,
+      "created_at": "2025-01-15T10:38:50.165Z",
+      "last_posted_at": "2025-01-15T10:54:31.506Z",
+      "bumped": true,
+      "bumped_at": "2025-01-15T10:54:31.506Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "clarification"
+      ],
+      "tags_descriptions": {},
+      "like_count": 0,
+      "views": 62,
+      "category_id": 7,
+      "featured_link": null,
+      "has_accepted_answer": true,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 36914,
+            "username": "spandanjit2005",
+            "name": "Spandanjit Mondal",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/spandanjit2005/{size}/118318_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster, Accepted Answer",
+          "user": {
+            "id": 39132,
+            "username": "H.BHASKAR_934",
+            "name": "HARSH BHASKAR",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/h.bhaskar_934/{size}/112475_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster",
+          "user": {
+            "id": 42272,
+            "username": "_dark_coder",
+            "name": "Rahul Singh",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/_dark_coder/{size}/122871_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        }
+      ]
+    }
+  ],
+  "summarizable": false,
+  "valid_reactions": [
+    "heart",
+    "+1",
+    "laughing",
+    "open_mouth",
+    "clap",
+    "confetti_ball",
+    "rocket",
+    "-1"
+  ],
+  "can_vote": false,
+  "vote_count": 0,
+  "user_voted": false,
+  "discourse_zendesk_plugin_zendesk_id": null,
+  "discourse_zendesk_plugin_zendesk_url": "https://your-url.zendesk.com/agent/tickets/",
+  "details": {
+    "can_edit": false,
+    "notification_level": 1,
+    "can_create_post": true,
+    "can_reply_as_new_topic": true,
+    "can_flag_topic": true,
+    "participants": [
+      {
+        "id": 16094,
+        "username": "carlton",
+        "name": "Carlton D'Silva",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/carlton/{size}/56317_2.png",
+        "post_count": 1,
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_color": "",
+        "flair_bg_color": "",
+        "flair_group_id": 294,
+        "trust_level": 3
+      },
+      {
+        "id": 12994,
+        "username": "21f3002439",
+        "name": "Amit kumar pandey",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/21f3002439/{size}/42182_2.png",
+        "post_count": 1,
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_color": "",
+        "flair_bg_color": "",
+        "flair_group_id": 294,
+        "trust_level": 1
+      }
+    ],
+    "created_by": {
+      "id": 12994,
+      "username": "21f3002439",
+      "name": "Amit kumar pandey",
+      "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/21f3002439/{size}/42182_2.png"
+    },
+    "last_poster": {
+      "id": 16094,
+      "username": "carlton",
+      "name": "Carlton D'Silva",
+      "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/carlton/{size}/56317_2.png"
+    }
+  },
+  "pending_posts": [],
+  "bookmarks": []
+}

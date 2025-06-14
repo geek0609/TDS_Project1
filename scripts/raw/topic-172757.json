@@ -1,0 +1,931 @@
+{
+  "post_stream": {
+    "posts": [
+      {
+        "id": 619969,
+        "name": "Anshuman Dave",
+        "username": "Anshuman_Dave",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/anshuman_dave/{size}/66858_2.png",
+        "created_at": "2025-04-16T04:23:51.166Z",
+        "cooked": "<p>please clarify the marking scheme for MSQs.<br>\nin specific,<br>\nthe 2 marks MSQs.<br>\nLet us say there are 2 correct options out of 4 given options. But i have chosen only 1 option.<br>\nThen how many marks will i be awarded ?</p>",
+        "post_number": 1,
+        "post_type": 1,
+        "posts_count": 3,
+        "updated_at": "2025-04-16T04:23:51.166Z",
+        "reply_count": 0,
+        "reply_to_post_number": null,
+        "quote_count": 0,
+        "incoming_link_count": 0,
+        "reads": 70,
+        "readers_count": 69,
+        "score": 13.0,
+        "yours": false,
+        "topic_id": 172757,
+        "topic_slug": "marking-scheme",
+        "display_username": "Anshuman Dave",
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_bg_color": "",
+        "flair_color": "",
+        "flair_group_id": 294,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "read": false,
+        "user_title": null,
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "user_id": 21217,
+        "hidden": false,
+        "trust_level": 0,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/marking-scheme/172757/1",
+        "user_cakedate": "2023-06-28",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": null,
+        "can_vote": false
+      },
+      {
+        "id": 619971,
+        "name": "Anshuman Dave",
+        "username": "Anshuman_Dave",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/anshuman_dave/{size}/66858_2.png",
+        "created_at": "2025-04-16T04:24:23.514Z",
+        "cooked": "<p><a class=\"mention\" href=\"/u/carlton\">@carlton</a> please help</p>",
+        "post_number": 2,
+        "post_type": 1,
+        "posts_count": 3,
+        "updated_at": "2025-04-16T04:24:23.514Z",
+        "reply_count": 0,
+        "reply_to_post_number": null,
+        "quote_count": 0,
+        "incoming_link_count": 0,
+        "reads": 70,
+        "readers_count": 69,
+        "score": 13.2,
+        "yours": false,
+        "topic_id": 172757,
+        "topic_slug": "marking-scheme",
+        "display_username": "Anshuman Dave",
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_bg_color": "",
+        "flair_color": "",
+        "flair_group_id": 294,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "read": false,
+        "user_title": null,
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "user_id": 21217,
+        "hidden": false,
+        "trust_level": 0,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/marking-scheme/172757/2",
+        "user_cakedate": "2023-06-28",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": null
+      },
+      {
+        "id": 620094,
+        "name": "Prasanna",
+        "username": "iamprasna",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/iamprasna/{size}/13977_2.png",
+        "created_at": "2025-04-16T08:40:47.626Z",
+        "cooked": "<p>You will receive partial marks for the correct option.</p>",
+        "post_number": 3,
+        "post_type": 1,
+        "posts_count": 3,
+        "updated_at": "2025-04-16T08:40:47.626Z",
+        "reply_count": 0,
+        "reply_to_post_number": null,
+        "quote_count": 0,
+        "incoming_link_count": 0,
+        "reads": 59,
+        "readers_count": 58,
+        "score": 10.8,
+        "yours": false,
+        "topic_id": 172757,
+        "topic_slug": "marking-scheme",
+        "display_username": "Prasanna",
+        "primary_group_name": "course_support",
+        "flair_name": "course_support",
+        "flair_url": "scale-balanced",
+        "flair_bg_color": "0040ff",
+        "flair_color": "1affc6",
+        "flair_group_id": 41,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "read": false,
+        "user_title": "Course_Team",
+        "title_is_group": true,
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "user_id": 9398,
+        "hidden": false,
+        "trust_level": 4,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/marking-scheme/172757/3",
+        "user_cakedate": "2022-01-03",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": null
+      }
+    ],
+    "stream": [
+      619969,
+      619971,
+      620094
+    ]
+  },
+  "timeline_lookup": [
+    [
+      1,
+      59
+    ]
+  ],
+  "suggested_topics": [
+    {
+      "id": 179135,
+      "title": "TDS Project 1 2025 issue in submitting the project",
+      "fancy_title": "TDS Project 1 2025 issue in submitting the project",
+      "slug": "tds-project-1-2025-issue-in-submitting-the-project",
+      "posts_count": 1,
+      "reply_count": 0,
+      "highest_post_number": 1,
+      "image_url": null,
+      "created_at": "2025-06-14T02:52:12.918Z",
+      "last_posted_at": "2025-06-14T02:52:13.156Z",
+      "bumped": true,
+      "bumped_at": "2025-06-14T02:53:17.328Z",
+      "archetype": "regular",
+      "unseen": true,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": true,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "diploma-level",
+        "term2-2025"
+      ],
+      "tags_descriptions": {},
+      "like_count": 0,
+      "views": 1,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": "latest single",
+          "description": "Original Poster, Most Recent Poster",
+          "user": {
+            "id": 23906,
+            "username": "23f3001930",
+            "name": "Pragati Anshuman Chandra",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f3001930/{size}/67084_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 179104,
+      "title": "Drop Course Window",
+      "fancy_title": "Drop Course Window",
+      "slug": "drop-course-window",
+      "posts_count": 1,
+      "reply_count": 0,
+      "highest_post_number": 1,
+      "image_url": null,
+      "created_at": "2025-06-13T15:28:35.695Z",
+      "last_posted_at": "2025-06-13T15:28:35.924Z",
+      "bumped": true,
+      "bumped_at": "2025-06-13T15:28:35.924Z",
+      "archetype": "regular",
+      "unseen": true,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "clarification",
+        "diploma-level",
+        "term2-2025"
+      ],
+      "tags_descriptions": {},
+      "like_count": 0,
+      "views": 26,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": "latest single",
+          "description": "Original Poster, Most Recent Poster",
+          "user": {
+            "id": 22658,
+            "username": "23f2005404",
+            "name": "Nitin Dixit ",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f2005404/{size}/67257_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 179010,
+      "title": "Hoe to get disclosure api",
+      "fancy_title": "Hoe to get disclosure api",
+      "slug": "hoe-to-get-disclosure-api",
+      "posts_count": 3,
+      "reply_count": 1,
+      "highest_post_number": 3,
+      "image_url": null,
+      "created_at": "2025-06-12T18:04:05.077Z",
+      "last_posted_at": "2025-06-13T12:38:08.487Z",
+      "bumped": true,
+      "bumped_at": "2025-06-13T12:38:08.487Z",
+      "archetype": "regular",
+      "unseen": true,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "clarification",
+        "term2-2025"
+      ],
+      "tags_descriptions": {},
+      "like_count": 0,
+      "views": 55,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 14785,
+            "username": "Mohit173",
+            "name": "Mohit dey",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/mohit173/{size}/121666_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 0
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 25754,
+            "username": "24f1001200",
+            "name": "K Gokul ",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/24f1001200/{size}/68306_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 0
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster",
+          "user": {
+            "id": 15651,
+            "username": "Jivraj",
+            "name": "Jivraj Singh Shekhawat",
+            "avatar_template": "https://avatars.discourse-cdn.com/v4/letter/j/b9bd4f/{size}.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 2
+          }
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "clarification"
+  ],
+  "tags_descriptions": {},
+  "id": 172757,
+  "title": "Marking Scheme",
+  "fancy_title": "Marking Scheme",
+  "posts_count": 3,
+  "created_at": "2025-04-16T04:23:50.944Z",
+  "views": 79,
+  "reply_count": 0,
+  "like_count": 0,
+  "last_posted_at": "2025-04-16T08:40:47.626Z",
+  "visible": true,
+  "closed": false,
+  "archived": false,
+  "has_summary": false,
+  "archetype": "regular",
+  "slug": "marking-scheme",
+  "category_id": 34,
+  "word_count": 53,
+  "deleted_at": null,
+  "user_id": 21217,
+  "featured_link": null,
+  "pinned_globally": false,
+  "pinned_at": null,
+  "pinned_until": null,
+  "image_url": null,
+  "slow_mode_seconds": 0,
+  "draft": null,
+  "draft_key": "topic_172757",
+  "draft_sequence": 0,
+  "unpinned": null,
+  "pinned": false,
+  "current_post_number": 1,
+  "highest_post_number": 3,
+  "deleted_by": null,
+  "actions_summary": [
+    {
+      "id": 4,
+      "count": 0,
+      "hidden": false,
+      "can_act": true
+    },
+    {
+      "id": 8,
+      "count": 0,
+      "hidden": false,
+      "can_act": true
+    },
+    {
+      "id": 10,
+      "count": 0,
+      "hidden": false,
+      "can_act": true
+    },
+    {
+      "id": 7,
+      "count": 0,
+      "hidden": false,
+      "can_act": true
+    }
+  ],
+  "chunk_size": 20,
+  "bookmarked": false,
+  "topic_timer": null,
+  "message_bus_last_id": 3,
+  "participant_count": 2,
+  "show_read_indicator": false,
+  "thumbnails": null,
+  "slow_mode_enabled_until": null,
+  "tags_disable_ads": false,
+  "related_topics": [
+    {
+      "id": 170389,
+      "title": "Quiz marking scheme MSQ questions",
+      "fancy_title": "Quiz marking scheme MSQ questions",
+      "slug": "quiz-marking-scheme-msq-questions",
+      "posts_count": 2,
+      "reply_count": 0,
+      "highest_post_number": 2,
+      "image_url": null,
+      "created_at": "2025-03-18T15:04:08.661Z",
+      "last_posted_at": "2025-03-18T15:10:50.603Z",
+      "bumped": true,
+      "bumped_at": "2025-03-18T15:10:50.603Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "clarification",
+        "foundation-level"
+      ],
+      "tags_descriptions": {},
+      "like_count": 3,
+      "views": 72,
+      "category_id": 7,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 43749,
+            "username": "25f1001225",
+            "name": "MOKSH",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/25f1001225/{size}/121091_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster",
+          "user": {
+            "id": 39529,
+            "username": "Gurkirat",
+            "name": "Gurkirat Singh",
+            "avatar_template": "https://avatars.discourse-cdn.com/v4/letter/g/49beb7/{size}.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 31721,
+      "title": "Partial marking in quiz 1",
+      "fancy_title": "Partial marking in quiz 1",
+      "slug": "partial-marking-in-quiz-1",
+      "posts_count": 2,
+      "reply_count": 0,
+      "highest_post_number": 2,
+      "image_url": null,
+      "created_at": "2022-02-01T04:04:06.915Z",
+      "last_posted_at": "2022-02-01T04:38:07.583Z",
+      "bumped": true,
+      "bumped_at": "2022-02-01T04:38:07.583Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "compthink"
+      ],
+      "tags_descriptions": {},
+      "like_count": 1,
+      "views": 46,
+      "category_id": 20,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 8176,
+            "username": "22dp1000129",
+            "name": "Hemanth Punukollu",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/22dp1000129/{size}/17043_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster",
+          "user": {
+            "id": 9369,
+            "username": "rshambhwani",
+            "name": "Rahul Shambhwani",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/rshambhwani/{size}/15017_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 113123,
+      "title": "Partial marking in end term",
+      "fancy_title": "Partial marking in end term",
+      "slug": "partial-marking-in-end-term",
+      "posts_count": 3,
+      "reply_count": 1,
+      "highest_post_number": 3,
+      "image_url": null,
+      "created_at": "2023-12-24T06:12:48.693Z",
+      "last_posted_at": "2023-12-27T07:01:27.106Z",
+      "bumped": true,
+      "bumped_at": "2023-12-27T07:01:27.106Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "clarification",
+        "course-portal"
+      ],
+      "tags_descriptions": {},
+      "like_count": 4,
+      "views": 90,
+      "category_id": 34,
+      "featured_link": null,
+      "has_accepted_answer": true,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 11403,
+            "username": "vinnakotameghana",
+            "name": "vinnakota meghana",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/vinnakotameghana/{size}/67243_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster, Accepted Answer",
+          "user": {
+            "id": 3009,
+            "username": "Amit1",
+            "name": "Amit Kumar Gupta",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/amit1/{size}/30210_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 33636,
+      "title": "Quiz 1 marking",
+      "fancy_title": "Quiz 1 marking",
+      "slug": "quiz-1-marking",
+      "posts_count": 4,
+      "reply_count": 1,
+      "highest_post_number": 4,
+      "image_url": null,
+      "created_at": "2022-02-12T04:29:16.521Z",
+      "last_posted_at": "2022-02-14T07:34:26.291Z",
+      "bumped": true,
+      "bumped_at": "2022-02-14T07:34:26.291Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "compthink"
+      ],
+      "tags_descriptions": {},
+      "like_count": 0,
+      "views": 58,
+      "category_id": 20,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 8176,
+            "username": "22dp1000129",
+            "name": "Hemanth Punukollu",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/22dp1000129/{size}/17043_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster",
+          "user": {
+            "id": 30,
+            "username": "Omkar_Joshi",
+            "name": "Omkar Joshi",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/omkar_joshi/{size}/1245_2.png",
+            "trust_level": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 160646,
+      "title": "Request to Re evaluation of end term marks",
+      "fancy_title": "Request to Re evaluation of end term marks",
+      "slug": "request-to-re-evaluation-of-end-term-marks",
+      "posts_count": 6,
+      "reply_count": 3,
+      "highest_post_number": 6,
+      "image_url": null,
+      "created_at": "2024-12-27T12:49:07.841Z",
+      "last_posted_at": "2024-12-27T15:54:58.484Z",
+      "bumped": true,
+      "bumped_at": "2024-12-27T15:54:58.484Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "tags": [
+        "foundation-level"
+      ],
+      "tags_descriptions": {},
+      "like_count": 1,
+      "views": 77,
+      "category_id": 23,
+      "featured_link": null,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 27412,
+            "username": "24f1000261",
+            "name": "Kunjan sharma",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/24f1000261/{size}/119137_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 25024,
+            "username": "deepbist",
+            "name": "Dipanshu Singh Bist",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/deepbist/{size}/98467_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster",
+          "user": {
+            "id": 21765,
+            "username": "23f2004971",
+            "name": "Sulaksh Patnaik",
+            "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f2004971/{size}/66894_2.png",
+            "primary_group_name": "ds-students",
+            "flair_name": "ds-students",
+            "flair_group_id": 294,
+            "trust_level": 1
+          }
+        }
+      ]
+    }
+  ],
+  "summarizable": false,
+  "valid_reactions": [
+    "heart",
+    "+1",
+    "laughing",
+    "open_mouth",
+    "clap",
+    "confetti_ball",
+    "rocket",
+    "-1"
+  ],
+  "can_vote": false,
+  "vote_count": 0,
+  "user_voted": false,
+  "discourse_zendesk_plugin_zendesk_id": null,
+  "discourse_zendesk_plugin_zendesk_url": "https://your-url.zendesk.com/agent/tickets/",
+  "details": {
+    "can_edit": false,
+    "notification_level": 1,
+    "can_create_post": true,
+    "can_reply_as_new_topic": true,
+    "can_flag_topic": true,
+    "participants": [
+      {
+        "id": 21217,
+        "username": "Anshuman_Dave",
+        "name": "Anshuman Dave",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/anshuman_dave/{size}/66858_2.png",
+        "post_count": 2,
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_color": "",
+        "flair_bg_color": "",
+        "flair_group_id": 294,
+        "trust_level": 0
+      },
+      {
+        "id": 9398,
+        "username": "iamprasna",
+        "name": "Prasanna",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/iamprasna/{size}/13977_2.png",
+        "post_count": 1,
+        "primary_group_name": "course_support",
+        "flair_name": "course_support",
+        "flair_url": "scale-balanced",
+        "flair_color": "1affc6",
+        "flair_bg_color": "0040ff",
+        "flair_group_id": 41,
+        "trust_level": 4
+      }
+    ],
+    "created_by": {
+      "id": 21217,
+      "username": "Anshuman_Dave",
+      "name": "Anshuman Dave",
+      "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/anshuman_dave/{size}/66858_2.png"
+    },
+    "last_poster": {
+      "id": 9398,
+      "username": "iamprasna",
+      "name": "Prasanna",
+      "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/iamprasna/{size}/13977_2.png"
+    }
+  },
+  "pending_posts": [],
+  "bookmarks": []
+}

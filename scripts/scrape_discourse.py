@@ -79,6 +79,31 @@ def scrape_topics(session, ids):
             print(f"Failed topic {tid}: {r.status_code}")
             continue
         data = r.json()
+        
+        # NEW: fetch additional pages to include **all** posts, not just the first 20
+        total_posts = data.get("posts_count", 0)
+        all_posts = data.get("post_stream", {}).get("posts", [])
+
+        page = 1
+        while len(all_posts) < total_posts:
+            page += 1
+            page_url = f"https://discourse.onlinedegree.iitm.ac.in/t/{tid}.json?page={page}"
+            pr = session.get(page_url)
+            if pr.status_code != 200:
+                print(f"  Warning: could not fetch page {page} for topic {tid} (status {pr.status_code})")
+                break
+            pdata = pr.json()
+            new_posts = pdata.get("post_stream", {}).get("posts", [])
+            if not new_posts:
+                break
+            all_posts.extend(new_posts)
+            time.sleep(0.3)
+
+        # Replace the posts in the original data with the consolidated list
+        if all_posts and data.get("post_stream"):
+            data["post_stream"]["posts"] = all_posts
+            data["post_stream"]["stream"] = [p.get("id") or p.get("post_number") for p in all_posts]
+
         (RAW_DIR / f"topic-{tid}.json").write_text(json.dumps(data, indent=2))
         out.append({
             "id": data.get("id"),

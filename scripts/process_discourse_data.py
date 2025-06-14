@@ -164,6 +164,7 @@ def process_topic_file(file_path: Path) -> Dict[str, Any]:
         "tags": tags,
         "posts_count": len(posts),
         "views": data.get("views", 0),
+        "content": " ".join([p["content"] for p in all_posts_content]),
         "qa_pairs": qa_pairs,
         "all_posts": all_posts_content,
         "code_examples": code_examples,

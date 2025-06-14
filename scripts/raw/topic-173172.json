@@ -1990,6 +1990,1010 @@
         "can_unaccept_answer": false,
         "accepted_answer": false,
         "topic_accepted_answer": null
+      },
+      {
+        "id": 622233,
+        "name": "Carlton D'Silva",
+        "username": "carlton",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/carlton/{size}/56317_2.png",
+        "created_at": "2025-04-23T04:15:17.607Z",
+        "cooked": "<p>Please refer to this post.</p>\n<aside class=\"quote quote-modified\" data-post=\"2\" data-topic=\"173172\">\n  <div class=\"title\">\n    <div class=\"quote-controls\"></div>\n    <img alt=\"\" width=\"24\" height=\"24\" src=\"https://dub1.discourse-cdn.com/flex013/user_avatar/discourse.onlinedegree.iitm.ac.in/carlton/48/56317_2.png\" class=\"avatar\">\n    <a href=\"https://discourse.onlinedegree.iitm.ac.in/t/urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2/173172/2\">URGENT ATTN REQ: technical discrepancy and inconsistency in the evaluation scripts of graded assignment and project 2</a> <a class=\"badge-category__wrapper \" href=\"/c/courses/tds-kb/34\"><span data-category-id=\"34\" style=\"--category-badge-color: #0088CC; --category-badge-text-color: #FFFFFF; --parent-category-badge-color: #3AB54A;\" data-parent-category-id=\"9\" data-drop-close=\"true\" class=\"badge-category --has-parent\" title=\"This category is created to address subject-specific queries related to Tools in Data Science\"><span class=\"badge-category__name\">Tools in Data Science</span></span></a>\n  </div>\n  <blockquote>\n    Hi Premdeep, \nWe will update your score to consider \\n for SQL query. \nI had briefly read your post and incorrectly assumed that the script was not handling newline characters (which are invisible whitespaces). \nThe prescription given by Anand in a live session exclusively conducted by him was clear. \nWe should be able to copy paste your answer from the JSON response and put it in the GA and it should work. There only some notable exceptions, and this is where formatted text is expected. This qu\u2026\n  </blockquote>\n</aside>\n\n<p>Your logs have been shared with you. But I have pasted it here as a reference.</p>\n<pre><code class=\"lang-auto\">[\n    {\n        \"api\": \"http://172.232.122.21:8000/api/\",\n        \"test_code\": \"GA1_q18\",\n        \"status\": \"ERROR\",\n        \"error\": \"near \\\"\\\"SELECT SUM(units * price) AS total_sales\\\\n        FROM tickets\\\\n        WHERE TRIM(LOWER(type)) = 'gold';\\\"\\\": syntax error\"\n    },\n    {\n        \"api\": \"http://172.232.122.21:8000/api/\",\n        \"test_code\": \"GA4_q6\",\n        \"status\": \"FAILED\",\n        \"actual\": \"\\\"http://www.engineerbetter.com/blog/yubikey-all-the-things/\\\"\",\n        \"expected\": \"https://blog.jacobstechtavern.com/p/building-a-2fa-app-that-detects-patterns\"\n    },\n    {\n        \"api\": \"http://172.232.122.21:8000/api/\",\n        \"test_code\": \"GA2_q3\",\n        \"status\": \"FAILED\",\n        \"actual\": \"&lt;!--email_off--&gt; tag not found\",\n        \"expected\": \"&lt;!--email_off--&gt;23f1001231@ds.study.iitm.ac.in&lt;!--/email_off--&gt;\"\n    },\n    {\n        \"api\": \"http://172.232.122.21:8000/api/\",\n        \"test_code\": \"GA3_q2\",\n        \"status\": \"ERROR\",\n        \"error\": \"invalid literal for int() with base 10: '{\\\"model\\\": \\\"gpt-4o-mini\\\", \\\"messages\\\": [{\\\"role\\\": \\\"system\\\", \\\"content\\\": \\\"Respond in JSON\\\"}, {\\\"role\\\": \\\"user\\\", \\\"content\\\": \\\"Generate 10 random addresses in the US\\\"}], \\\"response_format\\\": {\\\"type\\\": \\\"json_schem\"\n    },\n    {\n        \"api\": \"http://172.232.122.21:8000/api/\",\n        \"test_code\": \"GA5_q7\",\n        \"status\": \"PASSED\"\n    }\n]\n</code></pre>\n<blockquote>\n<p>It is a fundamental principle of academic integrity and fairness that students receive the marks they have rightfully earned. Denying the correction of a clear and acknowledged error constitutes an unjust deprivation of my rightful academic standing. Such actions may not align with the principles of due process.</p>\n</blockquote>\n<p>We have you scored currently at 12 out of 20.<br>\nYou asked for a fair evaluation.<br>\n<strong>You actually should be scored 8 out of 20</strong>, reducing your T score from 82 to 78, just out of maintaining the principle of fairly evaluating everyone. This will result in a grade change for you.<br>\n<strong>If you still want a fair evaluation we are happy to forward your request to operations.</strong> <a class=\"mention\" href=\"/u/jkmadathil\">@jkmadathil</a>  has been consulted on this and course team together has looked at your grievance and we have made it publicly visible so that it can be judged fairly.</p>\n<p>Kind regards</p>",
+        "post_number": 23,
+        "post_type": 1,
+        "posts_count": 30,
+        "updated_at": "2025-04-23T05:13:14.086Z",
+        "reply_count": 0,
+        "reply_to_post_number": 19,
+        "quote_count": 0,
+        "incoming_link_count": 0,
+        "reads": 49,
+        "readers_count": 48,
+        "score": 9.8,
+        "yours": false,
+        "topic_id": 173172,
+        "topic_slug": "urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2",
+        "display_username": "Carlton D'Silva",
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_bg_color": "",
+        "flair_color": "",
+        "flair_group_id": 294,
+        "badges_granted": [],
+        "version": 2,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "read": false,
+        "user_title": "Regular",
+        "title_is_group": false,
+        "reply_to_user": {
+          "id": 18074,
+          "username": "23f1001231",
+          "name": "PREMDEEP MAITI",
+          "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f1001231/{size}/67068_2.png"
+        },
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "group_moderator": true,
+        "user_id": 16094,
+        "hidden": false,
+        "trust_level": 3,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2/173172/23",
+        "user_cakedate": "2023-01-25",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": null
+      },
+      {
+        "id": 622237,
+        "name": "Saransh Saini",
+        "username": "Saransh_Saini",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/saransh_saini/{size}/123495_2.png",
+        "created_at": "2025-04-23T04:35:34.599Z",
+        "cooked": "<p>Hi <a class=\"mention\" href=\"/u/23f1002997\">@23f1002997</a><br>\nIt\u2019s unfortunate that you had to go through this, but since it was your mistake to not update your URL despite repeated notifications, under whatever assumptions, there is nothing we can do. I can understand that a small mistake like this has lead to a setback for a term, and honestly I can relate very strongly with this. But take it as a life lesson and try to score well in the next term.</p>\n<p>Best wishes<br>\nSaransh Saini</p>",
+        "post_number": 24,
+        "post_type": 1,
+        "posts_count": 30,
+        "updated_at": "2025-04-23T04:35:34.599Z",
+        "reply_count": 0,
+        "reply_to_post_number": 22,
+        "quote_count": 0,
+        "incoming_link_count": 1,
+        "reads": 41,
+        "readers_count": 40,
+        "score": 13.0,
+        "yours": false,
+        "topic_id": 173172,
+        "topic_slug": "urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2",
+        "display_username": "Saransh Saini",
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_bg_color": "",
+        "flair_color": "",
+        "flair_group_id": 294,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "read": false,
+        "user_title": "Course TA",
+        "title_is_group": false,
+        "reply_to_user": {
+          "id": 24773,
+          "username": "23f1002997",
+          "name": "Akbar Ali ",
+          "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f1002997/{size}/66858_2.png"
+        },
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "group_moderator": true,
+        "user_id": 13078,
+        "hidden": false,
+        "trust_level": 1,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2/173172/24",
+        "user_cakedate": "2022-05-02",
+        "user_birthdate": "1904-08-04",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": null
+      },
+      {
+        "id": 622292,
+        "name": "Saransh Saini",
+        "username": "Saransh_Saini",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/saransh_saini/{size}/123495_2.png",
+        "created_at": "2025-04-23T09:40:14.942Z",
+        "cooked": "<p>Hi <a class=\"mention\" href=\"/u/algsoch\">@Algsoch</a>,<br>\n<strong>Case 1:</strong> This might be an error. Send me your github pages endpoint I\u2019ll have a look.<br>\n<strong>Case 2:</strong> Question asked for the recent post where 2FA was mentioned with at least 95 points.<br>\n<strong>Case 3:</strong> Question asked for the number of times key \u201cY\u201d appears.</p>",
+        "post_number": 25,
+        "post_type": 1,
+        "posts_count": 30,
+        "updated_at": "2025-04-23T09:40:14.942Z",
+        "reply_count": 1,
+        "reply_to_post_number": 18,
+        "quote_count": 0,
+        "incoming_link_count": 0,
+        "reads": 37,
+        "readers_count": 36,
+        "score": 12.2,
+        "yours": false,
+        "topic_id": 173172,
+        "topic_slug": "urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2",
+        "display_username": "Saransh Saini",
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_bg_color": "",
+        "flair_color": "",
+        "flair_group_id": 294,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "read": false,
+        "user_title": "Course TA",
+        "title_is_group": false,
+        "reply_to_user": {
+          "id": 35950,
+          "username": "Algsoch",
+          "name": "Vicky Kumar",
+          "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/algsoch/{size}/111675_2.png"
+        },
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "group_moderator": true,
+        "user_id": 13078,
+        "hidden": false,
+        "trust_level": 1,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2/173172/25",
+        "user_cakedate": "2022-05-02",
+        "user_birthdate": "1904-08-04",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": null
+      },
+      {
+        "id": 622298,
+        "name": "Saransh Saini",
+        "username": "Saransh_Saini",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/saransh_saini/{size}/123495_2.png",
+        "created_at": "2025-04-23T10:02:40.638Z",
+        "cooked": "<p>Hi <a class=\"mention\" href=\"/u/23f1001231\">@23f1001231</a><br>\nYour submission was validated by the course portal, so it testifies its correctness. But I want to clarify our side.<br>\nI checked your response. The problem is not that your tag is present in <code>&lt;a&gt;</code> tags. Its because your closing email_off tag doesn\u2019t have a slash as mentioned in the question page.<br>\n<img src=\"https://europe1.discourse-cdn.com/flex013/uploads/iitm/original/3X/1/2/12175ad65255c16916632d78f6798feac06a8910.png\" alt=\"image\" data-base62-sha1=\"2A2DbhkfQJxHIYbb2kNIgxAd3OM\" width=\"656\" height=\"79\"></p>\n<p>Moreover this was specifically mentioned in the question we sent you in the API request.</p>\n<pre data-code-wrap=\"python\"><code class=\"lang-python\">\"Publish a page using GitHub Pages that showcases your work. Ensure that your email address 23f1001231@ds.study.iitm.ac.in is in the page's HTML. GitHub pages are served via CloudFlare which obfuscates emails. So, wrap your email address inside a: &lt;!--email_off--&gt;23f1001231@ds.study.iitm.ac.in&lt;!--/email_off--&gt; What is the GitHub Pages URL? It might look like: https://[USER].github.io/[REPO]/\"\n</code></pre>\n<p>So, in short it wasn\u2019t a bug in our script, rather leniency given by the course portal.</p>",
+        "post_number": 26,
+        "post_type": 1,
+        "posts_count": 30,
+        "updated_at": "2025-04-23T10:05:16.273Z",
+        "reply_count": 0,
+        "reply_to_post_number": 3,
+        "quote_count": 0,
+        "incoming_link_count": 0,
+        "reads": 39,
+        "readers_count": 38,
+        "score": 7.6,
+        "yours": false,
+        "topic_id": 173172,
+        "topic_slug": "urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2",
+        "display_username": "Saransh Saini",
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_bg_color": "",
+        "flair_color": "",
+        "flair_group_id": 294,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "link_counts": [
+          {
+            "url": "https://discourse.onlinedegree.iitm.ac.in/t/urgent-attn-req-another-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2/173175/2",
+            "internal": true,
+            "reflection": true,
+            "title": "URGENT ATTN REQ: Another technical discrepancy and inconsistency in the evaluation scripts of graded assignment and project 2",
+            "clicks": 0
+          }
+        ],
+        "read": false,
+        "user_title": "Course TA",
+        "title_is_group": false,
+        "reply_to_user": {
+          "id": 18074,
+          "username": "23f1001231",
+          "name": "PREMDEEP MAITI",
+          "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/23f1001231/{size}/67068_2.png"
+        },
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "group_moderator": true,
+        "user_id": 13078,
+        "hidden": false,
+        "trust_level": 1,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2/173172/26",
+        "user_cakedate": "2022-05-02",
+        "user_birthdate": "1904-08-04",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": null
+      },
+      {
+        "id": 622315,
+        "name": "Vicky Kumar",
+        "username": "Algsoch",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/algsoch/{size}/111675_2.png",
+        "created_at": "2025-04-23T12:13:05.921Z",
+        "cooked": "<aside class=\"onebox githubrepo\" data-onebox-src=\"https://github.com/algsoch/portfolio-1744830932\">\n  <header class=\"source\">\n\n      <a href=\"https://github.com/algsoch/portfolio-1744830932\" target=\"_blank\" rel=\"noopener nofollow ugc\">github.com</a>\n  </header>\n\n  <article class=\"onebox-body\">\n    <div class=\"github-row\" data-github-private-repo=\"false\">\n  <img width=\"690\" height=\"344\" src=\"https://europe1.discourse-cdn.com/flex013/uploads/iitm/optimized/3X/f/0/f09d3449e5f92c59aa581d28ff633e44e2941426_2_690x344.png\" class=\"thumbnail\" data-dominant-color=\"F3ECEA\">\n\n  <h3><a href=\"https://github.com/algsoch/portfolio-1744830932\" target=\"_blank\" rel=\"noopener nofollow ugc\">GitHub - algsoch/portfolio-1744830932: Portfolio page for 24f2006438@ds.study.iitm.ac.in</a></h3>\n\n    <p><span class=\"github-repo-description\">Portfolio page for 24f2006438@ds.study.iitm.ac.in</span></p>\n</div>\n\n  </article>\n\n  <div class=\"onebox-metadata\">\n    \n    \n  </div>\n\n  <div style=\"clear: both\"></div>\n</aside>\n",
+        "post_number": 27,
+        "post_type": 1,
+        "posts_count": 30,
+        "updated_at": "2025-04-23T12:13:05.921Z",
+        "reply_count": 0,
+        "reply_to_post_number": 25,
+        "quote_count": 0,
+        "incoming_link_count": 0,
+        "reads": 37,
+        "readers_count": 36,
+        "score": 7.4,
+        "yours": false,
+        "topic_id": 173172,
+        "topic_slug": "urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2",
+        "display_username": "Vicky Kumar",
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_bg_color": "",
+        "flair_color": "",
+        "flair_group_id": 294,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "link_counts": [
+          {
+            "url": "https://github.com/algsoch/portfolio-1744830932",
+            "internal": false,
+            "reflection": false,
+            "title": "GitHub - algsoch/portfolio-1744830932: Portfolio page for 24f2006438@ds.study.iitm.ac.in",
+            "clicks": 3
+          }
+        ],
+        "read": false,
+        "user_title": null,
+        "reply_to_user": {
+          "id": 13078,
+          "username": "Saransh_Saini",
+          "name": "Saransh Saini",
+          "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/saransh_saini/{size}/123495_2.png"
+        },
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "user_id": 35950,
+        "hidden": false,
+        "trust_level": 1,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2/173172/27",
+        "user_cakedate": "2024-09-21",
+        "user_birthdate": "1904-06-19",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": null
+      },
+      {
+        "id": 622380,
+        "name": "Srishty",
+        "username": "Srishty_Snehi",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/srishty_snehi/{size}/120835_2.png",
+        "created_at": "2025-04-23T21:30:47.987Z",
+        "cooked": "<p><a class=\"mention\" href=\"/u/carlton\">@carlton</a> please look into this!!!</p>",
+        "post_number": 28,
+        "post_type": 1,
+        "posts_count": 30,
+        "updated_at": "2025-04-23T21:30:47.987Z",
+        "reply_count": 1,
+        "reply_to_post_number": 20,
+        "quote_count": 0,
+        "incoming_link_count": 0,
+        "reads": 34,
+        "readers_count": 33,
+        "score": 11.8,
+        "yours": false,
+        "topic_id": 173172,
+        "topic_slug": "urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2",
+        "display_username": "Srishty",
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_bg_color": "",
+        "flair_color": "",
+        "flair_group_id": 294,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "read": false,
+        "user_title": null,
+        "reply_to_user": {
+          "id": 45632,
+          "username": "Srishty_Snehi",
+          "name": "Srishty",
+          "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/srishty_snehi/{size}/120835_2.png"
+        },
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "user_id": 45632,
+        "hidden": false,
+        "trust_level": 0,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2/173172/28",
+        "user_cakedate": "2025-02-23",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": null
+      },
+      {
+        "id": 622395,
+        "name": "Carlton D'Silva",
+        "username": "carlton",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/carlton/{size}/56317_2.png",
+        "created_at": "2025-04-24T04:05:26.806Z",
+        "cooked": "<p>Hi Shrishty,</p>\n<p>We have shared the logs with you. The HTTP 500 error indicates there was a problem with your backend and was generating an error.</p>\n<pre><code class=\"lang-auto\">[\n    {\n        \"api\": \"https://tdsproject2-production.up.railway.app/api/\",\n        \"test_code\": \"GA1_q18\",\n        \"status\": \"FAILED\",\n        \"error\": \"HTTP 500: {\\\"detail\\\":\\\"cannot access local variable 'httpx' where it is not associated with a value\\\"}\"\n    },\n    {\n        \"api\": \"https://tdsproject2-production.up.railway.app/api/\",\n        \"test_code\": \"GA4_q6\",\n        \"status\": \"FAILED\",\n        \"error\": \"HTTP 500: {\\\"detail\\\":\\\"cannot access local variable 'httpx' where it is not associated with a value\\\"}\"\n    },\n    {\n        \"api\": \"https://tdsproject2-production.up.railway.app/api/\",\n        \"test_code\": \"GA2_q3\",\n        \"status\": \"FAILED\",\n        \"error\": \"HTTP 500: {\\\"detail\\\":\\\"cannot access local variable 'httpx' where it is not associated with a value\\\"}\"\n    },\n    {\n        \"api\": \"https://tdsproject2-production.up.railway.app/api/\",\n        \"test_code\": \"GA3_q2\",\n        \"status\": \"FAILED\",\n        \"error\": \"HTTP 500: {\\\"detail\\\":\\\"cannot access local variable 'httpx' where it is not associated with a value\\\"}\"\n    },\n    {\n        \"api\": \"https://tdsproject2-production.up.railway.app/api/\",\n        \"test_code\": \"GA5_q7\",\n        \"status\": \"FAILED\",\n        \"error\": \"HTTP 500: {\\\"detail\\\":\\\"cannot access local variable 'httpx' where it is not associated with a value\\\"}\"\n    }\n]\n</code></pre>\n<p>Kind regards</p>",
+        "post_number": 29,
+        "post_type": 1,
+        "posts_count": 30,
+        "updated_at": "2025-04-24T04:07:14.557Z",
+        "reply_count": 0,
+        "reply_to_post_number": 28,
+        "quote_count": 0,
+        "incoming_link_count": 0,
+        "reads": 32,
+        "readers_count": 31,
+        "score": 6.4,
+        "yours": false,
+        "topic_id": 173172,
+        "topic_slug": "urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2",
+        "display_username": "Carlton D'Silva",
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_bg_color": "",
+        "flair_color": "",
+        "flair_group_id": 294,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "read": false,
+        "user_title": "Regular",
+        "title_is_group": false,
+        "reply_to_user": {
+          "id": 45632,
+          "username": "Srishty_Snehi",
+          "name": "Srishty",
+          "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/srishty_snehi/{size}/120835_2.png"
+        },
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "group_moderator": true,
+        "user_id": 16094,
+        "hidden": false,
+        "trust_level": 3,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2/173172/29",
+        "user_cakedate": "2023-01-25",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": null
+      },
+      {
+        "id": 623515,
+        "name": "Sudhish Narayan S",
+        "username": "Sudhishnarayan",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/sudhishnarayan/{size}/66833_2.png",
+        "created_at": "2025-04-29T14:35:55.722Z",
+        "cooked": "<p>Sir, I have extracted the files from the GitHub Repository, built my DockerFile withe the DockerImage I have posted. The build is successful and the dockerimage is also running sir. I have attached the screen shot below</p>\n<p><div class=\"lightbox-wrapper\"><a class=\"lightbox\" href=\"https://europe1.discourse-cdn.com/flex013/uploads/iitm/original/3X/5/f/5f58734cfd90a7011b3effca56b9023d51b773c0.png\" data-download-href=\"/uploads/short-url/dBsRyoAfPZZ0uPWv6BaWMFfsBWM.png?dl=1\" title=\"Screenshot 2025-04-12 115342\" rel=\"noopener nofollow ugc\"><img src=\"https://europe1.discourse-cdn.com/flex013/uploads/iitm/original/3X/5/f/5f58734cfd90a7011b3effca56b9023d51b773c0.png\" alt=\"Screenshot 2025-04-12 115342\" data-base62-sha1=\"dBsRyoAfPZZ0uPWv6BaWMFfsBWM\" width=\"690\" height=\"330\" data-dominant-color=\"141C22\"><div class=\"meta\"><svg class=\"fa d-icon d-icon-far-image svg-icon\" aria-hidden=\"true\"><use href=\"#far-image\"></use></svg><span class=\"filename\">Screenshot 2025-04-12 115342</span><span class=\"informations\">1466\u00d7702 50.4 KB</span><svg class=\"fa d-icon d-icon-discourse-expand svg-icon\" aria-hidden=\"true\"><use href=\"#discourse-expand\"></use></svg></div></a></div></p>\n<p>Sir, But I couldn\u2019t run the last command you gave,</p>\n<pre><code class=\"lang-auto\">uv run evaluate.py --email &lt;any email&gt; --token_counter 1 --external_port 8000\n</code></pre>\n<p>As I dont have evaluate.py</p>\n<p>But, the DockerImage is built and is running without error sir.<br>\nPlease guide me after this sir<br>\nThank You So much sir</p>\n<p>Sir, I already posted before 10 days, I didn\u2019t get any reply. I am posting again</p>",
+        "post_number": 30,
+        "post_type": 1,
+        "posts_count": 30,
+        "updated_at": "2025-04-29T14:35:55.722Z",
+        "reply_count": 0,
+        "reply_to_post_number": null,
+        "quote_count": 0,
+        "incoming_link_count": 0,
+        "reads": 18,
+        "readers_count": 17,
+        "score": 3.6,
+        "yours": false,
+        "topic_id": 173172,
+        "topic_slug": "urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2",
+        "display_username": "Sudhish Narayan S",
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_bg_color": "",
+        "flair_color": "",
+        "flair_group_id": 294,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "read": false,
+        "user_title": null,
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "user_id": 32407,
+        "hidden": false,
+        "trust_level": 1,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2/173172/30",
+        "user_cakedate": "2024-06-04",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": null
+      },
+      {
+        "id": 623516,
+        "name": "Sudhish Narayan S",
+        "username": "Sudhishnarayan",
+        "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/sudhishnarayan/{size}/66833_2.png",
+        "created_at": "2025-04-29T14:37:49.423Z",
+        "cooked": "<p>Good Afternoon Sir.<br>\nThis is regarding project 1 and project 2.</p>\n<p><strong>Project-1 Evaluation</strong><br>\nSir, For the project 1, I have written the code, uploaded in GitHub and the dockerfile image is created and uploaded successfully.<br>\nSir, I already contacted regarding Project - 1, you said to check it by replicating the test environment. I did till running the dockerfile but I needed evaluate.py sir, which I didn\u2019t get it. I got only 5 marks sir. Can you please check my code once sir and verify it as I have written the code and the dockerfile is running successfully.</p>\n<p><strong>Project-2 Evaluation</strong><br>\nRegarding project 2 also, I have uploaded my code in GitHub and deployed my app in Vercel. But, I got 0 sir. Can you check my code once again and verify it? According to the guidance given, I deployed my app through Vercel. The app got deployed but I am getting 404 Error, even after trying any troubleshooting method. Maybe, Vercel is in development stage.</p>\n<p>Sir, but I wrote the code and deployed, but I got 0 marks only. Please check it and guide me to get it corrected. Sir, due to the projects I got poor marks on TDS. Please, I request you to re-evaluate and give me correct marks.</p>\n<p>In anticipation of quick response<br>\nThank You</p>\n<p>Sir, I have filled the E-Mail for discrepancy, but there is no change. Please help me out sir.</p>\n<p>Thank You</p>",
+        "post_number": 31,
+        "post_type": 1,
+        "posts_count": 30,
+        "updated_at": "2025-04-29T14:37:49.423Z",
+        "reply_count": 1,
+        "reply_to_post_number": null,
+        "quote_count": 0,
+        "incoming_link_count": 0,
+        "reads": 23,
+        "readers_count": 22,
+        "score": 9.4,
+        "yours": false,
+        "topic_id": 173172,
+        "topic_slug": "urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2",
+        "display_username": "Sudhish Narayan S",
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_bg_color": "",
+        "flair_color": "",
+        "flair_group_id": 294,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "read": false,
+        "user_title": null,
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "user_id": 32407,
+        "hidden": false,
+        "trust_level": 1,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2/173172/31",
+        "user_cakedate": "2024-06-04",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": null
+      },
+      {
+        "id": 623521,
+        "name": "Jivraj Singh Shekhawat",
+        "username": "Jivraj",
+        "avatar_template": "https://avatars.discourse-cdn.com/v4/letter/j/b9bd4f/{size}.png",
+        "created_at": "2025-04-29T15:17:42.651Z",
+        "cooked": "<p>Project 1 : You tried to copy parent folder(Ref:line number 8 in your <a href=\"https://github.com/sudhishssn134/project_1_tds/blob/main/Dockerfile\" rel=\"noopener nofollow ugc\">Dockerfile</a>) but there is no parent folder with respect to github repo\u2019s root folder, so it fails evaluation.</p>\n<p>Project 2 : Response we received through google form was <a href=\"http://127.0.0.1:8000/api\" rel=\"noopener nofollow ugc\">http://127.0.0.1:8000/api</a> which is local host url not a vercel endpoint.</p>",
+        "post_number": 32,
+        "post_type": 1,
+        "posts_count": 30,
+        "updated_at": "2025-04-29T15:18:23.949Z",
+        "reply_count": 0,
+        "reply_to_post_number": 31,
+        "quote_count": 0,
+        "incoming_link_count": 0,
+        "reads": 23,
+        "readers_count": 22,
+        "score": 4.2,
+        "yours": false,
+        "topic_id": 173172,
+        "topic_slug": "urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2",
+        "display_username": "Jivraj Singh Shekhawat",
+        "primary_group_name": "ds-students",
+        "flair_name": "ds-students",
+        "flair_url": null,
+        "flair_bg_color": "",
+        "flair_color": "",
+        "flair_group_id": 294,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "link_counts": [
+          {
+            "url": "https://github.com/sudhishssn134/project_1_tds/blob/main/Dockerfile",
+            "internal": false,
+            "reflection": false,
+            "title": "project_1_tds/Dockerfile at main \u00b7 sudhishssn134/project_1_tds \u00b7 GitHub",
+            "clicks": 0
+          },
+          {
+            "url": "http://127.0.0.1:8000/api",
+            "internal": false,
+            "reflection": false,
+            "clicks": 0
+          },
+          {
+            "url": "https://discourse.onlinedegree.iitm.ac.in/t/project-1-evaluation-second-mail-is-not-correct-and-reports-files-missing-while-they-are-present/171477/13",
+            "internal": true,
+            "reflection": true,
+            "title": "Project 1 Evaluation second mail is not correct and reports files missing while they are present",
+            "clicks": 0
+          }
+        ],
+        "read": false,
+        "user_title": "Course TA",
+        "title_is_group": false,
+        "reply_to_user": {
+          "id": 32407,
+          "username": "Sudhishnarayan",
+          "name": "Sudhish Narayan S",
+          "avatar_template": "/user_avatar/discourse.onlinedegree.iitm.ac.in/sudhishnarayan/{size}/66833_2.png"
+        },
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "group_moderator": true,
+        "user_id": 15651,
+        "hidden": false,
+        "trust_level": 2,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2/173172/32",
+        "user_cakedate": "2023-01-25",
+        "reactions": [],
+        "current_user_reaction": null,
+        "reaction_users_count": 0,
+        "current_user_used_main_reaction": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": null
       }
     ],
     "stream": [
@@ -2031,11 +3035,11 @@
       54
     ],
     [
-      6,
+      9,
       53
     ],
     [
-      20,
+      21,
       52
     ],
     [
@@ -2045,10 +3049,6 @@
     [
       28,
       46
-    ],
-    [
-      30,
-      45
     ]
   ],
   "tags": [

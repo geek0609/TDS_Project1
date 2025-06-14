@@ -392,6 +392,15 @@
                 </div>
                 <span>Deployed</span>
             </div>
+            
+            <!-- Debug Panel (hidden by default) -->
+            <div id="debugPanel" style="position: absolute; top: 60px; right: 20px; background: rgba(0,0,0,0.8); color: white; padding: 10px; border-radius: 5px; font-size: 10px; display: none;">
+                <div>Input Disabled: <span id="debugInputDisabled">false</span></div>
+                <div>Button Disabled: <span id="debugButtonDisabled">false</span></div>
+                <div>API URL: <span id="debugApiUrl"></span></div>
+                <div>Last Error: <span id="debugLastError">none</span></div>
+                <button onclick="resetInterface()" style="margin-top: 5px; font-size: 10px;">Reset Interface</button>
+            </div>
         </div>
 
         <div class="chat-messages" id="chatMessages">
@@ -442,7 +451,7 @@
                     placeholder="Ask me anything about The Data Science course..."
                     rows="1"
                 ></textarea>
-                <button id="sendButton" class="send-button" onclick="sendMessage()">
+                <button id="sendButton" class="send-button">
                     <i class="fas fa-paper-plane"></i>
                 </button>
             </div>
@@ -552,6 +561,8 @@
             const message = chatInput.value.trim();
             if (!message) return;
 
+            console.log('Sending message:', message);
+
             // Disable input and button
             chatInput.disabled = true;
             sendButton.disabled = true;
@@ -567,6 +578,7 @@
             showTyping();
             
             try {
+                console.log('Making API request to:', API_URL);
                 const response = await fetch(API_URL, {
                     method: 'POST',
                     headers: {
@@ -575,11 +587,14 @@
                     body: JSON.stringify({ question: message })
                 });
                 
+                console.log('Response status:', response.status);
+                
                 if (!response.ok) {
                     throw new Error(`HTTP ${response.status}: ${response.statusText}`);
                 }
                 
                 const data = await response.json();
+                console.log('Response data:', data);
                 
                 // Hide typing indicator
                 hideTyping();
@@ -588,7 +603,7 @@
                 addMessage(data.answer, false, data.links || []);
                 
             } catch (error) {
-                console.error('Error:', error);
+                console.error('Error in sendMessage:', error);
                 hideTyping();
                 
                 let errorMessage = 'Sorry, I encountered an error while processing your question. ';
@@ -602,10 +617,12 @@
                 
                 showError(errorMessage);
             } finally {
-                // Re-enable input and button
+                // Re-enable input and button with explicit logging
+                console.log('Re-enabling input and button');
                 chatInput.disabled = false;
                 sendButton.disabled = false;
                 chatInput.focus();
+                console.log('Input disabled:', chatInput.disabled, 'Button disabled:', sendButton.disabled);
             }
         }
 
@@ -613,6 +630,45 @@
         window.addEventListener('load', () => {
             chatInput.focus();
         });
+
+        // Add click handler for send button
+        sendButton.addEventListener('click', sendMessage);
+
+        // Reset function to ensure interface is always responsive
+        function resetInterface() {
+            chatInput.disabled = false;
+            sendButton.disabled = false;
+            hideTyping();
+            chatInput.focus();
+            updateDebugPanel();
+        }
+
+        // Debug panel update function
+        function updateDebugPanel() {
+            document.getElementById('debugInputDisabled').textContent = chatInput.disabled;
+            document.getElementById('debugButtonDisabled').textContent = sendButton.disabled;
+            document.getElementById('debugApiUrl').textContent = API_URL;
+        }
+
+        // Show debug panel with Ctrl+D
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'd') {
+                e.preventDefault();
+                const debugPanel = document.getElementById('debugPanel');
+                debugPanel.style.display = debugPanel.style.display === 'none' ? 'block' : 'none';
+                updateDebugPanel();
+            }
+        });
+
+        // Reset interface every 30 seconds as a safety measure
+        setInterval(() => {
+            updateDebugPanel();
+            // Only reset if something seems stuck
+            if (chatInput.disabled && sendButton.disabled) {
+                console.warn('Interface appears stuck, auto-resetting...');
+                resetInterface();
+            }
+        }, 30000);
 
         // Test API connection on load
         fetch('https://p1-jhmvr9emt-geek0609s-projects.vercel.app/api/health')

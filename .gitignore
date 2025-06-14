@@ -67,9 +67,6 @@ logs/
 # Vercel
 .vercel
 
-# Data files (optional - uncomment if you want to exclude processed data)
-scripts/processed/
-scripts/processed_course/ 
 
 tools-in-data-science-public/
 

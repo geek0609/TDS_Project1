@@ -1,0 +1,450 @@
+{
+  "qa_pairs": [
+    {
+      "question": "Dear all, I’m thrilled to share a project inspired by my experience in the *Tools in Data Science * course: LLM Classroom Assignment Evaluator. This is the basic prototype. This tool leverages Google APIs and LLMs to automate grading and feedback for Google Classroom assignments, making evaluation faster and more insightful for educators. A heartfelt thanks to @s.anand, our course instructor, and TAs @Carlton and @Jivraj, whose guidance on LLM function calling and real-world applications made this project possible. I’d love to invite contributions from this amazing community to: Expand functionality and evaluation models. Fix bugs and optimize workflows. Improve documentation for broader accessibility. The GitHub repository is open for forks, pull requests, and ideas. I look forward to collaborating with you all! Update: here is a video explaining the process - https://youtu.be/xa4zhP-S3NE?feature=shared Best regards, Avinash Shrivastava",
+      "answer": "Hi Avinash, Thats great work! I am glad you were able to use what you learnt from the course for something so practical. I hope you continue to develop and refine it, take feedback from the stakeholders who would be interested in this approach. I see a lot of potential in this project. Kind regards",
+      "question_author": "Avinash Shrivastava ",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "where we can find tools in data science calendar link I cannot find it in my course tab?",
+      "answer": "Hi Sahil, Please find it at the following location. Screenshot 2025-01-12 at 18.25.312474×1306 330 KB Kind regards",
+      "question_author": "Sahil Raj ",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 3
+    },
+    {
+      "question": "My doubt is that “Will there be any coding level questions in the ROE and the weekly graded assignments?”",
+      "answer": "In ROE , usually you have to find the answers of the questions by solving them using codes and tools explained in the course . For example you have a large pdf file of some patients and their disease and you are said to find number patients having some XYZ disease in that pdf . Now you can get this answer by using parsing tools and few lines of codes and after getting the results you can write that answer back in the portal . Same goes for assignments , they will be more like minor project works.",
+      "question_author": "Divyasree",
+      "answer_author": "ADITYA SIDDHARTH JYOTI",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "Can anyone forward the specified links of the books(iitm certified(logo)) or pdf’s for preparation?",
+      "answer": "@Divya1 there are no IITM certified books nor PDFs for Tools in Data Science. The site https://tds.s-anand.net/ is the reference. We update the content regularly. You might want to track the changes for recent updates.",
+      "question_author": "Divyasree",
+      "answer_author": "Anand S",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "I recently explored the details of the extra credit project and found the problem statement and its clever framing both fascinating and challenging. While I’m eager to take it on, I feel my current skill set might fall short of the project’s demands. I’m committed to pushing my boundaries and would greatly appreciate your guidance on topics or resources that could help me prepare more effectively during my free time. I want to ensure I can contribute something meaningful and engaging, even if the outcome isn’t perfect. If there are any recommended readings, practice problems, or areas of focus that you believe would provide a solid foundation for approaching this project, I would be very grateful for your suggestions. Thank you for considering my request. I’m genuinely excited by the challenge and hope to make the most of this opportunity to learn and grow under your guidance. @s.anand ChatGPT can make mistakes. Check important info.",
+      "answer": "@23f1002382 - The topics & resources that might help prepare for the projects at https://tds.s-anand.net/. It’s an evolving site. We keep adding whatever’s required that’s (a) new or (b) unknown to some students. Please go through the content. Where you find gaps, please let us know. If it’s a need across multiple students, we’ll find / create the content around it. Looking forward to your project!",
+      "question_author": "Andrew David",
+      "answer_author": "Anand S",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "Hi Team, I understand there have been 2 TA-led sessions on 16th and 17th Jan, however the recordings were not found in the playlist - https://www.youtube.com/playlist?list=PL_h5u1jMeBCl1BquBhgunA4t08XAxsA-C Please help if these were recorded or if the link is wrong. Thanks in advance!",
+      "answer": "Hi Koustubh, We will upload session recordings by tomorrow. Thanks and Kind regards",
+      "question_author": "Koustubh Ramakrishnan",
+      "answer_author": "Jivraj Singh Shekhawat",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "The knowledge required by students to do TDS has been revised during recent terms. ( Mentioned that as per industrial standards/ needs). Additional programming skills are required(in addition to Python) to follow the TDS Course. That means indirectly, one should complete many courses diploma in programming before doing TDS. In such a case, how to drop the course Tools In Data Science(already registered) and get it replaced with another course to save time and without incurring financial losses(as dropping a course refunds only a certain percentage of fees amount paid for the course), and do it again later in terms. It’s completely IIT Madras’s fault since it was mentioned in the academics site that no prerequisites were required for the course while the reality turned out to be far from promises. I want to either get the course structure for the TDS revised or get it replaced with some another course; incase of some course fee difference, I will pay the difference amount.",
+      "answer": "i think you would have to mail this to the support",
+      "question_author": "Rishit",
+      "answer_author": "B R GIRI SUBRAHMANYA",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "Hi Everyone, For today’s live session [23-01-2025] we will be giving an elaborate tutorial on using Flask framework for API creation, also we will discuss the last 3 questions of GA1. Flask is a Python Framework used for creating APIs and accessing databases. We highly encourage everyone to join this session at 8pm, as Flask is an important topic which might be useful in your projects and even ROE. Also anyone who is not enrolled in TDS, but wished to learn about Flask are also encouraged to join. Link: meet.google.com/brz-ksac-evo Timings: 8pm - 10pm Regards, Saransh Saini TDS TA",
+      "answer": "This session will be uploaded on YouTube soon. In the meanwhile you can access the recording here drive.google.com Live Session - TDS - 2025/01/23 19:54 GMT+05:30 - Recording Google Drive file.",
+      "question_author": "Saransh Saini",
+      "answer_author": "Saransh Saini",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 4
+    },
+    {
+      "question": "I wanted to seek clarification regarding the deadline for GA2. The latest email received today mentions the deadline as 26th January, whereas an earlier email stated 2nd February, which is also reflected on the dashboard. Could you please confirm the correct deadline to avoid any confusion? image1056×289 15.4 KB",
+      "answer": "Deadline for GA 2 has been shifted to 2nd Feb. Regards, TDS TA",
+      "question_author": "Shalini Saravanan",
+      "answer_author": "Saransh Saini",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "Respected Sir @carlton, I realized there are still many topics to learn in order to complete the TDS Course ( With an A or S Grade) as I have missed some questions (Couldn’t do even after studying the videos ) . Therefore wanted to learn and regardless of the scoring I still wish to complete GA1 but, I see that I can’t access the questions anymore … Is there any way to give the answers in the portal and check. I just want to learn and test my knowledge Thank You, 22f2000559.",
+      "answer": "@22f2000559 – Good point. I’ve enabled access now. @parthpatel – nice workaround!",
+      "question_author": "Anushka Kumar",
+      "answer_author": "Anand S",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 4
+    },
+    {
+      "question": "In the discussion Thread for Project 1, it was said that there will be live sessions conducted for the project, however, there hasn’t been one specifically for it. If there are live sessions that will be conducted, can we have some hands on tutorial for the project ?",
+      "answer": "Hi Sakthivel, We are still covering the precursors for Project. Once we cover the required topics then we will have sessions that work through the project with the students. Kind regards",
+      "question_author": "Sakthivel S",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "@carlton @s.anand dear sir i have taken tds in this term. after the first assignment there was no checkbox provided to any graded assignment .for this reason i just saved the assignment at the portal link .and now after the deadline its showing my assignment had not been submitted. pls do something please do it fast.",
+      "answer": "Your scores are evaluated on a site that is external to the seek portal and is not integrated with the seek portal. Therefore seek does not know if you have submitted or not and by default says that it has not been submitted because it cannot see your external evaluation. There will not be a fix for this for some time. Scores for GA1, GA2, GA3, GA4, GA5, Project1, Project2, ROE will NOT be inside your seek portal. The scores will only be visible in the dashboard. Just ignore anything inside seek portal. The dashboard is where all your subject score cards exists. As stated in multiple places on discourse as well as in live sessions, The final score is always your last submission. If your dashboard score does not match your final submission score on the assignment page, only then contact us regarding your marks. Kind regards",
+      "question_author": "Sompartha Sinha",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 6
+    },
+    {
+      "question": "Sir, I am not able to understand how to solve Q7 in GA4. kindly guide me how to solve this question or provide some tutorial video to complete it. As the deadline is of today please provide the tutorial video for this question soon. @Saransh_Saini , @Jivraj , @carlton",
+      "answer": "Connect to the GitHub API- it lets you fetch user data automatically(go to github developer settings ->personal acceess tokens->tokens(classic) Search for Users with criteria mentioned in your question We organize the list from newest to oldest, making it easy to spot the freshest account.",
+      "question_author": "SAKSHI PATHAK",
+      "answer_author": "Debarpita Dash",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 4
+    },
+    {
+      "question": "Is it important to use an IITM mail ID in GitHub for the project? @carlton",
+      "answer": "Currently we do not have any explicit policy regarding requiring IITM email as the github profile name or the github repo owner. We DO however require you to use your IITM email when submitting the project submission form. We are clarifying with operations at the moment if this arrangement satisfies their requirements. If it changes we will make a general announcement via email, portal and discourse. (we do not expect the current requirements of github to change) Kind regards",
+      "question_author": "Mahesh Singh Bohra ",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "@s.anand @carlton @Jivraj Please extend the deadline please. 88394c0c2e80a1326cfffe020684be4a480×270 10.3 KB",
+      "answer": "Done Kind regards Cant say no to a fuzzy wuzzy cat",
+      "question_author": "Vishal Baraiya",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "Dear Sir, I have submitted TDS Project 1 twice. Please consider my last submission for evaluation, as it contains the final and most updated version. Apologies for any inconvenience caused, and I appreciate your time and consideration. Best regards, Sudip Dey",
+      "answer": "We consider only last submissions for Project before the deadline. Kind regards",
+      "question_author": "Sudip Dey",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "@carlton @Jivraj @Saransh_Saini I got a mail saying my Dockerfile is missing. However I have a dockerfile already in my github repository. Is it an issue with the spelling of dockerfile since I have submitted it in all small case as ‘dockerfile’. It was showing the score when I checked with the evaluate.py that was provided by iitm. Shall I just change the name of the file from ‘dockerfile’ to ‘Dockerfile’ in github repository of mine or is there anything else that is needed to detect the Dockerfile?",
+      "answer": "The name of the Dockerfile should be “Dockerfile” indeed, more over check other sections of your submission like Is the GitHub repo public? Does it have an MIT license? Does it have a DockerFile? Is the Docker image accessible?",
+      "question_author": "Nayonika Arora",
+      "answer_author": "Saransh Saini",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "Dear TDS Team, I have verified my submission, and my repository does include a Dockerfile, and the Docker image is accessible on DockerHub. Please find the attached screenshot as proof. Kindly review my submission again and let me know if any further action is needed. Looking forward to your confirmation. Best regards, Arnav Mehta (21f3002647) image250×534 3.92 KB image713×238 11 KB",
+      "answer": "So the reason for the failure is: You had initially put your Dockerfile inside a directory called TDSP-1-main instead of being directly in your repo. (On 15th Feb 1:26AM) Then when our automated script checked if students repos met the requirements and yours did not we immediately sent out a warning email as a opportunity for students to make the necessary corrections. Then once you realised your mistake, on Feb 17th at 9:11 pm IST i.e yesteday, you changed your repo to put the files in the correct locations. Then you finally posted here on Discourse with the image [quote=“21f3002647, post:1, topic:167471”] image250×534 3.92 KB [/quote] showing that your files are in the correct place. We do not take into consideration modifications to your repo after the deadline because then we would have to extend that curtesy to all students. Kind regards",
+      "question_author": "Arnav Mehta ",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 9
+    },
+    {
+      "question": "The deadlines mentioned in the Grading Document provided and the TDS website (s-anand.net) are different. Project-1’s deadline was 15 Feb, it was then postponed to the 16th of Feb. Can this be reflected here? Not affecting me particularly, however, it’s good to be consistent across channels of communication to the students… grab-IIT-Madras--Microsoft Edge_at_11.39.08_on__19-02-2025__0032971484×1168 161 KB",
+      "answer": "@23f1003186 Thanks for letting us know (it might take a little while to fix) Kind regards",
+      "question_author": "Aniruddha Mukherjee",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "I have not receive week 6 assignment.Please help",
+      "answer": "Not ready yet. We will release it soon.",
+      "question_author": "Ashutosh ",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 3
+    },
+    {
+      "question": "image1337×683 31.9 KB It seems that the question in Graded Assignment 5 for TDS is producing incorrect results despite the same logic working correctly for other variations of the problem. Please check into this question once as I have cross checked with many of the students and chatgpt and all of us faced this issue in this question. Thanks! @carlton @s.anand code to take reference from: import gzip import pandas as pd from datetime import datetime log_path = 's-anand.net-May-2024.gz' start_time = datetime.strptime('01:00:00', '%H:%M:%S').time() end_time = datetime.strptime('15:00:00', '%H:%M:%S').time() log_data = [] def parse_log(line): parts = line.split(' ') log_time = datetime.strptime(parts[3][1:], '%d/%b/%Y:%H:%M:%S') method, url, status = parts[5][1:], parts[6], int(parts[8]) return log_time, method, url, status with gzip.open(log_path, 'rt') as file: for entry in file: log_time, method, url, status = parse_log(entry) if method == 'GET' and url.startswith('/blog/') and 200 <= status < 300: if log_time.weekday() == 0 and start_time <= log_time.time() < end_time: log_data.append(entry) print(f\"Successful GET requests: {len(log_data)}\") ps: I shared code after the deadline hopefully no issues there!",
+      "answer": "We have determined that some students were affected by GA5 Q3. Whoever we have identified as having received the incorrect assessment will receive 1 mark for that particular question. These are the students that we have identified as been assessed incorrectly: SN Email 1 21f1000131@ds.study.iitm.ac.in 2 21f1001484@ds.study.iitm.ac.in 3 21f1001631@ds.study.iitm.ac.in 4 21f1001729@ds.study.iitm.ac.in 5 21f1001890@ds.study.iitm.ac.in 6 21f1002734@ds.study.iitm.ac.in 7 21f1002773@ds.study.iitm.ac.in 8 21f1003135@ds.study.iitm.ac.in 9 21f1003475@ds.study.iitm.ac.in 10 21f1003816@ds.study.iitm.ac.in 11 21f1005422@ds.study.iitm.ac.in 12 21f1005510@ds.study.iitm.ac.in 13 21f1006234@ds.study.iitm.ac.in 14 21f1006309@ds.study.iitm.ac.in 15 21f1006867@ds.study.iitm.ac.in 16 21f2000525@ds.study.iitm.ac.in 17 21f2000913@ds.study.iitm.ac.in 18 21f2000998@ds.study.iitm.ac.in 19 21f2001061@ds.study.iitm.ac.in 20 21f2001080@ds.study.iitm.ac.in 21 21f2001543@ds.study.iitm.ac.in 22 21f3000311@ds.study.iitm.ac.in 23 21f3000355@ds.study.iitm.ac.in 24 21f3000512@ds.study.iitm.ac.in 25 21f3000591@ds.study.iitm.ac.in 26 21f3000687@ds.study.iitm.ac.in 27 21f3000813@ds.study.iitm.ac.in 28 21f3001091@ds.study.iitm.ac.in 29 21f3001161@ds.study.iitm.ac.in 30 21f3001936@ds.study.iitm.ac.in 31 21f3001965@ds.study.iitm.ac.in 32 21f3002158@ds.study.iitm.ac.in 33 21f3002431@ds.study.iitm.ac.in 34 21f3002444@ds.study.iitm.ac.in 35 21f3002647@ds.study.iitm.ac.in 36 21f3002782@ds.study.iitm.ac.in 37 21f3003195@ds.study.iitm.ac.in 38 22ds2000011@ds.study.iitm.ac.in 39 22f1000376@ds.study.iitm.ac.in 40 22f1000821@ds.study.iitm.ac.in 41 22f1000902@ds.study.iitm.ac.in 42 22f1000935@ds.study.iitm.ac.in 43 22f1000989@ds.study.iitm.ac.in 44 22f1001095@ds.study.iitm.ac.in 45 22f1001316@ds.study.iitm.ac.in 46 22f1001391@ds.study.iitm.ac.in 47 22f1001416@ds.study.iitm.ac.in 48 22f1001438@ds.study.iitm.ac.in 49 22f1001542@ds.study.iitm.ac.in 50 22f1001551@ds.study.iitm.ac.in 51 22f1001552@ds.study.iitm.ac.in 52 22f1001862@ds.study.iitm.ac.in 53 22f2000108@ds.study.iitm.ac.in 54 22f2000113@ds.study.iitm.ac.in 55 22f2000116@ds.study.iitm.ac.in 56 22f2000273@ds.study.iitm.ac.in 57 22f2000467@ds.study.iitm.ac.in 58 22f2000813@ds.study.iitm.ac.in 59 22f2000898@ds.study.iitm.ac.in 60 22f2000946@ds.study.iitm.ac.in 61 22f2001041@ds.study.iitm.ac.in 62 22f2001336@ds.study.iitm.ac.in 63 22f2001532@ds.study.iitm.ac.in 64 22f2001590@ds.study.iitm.ac.in 65 22f3000275@ds.study.iitm.ac.in 66 22f3000337@ds.study.iitm.ac.in 67 22f3000419@ds.study.iitm.ac.in 68 22f3000422@ds.study.iitm.ac.in 69 22f3000487@ds.study.iitm.ac.in 70 22f3000563@ds.study.iitm.ac.in 71 22f3000694@ds.study.iitm.ac.in 72 22f3000814@ds.study.iitm.ac.in 73 22f3000819@ds.study.iitm.ac.in 74 22f3000831@ds.study.iitm.ac.in 75 22f3000833@ds.study.iitm.ac.in 76 22f3001050@ds.study.iitm.ac.in 77 22f3001074@ds.study.iitm.ac.in 78 22f3001108@ds.study.iitm.ac.in 79 22f3001278@ds.study.iitm.ac.in 80 22f3001316@ds.study.iitm.ac.in 81 22f3001675@ds.study.iitm.ac.in 82 22f3001688@ds.study.iitm.ac.in 83 22f3001777@ds.study.iitm.ac.in 84 22f3001834@ds.study.iitm.ac.in 85 22f3001930@ds.study.iitm.ac.in 86 22f3001961@ds.study.iitm.ac.in 87 22f3001967@ds.study.iitm.ac.in 88 22f3002011@ds.study.iitm.ac.in 89 22f3002175@ds.study.iitm.ac.in 90 22f3002184@ds.study.iitm.ac.in 91 22f3002236@ds.study.iitm.ac.in 92 22f3002265@ds.study.iitm.ac.in 93 22f3002291@ds.study.iitm.ac.in 94 22f3002307@ds.study.iitm.ac.in 95 22f3002394@ds.study.iitm.ac.in 96 22f3002447@ds.study.iitm.ac.in 97 22f3002498@ds.study.iitm.ac.in 98 22f3002565@ds.study.iitm.ac.in 99 22f3002634@ds.study.iitm.ac.in 100 22f3002712@ds.study.iitm.ac.in 101 22f3002813@ds.study.iitm.ac.in 102 22f3002844@ds.study.iitm.ac.in 103 22f3002948@ds.study.iitm.ac.in 104 22f3003003@ds.study.iitm.ac.in 105 22f3003237@ds.study.iitm.ac.in 106 23ds1000032@ds.study.iitm.ac.in 107 23ds2000055@ds.study.iitm.ac.in 108 23ds2000069@ds.study.iitm.ac.in 109 23ds3000146@ds.study.iitm.ac.in 110 23ds3000149@ds.study.iitm.ac.in 111 23ds3000224@ds.study.iitm.ac.in 112 23f1000232@ds.study.iitm.ac.in 113 23f1000257@ds.study.iitm.ac.in 114 23f1000292@ds.study.iitm.ac.in 115 23f1000587@ds.study.iitm.ac.in 116 23f1000776@ds.study.iitm.ac.in 117 23f1000813@ds.study.iitm.ac.in 118 23f1000844@ds.study.iitm.ac.in 119 23f1001472@ds.study.iitm.ac.in 120 23f1001651@ds.study.iitm.ac.in 121 23f1001684@ds.study.iitm.ac.in 122 23f1001788@ds.study.iitm.ac.in 123 23f1001861@ds.study.iitm.ac.in 124 23f1002075@ds.study.iitm.ac.in 125 23f1002114@ds.study.iitm.ac.in 126 23f1002279@ds.study.iitm.ac.in 127 23f1002345@ds.study.iitm.ac.in 128 23f1002362@ds.study.iitm.ac.in 129 23f1002535@ds.study.iitm.ac.in 130 23f1002563@ds.study.iitm.ac.in 131 23f1002586@ds.study.iitm.ac.in 132 23f1002630@ds.study.iitm.ac.in 133 23f1002929@ds.study.iitm.ac.in 134 23f1003000@ds.study.iitm.ac.in 135 23f1003115@ds.study.iitm.ac.in 136 23f2000119@ds.study.iitm.ac.in 137 23f2000273@ds.study.iitm.ac.in 138 23f2000762@ds.study.iitm.ac.in 139 23f2000794@ds.study.iitm.ac.in 140 23f2000822@ds.study.iitm.ac.in 141 23f2000926@ds.study.iitm.ac.in 142 23f2000942@ds.study.iitm.ac.in 143 23f2001274@ds.study.iitm.ac.in 144 23f2001347@ds.study.iitm.ac.in 145 23f2001494@ds.study.iitm.ac.in 146 23f2001529@ds.study.iitm.ac.in 147 23f2001539@ds.study.iitm.ac.in 148 23f2001661@ds.study.iitm.ac.in 149 23f2001960@ds.study.iitm.ac.in 150 23f2001992@ds.study.iitm.ac.in 151 23f2002034@ds.study.iitm.ac.in 152 23f2002121@ds.study.iitm.ac.in 153 23f2002865@ds.study.iitm.ac.in 154 23f2002939@ds.study.iitm.ac.in 155 23f2003529@ds.study.iitm.ac.in 156 23f2003751@ds.study.iitm.ac.in 157 23f2003893@ds.study.iitm.ac.in 158 23f2004115@ds.study.iitm.ac.in 159 23f2004244@ds.study.iitm.ac.in 160 23f2004366@ds.study.iitm.ac.in 161 23f2004443@ds.study.iitm.ac.in 162 23f2004473@ds.study.iitm.ac.in 163 23f2004510@ds.study.iitm.ac.in 164 23f2004637@ds.study.iitm.ac.in 165 23f2004770@ds.study.iitm.ac.in 166 23f2004793@ds.study.iitm.ac.in 167 23f2004936@ds.study.iitm.ac.in 168 23f2004979@ds.study.iitm.ac.in 169 23f2005010@ds.study.iitm.ac.in 170 23f2005193@ds.study.iitm.ac.in 171 23f2005325@ds.study.iitm.ac.in 172 23f2005398@ds.study.iitm.ac.in 173 23f2005474@ds.study.iitm.ac.in 174 23f2005525@ds.study.iitm.ac.in 175 23f2005665@ds.study.iitm.ac.in 176 23f2005701@ds.study.iitm.ac.in 177 23f2005706@ds.study.iitm.ac.in 178 23f2005738@ds.study.iitm.ac.in 179 23f3000975@ds.study.iitm.ac.in 180 23f3001271@ds.study.iitm.ac.in 181 23f3001462@ds.study.iitm.ac.in 182 23f3001572@ds.study.iitm.ac.in 183 23f3001745@ds.study.iitm.ac.in 184 23f3001752@ds.study.iitm.ac.in 185 23f3001764@ds.study.iitm.ac.in 186 23f3001848@ds.study.iitm.ac.in 187 23f3002196@ds.study.iitm.ac.in 188 23f3002427@ds.study.iitm.ac.in 189 23f3002537@ds.study.iitm.ac.in 190 23f3002643@ds.study.iitm.ac.in 191 23f3003016@ds.study.iitm.ac.in 192 23f3003027@ds.study.iitm.ac.in 193 23f3003871@ds.study.iitm.ac.in 194 23f3004013@ds.study.iitm.ac.in 195 23f3004024@ds.study.iitm.ac.in 196 23f3004066@ds.study.iitm.ac.in 197 23f3004134@ds.study.iitm.ac.in 198 23f3004230@ds.study.iitm.ac.in 199 23f3004238@ds.study.iitm.ac.in 200 23f3004264@ds.study.iitm.ac.in 201 23f3004394@ds.study.iitm.ac.in 202 23f3004444@ds.study.iitm.ac.in 203 24ds1000079@ds.study.iitm.ac.in 204 24ds2000062@ds.study.iitm.ac.in 205 24ds2000101@ds.study.iitm.ac.in 206 24ds2000112@ds.study.iitm.ac.in 207 24ds3000028@ds.study.iitm.ac.in 208 24ds3000031@ds.study.iitm.ac.in 209 24ds3000074@ds.study.iitm.ac.in 210 24f1000010@ds.study.iitm.ac.in 211 24f1000400@ds.study.iitm.ac.in 212 24f1000784@ds.study.iitm.ac.in 213 24f1000925@ds.study.iitm.ac.in 214 24f1001396@ds.study.iitm.ac.in 215 24f1001439@ds.study.iitm.ac.in 216 24f1001520@ds.study.iitm.ac.in 217 24f1002390@ds.study.iitm.ac.in 218 24f1002474@ds.study.iitm.ac.in 219 24f2000994@ds.study.iitm.ac.in 220 24f2002746@ds.study.iitm.ac.in 221 24f2003375@ds.study.iitm.ac.in 222 24f2004863@ds.study.iitm.ac.in Kind regards, TDS Team",
+      "question_author": "Muskan Aggarwal",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 9
+    },
+    {
+      "question": "Screenshot 2025-02-22 at 12.41.09 AM2940×1912 443 KB Is this something to worry about?",
+      "answer": "This is nothing to worry about because as you can see in the Recent saves section, it has your score history. We have your entire submission history because we log that. Kind regards",
+      "question_author": "Rounaq Biswas",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "Hi TDS team, with ROE being ahead, i assume an official thread will be created soon. Here are few doubts from my side. I request the official post to cover these. Syllabus kindly hint us on the type of questions, kind of tools to practice I did my ROE the last term, the time was not enough for me. I would like to know if it is actually possible to solve all the questions within the time Any mock or resource to practice from? additional tips, if any",
+      "answer": "Modules 1 - 5 Questions will be similar to GAs and the content in the modules. ROE is quite hard. Only a small number will be able to do it in the given time frame. We will have some past ROEs as practise … watch sessions Kind regards",
+      "question_author": "B R GIRI SUBRAHMANYA",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "@carlton @s.anand Release of Project 2 has been delayed by 3 days, and release of Assignment 6 has been delayed by 10 days. Could you please clarify if the submission dates will be changed accordingly? I am assuming it will have to be changed for Assignment 7 as well. Please let me know rough submission dates if possible so that I can plan accordingly (my schedule in the upcoming days is very hectic).",
+      "answer": "@Yogesh GA6 will be released sometime this week. All GAs have a minimum 9 days for submissions. We do not have an ETA for Project 2 yet. Kind regards",
+      "question_author": "Yogesh",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "@carlton @jkmadathil Sir please shift the ROE date to another date because we really need time to understand all these stuffs as these are so hard for beginners like us and there is quiz 2 and we have to prepare for that also. Sir please understand our situation and pay attention to our concern.",
+      "answer": "Just FYI the correct tag to use for Professor Anand of TDS is @s.anand Also ROE date will not be moved because its an exam date that has been set before the term starts. This is just part of the policy of the BS Programme. Exam dates never get moved except in truly exceptional circumstances. Kind regards",
+      "question_author": "Sarthak Gupta ",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 5
+    },
+    {
+      "question": "Dear @jkmadathil @Anand @Bharathi First and foremost, we sincerely appreciate the efforts of the TDS team in supporting us throughout this course. The live sessions and guidance have been helpful, and we recognize the intent to make this a valuable learning experience. However, despite these efforts, many of us have faced significant challenges in keeping up with the course expectations. Key Challenges Faced Lack of Prerequisites This course did not list any prerequisites, leading many students—including those from non-technical backgrounds—to enroll with the expectation that they could keep up. However, the reality is that the course content, assignments, and projects have been far more complex than anticipated, making it difficult to manage. Project Complexity & Deadline Pressure The difficulty of the projects has been overwhelming, requiring most of us to rely heavily on peer support just to meet the deadlines. Despite putting in our best efforts, many of us struggled to complete them successfully. Course Structure Changes & Misleading Past Feedback Many students joined TDS based on past Discourse posts and feedback, which suggested a different course structure. With the recent changes, it has been a tough transition—especially for working professionals and students without prior experience. Remote Open Exam (RoE) & Graded Assignments (GAs) While we have put in significant effort—spending 2-3 days on Graded Assignments (GAs) to secure good scores—we still find ourselves struggling to meet expectations for the projects and RoE, which are significantly harder than anticipated. We completely understand the need to maintain academic standards, but we also hope fairness is considered. Since many of us are putting in our best efforts but still finding it hard to meet the course demands, we kindly request a revision of the grading pattern. Increasing the weightage of Graded Assignments (GAs) would help ensure that the dedication and hard work of students are fairly reflected in their grades. This would allow students to pass with a reasonable grade while still maintaining the integrity of the course. We truly respect the effort that has gone into designing this course, and we are all here because we genuinely want to learn and grow. We only ask that the grading structure consider the diverse backgrounds of students so that everyone has a fair chance to succeed. Thank you for your time and understanding. We appreciate your consideration and hope to find a way forward that benefits both students and the course objectives.",
+      "answer": "Thank you @A_LAKSHMI for the detailed post. This is much appreciated. Thought of quickly stepping in before Anand or other members from the course team gives a more detailed response. Let me be Open and Blunt to all in saying that the grading pattern will not be changed. And the points below are some of quick things that came to my mind while reading the detailed listing of the challenges that have been put in the OP. TDS team have been tinkering with the course structure for the past 3 terms. You can check this Discourse thread where students have unanimously said that this is not an easy subject. In fact the first page of the TDS course GA1 itself should have given everyone an indication of what lies ahead. Anand has explicitly written down the below words: This course is quite hard Here’s students’ feedback: It used to be an easy course until 2024. # # # Now it’s hard and covers more. Take it in your last semester if possible. # # # Plan extra time. It takes more time than typical 3-credit courses. # # # LLMs grade you – unpredictably. # # The ROE is hard. # Take Graded assignment 1 to check if you’re ready for this course. Please drop this course (do it in a later term) if you score low. It’ll be too tough for you now. TDS (or for that matter any course in this Degree program) is not supposed to be a single person effort. You should be realizing this even in your real life. A significant part of our learning process is social by nature. The only difference in this course is that we we explicitly encourage you to collaborate. If there is one main life lesson that we want you to learn out of this course then it is just this - Surviving tough situations require support all around us, and there is no shame in asking for help Again to quote Anand: We encourage learning by sharing You CAN copy from friends. You can work in groups. You can share code. Even in projects, assignments, and exams (except the final end-term exam). Why should you copy? Because in real life, there’s no time to re-invent the wheel. You’ll be working in teams on the shoulders of giants. It’s important to learn how to do that well. To learn well, understand what you’re copying. If you’re short of time, prioritize. To learn better, teach what you’ve learnt. Now will be a good point to reflect on the optimization problem of Grades versus Learning. The larger question for each of you is to consider the short-term advantage of better grades versus the long term advantage of improving the fundamentals related to tools usage (not just for Data Science, but in every day life itself). Once again Anand has a nice blog where [I think] he is trying to explain that neither do we know nor do students realize what is going to ultimately benefit us. This is a journey that all of us are taking together, and we hope such open interactions along with the course will make the learning (or teaching) experience enjoyable and internally make us more humble. Whether you like it or not, life is becoming more complex day by day. And unless you figure out your optimization strategy, it is going to be a bumpy ride. And this is true even for the TDS course team members. Each of us are also juggling multiple responsibilities (some even doing 4 projects in this term) while ensuring that needed support can be provided to the learners. This is not lighten the issues that any of you have highlighted here, but just to point out that there is no flowery path for anyone here. Then the major question will be, why are all of doing this crazy business of learning tools in this way. The simplest answer is - Tools are evolving day by day, and unless we realize that they are just “tools”, it is going to consume us an eternity to master them The point of all the exercises and assessments, is for you to understand the fundamental aspects related to a tool and figure out your own strategies for getting a grip on them. @22f2001640 Management of time and difficulty levels are a shared responsibility. All of you have been sufficiently warned that the learning process wont be easy. In fact we have released all major content well in advance, so that learners can benefit from early access. And from our side, we also have realized the supporting learners wouldn’t be easy. But I see that the TDS course team members have been putting their heart and soul in this course (and support), and even in this week they have prepared 3 sets of ROEs in order to ensure that all of you get enough practice opportunity.",
+      "question_author": "A LAKSHMI",
+      "answer_author": "Jayakrishnan",
+      "is_staff_answer": true,
+      "post_number": 9
+    },
+    {
+      "question": "I am not able to see Module 6 or Module 7 in my TDS curriculum. Please let me know whether it is released already.",
+      "answer": "@24ds1000012 Both Module 6 and Module 7 have been available from the start of the course. All modules were released before the 10th of Jan on the TDS course site. https://tds.s-anand.net/#/ Module 6: https://tds.s-anand.net/#/data-analysis Module 7: https://tds.s-anand.net/#/data-visualization GA 6 will become available sometime this week. We do not currently have an ETA on GA 7 and Project 2. Please refer to pinned post at the top of TDS page for new dates. Kind regards",
+      "question_author": "Diwakar",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "Good morning sir, I want to request that you open the previous GAs to solve the questions and check for the answers. I don’t wish for them to be graded, but I would like to work with the portal and validate my answers for the questions stated in the GA itself. This would be of great help and could help prepare the upcoming ROE. Thank you for considering my request. Regards. @carlton @Jeevesh",
+      "answer": "Hi @22f3001011 You can access questions by just enabling input boxes, and check answers button. Kind regrads",
+      "question_author": "Shahsank J Shetty",
+      "answer_author": "Jivraj Singh Shekhawat",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "On 2nd March, I have both Java OPPE and TDS ROE. My Java OPPE timing is: 9:30 to 11:00 AM MY TDS ROE timing is: 10:30 to 11:15 AM A minimum gap of one hour is recommended. I have written to support. @carlton Please look into this.",
+      "answer": "@Nelson TDS ROE is at 1pm in the afternoon for everyone.",
+      "question_author": "Nelson Jochim DSouza",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 3
+    },
+    {
+      "question": "Whoever wants can participate and then we go into breakout rooms and each group solves a particular question and then we all share the code so we can complete the ROE faster and more effienctly? @all",
+      "answer": "I created a discord Discord Join the ACING ROE 1 Discord Server! Check out the ACING ROE 1 community on Discord – hang out with 1 other members and enjoy free voice and text chat. @all",
+      "question_author": "Andrew David",
+      "answer_author": "Andrew David",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 15
+    },
+    {
+      "question": "@s.anand @carlton @Jivraj Dear TDS Team, I hope you are doing well. I am writing to highlight several issues and doubts related to different aspects of the course that require clarification and resolution. 1. Graded Assignments (GA) GA6 Doubts Unresolved: While doubts related to Q1 and Q2 have been addressed, other queries remain unresolved despite being posted in the GA6 thread . The deadline has passed, but no solutions have been provided. (Thread link) GA Platform Changes: Initially, we were solving questions on exam.sanand.workers.dev . However, in GA6, we moved to Seek and in GA7, to Google Forms. The issue is that in GA6, we cannot check our answers like we could in previous assignments. 2. Project Updates Project 1: The result is still awaited, although it was expected on or before March 16. Any update on this would be helpful. Project 2: There are multiple doubts posted in the Project 2 discussion thread, but they have not been addressed yet. Without these clarifications, it is difficult to proceed with the project. Could you please provide an expected timeline for when these queries will be resolved? (thread link) 3. ROE Score Update While ROE scores may not be a primary concern, the bonus marks in ROE have still not been updated on the student dashboard. It would be helpful to get confirmation on when these will be reflected. I appreciate your time and assistance in addressing these concerns. Looking forward to your response. Best regards, Lakshay",
+      "answer": "lakshaygarg654: GA Platform Changes: Initially, we were solving questions on exam.sanand.workers.dev . However, in GA6, we moved to Seek and in GA7, to Google Forms. The issue is that in GA6, we cannot check our answers like we could in previous assignments. The course is in transition. Initially all of it used to be on seek portal. But there were limitations of seek portal that we were not able to work around to deliver the kind of interactive, reactive and rapid corrections/iterations that are now possible because we moved the evaluations from the seek portal to the TDS server. Since the move to the new TDS server on the back end, we are able to also directly see students actual parameterised questions whenever doubts are raised. This is NOT possible on seek portal for us. The results are immediate to see. You got timely rapid feedback for GA 1 to GA 5 from the TAs. The TAs were also able to iterate quickly in discussion with the instructors and the professor as well as operations. With GA 6 our inability to actually see your individual question sets immediately (its possible, but it has to take a very circuitous route via 3 set of people) meant we were always on the back foot for both, checking the answers, as well as making any corrections. And since the questions were parameterised, for technical reasons it was extremely cumbersome/risky/impossible to make changes without it being VERY disruptive to all students. These were some of the reasons we are transitioning. We have seen this problem term after term in prior terms with regards to the seek portal. This is a technological limitation of the current seek portal that directly impacts our ability to react to a dynamic course like TDS. GA 7 was decided to submit via forms again for the reasons listed above. GA6 was straightforward because it was a traditional evaluation. Whereas GA7 is once again very unique and does not handle well in being configured in Seek Portal. Since it was not possible in such a short time to transition GA7 to our preferred hosting server and student favourite, we opted for the least disruptive solution that we are able to action very quickly upon. lakshaygarg654: Project 1: The result is still awaited, although it was expected on or before March 16. Any update on this would be helpful. Project 1 evaluations is VERY computationally intensive for us to evaluate. Each project although dockerised, with an average submission weighing at 2GB, we have to provision space of 1 TB along with the cloud computer resources for all of that (RAM and vCPUs) and if you thought creating project 1 was tough, you can imagine the technical challenge involved in evaluating the 600+ submissions with all the errors and issues we have to fix. In truth its all hands on deck for us here on the back end because it has been deemed critical. So while we are moving the course along, we are also aware that evaluations are at serious risk of missing crucial deadlines. We are taking the matter with utmost seriousness. Its just that we cant always keep you up to date on every set back we are facing. Each and everyone of us are concerned about Project 1 and are working on it. Anand, JK, Prasanna, myself, Jivraj and Saransh. We all have been given access to the eval server which we only managed to provision a few days ago and we are all trying to get the most ambitious TDS project evaluation out the dry dock and into the water and hoping it floats gracefully rather than sink in the estuary. Meanwhile we are busy patching the pipes in the belly of the ship while its rolling down the slipway. lakshaygarg654: 3. ROE Score Update While ROE scores may not be a primary concern, the bonus marks in ROE have still not been updated on the student dashboard. It would be helpful to get confirmation on when these will be reflected. You got the maximum possible mark in ROE. Does it not show you got 100 in ROE in the dashboard? I have been told by operations that it has been pushed. Kind regards",
+      "question_author": "LAKSHAY",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 3
+    },
+    {
+      "question": "Sir, I haven’t received bonus marks in ga4 as, i posted queries in discourse regarding ga4. I have scored 8 marks in ga4, but after bonus marks it should be 9, but in dashboard it is showing only 80 marks. Kindly, update my marks in dashboard. @carlton , @Jivraj , @Saransh_Saini",
+      "answer": "Hi @Sakshi6479, You have not followed the instruction in GA4 for the bonus mark. Screenshot 2025-03-18 at 11.02.31 am2566×224 23.2 KB We were given the list by Anand for all those that followed this instruction. That is why you have not received the bonus mark for GA4. Kind regards",
+      "question_author": "SAKSHI PATHAK",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "Mail I received Yesterday: Screenshot from 2025-04-01 09-01-071174×451 54.2 KB Previous Correct Evaluation Mail: Screenshot from 2025-04-01 09-02-351687×650 144 KB Good Morning Sir, This is my github repo: GitHub - kohliaryan/TDS_Project_1 ()You can verify that it is public, MIT License is present and Dockerfile is also present.) I also got a mail 2 days ago in which everything is mentioned correctly but the mail I got yesterday worry me. Sir, I have worked really hard for project 1. Please look into this matter. @carlton",
+      "answer": "Apologies for that, The second email was an automated script that used a stricter criteria. You have passed evaluation and also have a score. So dont worry. We will push scores over this weekend. We are currently doing normalisation. Kind regards",
+      "question_author": "Aryan Kohli",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 3
+    },
+    {
+      "question": "@carlton can you give me some advice regarding preparation for end term exam.",
+      "answer": "The Tuesday and the Thursday session will cover end term including a mock. End term is usually very easy for TDS. A look at prior end terms is a good indicator of how easy they are. Kind regards",
+      "question_author": "Ansh bansal",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 8
+    },
+    {
+      "question": "Can anyone share the link to project 1 solution github repo.",
+      "answer": "The repo has not been made public. But until that happens, we are allowed to share the solution. Just name the script app.py, build the docker image according to test environment. This also happened to be the highest scoring script getting 19 tasks correct. # /// script # requires-python = \">=3.11\" # dependencies = [ # \"fastapi\", # \"httpx\", # \"uvicorn\", # ] # /// from fastapi import FastAPI, HTTPException from fastapi.staticfiles import StaticFiles from fastapi.responses import FileResponse import os import httpx import re import asyncio app = FastAPI() app.mount(\"/static\", StaticFiles(directory=\"static\"), name=\"static\") token = os.environ[\"LLMFOUNDRY_TOKEN\"] async def llm(system_prompt: str, user_prompt: str) -> str: \"\"\"Call GPT-4o-Mini via AI Proxy.\"\"\" async with httpx.AsyncClient(timeout=30.0) as client: response = await client.post( \"https://llmfoundry.straive.com/v1/chat/completions\", headers={\"Authorization\": f\"Bearer {token}\"}, json={ \"model\": \"gpt-4o-mini\", \"messages\": [ {\"role\": \"system\", \"content\": system_prompt}, {\"role\": \"user\", \"content\": user_prompt}, ], }, ) response.raise_for_status() return response.json()[\"choices\"][0][\"message\"][\"content\"] system_prompt = \"\"\"The user will provide a task description. Write one or more `bash` or `python` scripts to execute the task. CODING RULES: - uv, the Python runner, is ALREADY installed. Run with `uv run [URL] [ARGUMENTS]` - Parse dates with `python-dateutil` - Sender email is in the `From: \"Name <email@...>` header - When removing a prefix (e.g. `/data/docs/`) from a path, retain the path after the prefix - Call an LLM via a POST request to `https://llmfoundry.straive.com/openai/v1/chat/completions` with `Authorization: Bearer {os.getenv(\"LLMFOUNDRY_TOKEN\")}` and this JSON body: { model: \"gpt-4o-mini\", messages: [ { role: \"system\", content: \"[INSERT SYSTEM PROMPT]\" }, { role: \"user\", content: [ { type: \"text\", text: \"[INSERT USER MESSAGE]\" }, // for text { type: \"image_url\", image_url: { url: `data:[IMAGE MIME TYPE];base64,[IMAGE BASE64]`, detail: \"low\" } }, // for image. Get MIME type DYNAMICALLY from image ]} ], // response_format: \"json_object\", // forces JSON response } Response is in `response.choices?.[0]?.message?.content`. Error is in `response.error?.message`. - Calculate embeddings with a POST request to `https://llmfoundry.straive.com/openai/v1/embeddings` with `Authorization: Bearer {os.getenv(\"LLMFOUNDRY_TOKEN\")}` and this JSON body: { model: \"text-embedding-3-small\", input: [array of strings], } Embeddings are in response.data[*].embedding - an array of floats. Calculate the dot product of the embeddings (skipping the diagonal) to find the most similar pair of strings. client.post( f\"{openai_api_base}/embeddings\", headers={\"Authorization\": f\"Bearer {openai_api_key}\"}, json={\"model\": \"text-embedding-3-small\", \"input\": data}, ) - When extracting card information, use the system prompt \"Extract the EXACT dummy credit card number from this test image\" EXECUTION RULES: An automated agent will blindly run the scripts you provide. So ONLY write the FINAL script(s) to run in ```bash or ```python code fences. \"\"\" @app.post(\"/run\") async def run_task(task: str): \"\"\"Execute a plain-English automation task.\"\"\" response = await llm(system_prompt, task) print(f\"\\n🟡 Running task:\\n{task.strip()}\\n\") print(f\"\\n🟡 {response}\\n\") results = [] for language, code in re.findall(r\"```(python|bash)\\n(.*?)\\n```\", response, re.DOTALL): print(f\"\\n🟡 Running {language} code:\\n{code}\\n\") if language == \"python\": result = await execute_python(code) else: # bash result = await execute_bash(code) results.append({\"lang\": language, **result}) print(f\"\\n🟡 Results:\\n{results}\\n\") return {\"response\": response, \"results\": results} @app.get(\"/read\") async def read_file(path: str): \"\"\"Read contents of a file.\"\"\" # Validate path is within /data path = os.path.normpath(path) if not path.startswith(\"/data/\"): raise HTTPException(status_code=400, detail=\"Invalid path\") if not os.path.exists(path): raise HTTPException(status_code=404, detail=\"File not found\") return FileResponse(path) @app.post(\"/execute/python\") async def execute_python(code: str): \"\"\"Execute Python code directly.\"\"\" proc = await asyncio.create_subprocess_exec( \"python3\", \"-\", stdin=asyncio.subprocess.PIPE, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE, ) stdout, stderr = await proc.communicate(code.encode()) if proc.returncode != 0: print(f\"\\n🔴 Python execution failed:\\n{stderr.decode()}\") raise HTTPException(status_code=500, detail=f\"Execution failed: {stderr.decode()}\") return {\"stdout\": stdout.decode(), \"stderr\": stderr.decode()} @app.post(\"/execute/bash\") async def execute_bash(code: str): \"\"\"Execute bash code directly.\"\"\" proc = await asyncio.create_subprocess_exec( \"bash\", stdin=asyncio.subprocess.PIPE, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE, ) stdout, stderr = await proc.communicate(code.encode()) if proc.returncode != 0: print(f\"\\n🔴 Bash execution failed:\\n{stderr.decode()}\") raise HTTPException(status_code=500, detail=f\"Execution failed: {stderr.decode()}\") return {\"stdout\": stdout.decode(), \"stderr\": stderr.decode()} @app.get(\"/\") async def read_root(): \"\"\"Serve the index.html file.\"\"\" return FileResponse(\"static/index.html\") if __name__ == \"__main__\": import uvicorn uvicorn.run(app, host=\"0.0.0.0\", port=8000)",
+      "question_author": "Nomit Rawat",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "image1141×678 102 KB @carlton sir plz review it i think the correct answer should be A",
+      "answer": "yes saturday is 5 when using weekday ()",
+      "question_author": "Dhruv Agrawal",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "I had been accidentally given a duplicate peer and assigned a new peer on 10th April with the evaluation deadline being 11th April 11:59 PM. I had asked for access to the Google Sheet for question 1 however I have not been given any access and the deadline is up. What to do?",
+      "answer": "@SohamHaldar @21f3000745 We had sent out an email with an extra non - duplicate peer and extended the deadline by a day to accommodate reviewing the extra peer. Please check your email with the subject. [TDS Jan 25] Bonus peer",
+      "question_author": "Soham Haldar",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 3
+    },
+    {
+      "question": "@carlton @Jivraj till the previous night my GAA score was 103 and this morning it is 100…the total average by manual calculation is 102.5",
+      "answer": "I raised the question with operations. Its an operational issue.",
+      "question_author": "Mishkat Chougule",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 6
+    },
+    {
+      "question": "My doesn’t show the grades yet. Are they released?",
+      "answer": "They are not released yet. We are still checking all discrepancies that have been submitted via our discrepancies submission portal.",
+      "question_author": "B R GIRI SUBRAHMANYA",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 3
+    },
+    {
+      "question": "@s.anand @carlton @Jivraj @Saransh_Saini Creating a New Topic for better reachability of my second message in below topic’s thread. Continuing the discussion from URGENT ATTN REQ: technical discrepancy and inconsistency in the evaluation scripts of graded assignment and project 2:",
+      "answer": "Kindly refer this URGENT ATTN REQ: technical discrepancy and inconsistency in the evaluation scripts of graded assignment and project 2 Tools in Data Science Hi @23f1001231 Your submission was validated by the course portal, so that makes it correct. But I want to clarify our side. I checked your response. The problem is not that your tag is present in <a> tags. Its because your closing email_off tag doesn’t have a slash as mentioned in the question page. [image] Moreover this was specifically mentioned in the question we sent you in the API request. \"Publish a page using GitHub Pages that showcases your work. Ensure that your email address 23f1…",
+      "question_author": "PREMDEEP MAITI",
+      "answer_author": "Saransh Saini",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "With Due respect I would like to ask that why my score has been reduced in the dashboard while the mail which I received has more marks. Further more I would like to ask that there is no grace marks to pass the score while other subjects have some policy. Due to some issues I couldn’t study well and I didn’t pass the course with only 1.5 marks. Due to high fees and I do not fall under any Fees relaxation policy. So please sir I would like to request for a better decision. So that I would end up my Diploma by next term. It’s a kind request sir to look into it and please help me out. If I pass this course I would end my diploma by next term. I cannot add two image files Screenshot (2374)449×748 34.9 KB @carlton @Jivraj",
+      "answer": "Greetings sir , @jkmadathil I am a diploma student currently in the last term of this level but due to Grade U, I wouldn’t be able to complete this level by next term. I only 1.5 grace marks to pass this course. I didn’t knew the difficulty of this course because the rating of this course on discourse is wrong. So I took this subject but wasn’t able to give proper time to it. Somehow I managed to do the course but due to only 1.5 marks, I am not able to pass the course. I have only 4 course left, So if I pass this course I’ll be able to complete diploma by next term. Further sir, I do not fall under any fees relaxation policy, So sir I have to pay the same fees again for the same course. So it’s a huge request sir to grant me some grace marks to pass the course. If the difference was more I wouldn’t request at all. Even sir in the last term I repeated MLT because the difference was high and I couldn’t make it but I managed to pass it in this term. Sir I request you grant me some grace marks. My score is 38.6 so If you grant me 1 marks and round it off. then sir I’ll be able to pass it and will finish diploma by next term. Sir it is huge request sir. Please consider it as exception and sir this will be my last request because I respect your decision and will not make any further request. Thank you sir sincere regards",
+      "question_author": "Utkarsh Srivastava ",
+      "answer_author": "Utkarsh Srivastava ",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 11
+    },
+    {
+      "question": "sir, i am not able to do this llm “What is 2 + 2” Error: Error code: 401 - {‘message’: ‘Bearer… bMA is invalid: JWSInvalid: Invalid Compact JWS’} i am getting this error @carlton",
+      "answer": "It’s problem with the way you are using llm, request needs to go via proxy (aipipe). Find documentation below sanand0/aipipe: Gives anyone access to an OpenAI/OpenRouter API key free at 10 cents/week. Self-hostable. Useful as a backend if you’re building pure front-end LLM apps @22f3000982 @Sahil_singh If you follow steps in above documentation carefully then you will get not face invalid token issues.",
+      "question_author": "Ashish Raj",
+      "answer_author": "Jivraj Singh Shekhawat",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 5
+    },
+    {
+      "question": "Hi, Could you please share the recording of the sessions that took place on the 10th and 11th of May on Tools in Data Science? Thanks, Ranadeep",
+      "answer": "The are available on youtube. YouTube Tools in Data Science Share your videos with friends, family, and the world Please subscribe to the channel. It will notify you as soon as new videos are uploaded. Additionally, they are also in the calendar. Currently only the Sat 10th session has been uploaded. The Sun 11th session will take a bit longer because we are doing some automation tool trials. We hope to upload it today. Kind regards",
+      "question_author": "Ranadeep",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "I just unable to access it image1037×773 69 KB image1196×716 46.5 KB",
+      "answer": "We will make it available on you tube. We are doing some processing that requires some manual intervention.",
+      "question_author": "OM Rajesh Bhambere",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 3
+    },
+    {
+      "question": "Hi, I’ve registered for this (TDS) course in the current term along with MLT. But when I see the course content closely, it looks more like core programming. I feel more comfortable to take up this course after completing (Java & other) courses available in Diploma in Programming. So, can I drop this course now? If so, will I get full fee refund? If not full, how much would they refund? BTW, if drop course is possible, what are the start and end dates for this facility? Thanks, Prasad.",
+      "answer": "You can check for the same in the Student Handbook. Specifically at the following link. docs.google.com IITM BS Degree Programme - Student Handbook (Updated 08052025) - Student version This Doc is private I too have taken MLT and TDS after the first 4 subjects in combined Diploma path. I had the same thoughts as you. I am waiting for course drop google form to be floated.",
+      "question_author": "Prasad (Chopperla Venkata Satya Prasada Babu)",
+      "answer_author": "Vidit Thakkar",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "Hi Sir, image1920×1080 248 KB I kept on saving while solving each question in GA-1, My final score was 5.25 which we can find in the above screenshot. But now, when I go to GA-1 and open the site, it is showing my answers but total score at the top is showing “ZERO”. See below. image1920×1080 142 KB Something strange. Anyone having this issue?",
+      "answer": "Check the “Recent saves (most recent is your official score)” section. That should tell you your last saved score.",
+      "question_author": "Prasad (Chopperla Venkata Satya Prasada Babu)",
+      "answer_author": "Siddharth",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "image1642×639 51.5 KB today is 20th so why does it still shows 0 ? Kindly confirm/guide on the same.",
+      "answer": "Under recent save, the last submission which is done before deadline will be counted as your final score for GA1.",
+      "question_author": "Karvy Singh",
+      "answer_author": "HRITIK ROSHAN MAURYA",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "I find Tools in Data Science too difficult at this level. Please help me how to opt out of this course, and get a refund. I’ll opt it later when I’m prepared with basics. Please guide.",
+      "answer": "study.iitm.ac.in Academic Calendar Current academic calendar of the BS Degree Program. In every term there is a a option to drop course. Check the calendar there is a date mentioned 30th May. On this date on your current course there will be options to drop the taken courses.(Check Date yourself also carefully) Note: For refund etc, you need to check student handbook or mail to support team.",
+      "question_author": "MEENAKSHI GUPTA",
+      "answer_author": "HRITIK ROSHAN MAURYA",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 2
+    },
+    {
+      "question": "I received an email about upcoming changes stating that recorded live sessions will no longer be provided to encourage participation in live sessions. Could someone please confirm if this change applies to TDS live sessions as well? Recorded sessions are valuable for revision, and I’ve noticed that some courses still offer them—are there exceptions in place? Just looking for clarity on whether TDS sessions will continue to be recorded or not. Thanks!",
+      "answer": "@Priyank We understand that students might have other commitments, but that being said, if there are no students in the sessions then we will have to reconsider having them in the first place. Thats why an email was sent to all students. Kind regards",
+      "question_author": "Priyank Solanki ",
+      "answer_author": "Carlton D'Silva",
+      "is_staff_answer": false,
+      "is_accepted": true,
+      "post_number": 3
+    }
+  ],
+  "metadata": {
+    "total_topics": 163,
+    "total_qa_pairs": 49,
+    "processed_at": "2025-06-14T08:34:33.355740",
+    "date_range": "2025-01-01 to 2025-04-14"
+  }
+}

@@ -1,0 +1,1290 @@
+[
+  {
+    "id": "base64-encoding.md_code_0",
+    "language": "python",
+    "code": "import base64\n\n# Basic encoding/decoding\ntext = \"Hello, World!\"\n# Convert text to base64\nencoded = base64.b64encode(text.encode()).decode() # SGVsbG8sIFdvcmxkIQ==\n# Convert base64 back to text\ndecoded = base64.b64decode(encoded).decode() # Hello, World!\n# Convert to URL-safe base64\nurl_safe = base64.urlsafe_b64encode(text.encode()).decode() # SGVsbG8sIFdvcmxkIQ==\n\n# Working with binary files (e.g., images)\nwith open('image.png', 'rb') as f:\n binary_data = f.read()\n image_b64 = base64.b64encode(binary_data).decode()\n\n# Data URI example (embed images in HTML/CSS)\ndata_uri = f\"data:image/png;base64,{image_b64}\"",
+    "source_file": "base64-encoding.md",
+    "context": "variant of Base64 that replaces + and / with - and \\_ to avoid issues in URLs\n- Base64 adds ~33% overhead (since every 3 bytes becomes 4 characters)\n\nCommon Python operations with Base64:\n\n[CODE_BLOCK]\n\nData URIs allow embedding binary data directly in HTML/CSS. This reduces the number of HTTP requests and also works offline. But it increases the file size.\n\nFor example, here's an SVG image emb"
+  },
+  {
+    "id": "base64-encoding.md_code_1",
+    "language": "html",
+    "code": "<img\n src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTUiIGZpbGw9IiMyNTYzZWIiLz48cGF0aCBmaWxsPSIjZmZmIiBkPSJtMTYgNyAyIDcgNyAyLTcgMi0yIDctMi03LTctMiA3LTJaIi8+PC9zdmc+\"\n/>",
+    "source_file": "base64-encoding.md",
+    "context": "g binary data directly in HTML/CSS. This reduces the number of HTTP requests and also works offline. But it increases the file size.\n\nFor example, here's an SVG image embedded as a data URI:\n\n[CODE_BLOCK]\n\nBase64 is used in many places:\n\n- JSON: Encoding binary data in JSON payloads\n- Email: MIME attachments encoding\n- Auth: HTTP Basic Authentication headers\n- JWT: Encoding tokens in web authentic"
+  },
+  {
+    "id": "bash.md_code_0",
+    "language": "bash",
+    "code": "# File Operations\nls -la # List all files with details\ncd path/to/dir # Change directory\npwd # Print working directory\ncp source dest # Copy files\nmv source dest # Move/rename files\nrm -rf dir # Remove directory recursively\n\n# Text Processing\ngrep \"pattern\" file # Search for pattern\nsed 's/old/new/' f # Replace text\nawk '{print $1}' f # Process text by columns\ncat file | wc -l # Count lines\n\n# Process Management\nps aux # List processes\nkill -9 PID # Force kill process\ntop # Monitor processes\nhtop # Interactive process viewer\n\n# Network\ncurl url # HTTP requests\nwget url # Download files\nnc -zv host port # Test connectivity\nssh user@host # Remote login\n\n# Count unique values in CSV column\ncut -d',' -f1 data.csv | sort | uniq -c\n\n# Quick data analysis\nawk -F',' '{sum+=$2} END {print sum/NR}' data.csv # Average\nsort -t',' -k2 -n data.csv | head # Top 10\n\n# Monitor log in real-time\ntail -f log.txt | grep --color 'ERROR'",
+    "source_file": "bash.md",
+    "context": "UNIX shell commands (75 min).\n\n[![Beginner's Guide to the Bash Terminal (75 min)](https://i.ytimg.com/vi_webp/oxuRxtrO2Ag/sddefault.webp)](https://youtu.be/oxuRxtrO2Ag)\n\nEssential Commands:\n\n[CODE_BLOCK]\n\nBash Scripting Essentials:\n\n```bash\n#!/bin/bash\n\n# Variables\nNAME=\"value\"\necho $NAME\n\n# Loops\nfor i in {1..5}; do\n echo $i\ndone\n\n# Conditionals\nif [ -f \"file.txt\" ]; then\n echo \"File exists\"\nfi"
+  },
+  {
+    "id": "bash.md_code_1",
+    "language": "bash",
+    "code": "#!/bin/bash\n\n# Variables\nNAME=\"value\"\necho $NAME\n\n# Loops\nfor i in {1..5}; do\n echo $i\ndone\n\n# Conditionals\nif [ -f \"file.txt\" ]; then\n echo \"File exists\"\nfi\n\n# Functions\nprocess_data() {\n local input=$1\n echo \"Processing $input\"\n}",
+    "source_file": "bash.md",
+    "context": "{sum+=$2} END {print sum/NR}' data.csv # Average\nsort -t',' -k2 -n data.csv | head # Top 10\n\n# Monitor log in real-time\ntail -f log.txt | grep --color 'ERROR'\n[CODE_BLOCK]bash\n#!/bin/bash\n\n# Variables\nNAME=\"value\"\necho $NAME\n\n# Loops\nfor i in {1..5}; do\n echo $i\ndone\n\n# Conditionals\nif [ -f \"file.txt\" ]; then\n echo \"File exists\"\nfi\n\n# Functions\nprocess_data() {\n local input=$1\n echo \"Processing $input\"\n}\n```\n\nProductivity Tips:\n\n1. **Command History**\n\n ```bash\n history # Show command history\n Ctrl+R # Search history\n !! # Repeat last command\n !$ # Last argument\n ```\n\n2. **Directory Navigation**\n\n ``"
+  },
+  {
+    "id": "convert-html-to-markdown.md_code_0",
+    "language": "bash",
+    "code": "find . -name '*.html' -exec npx --package defuddle-cli -y defuddle parse {} --md -o {}.md \\;",
+    "source_file": "convert-html-to-markdown.md",
+    "context": "a bit slow and not very customizable but produces clean Markdown that preserves structure, links, and basic formatting. Best for content where preserving the document structure is important.\n\n[CODE_BLOCK]\n\n- `find . -name '*.html'`: Finds all HTML files in the current directory and subdirectories\n- `-exec ... \\;`: Executes the following command for each file found\n- `npx --package defuddle-cli -y`"
+  },
+  {
+    "id": "convert-html-to-markdown.md_code_1",
+    "language": "bash",
+    "code": "find . -name '*.html' -exec pandoc -f html -t markdown_strict -o {}.md {} \\;",
+    "source_file": "convert-html-to-markdown.md",
+    "context": "versatele document convertors.\n\n[![How to Convert a Word Document to Markdown for Free using Pandoc (12 min)](https://i.ytimg.com/vi/HPSK7q13-40/sddefault.jpg)](https://youtu.be/HPSK7q13-40)\n\n[CODE_BLOCK]\n\n- `find . -name '*.html'`: Finds all HTML files in the current directory and subdirectories\n- `-exec ... \\;`: Executes the following command for each file found\n- `pandoc`: The Swiss Army knife"
+  },
+  {
+    "id": "convert-html-to-markdown.md_code_2",
+    "language": "bash",
+    "code": "find . -type f -name '*.html' -exec sh -c 'for f; do lynx -dump -nolist \"$f\" > \"${f%.html}.txt\"; done' _ {} +",
+    "source_file": "convert-html-to-markdown.md",
+    "context": "renders the HTML as it would appear in a text browser, preserving basic structure but losing complex formatting. Best for quick content extraction or when processing large numbers of files.\n\n[CODE_BLOCK]\n\n- `find . -type f -name '*.html'`: Finds all HTML files in the current directory and subdirectories\n- `-exec sh -c '...' _ {} +`: Executes a shell command with batched files for efficiency\n- `fo"
+  },
+  {
+    "id": "convert-html-to-markdown.md_code_3",
+    "language": "bash",
+    "code": "find . -type f -name '*.html' \\\n -exec sh -c 'for f; do \\\n w3m -dump -T text/html -cols 80 -no-graph \"$f\" > \"${f%.html}.md\"; \\\n done' _ {} +",
+    "source_file": "convert-html-to-markdown.md",
+    "context": "sites with dynamic content. Best for cases where you need slightly better rendering than lynx, particularly for complex layouts and tables, and when some JavaScript processing is beneficial.\n\n[CODE_BLOCK]\n\n- `find . -type f -name '*.html'`: Finds all HTML files in the current directory and subdirectories\n- `-exec sh -c '...' _ {} +`: Executes a shell command with batched files for efficiency\n- `fo"
+  },
+  {
+    "id": "convert-html-to-markdown.md_code_4",
+    "language": "bash",
+    "code": "find . -name \"*.html\" | parallel \"pandoc -f html -t markdown_strict -o {}.md {}\"\n ```\n\n2. **Filter files before processing**:\n\n ```bash\n find . -name \"*.html\" -type f -size -1M -exec pandoc -f html -t markdown {} -o {}.md \\;\n ```\n\n3. **Customize output format** with additional parameters:\n\n ```bash\n # For pandoc, preserve line breaks but simplify other formatting\n find . -name \"*.html\" -exec pandoc -f html -t markdown --wrap=preserve --atx-headers {} -o {}.md \\;\n ```\n\n4. **Handle errors gracefully**:\n\n ```bash\n find . -name \"*.html\" -exec sh -c 'for f; do pandoc -f html -t markdown \"$f\" -o \"${f%.html}.md\" 2>/dev/null || echo \"Failed: $f\" >> conversion_errors.log; done' _ {} +\n ```\n\n### Choosing the Right Tool\n\n- **Need speed with minimal formatting?** Use the lynx approach\n- **Need precise, complete conversion?** Use pandoc\n- **Need a balance of structure and cleanliness?** Try defuddle-cli\n- **Working with complex tables?** w3m might render them better\n\nRemember that the best approach depends on your specific use case, volume of files, and how you intend to use the converted text.\n\n### Combined Crawling and Conversion\n\nSometimes you need to both crawl a website and convert its content to markdown or text in a single workflow, like [Crawl4AI](#crawl4ai) or [markdown-crawler](#markdown-crawler).\n\n1. **For research/data collection**: Use a specialized crawler (like Crawl4AI) with post-processing conversion\n2. **For simple website archiving**: Markdown-crawler provides a convenient all-in-one solution\n3. **For high-quality conversion**: Use wget/wget2 for crawling followed by pandoc for conversion\n4. **For maximum speed**: Combine wget with lynx in a pipeline\n\n### Crawl4AI\n\n[Crawl4AI](https://github.com/crawl4ai/crawl4ai) is designed for single-page extraction with high-quality content processing. Crawl4AI is optimized for AI training data extraction, focusing on clean, structured content rather than complete site preservation. It excels at removing boilerplate content and preserving the main article text.",
+    "source_file": "convert-html-to-markdown.md",
+    "context": "| Medium-Low | Basic structure with better tables | Improved readability over lynx |\n\n### Optimize Batch Processing\n\n1. **Process in parallel**: Use GNU Parallel for multi-core processing:\n\n [CODE_BLOCK]bash\nuv venv\nsource .venv/bin/activate.fish\nuv pip install crawl4ai\ncrawl4ai-setup\n```\n\n- `uv venv`: Creates a Python virtual environment using uv (a faster alternative to virtualenv)\n- `source .v"
+  },
+  {
+    "id": "convert-html-to-markdown.md_code_5",
+    "language": "text",
+    "code": "- `uv venv`: Creates a Python virtual environment using uv (a faster alternative to virtualenv)\n- `source .venv/bin/activate.fish`: Activates the virtual environment (fish shell syntax)\n- `uv pip install crawl4ai`: Installs the crawl4ai package\n- `crawl4ai-setup`: Initializes crawl4ai's required dependencies\n\n### markdown-crawler\n\n[markdown-crawler](https://pypi.org/project/markdown-crawler/) combines web crawling with markdown conversion in one tool. It's efficient for bulk processing but tends to produce lower-quality markdown conversion compared to specialized converters like pandoc or defuddle. Best for projects where quantity and integration are more important than perfect formatting.",
+    "source_file": "convert-html-to-markdown.md",
+    "context": "complete site preservation. It excels at removing boilerplate content and preserving the main article text.\n\n[CODE_BLOCK]\n\n- `uv venv`: Creates a Python virtual environment using uv (a faster alternative to virtualenv)\n- `source .venv/bin/activate.fish`: Activates the virtual environment (fish shell syntax)\n- `uv pip install crawl4ai`: Installs the crawl4ai package\n- `crawl4ai-setup`: Initializes crawl4ai's required dependencies\n\n### markdown-crawler\n\n[markdown-crawler](https://pypi.org/project/markdown-crawler/) combines web crawling with markdown conversion in one tool. It's efficient for bulk processing but tends to produce lower-quality markdown conversion compared to specialized converters like pandoc or defuddle. Best for projects where quantity and integration are more important than perfect formatting.\n\n[CODE_BLOCK]\n\n- `uv venv` and activation: Same as above\n- `"
+  },
+  {
+    "id": "convert-pdfs-to-markdown.md_code_0",
+    "language": "bash",
+    "code": "PYTHONUTF8=1 uv run --with pymupdf4llm python -c 'import pymupdf4llm; h = open(\"pymupdf4llm.md\", \"w\"); h.write(pymupdf4llm.to_markdown(\"$FILE.pdf\"))'",
+    "source_file": "convert-pdfs-to-markdown.md",
+    "context": "PDF parsing engine. [PyMuPDF](https://pymupdf.readthedocs.io/) is emerging as a strong default for PDF text extraction due to its accuracy and performance in handling complex PDF structures.\n\n[CODE_BLOCK]\n\n- `PYTHONUTF8=1`: Forces Python to use UTF-8 encoding regardless of system locale\n- `uv run --with pymupdf4llm`: Uses uv package manager to run Python with the pymupdf4llm package\n- `python -c '"
+  },
+  {
+    "id": "convert-pdfs-to-markdown.md_code_1",
+    "language": "bash",
+    "code": "PYTHONUTF8=1 uvx markitdown $FILE.pdf > markitdown.md",
+    "source_file": "convert-pdfs-to-markdown.md",
+    "context": "PPTX via Python-PPTX. Good for batch processing of mixed document types. The quality of PDF conversion is generally good but may struggle with complex layouts or heavily formatted documents.\n\n[CODE_BLOCK]\n\n- `PYTHONUTF8=1`: Forces Python to use UTF-8 encoding\n- `uvx markitdown`: Runs the markitdown tool via the uv package manager\n- `$FILE.pdf`: The input PDF file\n- `> markitdown.md`: Redirects out"
+  },
+  {
+    "id": "convert-pdfs-to-markdown.md_code_2",
+    "language": "bash",
+    "code": "# Start GROBID service\ndocker run -t --rm -p 8070:8070 lfoppiano/grobid:0.7.2\n\n# Process PDF with curl\ncurl -X POST -F \"input=@paper.pdf\" localhost:8070/api/processFulltextDocument > references.tei.xml",
+    "source_file": "convert-pdfs-to-markdown.md",
+    "context": "ative PDFs or reliably OCR'ed ones, [GROBID](https://github.com/kermitt2/grobid) remains the de facto choice. It excels at extracting structured bibliographic information with high accuracy.\n\n[CODE_BLOCK]\n\n### Mistral OCR API\n\n[Mistral OCR](https://mistral.ai/products/ocr/) offers an end-to-end cloud API that preserves both text and layout, making it easier to isolate specific sections like Refere"
+  },
+  {
+    "id": "cors.md_code_0",
+    "language": "http",
+    "code": "Access-Control-Allow-Origin: https://example.com\nAccess-Control-Allow-Methods: GET, POST, PUT, DELETE\nAccess-Control-Allow-Headers: Content-Type, Authorization\nAccess-Control-Allow-Credentials: true",
+    "source_file": "cors.md",
+    "context": "tication\n\nIf you're exposing your API with a GET request publicly, the only thing you need to do is set the HTTP header `Access-Control-Allow-Origin: *`.\n\nHere are other common CORS headers:\n\n[CODE_BLOCK]\n\nTo implement CORS in FastAPI, use the [`CORSMiddleware` middleware](https://fastapi.tiangolo.com/tutorial/cors/):\n\n```python\nfrom fastapi import FastAPI\nfrom fastapi.middleware.cors import CORSM"
+  },
+  {
+    "id": "cors.md_code_1",
+    "language": "python",
+    "code": "from fastapi import FastAPI\nfrom fastapi.middleware.cors import CORSMiddleware\n\napp = FastAPI()\n\napp.add_middleware(CORSMiddleware, allow_origins=[\"*\"]) # Allow GET requests from all origins\n# Or, provide more granular control:\napp.add_middleware(\n CORSMiddleware,\n allow_origins=[\"https://example.com\"], # Allow a specific domain\n allow_credentials=True, # Allow cookies\n allow_methods=[\"GET\", \"POST\", \"PUT\", \"DELETE\"], # Allow specific methods\n allow_headers=[\"*\"], # Allow all headers\n)",
+    "source_file": "cors.md",
+    "context": "s: Content-Type, Authorization\nAccess-Control-Allow-Credentials: true\n[CODE_BLOCK]python\nfrom fastapi import FastAPI\nfrom fastapi.middleware.cors import CORSMiddleware\n\napp = FastAPI()\n\napp.add_middleware(CORSMiddleware, allow_origins=[\"*\"]) # Allow GET requests from all origins\n# Or, provide more granular control:\napp.add_middleware(\n CORSMiddleware,\n allow_origins=[\"https://example.com\"], # Allow a specific domain\n allow_credentials=True, # Allow cookies\n allow_methods=[\"GET\", \"POST\", \"PUT\", \"DELETE\"], # Allow specific methods\n allow_headers=[\"*\"], # Allow all headers\n)\n[CODE_BLOCK]javascript\n// Simple request\nconst response = await fetch(\"https://api.example.com/data\", {\n method: \"GET\",\n headers: { \"Content-Type\": \"application/json\" },\n})"
+  },
+  {
+    "id": "cors.md_code_2",
+    "language": "javascript",
+    "code": "// Simple request\nconst response = await fetch(\"https://api.example.com/data\", {\n method: \"GET\",\n headers: { \"Content-Type\": \"application/json\" },\n});\n\n// Request with credentials\nconst response = await fetch(\"https://api.example.com/data\", {\n credentials: \"include\",\n headers: { \"Content-Type\": \"application/json\" },\n});",
+    "source_file": "cors.md",
+    "context": "edentials=True, # Allow cookies\n allow_methods=[\"GET\", \"POST\", \"PUT\", \"DELETE\"], # Allow specific methods\n allow_headers=[\"*\"], # Allow all headers\n)\n[CODE_BLOCK]javascript\n// Simple request\nconst response = await fetch(\"https://api.example.com/data\", {\n method: \"GET\",\n headers: { \"Content-Type\": \"application/json\" },\n});\n\n// Request with credentials\nconst response = await fetch(\"https://api.example.com/data\", {\n credentials: \"include\",\n headers: { \"Content-Type\": \"application/json\" },\n});\n```\n\nUseful CORS debugging tools:\n\n- [CORS Checker](https://cors-test.codehappy.dev/): Test CORS configurations\n- Browser DevTools Network tab: Inspect CORS headers and preflight requests\n- [cors-any"
+  },
+  {
+    "id": "crawling-cli.md_code_0",
+    "language": "bash",
+    "code": "wget \\\n --recursive \\\n --level=3 \\\n --no-parent \\\n --convert-links \\\n --adjust-extension \\\n --compression=auto \\\n --accept html,htm \\\n --directory-prefix=./ds \\\n https://study.iitm.ac.in/ds/",
+    "source_file": "crawling-cli.md",
+    "context": "s://i.ytimg.com/vi/pLfH5TZBGXo/sddefault.jpg)](https://youtu.be/pLfH5TZBGXo)\n\nTo crawl the [IIT Madras Data Science Program website](https://study.iitm.ac.in/ds/) for example, you could run:\n\n[CODE_BLOCK]\n\nHere's what each option does:\n\n- `--recursive`: Enables recursive downloading (following links)\n- `--level=3`: Limits recursion depth to 3 levels from the initial URL\n- `--no-parent`: Restricts"
+  },
+  {
+    "id": "crawling-cli.md_code_1",
+    "language": "bash",
+    "code": "wget2 \\\n --recursive \\\n --level=3 \\\n --no-parent \\\n --convert-links \\\n --adjust-extension \\\n --compression=auto \\\n --accept html,htm \\\n --directory-prefix=./ds \\\n https://study.iitm.ac.in/ds/",
+    "source_file": "crawling-cli.md",
+    "context": "directory\n\n[wget2](https://gitlab.com/gnuwget/wget2) is a better version of `wget` and supports HTTP2, parallel connections, and only updates modified sites. The syntax is (mostly) the same.\n\n[CODE_BLOCK]\n\nThere are popular free and open-source alternatives to Wget:\n\n### Wpull\n\n[Wpull](https://github.com/ArchiveTeam/wpull) is a wget‐compatible Python crawler that supports on-disk resumption, WARC"
+  },
+  {
+    "id": "crawling-cli.md_code_2",
+    "language": "bash",
+    "code": "uvx wpull \\\n --recursive \\\n --level=3 \\\n --no-parent \\\n --convert-links \\\n --adjust-extension \\\n --compression=auto \\\n --accept html,htm \\\n --directory-prefix=./ds \\\n https://study.iitm.ac.in/ds/",
+    "source_file": "crawling-cli.md",
+    "context": "alternatives to Wget:\n\n### Wpull\n\n[Wpull](https://github.com/ArchiveTeam/wpull) is a wget‐compatible Python crawler that supports on-disk resumption, WARC output, and PhantomJS integration.\n\n[CODE_BLOCK]\n\n### HTTrack\n\n[HTTrack](https://www.httrack.com/html/fcguide.html) is dedicated website‐mirroring tool with rich filtering and link‐conversion options.\n\n```bash\nhttrack \"https://study.iitm.ac.in/"
+  },
+  {
+    "id": "crawling-cli.md_code_3",
+    "language": "bash",
+    "code": "httrack \"https://study.iitm.ac.in/ds/\" \\\n -O \"./ds\" \\\n \"+*.study.iitm.ac.in/ds/*\" \\\n -r3",
+    "source_file": "crawling-cli.md",
+    "context": "ds \\\n https://study.iitm.ac.in/ds/\n[CODE_BLOCK]bash\nhttrack \"https://study.iitm.ac.in/ds/\" \\\n -O \"./ds\" \\\n \"+*.study.iitm.ac.in/ds/*\" \\\n -r3\n```\n\n### Robots.txt\n\n`robots.txt` is a standard file found in a website's root directory that specifies which parts of the site should not be accessed by web crawlers. It's part of the Robots Exclusi"
+  },
+  {
+    "id": "data-preparation-in-duckdb.md_code_0",
+    "language": "bash",
+    "code": "duckdb sample.duckdb <<'SQL'\nCREATE OR REPLACE TABLE orders AS\nSELECT\n seq AS order_id,\n CASE WHEN seq % 5 = 0 THEN NULL ELSE 'Customer ' || seq END AS customer,\n date '2025-01-01' + CAST(seq % 15 AS INTEGER) AS order_date,\n CASE WHEN seq % 3 = 0 THEN 'Widget ' || seq ELSE 'Gadget ' || seq END AS product,\n round(random()*1000, 2) AS amount,\n CASE WHEN seq % 4 = 0 THEN 'EU' ELSE 'US' END AS region\nFROM range(1, 50) tbl(seq);\nSQL",
+    "source_file": "data-preparation-in-duckdb.md",
+    "context": "enarios: missing customer info (20% of orders), seasonal patterns (15-day cycles), and geographic segmentation that drive business decisions like inventory placement and marketing campaigns.\n\n[CODE_BLOCK]\n\n### Create a Messy CSV\n\nLet's also simulate real-world data export issues - unescaped quotes, missing delimiters, and malformed records that break standard CSV parsers. Data rarely arrives clean"
+  },
+  {
+    "id": "data-preparation-in-duckdb.md_code_1",
+    "language": "bash",
+    "code": "cat <<'EOF' > messy_orders.csv\norder_id,customer,order_date,product,amount,region\n1,Customer 1,2025-01-01,Widget 1,100,US\n\"2,Customer 2,2025-01-02,Gadget 2,200,US\n3,Customer 3,2025-01-03,Gadget 3,300,EU\nEOF",
+    "source_file": "data-preparation-in-duckdb.md",
+    "context": "les. Learning to handle corrupted CSV files prevents hours of debugging and ensures your data pipeline doesn't break when inevitably receiving bad data from vendors, APIs, or legacy systems.\n\n[CODE_BLOCK]\n\n### Create a Big CSV\n\nNext, we'll create a large dataset to practice memory-efficient processing techniques that handle files too big to fit in RAM. When working with millions of customer record"
+  },
+  {
+    "id": "data-preparation-in-duckdb.md_code_2",
+    "language": "bash",
+    "code": "duckdb sample.duckdb <<'SQL'\nCOPY (SELECT seq AS id, random() AS val FROM range(100000)) TO 'big.csv';\nSQL",
+    "source_file": "data-preparation-in-duckdb.md",
+    "context": "or run out of memory. DuckDB's streaming capabilities let you process 100GB+ files on laptops by reading data in chunks, making big data analysis accessible without expensive infrastructure.\n\n[CODE_BLOCK]\n\n### Exploratory Data Analysis\n\nWe need to examine our data structure and quality before making business decisions. Every data analysis starts with understanding what you have - missing values ca"
+  },
+  {
+    "id": "data-preparation-in-duckdb.md_code_3",
+    "language": "sql",
+    "code": "-- Preview and get stats\nSELECT * FROM orders LIMIT 5;\nDESCRIBE orders;\nSELECT COUNT(*) AS n, AVG(amount) AS avg_amount FROM orders;",
+    "source_file": "data-preparation-in-duckdb.md",
+    "context": "hich analytical techniques work. Quick EDA prevents costly mistakes like launching marketing campaigns based on incomplete customer data or setting prices using corrupted transaction amounts.\n\n[CODE_BLOCK]\n\n### Converting Data to Other Formats\n\nLet's export cleaned data to formats optimized for different business needs. Analytics teams need Parquet for fast querying, APIs require JSON for web integ"
+  },
+  {
+    "id": "data-preparation-in-duckdb.md_code_4",
+    "language": "sql",
+    "code": "COPY (SELECT * FROM orders) TO 'orders.json' (FORMAT JSON);\nCOPY (SELECT * FROM orders) TO 'orders.parquet' (FORMAT PARQUET);",
+    "source_file": "data-preparation-in-duckdb.md",
+    "context": "ity. Format conversion ensures your cleaned data reaches every stakeholder in their preferred format, enabling faster decision-making across departments without forcing everyone to learn SQL.\n\n[CODE_BLOCK]\n\n### Reading Messy CSV\n\nWe need to handle corrupted files that would normally crash your data pipeline. Real-world CSV files from vendors, legacy systems, or manual exports often contain malforme"
+  },
+  {
+    "id": "data-preparation-in-duckdb.md_code_5",
+    "language": "sql",
+    "code": "-- Skip bad lines while loading\nSELECT *\nFROM read_csv_auto('messy_orders.csv', ignore_errors=true);",
+    "source_file": "data-preparation-in-duckdb.md",
+    "context": "ending hours manually fixing files or losing critical business data, DuckDB's error handling lets you salvage usable records while identifying problem areas for follow-up with data providers.\n\n[CODE_BLOCK]\n\n### Handling Missing Values\n\nIt's important to address incomplete data that could lead to wrong business conclusions. Missing customer names prevent personalized marketing, absent transaction am"
+  },
+  {
+    "id": "data-preparation-in-duckdb.md_code_6",
+    "language": "sql",
+    "code": "-- Replace null customer names\nSELECT COALESCE(customer, 'Unknown') AS customer FROM orders;",
+    "source_file": "data-preparation-in-duckdb.md",
+    "context": "ing. Rather than excluding entire records and losing valuable information, strategic imputation preserves data for analysis while clearly marking assumptions made during the cleaning process.\n\n[CODE_BLOCK]\n\n### String Operations\n\nIt's common to standardize text data that comes from multiple sources with inconsistent formatting. Product names from different suppliers use varying cases, customer entr"
+  },
+  {
+    "id": "data-preparation-in-duckdb.md_code_7",
+    "language": "sql",
+    "code": "SELECT DISTINCT TRIM(LOWER(product)) AS clean_product FROM orders;",
+    "source_file": "data-preparation-in-duckdb.md",
+    "context": "tting. Clean, consistent strings enable accurate grouping for inventory management, prevent duplicate customer records, and ensure search functionality works properly across your application.\n\n[CODE_BLOCK]\n\n### Date Parsing and Conversion\n\nTypically, we transform dates into different formats that enable time-based business analysis. Raw date strings from different systems use various formats that p"
+  },
+  {
+    "id": "data-preparation-in-duckdb.md_code_8",
+    "language": "sql",
+    "code": "SELECT order_id, STRFTIME(order_date, '%Y-%m') AS order_month FROM orders;",
+    "source_file": "data-preparation-in-duckdb.md",
+    "context": "ndard formats enables monthly sales reporting, seasonal trend analysis, and time-based customer segmentation - critical for inventory planning, marketing campaigns, and financial forecasting.\n\n[CODE_BLOCK]\n\n### Conditional Logic and Binning\n\nA common task is to categorize continuous data into meaningful business segments that drive decision-making. Converting exact dollar amounts into price tiers e"
+  },
+  {
+    "id": "data-preparation-in-duckdb.md_code_9",
+    "language": "sql",
+    "code": "SELECT\n order_id,\n CASE WHEN amount > 700 THEN 'high' WHEN amount > 300 THEN 'medium' ELSE 'low' END AS price_band\nFROM orders;",
+    "source_file": "data-preparation-in-duckdb.md",
+    "context": "ventory classification (high/medium/low value items), and commission structures. This segmentation forms the foundation for personalized pricing, customer targeting, and performance analysis.\n\n[CODE_BLOCK]\n\n### Regex Search and Replace\n\nWe often need to clean complex text patterns that simple string operations can't handle. Product descriptions contain multiple spaces, phone numbers have inconsiste"
+  },
+  {
+    "id": "data-preparation-in-duckdb.md_code_10",
+    "language": "sql",
+    "code": "SELECT REGEXP_REPLACE(product, '\\\\s+', ' ', 'g') AS tidy_product FROM orders;",
+    "source_file": "data-preparation-in-duckdb.md",
+    "context": "viations with full words. Regular expressions fix these patterns systematically, ensuring consistent data quality for customer communications, shipping integrations, and search functionality.\n\n[CODE_BLOCK]\n\n### Working with Multiple Formats\n\nLet's combine data from different sources that use various file formats. Modern businesses receive data as CSV exports, JSON from APIs, and Parquet from data w"
+  },
+  {
+    "id": "data-preparation-in-duckdb.md_code_11",
+    "language": "sql",
+    "code": "CREATE TABLE json_orders AS SELECT * FROM read_json_auto('orders.json');\nCREATE TABLE parquet_orders AS SELECT * FROM read_parquet('orders.parquet');\nSELECT * FROM orders UNION ALL SELECT * FROM parquet_orders;",
+    "source_file": "data-preparation-in-duckdb.md",
+    "context": "arate processing pipelines, DuckDB's format flexibility lets you join orders from your CSV exports with customer data from JSON APIs and inventory levels from Parquet files in a single query.\n\n[CODE_BLOCK]\n\n### Processing in Chunks\n\nWe handle massive datasets that exceed available memory by processing them in manageable segments. When analyzing years of transaction logs, customer behavior data, or"
+  },
+  {
+    "id": "data-preparation-in-duckdb.md_code_12",
+    "language": "sql",
+    "code": "SELECT * FROM read_csv_auto('big.csv') LIMIT 1000 OFFSET 0;\nSELECT * FROM read_csv_auto('big.csv') LIMIT 1000 OFFSET 1000;",
+    "source_file": "data-preparation-in-duckdb.md",
+    "context": "nalysis of terabyte-scale datasets on standard hardware, making enterprise-level data analysis accessible for fraud detection, customer lifetime value calculations, and operational analytics.\n\n[CODE_BLOCK]\n\n### Filtering Rows and Dropping Columns\n\nWe'll focus analysis on relevant data subsets while removing sensitive or unnecessary information. Business analysis rarely needs all data - marketing te"
+  },
+  {
+    "id": "data-preparation-in-duckdb.md_code_13",
+    "language": "sql",
+    "code": "SELECT order_id, amount FROM orders WHERE region = 'US';\nSELECT * EXCLUDE region FROM orders;",
+    "source_file": "data-preparation-in-duckdb.md",
+    "context": "es processing time, protects sensitive data (removing PII columns), and ensures analysis focuses on business-relevant subsets rather than getting lost in comprehensive but unfocused datasets.\n\n[CODE_BLOCK]\n\n### Derived Columns\n\nNow, let's create new business metrics from existing data that drive key performance indicators. Raw transaction amounts become profit margins with tax calculations, custome"
+  },
+  {
+    "id": "data-preparation-in-duckdb.md_code_14",
+    "language": "sql",
+    "code": "SELECT *, amount * 0.1 AS tax, UPPER(region) AS region_code FROM orders;",
+    "source_file": "data-preparation-in-duckdb.md",
+    "context": "comparisons. These derived metrics power executive dashboards, sales team performance tracking, and automated business rules without requiring manual calculations or separate reporting tools.\n\n[CODE_BLOCK]\n\n### Summaries and Pivots\n\nA big part of data preparation is to transform detailed transaction data into executive-level insights that inform strategic decisions. Converting thousands of individu"
+  },
+  {
+    "id": "data-preparation-in-duckdb.md_code_15",
+    "language": "sql",
+    "code": "-- Aggregation\nSELECT region, COUNT(*) AS n_orders, SUM(amount) AS total FROM orders GROUP BY region;\n\n-- Pivot by region\nSELECT *\nFROM orders\nPIVOT(COUNT(*) FOR region IN ('US', 'EU'));",
+    "source_file": "data-preparation-in-duckdb.md",
+    "context": "growth opportunities, underperforming markets, and inventory optimization needs. These aggregations become the foundation for board presentations, budget planning, and strategic initiatives.\n\n[CODE_BLOCK]\n\nUseful links:\n\n- [DuckDB Documentation](https://duckdb.org/docs/)\n- [SQL Functions](https://duckdb.org/docs/sql/functions/overview)\n- [DuckDB Extensions](https://duckdb.org/docs/extensions/overv"
+  },
+  {
+    "id": "data-preparation-in-the-shell.md_code_0",
+    "language": "python",
+    "code": "# curl has LOTs of options. You won't remember most, but it's fun to geek out.\n!curl --help all",
+    "source_file": "data-preparation-in-the-shell.md",
+    "context": "lly available by default on most systems.\n\nWe'll use `curl` to download the file from the URL `https://drive.usercontent.google.com/uc?id=1J1ed4iHFAiS1Xq55aP858OEyEMQ-uMnE&export=download`\n\n[CODE_BLOCK]\n\n Usage: curl [options...] <url>\n --abstract-unix-socket <path> Connect via abstract Unix domain socket\n --alt-svc <file name> Enable alt-svc with this cache file\n --anyauth Pick any authenticati"
+  },
+  {
+    "id": "data-preparation-in-the-shell.md_code_1",
+    "language": "python",
+    "code": "# We're using 3 curl options here:\n# --continue-at - continues the download from where it left off. It won't download if already downloaded\n# --location downloads the file even if the link sends us somewhere else\n# --output FILE saves the downloaded output as\n!curl --continue-at - \\\n --location \\\n --output s-anand.net-Apr-2024.gz \\\n https://drive.usercontent.google.com/uc?id=1J1ed4iHFAiS1Xq55aP858OEyEMQ-uMnE&export=download",
+    "source_file": "data-preparation-in-the-shell.md",
+    "context": "ke the operation more talkative\n -V, --version Show version number and quit\n -w, --write-out <format> Use output FORMAT after completion\n --xattr Store metadata in extended file attributes\n\n[CODE_BLOCK]\n\n % Total % Received % Xferd Average Speed Time Time Time Current\n Dload Upload Total Spent Left Speed\n 0 0 0 0 0 0 0 0 --:--:-- --:--:-- --:--:-- 0\n 100 5665k 100 5665k 0 0 3139k 0 0:00:01 0:00:"
+  },
+  {
+    "id": "data-preparation-in-the-shell.md_code_2",
+    "language": "python",
+    "code": "!ls --help",
+    "source_file": "data-preparation-in-the-shell.md",
+    "context": "Spent Left Speed\n 0 0 0 0 0 0 0 0 --:--:-- --:--:-- --:--:-- 0\n 100 5665k 100 5665k 0 0 3139k 0 0:00:01 0:00:01 --:--:-- 9602k\n\n## List files\n\n`ls` lists files. It too has lots of options.\n\n[CODE_BLOCK]\n\n Usage: ls [OPTION]... [FILE]...\n List information about the FILEs (the current directory by default).\n Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.\n\n Mandatory argu"
+  },
+  {
+    "id": "data-preparation-in-the-shell.md_code_3",
+    "language": "python",
+    "code": "# By default, it just lists all file names\n!ls",
+    "source_file": "data-preparation-in-the-shell.md",
+    "context": "coreutils online help: <https://www.gnu.org/software/coreutils/>\n Full documentation <https://www.gnu.org/software/coreutils/ls>\n or available locally via: info '(coreutils) ls invocation'\n\n[CODE_BLOCK]\n\n sample_data s-anand.net-Apr-2024.gz\n\n[CODE_BLOCK]\n\n total 5672\n drwxr-xr-x 1 root root 4096 Jun 6 14:21 sa"
+  },
+  {
+    "id": "data-preparation-in-the-shell.md_code_4",
+    "language": "python",
+    "code": "# If we want to see the size of the file, use `-l` for the long-listing format\n!ls -l",
+    "source_file": "data-preparation-in-the-shell.md",
+    "context": "u.org/software/coreutils/ls>\n or available locally via: info '(coreutils) ls invocation'\n\n[CODE_BLOCK]\n\n sample_data s-anand.net-Apr-2024.gz\n\n[CODE_BLOCK]\n\n total 5672\n drwxr-xr-x 1 root root 4096 Jun 6 14:21 sample_data\n -rw-r--r-- 1 root root 5801198 Jun 9 05:18 s-anand.net-Apr-2024.gz\n\n## Uncompress the log file\n\n`gzip` is the most popular compr"
+  },
+  {
+    "id": "data-preparation-in-the-shell.md_code_5",
+    "language": "python",
+    "code": "# gzip -d is the same as gunzip. They both decompress a GZIP-ed file\n!gzip -d s-anand.net-Apr-2024.gz",
+    "source_file": "data-preparation-in-the-shell.md",
+    "context": "an use `gzip -d FILE.gz` to decompress the file. It'll replace `FILE.gz` with `FILE`.\n\n(Compression works the opposite way. `gzip FILE` replaces `FILE` with `FILE.gz`)[link text](https://)\n\n[CODE_BLOCK]\n\n[CODE_BLOCK]\n\n total 50832\n drwxr-xr-x 1 root root 4096 Jun 6 14:21 sample_data\n -rw-r--r-- 1 root root 52044491 Jun 9 05:18 s-anand.net-Apr-2024"
+  },
+  {
+    "id": "data-preparation-in-the-shell.md_code_6",
+    "language": "python",
+    "code": "# Let's list the files and see the size\n!ls -l",
+    "source_file": "data-preparation-in-the-shell.md",
+    "context": "e way. `gzip FILE` replaces `FILE` with `FILE.gz`)[link text](https://)\n\n[CODE_BLOCK]\n\n[CODE_BLOCK]\n\n total 50832\n drwxr-xr-x 1 root root 4096 Jun 6 14:21 sample_data\n -rw-r--r-- 1 root root 52044491 Jun 9 05:18 s-anand.net-Apr-2024\n\nIn this case, a file that was ~5.8MiB became ~52MiB, roughly"
+  },
+  {
+    "id": "data-preparation-in-the-shell.md_code_7",
+    "language": "python",
+    "code": "# Show the first 5 lines\n!head -n 5 s-anand.net-Apr-2024",
+    "source_file": "data-preparation-in-the-shell.md",
+    "context": "ransport compressed files -- especitally if they're plain text.\n\n## Preview the logs\n\nTo see the first few lines or the last few lines of a text file, use `head` or `tail`_italicized text_\n\n[CODE_BLOCK]\n\n 17.241.219.11 - - [31/Mar/2024:07:16:50 -0500] \"GET /hindi/Hari_Puttar_-_A_Comedy_of_Terrors~Meri_Yaadon_Mein_Hai_Tu HTTP/1.1\" 200 2839 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) Appl"
+  },
+  {
+    "id": "data-preparation-in-the-shell.md_code_8",
+    "language": "python",
+    "code": "# Show the last 5 files\n!tail -n 5 s-anand.net-Apr-2024",
+    "source_file": "data-preparation-in-the-shell.md",
+    "context": "pelt-tamil-movie-names/feed/ HTTP/1.1\" 200 1105 \"-\" \"Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.66 Safari/537.36\" www.s-anand.net 192.254.190.216\n\n[CODE_BLOCK]\n\n 47.128.125.180 - - [30/Apr/2024:07:07:47 -0500] \"GET /tamil/Subramaniyapuram HTTP/1.1\" 406 226 \"-\" \"Mozilla/5.0 (compatible; Bytespider; spider-feedback@bytedance.com) AppleWebKit/537.36 (KHTML"
+  },
+  {
+    "id": "data-preparation-in-the-shell.md_code_9",
+    "language": "python",
+    "code": "!wc s-anand.net-Apr-2024",
+    "source_file": "data-preparation-in-the-shell.md",
+    "context": "ly old versio of Chrome on Linux. Very likely a bot.\n\n## Count requests\n\n`wc` counts the number of lines, words, and characters in a file. The number of lines is most often used with data.\n\n[CODE_BLOCK]\n\n 208539 4194545 52044491 s-anand.net-Apr-2024\n\nSo, in Apr 2024, there were ~208K requests to the site. Useful to know.\n\nI wonder: **Who is sending most of these requests?**\n\nLet's extract the IP"
+  },
+  {
+    "id": "data-preparation-in-the-shell.md_code_10",
+    "language": "python",
+    "code": "# Preview just the IP addresses from the logs\n!cut --delimiter \" \" --fields 1 s-anand.net-Apr-2024 | head -n 5",
+    "source_file": "data-preparation-in-the-shell.md",
+    "context": "iter` is the character that splits fields. In the log file, it's a space. (We'll confirm this shortly.)\n`--fields` picks the field to cut. We want field 1 (IP address)\n\nLet's preview this:\n\n[CODE_BLOCK]\n\n 17.241.219.11\n 17.241.75.154\n 101.44.248.120\n 17.241.227.200\n 37.59.21.100\n\nWe used the `|` operator. That passes the output to the next command, `head -n 5`, and gives us first 5 lines. This i"
+  },
+  {
+    "id": "data-preparation-in-the-shell.md_code_11",
+    "language": "python",
+    "code": "# Preview the SORTED IP addresses from the logs\n!cut --delimiter \" \" --fields 1 s-anand.net-Apr-2024 | sort | head -n 5",
+    "source_file": "data-preparation-in-the-shell.md",
+    "context": "ing** and is the equivalent of calling a function inside another in programming languages.\n\nWe'll use `sort` to sort these IP addresses. That puts the same IP addresses next to each other.\n\n[CODE_BLOCK]\n\n 100.20.65.50\n 100.43.111.139\n 101.100.145.51\n 101.115.156.11\n 101.115.205.68\n\nThere are no duplicates there... maybe we need to go a bit further? Let's check the top 25 lines.\n\n```python\n# Prev"
+  },
+  {
+    "id": "data-preparation-in-the-shell.md_code_12",
+    "language": "python",
+    "code": "# Preview the SORTED IP addresses from the logs\n!cut --delimiter \" \" --fields 1 s-anand.net-Apr-2024 | sort | head -n 25",
+    "source_file": "data-preparation-in-the-shell.md",
+    "context": "d -n 5\n[CODE_BLOCK]python\n# Preview the SORTED IP addresses from the logs\n!cut --delimiter \" \" --fields 1 s-anand.net-Apr-2024 | sort | head -n 25\n```\n\n 100.20.65.50\n 100.43.111.139\n 101.100.145.51\n 101.115.156.11\n 101.115.205.68\n 101.126.25.225\n 101.132.248.41\n 101.166.40.221\n 101.166.6.221\n 101.183.40.167\n 101.185.221.147\n 101.188.225.246\n 10"
+  },
+  {
+    "id": "data-preparation-in-the-shell.md_code_13",
+    "language": "python",
+    "code": "!cut --delimiter \" \" --fields 1 s-anand.net-Apr-2024 | sort | uniq --count | head -n 25",
+    "source_file": "data-preparation-in-the-shell.md",
+    "context": "ll use `uniq` to count the unique IP addresses. It has a `--count` option that displays the number of unique values.\n\n**NOTE**: `uniq` works ONLY on sorted files. You NEED to `sort` first.\n\n[CODE_BLOCK]\n\n 1 100.20.65.50\n 1 100.43.111.139\n 1 101.100.145.51\n 1 101.115.156.11\n 1 101.115.205.68\n 1 101.126.25.225\n 1 101.132.248.41\n 1 101.166.40.221\n 1 101.166.6.221\n 1 101.183.40.167\n 1 101.185.221.14"
+  },
+  {
+    "id": "data-preparation-in-the-shell.md_code_14",
+    "language": "python",
+    "code": "# Show the top 5 IP addresses by visits\n!cut --delimiter \" \" --fields 1 s-anand.net-Apr-2024 | sort | uniq --count | sort --key 1n | tail -n 5",
+    "source_file": "data-preparation-in-the-shell.md",
+    "context": "eld `1` -- the count of IP addresses in this case. The `n` indicates that it's a numeric sort (so 11 appears AFTER 2).\n\nAlso, we'll use `tail` instead of `head` to get the highest entries.\n\n[CODE_BLOCK]\n\n 2560 66.249.70.6\n 3010 148.251.241.12\n 4245 35.86.164.73\n 7800 37.59.21.100\n 101255 136.243.228.193\n\nWOW! [136.243.228.193](https://www.whois.com/whois/136.243.228.193) from Dataforseo, Ukraine"
+  },
+  {
+    "id": "data-preparation-in-the-shell.md_code_15",
+    "language": "python",
+    "code": "# Preview lines that begin with 136.243.228.193\n!grep \"^136.243.228.193 \" s-anand.net-Apr-2024 | head -n 5",
+    "source_file": "data-preparation-in-the-shell.md",
+    "context": "helpful.\n\nHere, we'll search for all lines BEGINNING with 136.243.228.193 and having a space after that. That's `\"^136.243.228.193 \"`. The `^` at the beginning matches the start of a line.\n\n[CODE_BLOCK]\n\n 136.243.228.193 - - [31/Mar/2024:11:27:43 -0500] \"GET /kannadamp3 HTTP/1.1\" 200 4162 \"-\" \"Mozilla/5.0 (compatible; DataForSeoBot/1.0; +https://dataforseo.com/dataforseo-bot)\" www.s-anand.net 19"
+  },
+  {
+    "id": "data-preparation-in-the-shell.md_code_16",
+    "language": "python",
+    "code": "# Preview lines that begin with 37.59.21.100\n!grep \"^37.59.21.100 \" s-anand.net-Apr-2024 | head -n 5",
+    "source_file": "data-preparation-in-the-shell.md",
+    "context": "h is polite.\n\nLet's look at the second IP address: [37.59.21.100](https://www.whois.com/whois/37.59.21.100). That seems to be from OVH, a French cloud hosting provider. Is that a bot, too?\n\n[CODE_BLOCK]\n\n 37.59.21.100 - - [31/Mar/2024:07:19:41 -0500] \"GET /blog/matching-misspelt-tamil-movie-names/feed/ HTTP/1.1\" 200 1105 \"-\" \"Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) C"
+  },
+  {
+    "id": "data-preparation-in-the-shell.md_code_17",
+    "language": "python",
+    "code": "# Find all words with `bot` in it\n!grep --only-matching '\\b\\w*bot\\w*\\b' s-anand.net-Apr-2024 | head",
+    "source_file": "data-preparation-in-the-shell.md",
+    "context": "ire line.\n\nThe regular expression `'\\S*bot\\S*'` (which ChatGPT generated) finds all words that have bot.\n\n- `\\S` matches non-space characters\n- `\\S*` matches 0 or more non-space characters\n\n[CODE_BLOCK]\n\n Applebot\n applebot\n Applebot\n applebot\n Applebot\n applebot\n Applebot\n applebot\n Applebot\n applebot\n\n```python\n# Count frequency of all words with `bot` in it and show the top 10\n!grep --only-ma"
+  },
+  {
+    "id": "data-preparation-in-the-shell.md_code_18",
+    "language": "python",
+    "code": "# Count frequency of all words with `bot` in it and show the top 10\n!grep --only-matching '\\S*bot\\S*' s-anand.net-Apr-2024 | sort | uniq --count | sort --key 1n | tail",
+    "source_file": "data-preparation-in-the-shell.md",
+    "context": "with `bot` in it\n!grep --only-matching '\\b\\w*bot\\w*\\b' s-anand.net-Apr-2024 | head\n[CODE_BLOCK]python\n# Count frequency of all words with `bot` in it and show the top 10\n!grep --only-matching '\\S*bot\\S*' s-anand.net-Apr-2024 | sort | uniq --count | sort --key 1n | tail\n```\n\n 4134 PetalBot;+https://webmaster.petalsearch.com/site/petalbot)\"\n 4307 /robots.txt\n 5664 bingbot/2.0;\n 5664 +http://www.bing.com/bingbot.htm)\n 8771 +claudebot@anthropic.com)\"\n 8827 +http://www."
+  },
+  {
+    "id": "data-preparation-in-the-shell.md_code_19",
+    "language": "python",
+    "code": "# Replace [datetime] etc. with \"datetime\" and save as log.csv\n!sed 's/\\[\\([^]]*\\)\\]/\"\\1\"/' s-anand.net-Apr-2024 > log.csv",
+    "source_file": "data-preparation-in-the-shell.md",
+    "context": "c/xyz/\" FILE` replaces `abc` with `xyz` in the file. We can use the regular expression above for the search and `\"\\1\"` for the value -- it inserts captured group enclosed in double quotes.\n\n[CODE_BLOCK]\n\n[CODE_BLOCK]\n\n total 101660\n -rw-r--r-- 1 root root 52044491 Jun 9 05:19 log.csv\n drwxr-xr-x 1 root root"
+  },
+  {
+    "id": "data-preparation-in-the-shell.md_code_20",
+    "language": "python",
+    "code": "# We should now have a log.csv that's roughly the same size as the original file.\n!ls -l",
+    "source_file": "data-preparation-in-the-shell.md",
+    "context": "t inserts captured group enclosed in double quotes.\n\n[CODE_BLOCK]\n\n[CODE_BLOCK]\n\n total 101660\n -rw-r--r-- 1 root root 52044491 Jun 9 05:19 log.csv\n drwxr-xr-x 1 root root 4096 Jun 6 14:21 sample_data\n -rw-r--r-- 1 root root 52044491 Jun 9 05:18 s-anand.net-Apr-2024\n\nYou can"
+  },
+  {
+    "id": "dbt.md_code_0",
+    "language": "sql",
+    "code": "with source as (\n select * from {{ source('raw', 'customers') }}\n),\n\nrenamed as (\n select\n id as customer_id,\n first_name,\n last_name,\n email,\n created_at\n from source\n)\n\nselect * from renamed",
+    "source_file": "dbt.md",
+    "context": "changed data\n- **Deployment and Orchestration**: Set up dbt Cloud or integrate with Airflow for production deployment\n\nHere's a minimal dbt model example, `models/staging/stg_customers.sql`:\n\n[CODE_BLOCK]\n\nTools and Resources:\n\n- [dbt Core](https://github.com/dbt-labs/dbt-core) - The open-source transformation tool\n- [dbt Cloud](https://www.getdbt.com/product/dbt-cloud) - Hosted platform for runni"
+  },
+  {
+    "id": "docker.md_code_0",
+    "language": "bash",
+    "code": "podman machine init\npodman machine start",
+    "source_file": "docker.md",
+    "context": "is compatible with Docker and has better security (and a slightly more open license). In this course, we recommend Podman but Docker works in the same way.\n\nInitialize the container engine:\n\n[CODE_BLOCK]\n\nCommon Operations. (You can use `docker` instead of `podman` in the same way.)\n\n```bash\n# Pull an image\npodman pull python:3.11-slim\n\n# Run a container\npodman run -it python:3.11-slim\n\n# List co"
+  },
+  {
+    "id": "docker.md_code_1",
+    "language": "bash",
+    "code": "# Pull an image\npodman pull python:3.11-slim\n\n# Run a container\npodman run -it python:3.11-slim\n\n# List containers\npodman ps -a\n\n# Stop container\npodman stop container_id\n\n# Scan image for vulnerabilities\npodman scan myapp:latest\n\n# Remove container\npodman rm container_id\n\n# Remove all stopped containers\npodman container prune",
+    "source_file": "docker.md",
+    "context": "works in the same way.\n\nInitialize the container engine:\n\n[CODE_BLOCK]\n\nCommon Operations. (You can use `docker` instead of `podman` in the same way.)\n\n[CODE_BLOCK]\n\nYou can create a `Dockerfile` to build a container image. Here's a sample `Dockerfile` that converts a Python script into a container image.\n\n```dockerfile\nFROM python:3.11-slim\n# Set working di"
+  },
+  {
+    "id": "docker.md_code_2",
+    "language": "dockerfile",
+    "code": "FROM python:3.11-slim\n# Set working directory\nWORKDIR /app\n# Typically, you would use `COPY . .` to copy files from the host machine,\n# but here we're just using a simple script.\nRUN echo 'print(\"Hello, world!\")' > app.py\n# Run the script\nCMD [\"python\", \"app.py\"]",
+    "source_file": "docker.md",
+    "context": "pped containers\npodman container prune\n[CODE_BLOCK]dockerfile\nFROM python:3.11-slim\n# Set working directory\nWORKDIR /app\n# Typically, you would use `COPY . .` to copy files from the host machine,\n# but here we're just using a simple script.\nRUN echo 'print(\"Hello, world!\")' > app.py\n# Run the script\nCMD [\"python\", \"app.py\"]\n[CODE_BLOCK]bash\n# Create an account on https://hub.docker.com/ and then login\npodman login docker.io\n\n# Build and run the container\npodman b"
+  },
+  {
+    "id": "docker.md_code_3",
+    "language": "bash",
+    "code": "# Create an account on https://hub.docker.com/ and then login\npodman login docker.io\n\n# Build and run the container\npodman build -t py-hello .\npodman run -it py-hello\n\n# Push the container to Docker Hub. Replace $DOCKER_HUB_USERNAME with your Docker Hub username.\npodman push py-hello:latest docker.io/$DOCKER_HUB_USERNAME/py-hello\n\n# Push adding a specific tag, e.g. dev\nTAG=dev podman push py-hello docker.io/$DOCKER_HUB_USERNAME/py-hello:$TAG",
+    "source_file": "docker.md",
+    "context": "here we're just using a simple script.\nRUN echo 'print(\"Hello, world!\")' > app.py\n# Run the script\nCMD [\"python\", \"app.py\"]\n[CODE_BLOCK]bash\n# Create an account on https://hub.docker.com/ and then login\npodman login docker.io\n\n# Build and run the container\npodman build -t py-hello .\npodman run -it py-hello\n\n# Push the container to Docker Hub. Replace $DOCKER_HUB_USERNAME with your Docker Hub username.\npodman push py-hello:latest docker.io/$DOCKER_HUB_USERNAME/py-hello\n\n# Push adding a specific tag, e.g. dev\nTAG=dev podman push py-hello docker.io/$DOCKER_HUB_USERNAME/py-hello:$TAG\n```\n\nTools:\n\n- [Dive](https://github.com/wagoodman/dive): Explore image layers\n- [Skopeo](https://github.com/containers/skopeo): Work with container images\n- [Trivy](https://github.com/aquasecurity/t"
+  },
+  {
+    "id": "embeddings.md_code_0",
+    "language": "python",
+    "code": "# /// script\n# requires-python = \"==3.12\"\n# dependencies = [\n# \"sentence-transformers\",\n# \"httpx\",\n# \"numpy\",\n# ]\n# ///\n\nfrom sentence_transformers import SentenceTransformer\nimport numpy as np\n\nmodel = SentenceTransformer('BAAI/bge-base-en-v1.5') # A small, high quality model\n\nasync def embed(text: str) -> list[float]:\n \"\"\"Get embedding vector for text using local model.\"\"\"\n return model.encode(text).tolist()\n\nasync def get_similarity(text1: str, text2: str) -> float:\n \"\"\"Calculate cosine similarity between two texts.\"\"\"\n emb1 = np.array(await embed(text1))\n emb2 = np.array(await embed(text2))\n return float(np.dot(emb1, emb2) / (np.linalg.norm(emb1) * np.linalg.norm(emb2)))\n\nasync def main():\n print(await get_similarity(\"Apple\", \"Orange\"))\n print(await get_similarity(\"Apple\", \"Lightning\"))\n\nif __name__ == \"__main__\":\n import asyncio\n asyncio.run(main())",
+    "source_file": "embeddings.md",
+    "context": "de to Local Embeddings with Sentence Transformers](https://i.ytimg.com/vi/OATCgQtNX2o/sddefault.jpg)](https://youtu.be/OATCgQtNX2o)\n\nHere's a minimal example using a local embedding model:\n\n[CODE_BLOCK]\n\nNote the `get_similarity` function. It uses a [Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity) to calculate the similarity between two embeddings.\n\n### OpenAI Embeddings\n\nFor"
+  },
+  {
+    "id": "embeddings.md_code_1",
+    "language": "python",
+    "code": "import os\nimport httpx\n\nasync def embed(text: str) -> list[float]:\n \"\"\"Get embedding vector for text using OpenAI's API.\"\"\"\n async with httpx.AsyncClient() as client:\n response = await client.post(\n \"https://api.openai.com/v1/embeddings\",\n headers={\"Authorization\": f\"Bearer {os.environ['OPENAI_API_KEY']}\"},\n json={\"model\": \"text-embedding-3-small\", \"input\": text}\n )\n return response.json()[\"data\"][0][\"embedding\"]",
+    "source_file": "embeddings.md",
+    "context": "te the similarity between two embeddings.\n\n### OpenAI Embeddings\n\nFor comparison, here's how to use OpenAI's API with direct HTTP calls. Replace the `embed` function in the earlier script:\n\n[CODE_BLOCK]\n\n**NOTE**: You need to set the [`OPENAI_API_KEY`](https://platform.openai.com/api-keys) environment variable for this to work."
+  },
+  {
+    "id": "extracting-audio-and-transcripts.md_code_0",
+    "language": "bash",
+    "code": "# Basic conversion\nffmpeg -i input.mp4 output.avi\n\n# Extract audio\nffmpeg -i input.mp4 -vn output.mp3\n\n# Convert format without re-encoding\nffmpeg -i input.mkv -c copy output.mp4\n\n# High quality encoding (crf: 0-51, lower is better)\nffmpeg -i input.mp4 -preset slower -crf 18 output.mp4",
+    "source_file": "extracting-audio-and-transcripts.md",
+    "context": "s for:\n\n- Extracting audio/video for machine learning\n- Converting formats for web deployment\n- Creating visualizations and presentations\n- Processing large media datasets\n\nBasic Operations:\n\n[CODE_BLOCK]\n\nCommon Data Science Tasks:\n\n```bash\n# Extract frames for computer vision\nffmpeg -i input.mp4 -vf \"fps=1\" frames_%04d.png # 1 frame per second\nffmpeg -i input.mp4 -vf \"select='eq(n,0)'\" -vframes"
+  },
+  {
+    "id": "extracting-audio-and-transcripts.md_code_1",
+    "language": "bash",
+    "code": "# Extract frames for computer vision\nffmpeg -i input.mp4 -vf \"fps=1\" frames_%04d.png # 1 frame per second\nffmpeg -i input.mp4 -vf \"select='eq(n,0)'\" -vframes 1 first_frame.jpg\n\n# Create video from image sequence\nffmpeg -r 1/5 -i img%03d.png -c:v libx264 -vf fps=25 output.mp4\n\n# Extract audio for speech recognition\nffmpeg -i input.mp4 -ar 16000 -ac 1 audio.wav # 16kHz mono\n\n# Trim video/audio for training data\nffmpeg -ss 00:01:00 -i input.mp4 -t 00:00:30 -c copy clip.mp4",
+    "source_file": "extracting-audio-and-transcripts.md",
+    "context": "re-encoding\nffmpeg -i input.mkv -c copy output.mp4\n\n# High quality encoding (crf: 0-51, lower is better)\nffmpeg -i input.mp4 -preset slower -crf 18 output.mp4\n[CODE_BLOCK]bash\n# Extract frames for computer vision\nffmpeg -i input.mp4 -vf \"fps=1\" frames_%04d.png # 1 frame per second\nffmpeg -i input.mp4 -vf \"select='eq(n,0)'\" -vframes 1 first_frame.jpg\n\n# Create video from image sequence\nffmpeg -r 1/5 -i img%03d.png -c:v libx264 -vf fps=25 output.mp4\n\n# Extract audio for speech recognition\nffmpeg -i input.mp4 -ar 16000 -ac 1 audio.wav # 16kHz mono\n\n# Trim video/audio for training data\nffmpeg -ss 00:01:00 -i input.mp4 -t 00:00:30 -c copy clip.mp4\n[CODE_BLOCK]bash\n# Concatenate videos (first create files.txt with list of files)\necho \"file 'input1.mp4'\nfile 'input2.mp4'\" > files.txt\nffmpeg -f concat -i files.txt -c copy"
+  },
+  {
+    "id": "extracting-audio-and-transcripts.md_code_2",
+    "language": "bash",
+    "code": "# Concatenate videos (first create files.txt with list of files)\necho \"file 'input1.mp4'\nfile 'input2.mp4'\" > files.txt\nffmpeg -f concat -i files.txt -c copy output.mp4\n\n# Batch process with shell loop\nfor f in *.mp4; do\n ffmpeg -i \"$f\" -vn \"audio/${f%.mp4}.wav\"\ndone",
+    "source_file": "extracting-audio-and-transcripts.md",
+    "context": "ffmpeg -i input.mp4 -ar 16000 -ac 1 audio.wav # 16kHz mono\n\n# Trim video/audio for training data\nffmpeg -ss 00:01:00 -i input.mp4 -t 00:00:30 -c copy clip.mp4\n[CODE_BLOCK]bash\n# Concatenate videos (first create files.txt with list of files)\necho \"file 'input1.mp4'\nfile 'input2.mp4'\" > files.txt\nffmpeg -f concat -i files.txt -c copy output.mp4\n\n# Batch process with shell loop\nfor f in *.mp4; do\n ffmpeg -i \"$f\" -vn \"audio/${f%.mp4}.wav\"\ndone\n[CODE_BLOCK]bash\n# Get media file information\nffprobe -v quiet -print_format json -show_format -show_streams input.mp4\n\n# Display frame metadata\nffprobe -v quiet -print_format js"
+  },
+  {
+    "id": "extracting-audio-and-transcripts.md_code_3",
+    "language": "bash",
+    "code": "# Get media file information\nffprobe -v quiet -print_format json -show_format -show_streams input.mp4\n\n# Display frame metadata\nffprobe -v quiet -print_format json -show_frames input.mp4\n\n# Generate video thumbnails\nffmpeg -i input.mp4 -vf \"thumbnail\" -frames:v 1 thumb.jpg",
+    "source_file": "extracting-audio-and-transcripts.md",
+    "context": "\" > files.txt\nffmpeg -f concat -i files.txt -c copy output.mp4\n\n# Batch process with shell loop\nfor f in *.mp4; do\n ffmpeg -i \"$f\" -vn \"audio/${f%.mp4}.wav\"\ndone\n[CODE_BLOCK]bash\n# Get media file information\nffprobe -v quiet -print_format json -show_format -show_streams input.mp4\n\n# Display frame metadata\nffprobe -v quiet -print_format json -show_frames input.mp4\n\n# Generate video thumbnails\nffmpeg -i input.mp4 -vf \"thumbnail\" -frames:v 1 thumb.jpg\n```\n\nWatch this introduction to FFmpeg (12 min):\n\n[![FFmpeg in 12 Minutes](https://i.ytimg.com/vi_webp/MPV7JXTWPWI/sddefault.webp)](https://youtu.be/MPV7JXTWPWI)\n\nTools:\n\n- [ffmpeg.lav.io](https://ff"
+  },
+  {
+    "id": "extracting-audio-and-transcripts.md_code_4",
+    "language": "bash",
+    "code": "# Validate file before processing\nffprobe input.mp4 2>&1 | grep \"Invalid\"\n\n# Continue on errors in batch processing\nffmpeg -i input.mp4 output.mp4 -xerror\n\n# Get detailed error information\nffmpeg -v error -i input.mp4 2>&1 | grep -A2 \"Error\"",
+    "source_file": "extracting-audio-and-transcripts.md",
+    "context": "with `-progress pipe:1`\n3. Use `-hide_banner` to reduce output verbosity\n4. Test commands with small clips first\n5. Use hardware acceleration when available (-hwaccel auto)\n\nError Handling:\n\n[CODE_BLOCK]\n\n<!-- Assessment: Share output of `ffprobe -v quiet -print_format json -show_format {video}` -->\n<!-- Assessment: Share output of `ffmpeg -i {video} -vf \"select='eq(n,0)'\" -vframes 1 {email}.jpg`"
+  },
+  {
+    "id": "extracting-audio-and-transcripts.md_code_5",
+    "language": "bash",
+    "code": "# macOS\nbrew install yt-dlp\n\n# Linux\ncurl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o ~/.local/bin/yt-dlp\nchmod a+rx ~/.local/bin/yt-dlp\n\n# Windows\nwinget install yt-dlp",
+    "source_file": "extracting-audio-and-transcripts.md",
+    "context": "re-rich command-line tool for downloading audio/video from thousands of sites. It's particularly useful for extracting audio and transcripts from videos.\n\nInstall using your package manager:\n\n[CODE_BLOCK]\n\nCommon operations for extracting audio and transcripts:\n\n```bash\n# Download audio only at lowest quality suitable for speech\nyt-dlp -f \"ba[abr<50]/worstaudio\" \\\n --extract-audio \\\n --audio-forma"
+  },
+  {
+    "id": "extracting-audio-and-transcripts.md_code_6",
+    "language": "bash",
+    "code": "# Download audio only at lowest quality suitable for speech\nyt-dlp -f \"ba[abr<50]/worstaudio\" \\\n --extract-audio \\\n --audio-format mp3 \\\n --audio-quality 32k \\\n \"https://www.youtube.com/watch?v=VIDEO_ID\"\n\n# Download auto-generated subtitles\nyt-dlp --write-auto-sub \\\n --skip-download \\\n --sub-format \"srt\" \\\n \"https://www.youtube.com/watch?v=VIDEO_ID\"\n\n# Download both audio and subtitles with custom output template\nyt-dlp -f \"ba[abr<50]/worstaudio\" \\\n --extract-audio \\\n --audio-format mp3 \\\n --audio-quality 32k \\\n --write-auto-sub \\\n --sub-format \"srt\" \\\n -o \"%(title)s.%(ext)s\" \\\n \"https://www.youtube.com/watch?v=VIDEO_ID\"\n\n# Download entire playlist's audio\nyt-dlp -f \"ba[abr<50]/worstaudio\" \\\n --extract-audio \\\n --audio-format mp3 \\\n --audio-quality 32k \\\n -o \"%(playlist_index)s-%(title)s.%(ext)s\" \\\n \"https://www.youtube.com/playlist?list=PLAYLIST_ID\"",
+    "source_file": "extracting-audio-and-transcripts.md",
+    "context": "dlp/yt-dlp/releases/latest/download/yt-dlp -o ~/.local/bin/yt-dlp\nchmod a+rx ~/.local/bin/yt-dlp\n\n# Windows\nwinget install yt-dlp\n[CODE_BLOCK]bash\n# Download audio only at lowest quality suitable for speech\nyt-dlp -f \"ba[abr<50]/worstaudio\" \\\n --extract-audio \\\n --audio-format mp3 \\\n --audio-quality 32k \\\n \"https://www.youtube.com/watch?v=VIDEO_ID\"\n\n# Download auto-generated subtitles\nyt-dlp --write-auto-sub \\\n --skip-download \\\n --sub-format \"srt\" \\\n \"https://www.youtube.com/watch?v=VIDEO_ID\"\n\n# Download both audio and subtitles with custom output template\nyt-dlp -f \"ba[abr<50]/worstaudio\" \\\n --extract-audio \\\n --audio-format mp3 \\\n --audio-quality 32k \\\n --write-auto-sub \\\n --sub-format \"srt\" \\\n -o \"%(title)s.%(ext)s\" \\\n \"https://www.youtube.com/watch?v=VIDEO_ID\"\n\n# Download entire playlist's audio\nyt-dlp -f \"ba[abr<50]/worstaudio\" \\\n --extract-audio \\\n --audio-format mp3 \\\n --audio-quality 32k \\\n -o \"%(playlist_index)s-%(title)s.%(ext)s\" \\\n \"https://www.youtube.com/playlist?list=PLAYLIST_ID\"\n[CODE_BLOCK]python\n# /// script\n# requires-python = \">=3.9\"\n# dependencies = [\"yt-dlp\"]\n# ///\n\nimport yt_dlp\n\ndef download_audio(url: str) -> None:\n \"\"\"Download audio at speech-o"
+  },
+  {
+    "id": "extracting-audio-and-transcripts.md_code_7",
+    "language": "python",
+    "code": "# /// script\n# requires-python = \">=3.9\"\n# dependencies = [\"yt-dlp\"]\n# ///\n\nimport yt_dlp\n\ndef download_audio(url: str) -> None:\n \"\"\"Download audio at speech-optimized quality.\"\"\"\n ydl_opts = {\n 'format': 'ba[abr<50]/worstaudio',\n 'postprocessors': [{\n 'key': 'FFmpegExtractAudio',\n 'preferredcodec': 'mp3',\n 'preferredquality': '32'\n }]\n }\n\n with yt_dlp.YoutubeDL(ydl_opts) as ydl:\n ydl.download([url])\n\n# Example usage\ndownload_audio('https://www.youtube.com/watch?v=VIDEO_ID')",
+    "source_file": "extracting-audio-and-transcripts.md",
+    "context": "-extract-audio \\\n --audio-format mp3 \\\n --audio-quality 32k \\\n -o \"%(playlist_index)s-%(title)s.%(ext)s\" \\\n \"https://www.youtube.com/playlist?list=PLAYLIST_ID\"\n[CODE_BLOCK]python\n# /// script\n# requires-python = \">=3.9\"\n# dependencies = [\"yt-dlp\"]\n# ///\n\nimport yt_dlp\n\ndef download_audio(url: str) -> None:\n \"\"\"Download audio at speech-optimized quality.\"\"\"\n ydl_opts = {\n 'format': 'ba[abr<50]/worstaudio',\n 'postprocessors': [{\n 'key': 'FFmpegExtractAudio',\n 'preferredcodec': 'mp3',\n 'preferredquality': '32'\n }]\n }\n\n with yt_dlp.YoutubeDL(ydl_opts) as ydl:\n ydl.download([url])\n\n# Example usage\ndownload_audio('https://www.youtube.com/watch?v=VIDEO_ID')\n```\n\nTools:\n\n- [ffmpeg](https://ffmpeg.org/): Required for audio extraction and conversion\n- [whisper](https://github.com/openai/whisper): Can be used with yt-dlp for speech-to-text\n- [gallery-dl](ht"
+  },
+  {
+    "id": "extracting-audio-and-transcripts.md_code_8",
+    "language": "bash",
+    "code": "faster-whisper-xxl \"video.mp4\" --model medium --language en",
+    "source_file": "extracting-audio-and-transcripts.md",
+    "context": "s memory.\n\nYou can install it via:\n\n- `pip install faster-whisper`\n- [Download Windows Standalone](https://github.com/Purfview/whisper-standalone-win/releases)\n\nHere's a basic usage example:\n\n[CODE_BLOCK]\n\nHere's my recommendation for transcribing videos. This saves the output in JSON as well as SRT format in the source directory.\n\n```bash\nfaster-whisper-xxl --print_progress --output_dir source --"
+  },
+  {
+    "id": "extracting-audio-and-transcripts.md_code_9",
+    "language": "bash",
+    "code": "faster-whisper-xxl --print_progress --output_dir source --batch_recursive \\\n --check_files --standard --output_format json srt \\\n --model medium --language en $FILE",
+    "source_file": "extracting-audio-and-transcripts.md",
+    "context": "aster-whisper-xxl \"video.mp4\" --model medium --language en\n[CODE_BLOCK]bash\nfaster-whisper-xxl --print_progress --output_dir source --batch_recursive \\\n --check_files --standard --output_format json srt \\\n --model medium --language en $FILE\n```\n\n- `--model`: The OpenAI Whisper model to use. You can choose from:\n - `tiny`: Fastest but least accurate\n - `base`: Good for simple audio\n - `small`: Balanced speed/accuracy\n - `medium`: Recomme"
+  },
+  {
+    "id": "fastapi.md_code_0",
+    "language": "python",
+    "code": "# /// script\n# requires-python = \">=3.11\"\n# dependencies = [\n# \"fastapi\",\n# \"uvicorn\",\n# ]\n# ///\n\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/\")\nasync def root():\n return {\"message\": \"Hello!\"}\n\nif __name__ == \"__main__\":\n import uvicorn\n uvicorn.run(app, host=\"0.0.0.0\", port=8000)",
+    "source_file": "fastapi.md",
+    "context": "framework for building APIs with automatic interactive documentation. It's fast, easy to use, and designed for building production-ready REST APIs.\n\nHere's a minimal FastAPI app, `app.py`:\n\n[CODE_BLOCK]\n\nRun this with `uv run app.py`.\n\n1. **Handle errors by raising HTTPException**\n\n ```python\n from fastapi import HTTPException\n\n async def get_item(item_id: int):\n if not valid_item(item_id):\n rai"
+  },
+  {
+    "id": "function-calling.md_code_0",
+    "language": "python",
+    "code": "# /// script\n# requires-python = \">=3.11\"\n# dependencies = [\n# \"httpx\",\n# ]\n# ///\n\nimport httpx\nimport os\nfrom typing import Dict, Any\n\ndef query_gpt(user_input: str, tools: list[Dict[str, Any]]) -> Dict[str, Any]:\n response = httpx.post(\n \"https://api.openai.com/v1/chat/completions\",\n headers={\n \"Authorization\": f\"Bearer {os.getenv('OPENAI_API_KEY')}\",\n \"Content-Type\": \"application/json\",\n },\n json={\n \"model\": \"gpt-4o-mini\",\n \"messages\": [{\"role\": \"user\", \"content\": user_input}],\n \"tools\": tools,\n \"tool_choice\": \"auto\",\n },\n )\n return response.json()[\"choices\"][0][\"message\"]\n\nWEATHER_TOOL = {\n \"type\": \"function\",\n \"function\": {\n \"name\": \"get_weather\",\n \"description\": \"Get the current weather for a location\",\n \"parameters\": {\n \"type\": \"object\",\n \"properties\": {\n \"location\": {\"type\": \"string\", \"description\": \"City name or coordinates\"}\n },\n \"required\": [\"location\"],\n \"additionalProperties\": False,\n },\n \"strict\": True,\n },\n}\n\nif __name__ == \"__main__\":\n response = query_gpt(\"What is the weather in San Francisco?\", [WEATHER_TOOL])\n print([tool_call[\"function\"] for tool_call in response[\"tool_calls\"]])",
+    "source_file": "function-calling.md",
+    "context": "com/vi_webp/aqdWSYWC_LI/sddefault.webp)](https://youtu.be/aqdWSYWC_LI)\n\nHere's a minimal example using Python and OpenAI's function calling that identifies the weather in a given location.\n\n[CODE_BLOCK]\n\n### How to define functions\n\nThe function definition is a [JSON schema](https://json-schema.org/) with a few OpenAI specific properties.\nSee the [Supported schemas](https://platform.openai.com/d"
+  },
+  {
+    "id": "function-calling.md_code_1",
+    "language": "python",
+    "code": "MEETING_TOOL = {\n \"type\": \"function\",\n \"function\": {\n \"name\": \"schedule_meeting\",\n \"description\": \"Schedule a meeting room for a specific date and time\",\n \"parameters\": {\n \"type\": \"object\",\n \"properties\": {\n \"date\": {\n \"type\": \"string\",\n \"description\": \"Meeting date in YYYY-MM-DD format\"\n },\n \"time\": {\n \"type\": \"string\",\n \"description\": \"Meeting time in HH:MM format\"\n },\n \"meeting_room\": {\n \"type\": \"string\",\n \"description\": \"Name of the meeting room\"\n }\n },\n \"required\": [\"date\", \"time\", \"meeting_room\"],\n \"additionalProperties\": False\n },\n \"strict\": True\n }\n}",
+    "source_file": "function-calling.md",
+    "context": "properties.\nSee the [Supported schemas](https://platform.openai.com/docs/guides/structured-outputs#supported-schemas).\n\nHere's an example of a function definition for scheduling a meeting:\n\n[CODE_BLOCK]\n\n### How to define multiple functions\n\nYou can define multiple functions by passing a list of function definitions to the `tools` parameter.\n\nHere's an example of a list of function definitions f"
+  },
+  {
+    "id": "function-calling.md_code_2",
+    "language": "python",
+    "code": "tools = [\n {\n \"type\": \"function\",\n \"function\": {\n \"name\": \"get_expense_balance\",\n \"description\": \"Get expense balance for an employee\",\n \"parameters\": {\n \"type\": \"object\",\n \"properties\": {\n \"employee_id\": {\n \"type\": \"integer\",\n \"description\": \"Employee ID number\"\n }\n },\n \"required\": [\"employee_id\"],\n \"additionalProperties\": False\n },\n \"strict\": True\n }\n },\n {\n \"type\": \"function\",\n \"function\": {\n \"name\": \"calculate_performance_bonus\",\n \"description\": \"Calculate yearly performance bonus for an employee\",\n \"parameters\": {\n \"type\": \"object\",\n \"properties\": {\n \"employee_id\": {\n \"type\": \"integer\",\n \"description\": \"Employee ID number\"\n },\n \"current_year\": {\n \"type\": \"integer\",\n \"description\": \"Year to calculate bonus for\"\n }\n },\n \"required\": [\"employee_id\", \"current_year\"],\n \"additionalProperties\": False\n },\n \"strict\": True\n }\n }\n]",
+    "source_file": "function-calling.md",
+    "context": "by passing a list of function definitions to the `tools` parameter.\n\nHere's an example of a list of function definitions for handling employee expenses and calculating performance bonuses:\n\n[CODE_BLOCK]\n\nBest Practices:\n\n1. **Use Strict Mode**\n - Always set `strict: True` to ensure valid function calls\n - Define all required parameters\n - Set `additionalProperties: False`\n2. **Use tool choice**"
+  },
+  {
+    "id": "git.md_code_0",
+    "language": "bash",
+    "code": "# Repository Setup\ngit init # Create new repo\ngit clone url # Clone existing repo\ngit remote add origin url # Connect to remote\n\n# Basic Workflow\ngit status # Check status\ngit add . # Stage all changes\ngit commit -m \"message\" # Commit changes\ngit push origin main # Push to remote\n\n# Branching\ngit branch # List branches\ngit checkout -b feature # Create/switch branch\ngit merge feature # Merge branch\ngit rebase main # Rebase on main\n\n# History\ngit log --oneline # View history\ngit diff commit1 commit2 # Compare commits\ngit blame file # Show who changed what",
+    "source_file": "git.md",
+    "context": "outu.be/HVsySz-h9r4)\n\n[![Git and GitHub for Beginners - Crash Course (68 min)](https://i.ytimg.com/vi_webp/RGOj5yH7evk/sddefault.webp)](https://youtu.be/RGOj5yH7evk)\n\nEssential Git Commands:\n\n[CODE_BLOCK]\n\nBest Practices:\n\n1. **Commit Messages**\n\n ```bash\n # Good commit message format\n type(scope): summary\n\n Detailed description of changes.\n\n # Examples\n feat(api): add user authentication\n fix(db)"
+  },
+  {
+    "id": "github-actions.md_code_0",
+    "language": "yaml",
+    "code": "name: Log ISS Location Data Daily\n\non:\n schedule:\n # Runs at 12:00 UTC (noon) every day\n - cron: \"0 12 * * *\"\n workflow_dispatch: # Allows manual triggering\n\njobs:\n collect-iss-data:\n runs-on: ubuntu-latest\n permissions:\n contents: write\n\n steps:\n - name: Checkout repository\n uses: actions/checkout@v4\n\n - name: Install uv\n uses: astral-sh/setup-uv@v5\n\n - name: Fetch ISS location data\n run: | # python\n uv run --with requests python << 'EOF'\n import requests\n\n data = requests.get('http://api.open-notify.org/iss-now.json').text\n with open('iss-location.jsonl', 'a') as f:\n f.write(data + '\\n')\n 'EOF'\n\n - name: Commit and push changes\n run: | # shell\n git config --local user.email \"github-actions[bot]@users.noreply.github.com\"\n git config --local user.name \"github-actions[bot]\"\n git add iss-location.jsonl\n git commit -m \"Update ISS position data [skip ci]\" || exit 0\n git push",
+    "source_file": "github-actions.md",
+    "context": "ows)\n\nHere is a sample `.github/workflows/iss-location.yml` that runs daily, appends the International Space Station location data into `iss-location.json`, and commits it to the repository.\n\n[CODE_BLOCK]\n\nTools:\n\n- [GitHub CLI](https://cli.github.com/): Manage workflows from terminal\n- [Super-Linter](https://github.com/github/super-linter): Validate code style\n- [Release Drafter](https://github.c"
+  },
+  {
+    "id": "github-pages.md_code_0",
+    "language": "bash",
+    "code": "# Create a new GitHub repo\nmkdir my-site\ncd my-site\ngit init\n\n# Add your static content\necho \"<h1>My Site</h1>\" > index.html\n\n# Push to GitHub\ngit add .\ngit commit -m \"feat(pages): initial commit\"\ngit push origin main\n\n# Enable GitHub Pages from the main branch on the repo settings page",
+    "source_file": "github-pages.md",
+    "context": "Hub repository directly into a static website whenever you push it. This is useful for sharing analysis results, data science portfolios, project documentation, and more.\n\nCommon Operations:\n\n[CODE_BLOCK]\n\nBest Practices:\n\n1. **Keep it small**\n - [Optimize images](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Performance/Multimedia). Prefer SVG over WEBP over 8-bit PNG."
+  },
+  {
+    "id": "google-auth.md_code_0",
+    "language": "env",
+    "code": "GOOGLE_CLIENT_ID=your-client-id.apps.googleusercontent.com\n GOOGLE_CLIENT_SECRET=your-client-secret\n ```\n\n4. Create your FastAPI `app.py`:",
+    "source_file": "google-auth.md",
+    "context": "ls > OAuth client ID**.\n2. Choose **Web application**, set your authorized redirect URIs (e.g., `http://localhost:8000/`).\n3. Copy the **Client ID** and **Client Secret** into a `.env` file:\n\n [CODE_BLOCK]python\n# /// script\n# dependencies = [\"python-dotenv\", \"fastapi\", \"uvicorn\", \"itsdangerous\", \"httpx\", \"authlib\"]\n# ///\n\nimport os\nfrom dotenv import load_dotenv\nfrom fastapi import FastAPI, Reques"
+  },
+  {
+    "id": "hybrid-rag-typesense.md_code_0",
+    "language": "bash",
+    "code": "mkdir typesense-data\n\ndocker run -p 8108:8108 \\\n -v typesense-data:/data typesense/typesense:28.0 \\\n --data-dir /data \\\n --api-key=secret-key \\\n --enable-cors",
+    "source_file": "hybrid-rag-typesense.md",
+    "context": "elf-contained Hybrid RAG tutorial using TypeSense, Python, and the command line.\n\n### Install and run TypeSense\n\n[Install TypeSense](https://typesense.org/docs/guide/install-typesense.html).\n\n[CODE_BLOCK]\n\n- **`docker run`**: spins up a containerized TypeSense server on port 8108\n - `-p 8108:8108` maps host port to container port.\n - `-v typesense-data:/data` mounts a Docker volume for persistence"
+  },
+  {
+    "id": "hybrid-rag-typesense.md_code_1",
+    "language": "python",
+    "code": "# /// script\n# requires-python = \">=3.13\"\n# dependencies = [\"httpx\"]\n# ///\nimport json\nimport httpx\nimport os\n\nheaders = {\"X-TYPESENSE-API-KEY\": \"secret-key\"}\n\nschema = {\n \"name\": \"notes\",\n \"fields\": [\n {\"name\": \"id\", \"type\": \"string\", \"facet\": False},\n {\"name\": \"content\", \"type\": \"string\", \"facet\": False},\n {\n \"name\": \"embedding\",\n \"type\": \"float[]\",\n \"embed\": {\n \"from\": [\"content\"],\n \"model_config\": {\n \"model_name\": \"openai/text-embedding-3-small\",\n \"api_key\": os.getenv(\"OPENAI_API_KEY\"),\n },\n },\n },\n ],\n}\n\nwith open(\"chunks.json\", \"r\") as f:\n chunks = [json.loads(line) for line in f.readlines()]\n\nwith httpx.Client() as client:\n # Create the collection\n if client.get(f\"http://localhost:8108/collections/notes\", headers=headers).status_code == 404:\n r = client.post(\"http://localhost:8108/collections\", json=schema, headers=headers)\n\n # Embed the chunks\n result = client.post(\n \"http://localhost:8108/collections/notes/documents/import?action=emplace\",\n headers={**headers, \"Content-Type\": \"text/plain\"},\n data=\"\\n\".join(json.dumps(chunk) for chunk in chunks),\n )\n print(result.text)",
+    "source_file": "hybrid-rag-typesense.md",
+    "context": "docs/28.0/api/vector-search.html#option-b-auto-embedding-generation-within-typesense). We'll use that capability.\n\nSave the following as `addnotes.py` and run it with `uv run addnotes.py`.\n\n[CODE_BLOCK]\n\n- **`httpx.Client`**: an HTTP client for Python.\n- **Collection schema**: `id` and `content` fields plus an `embedding` field with auto-generated embeddings from OpenAI.\n- **Auto-embedding**: th"
+  },
+  {
+    "id": "hybrid-rag-typesense.md_code_2",
+    "language": "bash",
+    "code": "Q=\"What does the author affectionately call the => syntax?\"\n\npayload=$(jq -n --arg coll \"notes\" --arg q \"$Q\" \\\n '{\n searches: [\n {\n collection: $coll,\n q: $q,\n query_by: \"content,embedding\",\n sort_by: \"_text_match:desc\",\n prefix: false,\n exclude_fields: \"embedding\"\n }\n ]\n }'\n)\ncurl -s 'http://localhost:8108/multi_search' \\\n -H \"X-TYPESENSE-API-KEY: secret-key\" \\\n -d \"$payload\" \\\n | jq -r '.results[].hits[].document.content' \\\n | llm -s \"${Q} - \\$Answer ONLY from these notes. Cite verbatim from the notes.\" \\\n | uvx streamdown",
+    "source_file": "hybrid-rag-typesense.md",
+    "context": "we can use a single `curl` against the Multi-Search endpoint to combine keyword and vector search as a [hybrid search](https://typesense.org/docs/28.0/api/vector-search.html#hybrid-search):\n\n[CODE_BLOCK]\n\n- **`query_by: \"content,embedding\"`**: tells TypeSense to score by both keyword and vector similarity.\n- **`sort_by: \"_text_match:desc\"`**: boosts exact text hits.\n- **`exclude_fields: \"embeddin"
+  },
+  {
+    "id": "image-compression.md_code_0",
+    "language": "python",
+    "code": "from pathlib import Path\nfrom PIL import Image\nimport io\n\nasync def compress_image(input_path: Path, output_path: Path, quality: int = 85) -> None:\n \"\"\"Compress an image while maintaining reasonable quality.\"\"\"\n with Image.open(input_path) as img:\n # Convert RGBA to RGB if needed\n if img.mode == 'RGBA':\n img = img.convert('RGB')\n # Optimize for web\n img.save(output_path, 'WEBP', quality=quality, optimize=True)\n\n# Batch process images\npaths = Path('images').glob('*.jpg')\nfor p in paths:\n await compress_image(p, p.with_suffix('.webp'))",
+    "source_file": "image-compression.md",
+    "context": "if you can (i.e. if it's vector graphics or you can convert it to one)\n- Else, reduce the image to as small as you can, and save as (lossy or lossless) WebP\n\nCommon operations with Python:\n\n[CODE_BLOCK]\n\nCommand line tools include [cwebp](https://developers.google.com/speed/webp/docs/cwebp), [pngquant](https://pngquant.org/), [jpegoptim](https://github.com/tjko/jpegoptim), and [ImageMagick](http"
+  },
+  {
+    "id": "image-compression.md_code_1",
+    "language": "bash",
+    "code": "# Convert to WebP\ncwebp -q 85 input.png -o output.webp\n\n# Optimize PNG\npngquant --quality=65-80 image.png\n\n# Optimize JPEG\njpegoptim --strip-all --all-progressive --max=85 image.jpg\n\n# Convert and resize\nconvert input.jpg -resize 800x600 output.jpg\n\n# Batch convert\nmogrify -format webp -quality 85 *.jpg",
+    "source_file": "image-compression.md",
+    "context": "[cwebp](https://developers.google.com/speed/webp/docs/cwebp), [pngquant](https://pngquant.org/), [jpegoptim](https://github.com/tjko/jpegoptim), and [ImageMagick](https://imagemagick.org/).\n\n[CODE_BLOCK]\n\nWatch this video on modern image formats and optimization (15 min):\n\n[![Modern Image Optimization (15 min)](https://i.ytimg.com/vi_webp/F1kYBnY6mwg/sddefault.webp)](https://youtu.be/F1kYBnY6mwg)"
+  },
+  {
+    "id": "json.md_code_0",
+    "language": "python",
+    "code": "import json\n\n# Parse JSON string\njson_str = '{\"name\": \"Alice\", \"age\": 30}'\ndata = json.loads(json_str)\n\n# Convert to JSON string\njson_str = json.dumps(data, indent=2)\n\n# Read JSON from file\nwith open('data.json') as f:\n data = json.load(f)\n\n# Write JSON to file\nwith open('output.json', 'w') as f:\n json.dump(data, f, indent=2)\n\n# Read JSON data a Pandas DataFrame. JSON data is typically stored as an array of objects.\nimport pandas as pd\ndf = pd.read_json('data.json')\n\n# Read JSON lines from file into a DataFrame. JSON lines are typically one line per object.\ndf = pd.read_json('data.jsonl', lines=True)",
+    "source_file": "json.md",
+    "context": "r\n- [JSON Schema](https://json-schema.org/): Define the structure of your JSON data\n- [jq](https://stedolan.github.io/jq/): Command-line JSON processor\n\nCommon Python operations with JSON:\n\n[CODE_BLOCK]\n\nPractice JSON skills with these resources:\n\n- [JSON Generator](https://json-generator.com/): Create sample JSON data\n- [JSON Path Finder](https://jsonpathfinder.com/): Learn to navigate complex"
+  },
+  {
+    "id": "large-language-models.md_code_0",
+    "language": "bash",
+    "code": "curl https://aipipe.org/openrouter/v1/chat/completions \\\n -H \"Content-Type: application/json\" \\\n -H \"Authorization: Bearer $AIPIPE_TOKEN\" \\\n -d '{\n \"model\": \"google/gemini-2.0-flash-lite-001\",\n \"messages\": [{ \"role\": \"user\", \"content\": \"What is 2 + 2?\"} }]\n }'\n\ncurl https://aipipe.org/openai/v1/embeddings \\\n -H \"Content-Type: application/json\" \\\n -H \"Authorization: Bearer $AIPIPE_TOKEN\" \\\n -d '{ \"model\": \"text-embedding-3-small\", \"input\": \"What is 2 + 2?\" }'",
+    "source_file": "large-language-models.md",
+    "context": "sh-lite-001) for chat completions and [Text Embedding 3 Small](https://platform.openai.com/docs/models/text-embedding-3-small) via [OpenAI](https://platform.openai.com/docs/) for embeddings:\n\n[CODE_BLOCK]\n\nOr using [`llm`](https://llm.datasette.io/):\n\n```bash\nllm keys set openai --value $AIPIPE_TOKEN\n\nexport OPENAI_BASE_URL=https://aipipe.org/openrouter/v1\nllm 'What is 2 + 2?' -m openrouter/google"
+  },
+  {
+    "id": "large-language-models.md_code_1",
+    "language": "bash",
+    "code": "llm keys set openai --value $AIPIPE_TOKEN\n\nexport OPENAI_BASE_URL=https://aipipe.org/openrouter/v1\nllm 'What is 2 + 2?' -m openrouter/google/gemini-2.0-flash-lite-001\n\nexport OPENAI_BASE_URL=https://aipipe.org/openai/v1\nllm embed -c 'What is 2 + 2' -m 3-small",
+    "source_file": "large-language-models.md",
+    "context": "Type: application/json\" \\\n -H \"Authorization: Bearer $AIPIPE_TOKEN\" \\\n -d '{ \"model\": \"text-embedding-3-small\", \"input\": \"What is 2 + 2?\" }'\n[CODE_BLOCK]bash\nllm keys set openai --value $AIPIPE_TOKEN\n\nexport OPENAI_BASE_URL=https://aipipe.org/openrouter/v1\nllm 'What is 2 + 2?' -m openrouter/google/gemini-2.0-flash-lite-001\n\nexport OPENAI_BASE_URL=https://aipipe.org/openai/v1\nllm embed -c 'What is 2 + 2' -m 3-small\n```\n\n**For a 50% discount** (but slower speed), use [Flex processing](https://platform.openai.com/docs/guides/flex-processing) by adding `service_tier: \"flex\"` to your JSON request.\n\n## AI Proxy - Ja"
+  },
+  {
+    "id": "live-sessions.md_code_0",
+    "language": "bash",
+    "code": "yt-dlp --extract-audio --audio-format opus --embed-thumbnail --postprocessor-args \\\n \"-c:a libopus -b:a 12k -ac 1 -application voip -vbr off -ar 8000 -cutoff 4000 -frame_duration 60 -compression_level 10\" \\\n $YOUTUBE_URL",
+    "source_file": "live-sessions.md",
+    "context": "ww.youtube.com/playlist?list=PL_h5u1jMeBCl1BquBhgunA4t08XAxsA-C)\n\nThese were downloaded using [yt-dlp](https://github.com/yt-dlp/yt-dlp). The options compress the audio optimized for speech.\n\n[CODE_BLOCK]\n\nThey were then transcribed by Gemini 1.5 Flash 002 (currently the best model from a price-quality perspective for audio transcription).\n\nSystem prompt:\n\n```\nYou are an expert transcriber of data"
+  },
+  {
+    "id": "live-sessions.md_code_1",
+    "language": "text",
+    "code": "You are an expert transcriber of data science audio tutorials",
+    "source_file": "live-sessions.md",
+    "context": "compression_level 10\" \\\n $YOUTUBE_URL\n[CODE_BLOCK]\nYou are an expert transcriber of data science audio tutorials\n[CODE_BLOCK]\nTranscribe this audio tutorial about Tools in Data Science (TDS) as an FAQ.\nSummarize the student questions faithfully.\nSummarize the answers succinctly, without missing inform"
+  },
+  {
+    "id": "live-sessions.md_code_2",
+    "language": "text",
+    "code": "Transcribe this audio tutorial about Tools in Data Science (TDS) as an FAQ.\nSummarize the student questions faithfully.\nSummarize the answers succinctly, without missing information, in a conversational style.\nAvoid repeating questions, consolidating similar ones.\nPrefer \"You\" and \"I\" instead of \"student\" and \"instructor\".\nFor example:\n\n**Q1: [Concisely framed question]**\n\n**A1:** [Succinct answer]",
+    "source_file": "live-sessions.md",
+    "context": "lash 002 (currently the best model from a price-quality perspective for audio transcription).\n\nSystem prompt:\n\n[CODE_BLOCK]\n\nUser prompt:\n\n[CODE_BLOCK]"
+  },
+  {
+    "id": "llamafile.md_code_0",
+    "language": "text",
+    "code": "██╗ ██╗ █████╗ ███╗ ███╗ █████╗ ███████╗██╗██╗ ███████╗\n██║ ██║ ██╔══██╗████╗ ████║██╔══██╗██╔════╝██║██║ ██╔════╝\n██║ ██║ ███████║██╔████╔██║███████║█████╗ ██║██║ █████╗\n██║ ██║ ██╔══██║██║╚██╔╝██║██╔══██║██╔══╝ ██║██║ ██╔══╝\n███████╗███████╗██║ ██║██║ ╚═╝ ██║██║ ██║██║ ██║███████╗███████╗\n╚══════╝╚══════╝╚═╝ ╚═╝╚═╝ ╚═╝╚═╝ ╚═╝╚═╝ ╚═╝╚══════╝╚══════╝\nsoftware: llamafile 0.8.17\nmodel: Llama-3.2-1B-Instruct-Q8_0.gguf\ncompute: 13th Gen Intel Core i9-13900HX (alderlake)\nserver: http://127.0.0.1:8080/\n\nA chat between a curious human and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the human's questions.",
+    "source_file": "llamafile.md",
+    "context": "l: For GPU acceleration, use `Llama-3.2-1B-Instruct.Q6_K.llamafile --n-gpu-layers 35`. (Increase or decrease the number of layers based on your GPU VRAM.)\n\nYou might see a message like this:\n\n[CODE_BLOCK]\n\nYou can now chat with the model. Type `/exit` or press `Ctrl+C` to stop.\n\nYou can also visit `http://127.0.0.1:8080/` in your browser to chat with the model.\n\nLlamaFile exposes an OpenAI compati"
+  },
+  {
+    "id": "llamafile.md_code_1",
+    "language": "python",
+    "code": "import requests\n\nresponse = requests.post(\n \"http://localhost:8080/v1/chat/completions\",\n headers={\"Content-Type\": \"application/json\"},\n json={\"messages\": [{\"role\": \"user\", \"content\": \"Write a haiku about coding\"}]}\n)\nprint(response.json()[\"choices\"][0][\"message\"][\"content\"])",
+    "source_file": "llamafile.md",
+    "context": "or press `Ctrl+C` to stop.\n\nYou can also visit `http://127.0.0.1:8080/` in your browser to chat with the model.\n\nLlamaFile exposes an OpenAI compatible API. Here's how to use it in Python:\n\n[CODE_BLOCK]\n\nTools:\n\n- [OpenAI API compatibility](https://platform.openai.com/docs/api-reference/chat): Use existing OpenAI code\n- [Creating your own llamafiles](https://github.com/Mozilla-Ocho/llamafile#cre"
+  },
+  {
+    "id": "llm-agents.md_code_0",
+    "language": "bash",
+    "code": "uv run llm-cmd-agent.py \"list all Python files under the current directory, recursively, by size\"\nuv run llm-cmd-agent.py \"convert the largest Markdown file to HTML\"",
+    "source_file": "llm-agents.md",
+    "context": "complish the task\n3. Automatically extracts and executes the code\n4. Passes the results back to the LLM\n5. Provides a final answer or tries again if the execution fails\n\nHere's how it works:\n\n[CODE_BLOCK]\n\nThe agent will:\n\n1. Generate a shell script to list files with their sizes\n2. Execute the script in a subprocess\n3. Capture the output (stdout and stderr)\n4. Pass the output back to the LLM for"
+  },
+  {
+    "id": "llm-evals.md_code_0",
+    "language": "yaml",
+    "code": "prompts:\n - |\n Summarize this text: \"{{text}}\"\n - |\n Please write a concise summary of: \"{{text}}\"\n\nproviders:\n - openai:gpt-3.5-turbo\n - openai:gpt-4\n\ntests:\n - name: summary_test\n vars:\n text: \"PromptFoo is an open-source CLI and library for evaluating and testing LLMs with assertions, caching, and matrices.\"\n assertions:\n - contains-all:\n values:\n - \"open-source\"\n - \"LLMs\"\n - llm-rubric:\n instruction: |\n Score the summary from 1 to 5 for:\n - relevance: captures the main info?\n - clarity: wording is clear and concise?\n schema:\n type: object\n properties:\n relevance:\n type: number\n minimum: 1\n maximum: 5\n clarity:\n type: number\n minimum: 1\n maximum: 5\n required: [relevance, clarity]\n additionalProperties: false\n\ncommandLineOptions:\n cache: true",
+    "source_file": "llm-evals.md",
+    "context": "npm ([nodejs.org](https://nodejs.org/))\n2. Set up your [`OPENAI_API_KEY`](https://platform.openai.com/api-keys) environment variable\n3. Configure `promptfooconfig.yaml`. Below is an example:\n\n[CODE_BLOCK]\n\nNow, you can run the evaluations and see the results.\n\n```bash\n# Execute all tests\nnpx -y promptfoo eval -c promptfooconfig.yaml\n\n# List past evaluations\nnpx -y promptfoo list evals\n\n# Launch in"
+  },
+  {
+    "id": "llm-evals.md_code_1",
+    "language": "bash",
+    "code": "# Execute all tests\nnpx -y promptfoo eval -c promptfooconfig.yaml\n\n# List past evaluations\nnpx -y promptfoo list evals\n\n# Launch interactive results viewer on port 8080\nnpx -y promptfoo view -p 8080",
+    "source_file": "llm-evals.md",
+    "context": "type: number\n minimum: 1\n maximum: 5\n required: [relevance, clarity]\n additionalProperties: false\n\ncommandLineOptions:\n cache: true\n[CODE_BLOCK]bash\n# Execute all tests\nnpx -y promptfoo eval -c promptfooconfig.yaml\n\n# List past evaluations\nnpx -y promptfoo list evals\n\n# Launch interactive results viewer on port 8080\nnpx -y promptfoo view -p 8080\n[CODE_BLOCK]bash\n# Disable cache for this run\necho y | promptfoo eval --no-cache -c promptfooco"
+  },
+  {
+    "id": "llm-evals.md_code_2",
+    "language": "bash",
+    "code": "# Disable cache for this run\necho y | promptfoo eval --no-cache -c promptfooconfig.yaml\n\n# Clear all cache\necho y | promptfoo cache clear",
+    "source_file": "llm-evals.md",
+    "context": "# Launch interactive results viewer on port 8080\nnpx -y promptfoo view -p 8080\n[CODE_BLOCK]bash\n# Disable cache for this run\necho y | promptfoo eval --no-cache -c promptfooconfig.yaml\n\n# Clear all cache\necho y | promptfoo cache clear\n```"
+  },
+  {
+    "id": "llm-image-generation.md_code_0",
+    "language": "bash",
+    "code": "curl \"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp-image-generation:generateContent?key=$GEMINI_API_KEY\" \\\n -H \"Content-Type: application/json\" \\\n -X POST \\\n -d '{\n \"contents\": [{ \"parts\": [{ \"text\": \"A serene landscape of rolling hills at sunrise, digital art\" }] }],\n \"generationConfig\": { \"responseModalities\": [\"TEXT\", \"IMAGE\"] }\n }' | jq -r '.candidates[].content.parts[] | select(.inlineData) | .inlineData.data' | base64 --decode > image.png",
+    "source_file": "llm-image-generation.md",
+    "context": "Native Image Generation with API?](https://www.youtube.com/watch?v=wgs4UYx6quY))\n\n### Simple image generation\n\nTo generate a basic image, send a POST request to the `generateContent` method:\n\n[CODE_BLOCK]\n\nReplace `$GEMINI_API_KEY` with your key. ([Gemini API | Google AI for Developers](https://ai.google.dev/gemini-api/docs))\n\n### Generation options\n\nYou can tweak the output with these `generation"
+  },
+  {
+    "id": "llm-image-generation.md_code_1",
+    "language": "bash",
+    "code": "curl \"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp-image-generation:generateContent?key=$GEMINI_API_KEY\" \\\n -H \"Content-Type: application/json\" \\\n -X POST \\\n -d '{\n \"contents\": [{ \"parts\": [{ \"text\": \"A futuristic city skyline at dusk, neon lights\" }] }],\n \"generationConfig\": {\n \"responseModalities\": [\"TEXT\", \"IMAGE\"],\n \"temperature\": 0.7,\n \"topP\": 0.9,\n \"maxOutputTokens\": 1024\n }\n }' | jq -r '.candidates[].content.parts[] | select(.inlineData) | .inlineData.data' | base64 --decode > image.png",
+    "source_file": "llm-image-generation.md",
+    "context": ": Nucleus sampling threshold.\n- `topK`: Token selection cutoff.\n- `maxOutputTokens`: Max tokens for text parts.\n- `stopSequences`: Sequences to end generation.\n- `seed`: For reproducibility.\n\n[CODE_BLOCK]\n\n[Image Generation Docs](https://ai.google.dev/gemini-api/docs/image-generation)\n\n### Simple image editing\n\nTo edit an existing image, include it in the `contents` as `inlineData` (base64-encoded"
+  },
+  {
+    "id": "llm-image-generation.md_code_2",
+    "language": "bash",
+    "code": "curl \"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp-image-generation:generateContent?key=$GEMINI_API_KEY\" \\\n -H 'Content-Type: application/json' \\\n -d '{\n \"contents\": [{\n \"parts\":[\n {\"text\": \"Replace the background with a starry night sky\"},\n {\"inline_data\": {\"mime_type\":\"image/jpeg\", \"data\": \"'$(base64 -w 0 cat.jpg)'\"}}\n ]\n }],\n \"generationConfig\": {\"responseModalities\": [\"TEXT\", \"IMAGE\"]}\n }' | jq -r '.candidates[].content.parts[] | select(.inlineData) | .inlineData.data' | base64 --decode > image.png",
+    "source_file": "llm-image-generation.md",
+    "context": "Generation Docs](https://ai.google.dev/gemini-api/docs/image-generation)\n\n### Simple image editing\n\nTo edit an existing image, include it in the `contents` as `inlineData` (base64-encoded):\n\n[CODE_BLOCK]\n\n[Image Editing Docs](https://ai.google.dev/gemini-api/docs/image-generation)\n\n### Editing options\n\nEditing requests support:\n\n- `inlineData`: Embed raw image bytes.\n- `fileData`: Reference publi"
+  },
+  {
+    "id": "llm-image-generation.md_code_3",
+    "language": "bash",
+    "code": "curl 'https://api.openai.com/v1/images/generations' \\\n -H 'Content-Type: application/json' \\\n -H \"Authorization: Bearer $OPENAI_API_KEY\" \\\n -d '{\n \"model\": \"gpt-image-1\",\n \"prompt\": \"A whimsical illustration of a cat playing chess\",\n \"n\": 1,\n \"size\": \"1024x1024\"\n }' > image.png",
+    "source_file": "llm-image-generation.md",
+    "context": "Image Model API in 5 Minutes (5 min)](https://i.ytimg.com/vi_webp/k-G71JZA75A/sddefault.webp)](https://youtu.be/k-G71JZA75A)\n\n### Simple image generation\n\nUse the Image Generations endpoint:\n\n[CODE_BLOCK]\n\n([Generate Image | OpenAI API - Postman](https://www.postman.com/devrel/openai/request/riub8s3/generate-image))\n\n### Generation options\n\nAdjust these JSON parameters:\n\n- `model`: `gpt-image-1` ("
+  },
+  {
+    "id": "llm-image-generation.md_code_4",
+    "language": "json",
+    "code": "{\n \"model\": \"gpt-image-1\",\n \"prompt\": \"...\",\n \"n\": 2,\n \"size\": \"512x512\",\n \"response_format\": \"b64_json\"\n}",
+    "source_file": "llm-image-generation.md",
+    "context": "odel`: `gpt-image-1` (default).\n- `prompt`: Text description.\n- `n`: Number of images.\n- `size`: `256x256`, `512x512`, or `1024x1024`.\n- `response_format`: `\"url\"` (default) or `\"b64_json\"`.\n\n[CODE_BLOCK]\n\n### Simple image editing\n\nUse the Edits endpoint with an image and a mask:\n\n```bash\ncurl https://api.openai.com/v1/images/edits \\\n -H 'Content-Type: application/json' \\\n -H \"Authorization: Beare"
+  },
+  {
+    "id": "llm-image-generation.md_code_5",
+    "language": "bash",
+    "code": "curl https://api.openai.com/v1/images/edits \\\n -H 'Content-Type: application/json' \\\n -H \"Authorization: Bearer $OPENAI_API_KEY\" \\\n -d '{\n \"model\": \"gpt-image-1\",\n \"image\": \"data:image/png;base64,<BASE64_IMAGE>\",\n \"mask\": \"data:image/png;base64,<BASE64_MASK>\",\n \"prompt\": \"Add a rainbow in the sky above the mountains\",\n \"n\": 1,\n \"size\": \"1024x1024\"\n }'",
+    "source_file": "llm-image-generation.md",
+    "context": "son\n{\n \"model\": \"gpt-image-1\",\n \"prompt\": \"...\",\n \"n\": 2,\n \"size\": \"512x512\",\n \"response_format\": \"b64_json\"\n}\n[CODE_BLOCK]bash\ncurl https://api.openai.com/v1/images/edits \\\n -H 'Content-Type: application/json' \\\n -H \"Authorization: Bearer $OPENAI_API_KEY\" \\\n -d '{\n \"model\": \"gpt-image-1\",\n \"image\": \"data:image/png;base64,<BASE64_IMAGE>\",\n \"mask\": \"data:image/png;base64,<BASE64_MASK>\",\n \"prompt\": \"Add a rainbow in the sky above the mountains\",\n \"n\": 1,\n \"size\": \"1024x1024\"\n }'\n```\n\n([curl - What's the correct URL to test OpenAI API? - Stack Overflow](https://stackoverflow.com/questions/75041247/whats-the-correct-url-to-test-openai-api))\n\n### Editing options\n\nEditing reques"
+  },
+  {
+    "id": "llm-sentiment-analysis.md_code_0",
+    "language": "bash",
+    "code": "curl https://api.openai.com/v1/chat/completions \\\n -H \"Content-Type: application/json\" \\\n -H \"Authorization: Bearer $OPENAI_API_KEY\" \\\n -d '{\n \"model\": \"gpt-4o-mini\",\n \"messages\": [{ \"role\": \"user\", \"content\": \"Write a haiku about programming.\" }]\n }'",
+    "source_file": "llm-sentiment-analysis.md",
+    "context": "I API Quickstart: Send your First API Request](https://i.ytimg.com/vi_webp/Xz4ORA0cOwQ/sddefault.webp)](https://youtu.be/Xz4ORA0cOwQ)\n\nHere's a minimal example using `curl` to generate text:\n\n[CODE_BLOCK]\n\nLet's break down the request:\n\n- `curl https://api.openai.com/v1/chat/completions`: The API endpoint for text generation.\n- `-H \"Content-Type: application/json\"`: The content type of the request"
+  },
+  {
+    "id": "llm-speech.md_code_0",
+    "language": "bash",
+    "code": "curl https://api.openai.com/v1/audio/speech \\\n -H \"Authorization: Bearer $OPENAI_API_KEY\" \\\n -H \"Content-Type: application/json\" \\\n -d '{\n \"model\": \"tts-1\",\n \"input\": \"Hello! This is a test of the OpenAI text to speech API.\",\n \"voice\": \"alloy\"\n }' --output speech.mp3",
+    "source_file": "llm-speech.md",
+    "context": "ttps://i.ytimg.com/vi_webp/lXb0L16ISAc/sddefault.webp)](https://youtu.be/lXb0L16ISAc)\n\n### Simple speech generation\n\nTo generate speech from text, send a POST request to the speech endpoint:\n\n[CODE_BLOCK]\n\n### Generation options\n\nControl the output with these parameters:\n\n- `model`: `tts-1` (standard) or `tts-1-hd` (higher quality)\n- `input`: Text to convert (max 4096 characters)\n- `voice`: `alloy"
+  },
+  {
+    "id": "llm-speech.md_code_1",
+    "language": "bash",
+    "code": "curl https://api.openai.com/v1/audio/speech \\\n -H \"Authorization: Bearer $OPENAI_API_KEY\" \\\n -H \"Content-Type: application/json\" \\\n -d '{\n \"model\": \"tts-1-hd\",\n \"input\": \"Welcome to our podcast! Today we will be discussing artificial intelligence.\",\n \"voice\": \"nova\",\n \"response_format\": \"mp3\",\n \"speed\": 1.2\n }' --output podcast_intro.mp3",
+    "source_file": "llm-speech.md",
+    "context": "rt (max 4096 characters)\n- `voice`: `alloy`, `echo`, `fable`, `onyx`, `nova`, or `shimmer`\n- `response_format`: `mp3` (default), `opus`, `aac`, or `flac`\n- `speed`: 0.25 to 4.0 (default 1.0)\n\n[CODE_BLOCK]\n\n### Costs and optimization\n\nPricing per 1,000 characters:\n\n- `tts-1`: $0.015\n- `tts-1-hd`: $0.030\n\nTo optimize costs:\n\n- Use `tts-1` for drafts, `tts-1-hd` for final versions\n- Batch process tex"
+  },
+  {
+    "id": "llm-speech.md_code_2",
+    "language": "bash",
+    "code": "curl -X POST \"https://texttospeech.googleapis.com/v1/text:synthesize?key=$GOOGLE_API_KEY\" \\\n -H \"Content-Type: application/json\" \\\n -d '{\n \"input\": { \"text\": \"Hello, welcome to Gemini Speech Studio!\" },\n \"voice\": { \"languageCode\": \"en-US\", \"name\": \"en-US-Neural2-A\" },\n \"audioConfig\": { \"audioEncoding\": \"MP3\" }\n }' | jq -r .audioContent | base64 --decode > gemini-speech.mp3",
+    "source_file": "llm-speech.md",
+    "context": "Services → Credentials** and click **+ Create Credentials → API key**. Copy the generated key (it’ll look like `AIza…`).\n\n### Simple speech generation\n\nGenerate speech using the Gemini API:\n\n[CODE_BLOCK]\n\n### Generation options\n\nCustomize synthesis with these parameters:\n\n- `voice`:\n - `languageCode`: Language code (e.g., \"en-US\", \"es-ES\")\n - `name`: Voice model name\n - `ssmlGender`: \"NEUTRAL\", \""
+  },
+  {
+    "id": "llm-speech.md_code_3",
+    "language": "bash",
+    "code": "curl -X POST \"https://texttospeech.googleapis.com/v1/text:synthesize?key=$GOOGLE_API_KEY\" \\\n -H \"Content-Type: application/json\" \\\n -d '{\n \"input\": {\n \"text\": \"This is a demonstration of advanced speech settings.\"\n },\n \"voice\": {\n \"languageCode\": \"en-US\",\n \"name\": \"en-US-Neural2-D\"\n },\n \"audioConfig\": {\n \"audioEncoding\": \"MP3\",\n \"speakingRate\": 1.2,\n \"pitch\": 2.0,\n \"volumeGainDb\": 1.0\n }\n }' | jq -r .audioContent | base64 --decode > gemini-options.mp3",
+    "source_file": "llm-speech.md",
+    "context": "r`: \"NEUTRAL\", \"MALE\", or \"FEMALE\"\n- `audioConfig`:\n - `audioEncoding`: \"MP3\", \"WAV\", \"OGG_OPUS\"\n - `speakingRate`: 0.25 to 4.0\n - `pitch`: -20.0 to 20.0\n - `volumeGainDb`: Volume adjustment\n\n[CODE_BLOCK]\n\n### SSML support\n\nBoth APIs support Speech Synthesis Markup Language (SSML) for fine-grained control:\n\n```bash\ncurl -X POST \"https://texttospeech.googleapis.com/v1/text:synthesize?key=$GOOGLE_AP"
+  },
+  {
+    "id": "llm-speech.md_code_4",
+    "language": "bash",
+    "code": "curl -X POST \"https://texttospeech.googleapis.com/v1/text:synthesize?key=$GOOGLE_API_KEY\" \\\n -H \"Content-Type: application/json\" \\\n -d '{\n \"input\": {\n \"ssml\": \"<speak>Hello <break time=\\\"1s\\\"/> This text has a pause and <emphasis level=\\\"strong\\\">emphasized words</emphasis>.</speak>\"\n },\n \"voice\": { \"languageCode\": \"en-US\", \"name\": \"en-US-Neural2-A\" },\n \"audioConfig\": { \"audioEncoding\": \"MP3\" }\n }' | jq -r .audioContent | base64 --decode > gemini-ssml.mp3",
+    "source_file": "llm-speech.md",
+    "context": "umeGainDb\": 1.0\n }\n }' | jq -r .audioContent | base64 --decode > gemini-options.mp3\n[CODE_BLOCK]bash\ncurl -X POST \"https://texttospeech.googleapis.com/v1/text:synthesize?key=$GOOGLE_API_KEY\" \\\n -H \"Content-Type: application/json\" \\\n -d '{\n \"input\": {\n \"ssml\": \"<speak>Hello <break time=\\\"1s\\\"/> This text has a pause and <emphasis level=\\\"strong\\\">emphasized words</emphasis>.</speak>\"\n },\n \"voice\": { \"languageCode\": \"en-US\", \"name\": \"en-US-Neural2-A\" },\n \"audioConfig\": { \"audioEncoding\": \"MP3\" }\n }' | jq -r .audioContent | base64 --decode > gemini-ssml.mp3\n```\n\n### Costs and optimization\n\nPricing (per character):\n\n- Standard voices: $0.000004\n- Neural voices: $0.000016\n- Neural2 voices: $0.000024\n\nTo optimize:\n\n- Use standard voices for development\n- C"
+  },
+  {
+    "id": "llm-speech.md_code_5",
+    "language": "python",
+    "code": "import requests\nimport base64\nimport os\n\nopenai_key = os.getenv(\"OPENAI_API_KEY\")\ngoogle_key = os.getenv(\"GOOGLE_API_KEY\")\n\ndef generate_openai_speech(text, voice=\"alloy\", model=\"tts-1\"):\n response = requests.post(\n \"https://api.openai.com/v1/audio/speech\",\n headers={\"Authorization\": f\"Bearer {openai_key}\"},\n json={\"model\": model, \"input\": text, \"voice\": voice}\n )\n return response.content\n\ndef generate_gemini_speech(text, voice_name=\"en-US-Neural2-A\"):\n response = requests.post(\n f\"https://texttospeech.googleapis.com/v1/text:synthesize?key={google_key}\",\n json={\n \"input\": {\"text\": text},\n \"voice\": {\"languageCode\": \"en-US\", \"name\": voice_name},\n \"audioConfig\": {\"audioEncoding\": \"MP3\"}\n }\n )\n return base64.b64decode(response.json()[\"audioContent\"])\n\nif __name__ == \"__main__\":\n with open(\"openai_speech.mp3\", \"wb\") as f:\n f.write(generate_openai_speech(\"Hello from OpenAI's text to speech API!\"))\n with open(\"gemini_speech.mp3\", \"wb\") as f:\n f.write(generate_gemini_speech(\"Hello from Google's Gemini Speech Studio!\"))",
+    "source_file": "llm-speech.md",
+    "context": "rd voices for development\n- Cache common phrases\n- Batch process where possible\n- Choose appropriate audio quality\n\n### Python implementation\n\nHere's a simple Python wrapper for both APIs:\n\n[CODE_BLOCK]"
+  },
+  {
+    "id": "llm-text-extraction.md_code_0",
+    "language": "bash",
+    "code": "curl https://api.openai.com/v1/chat/completions \\\n-H \"Authorization: Bearer $OPENAI_API_KEY\" \\\n-H \"Content-Type: application/json\" \\\n-d '{\n \"model\": \"gpt-4o-2024-08-06\",\n \"messages\": [\n { \"role\": \"system\", \"content\": \"You are a helpful math tutor. Guide the user through the solution step by step.\" },\n { \"role\": \"user\", \"content\": \"how can I solve 8x + 7 = -23\" }\n ],\n \"response_format\": {\n \"type\": \"json_schema\",\n \"json_schema\": {\n \"name\": \"math_response\",\n \"strict\": true\n \"schema\": {\n \"type\": \"object\",\n \"properties\": {\n \"steps\": {\n \"type\": \"array\",\n \"items\": {\n \"type\": \"object\",\n \"properties\": { \"explanation\": { \"type\": \"string\" }, \"output\": { \"type\": \"string\" } },\n \"required\": [\"explanation\", \"output\"],\n \"additionalProperties\": false\n }\n },\n \"final_answer\": { \"type\": \"string\" }\n },\n \"required\": [\"steps\", \"final_answer\"],\n \"additionalProperties\": false\n }\n }\n }\n}'",
+    "source_file": "llm-text-extraction.md",
+    "context": "your supplied\n[JSON Schema](https://json-schema.org/overview/what-is-jsonschema), so you don't need to worry about the model omitting a required key,\nor hallucinating an invalid enum value.\n\n[CODE_BLOCK]\n\nHere's what the `response_format` tells OpenAI. The items marked ⚠️ are OpenAI specific requirements for the JSON schema.\n\n- `\"type\": \"json_schema\"`: We want you to generate a JSON response that"
+  },
+  {
+    "id": "llm-video-screen-scraping.md_code_0",
+    "language": "text",
+    "code": "Turn this video into a JSON array where each item has:\n{\n \"date\": \"yyyy-mm-dd\",\n \"amount\": float\n}",
+    "source_file": "llm-video-screen-scraping.md",
+    "context": "ogle AI Studio](https://makersuite.google.com/app/prompts)\n - Select Gemini 1.5 Flash (cost-effective)\n - Prompt for structured output (JSON/CSV)\n\nExample prompt for extracting tabular data:\n\n[CODE_BLOCK]\n\n### Cost Calculation\n\nGemini 1.5 Flash pricing (as of January 2025):\n\n- $0.075 per million tokens\n- Cost per frame ~ 250 tokens\n- Cost for 24 hours of video at 1 frame per second ~ $1.62!\n\n### B"
+  },
+  {
+    "id": "llm.md_code_0",
+    "language": "bash",
+    "code": "# Run a simple prompt\nllm 'five great names for a pet pelican'\n\n# Continue a conversation\nllm -c 'now do walruses'\n\n# Start a memory-aware chat session\nllm chat\n\n# Specify a model\nllm -m gpt-4.1-nano 'Summarize tomorrow’s meeting agenda'\n\n# Extract JSON output\nllm 'List the top 5 Python viz libraries with descriptions' \\\n --schema-multi 'name,description'",
+    "source_file": "llm.md",
+    "context": "//github.com/simonw/llm?tab=readme-ov-file#getting-started).\n\n**TDS Students**: See [Large Language Models](large-language-models.md) for instructions on how to get and use `OPENAI_API_KEY`.\n\n[CODE_BLOCK]\n\nOr use llm without installation using [`uvx`](uv.md):\n\n```bash\n# Run llm via uvx without any prior installation\nuvx llm 'Translate \"Hello, world\" into Japanese'\n\n# Specify a model\nuvx llm -m gpt"
+  },
+  {
+    "id": "llm.md_code_1",
+    "language": "bash",
+    "code": "# Run llm via uvx without any prior installation\nuvx llm 'Translate \"Hello, world\" into Japanese'\n\n# Specify a model\nuvx llm -m gpt-4.1-nano 'Draft a 200-word blog post on data ethics'\n\n# Use structured JSON output\nuvx llm 'List the top 5 programming languages in 2025 with their release years' \\\n --schema-multi 'rank,language,release_year'",
+    "source_file": "llm.md",
+    "context": "ing agenda'\n\n# Extract JSON output\nllm 'List the top 5 Python viz libraries with descriptions' \\\n --schema-multi 'name,description'\n[CODE_BLOCK]bash\n# Run llm via uvx without any prior installation\nuvx llm 'Translate \"Hello, world\" into Japanese'\n\n# Specify a model\nuvx llm -m gpt-4.1-nano 'Draft a 200-word blog post on data ethics'\n\n# Use structured JSON output\nuvx llm 'List the top 5 programming languages in 2025 with their release years' \\\n --schema-multi 'rank,language,release_year'\n```\n\n### Key Features\n\n- **Interactive prompts**: `llm '…'` — Fast shell access to any LLM.\n- **Conversational flow**: `-c '…'` — Continue context across prompts.\n- **Model switching**: `-m MODEL` —"
+  },
+  {
+    "id": "marimo.md_code_0",
+    "language": "python",
+    "code": "# Create new notebook\nuvx marimo new\n\n# Run notebook server\nuvx marimo edit notebook.py\n\n# Export to HTML\nuvx marimo export notebook.py",
+    "source_file": "marimo.md",
+    "context": "xamples](https://marimo.io/gallery). With a wide variety of interactive widgets, It's growing popular as an alternative to Streamlit for building data science web apps.\n\nCommon Operations:\n\n[CODE_BLOCK]\n\nBest Practices:\n\n1. **Cell Dependencies**\n - Keep cells focused and atomic\n - Use clear variable names\n - Document data flow between cells\n2. **Interactive Elements**\n\n ```python\n # Add interact"
+  },
+  {
+    "id": "markdown.md_code_0",
+    "language": "text",
+    "code": "# Heading 1\n## Heading 2\n\n**bold** and *italic*\n\n- Bullet point\n- Another point\n - Nested point\n\n1. Numbered list\n2. Second item\n\n[Link text](https://url.com)\n![Image alt](image.jpg)",
+    "source_file": "markdown.md",
+    "context": "Watch this introduction to Markdown (19 min):\n\n[![Markdown Crash Course (19 min)](https://i.ytimg.com/vi_webp/HUBNt18RFbo/sddefault.webp)](https://youtu.be/HUBNt18RFbo)\n\nCommon Markdown syntax:\n\n`[CODE_BLOCK]python\n# Code block\ndef hello():\n print(\"Hello\")\n[CODE_BLOCK]`\n\nThere is also a [GitHub Flavored Markdown](https://github.github.com/gfm/) standard which is popular. This includes extensi"
+  },
+  {
+    "id": "markdown.md_code_1",
+    "language": "text",
+    "code": "> Blockquote",
+    "source_file": "markdown.md",
+    "context": "italic*\n\n- Bullet point\n- Another point\n - Nested point\n\n1. Numbered list\n2. Second item\n\n[Link text](https://url.com)\n![Image alt](image.jpg)\n\n[CODE_BLOCK]\n\n> Blockquote\n`[CODE_BLOCK]\n- [ ] Incomplete task\n- [x] Completed task\n\n~~Strikethr"
+  },
+  {
+    "id": "markdown.md_code_2",
+    "language": "text",
+    "code": "- [ ] Incomplete task\n- [x] Completed task\n\n~~Strikethrough~~\n\nTables:\n\n| Column 1 | Column 2 |\n|----------|----------|\n| Cell 1 | Cell 2 |",
+    "source_file": "markdown.md",
+    "context": "de block\ndef hello():\n print(\"Hello\")\n[CODE_BLOCK]`\n\nThere is also a [GitHub Flavored Markdown](https://github.github.com/gfm/) standard which is popular. This includes extensions like:\n\n[CODE_BLOCK]\n\nTools for working with Markdown:\n\n- [markdown2](https://pypi.org/project/markdown2/): Python library to convert Markdown to HTML\n- [markdownlint](https://github.com/DavidAnson/markdownlint): Lin"
+  },
+  {
+    "id": "multimodal-embeddings.md_code_0",
+    "language": "bash",
+    "code": "export NOMIC_API_KEY=\"your-nomic-api-key\"",
+    "source_file": "multimodal-embeddings.md",
+    "context": "as Documentation][1])\n2. Once logged in, open the **Dashboard** and navigate to **Settings → API Keys**.\n3. Click **Create API Key**, name it, and copy the generated key.\n\nSet in your shell:\n\n[CODE_BLOCK]\n\n### Jina AI\n\n1. **Visit** the Jina AI Embeddings page:\n 👉 [https://jina.ai/embeddings/](https://jina.ai/embeddings/) ([Jina AI][2])\n2. Click **Get Started** (no credit card needed) and register"
+  },
+  {
+    "id": "multimodal-embeddings.md_code_1",
+    "language": "bash",
+    "code": "export JINA_API_KEY=\"your-jina-api-key\"",
+    "source_file": "multimodal-embeddings.md",
+    "context": "edit card needed) and register for a free account. Every new key comes with **1 million free tokens**.\n3. In the dashboard, go to **API Key & Billing** and copy your key.\n\nSet in your shell:\n\n[CODE_BLOCK]\n\n### Google Vertex AI\n\n1. **Sign up** for Google Cloud’s free tier (90 days, \\$300 credit):\n 👉 [https://cloud.google.com/free](https://cloud.google.com/free) ([Google Cloud][3])\n2. In the Cloud C"
+  },
+  {
+    "id": "multimodal-embeddings.md_code_2",
+    "language": "bash",
+    "code": "export GOOGLE_API_KEY=\"your-google-api-key\"\nexport PROJECT_ID=\"your-gcp-project-id\"",
+    "source_file": "multimodal-embeddings.md",
+    "context": "le.cloud.google.com/apis/credentials](https://console.cloud.google.com/apis/credentials) ([Google Cloud][4])\n3. Click **Create credentials → API key**, then copy the key.\n\nSet in your shell:\n\n[CODE_BLOCK]\n\n## Example Requests\n\nBelow are fully-workable snippets that:\n\n- **Embed two texts** (“A cute cat”, “A cardboard box”)\n- **Embed two images** (`cat.jpg`, `box.png`)\n- **Send** them to the respect"
+  },
+  {
+    "id": "multimodal-embeddings.md_code_3",
+    "language": "bash",
+    "code": "curl -X POST \"https://api-atlas.nomic.ai/v1/embedding/text\" \\\n -H \"Authorization: Bearer $NOMIC_API_KEY\" \\\n -H \"Content-Type: application/json\" \\\n -d '{\n \"model\": \"nomic-embed-text-v1.5\",\n \"task_type\": \"search_document\",\n \"texts\": [\"A cute cat\", \"A cardboard box\"]\n }'",
+    "source_file": "multimodal-embeddings.md",
+    "context": "`box.png`)\n- **Send** them to the respective API\n\nReplace variables (`$NOMIC_API_KEY`, `$JINA_API_KEY`, `$GOOGLE_API_KEY`, `$PROJECT_ID`) before running.\n\n### 1. Nomic Atlas\n\nText Embeddings\n\n[CODE_BLOCK]\n\nImage Embeddings\n\n```bash\ncurl -X POST \"https://api-atlas.nomic.ai/v1/embedding/image\" \\\n -H \"Authorization: Bearer $NOMIC_API_KEY\" \\\n -F \"model=nomic-embed-vision-v1.5\" \\\n -F \"images=@cat.jpg\""
+  },
+  {
+    "id": "multimodal-embeddings.md_code_4",
+    "language": "bash",
+    "code": "curl -X POST \"https://api-atlas.nomic.ai/v1/embedding/image\" \\\n -H \"Authorization: Bearer $NOMIC_API_KEY\" \\\n -F \"model=nomic-embed-vision-v1.5\" \\\n -F \"images=@cat.jpg\" \\\n -F \"images=@box.png\"",
+    "source_file": "multimodal-embeddings.md",
+    "context": "KEY\" \\\n -H \"Content-Type: application/json\" \\\n -d '{\n \"model\": \"nomic-embed-text-v1.5\",\n \"task_type\": \"search_document\",\n \"texts\": [\"A cute cat\", \"A cardboard box\"]\n }'\n[CODE_BLOCK]bash\ncurl -X POST \"https://api-atlas.nomic.ai/v1/embedding/image\" \\\n -H \"Authorization: Bearer $NOMIC_API_KEY\" \\\n -F \"model=nomic-embed-vision-v1.5\" \\\n -F \"images=@cat.jpg\" \\\n -F \"images=@box.png\"\n[CODE_BLOCK]bash\ncurl -X POST \"https://api.jina.ai/v1/embedd"
+  },
+  {
+    "id": "multimodal-embeddings.md_code_5",
+    "language": "bash",
+    "code": "curl -X POST \"https://api.jina.ai/v1/embeddings\" \\\n -H \"Authorization: Bearer $JINA_API_KEY\" \\\n -H \"Content-Type: application/json\" \\\n -d \"{\n \\\"model\\\": \\\"jina-clip-v2\\\",\n \\\"input\\\": [\n {\\\"text\\\":\\\"A cute cat\\\"},\n {\\\"text\\\":\\\"A cardboard box\\\"},,\n {\\\"image\\\":\\\"$(base64 -w 0 cat.jpg)\\\"},\n {\\\"image\\\":\\\"$(base64 -w 0 box.png)\\\"}\n ]\n }\"",
+    "source_file": "multimodal-embeddings.md",
+    "context": "F \"images=@cat.jpg\" \\\n -F \"images=@box.png\"\n[CODE_BLOCK]bash\ncurl -X POST \"https://api.jina.ai/v1/embeddings\" \\\n -H \"Authorization: Bearer $JINA_API_KEY\" \\\n -H \"Content-Type: application/json\" \\\n -d \"{\n \\\"model\\\": \\\"jina-clip-v2\\\",\n \\\"input\\\": [\n {\\\"text\\\":\\\"A cute cat\\\"},\n {\\\"text\\\":\\\"A cardboard box\\\"},,\n {\\\"image\\\":\\\"$(base64 -w 0 cat.jpg)\\\"},\n {\\\"image\\\":\\\"$(base64 -w 0 box.png)\\\"}\n ]\n }\"\n[CODE_BLOCK]bas"
+  },
+  {
+    "id": "multimodal-embeddings.md_code_6",
+    "language": "bash",
+    "code": "curl -X POST \\\n -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n -H \"Content-Type: application/json\" \\\n \"https://us-central1-aiplatform.googleapis.com/v1/projects/$PROJECT_ID/locations/us-central1/publishers/google/models/multimodalembedding@001:predict?key=$GOOGLE_API_KEY\" \\\n -d \"{\n \\\"instances\\\": [\n {\n \\\"text\\\": \\\"A cute cat\\\",\n \\\"image\\\": {\\\"bytesBase64Encoded\\\": \\\"$(base64 -w 0 cat.jpg)\\\"}\n },\n {\n \\\"text\\\": \\\"A cardboard box\\\",\n \\\"image\\\": {\\\"bytesBase64Encoded\\\": \\\"$(base64 -w 0 box.png)\\\"}\n }\n ]\n }\"",
+    "source_file": "multimodal-embeddings.md",
+    "context": "``\n\n### 3. Google Vertex AI Multimodal Embeddings\n\nVertex AI’s multimodal model (`multimodalembedding@001`) takes JSON instances combining text and **base64** image data. ([Google Cloud][5])\n\n[CODE_BLOCK]\n\nWith these steps, you’re all set to explore and experiment with multimodal embeddings across text + image data—unifying your applications’ visual and linguistic understanding.\n\n[1]: https://docs"
+  },
+  {
+    "id": "ngrok.md_code_0",
+    "language": "bash",
+    "code": "ngrok config add-authtoken $YOUR_AUTHTOKEN",
+    "source_file": "ngrok.md",
+    "context": "RL that you can share with others.\n\nTo get started, log into `ngrok.com` and [get an authtoken from the dashboard](https://dashboard.ngrok.com/get-started/your-authtoken). Copy it. Then run:\n\n[CODE_BLOCK]\n\nNow you can forward any local port to the internet. For example:\n\n[CODE_BLOCK]\n\nHere are us"
+  },
+  {
+    "id": "ngrok.md_code_1",
+    "language": "bash",
+    "code": "# Start a local server on port 8000\nuv run -m http.server 8000\n\n# Start HTTP tunnel\nuvx ngrok http 8000",
+    "source_file": "ngrok.md",
+    "context": "/dashboard.ngrok.com/get-started/your-authtoken). Copy it. Then run:\n\n[CODE_BLOCK]\n\nNow you can forward any local port to the internet. For example:\n\n[CODE_BLOCK]\n\nHere are useful things you can do with `ngrok http`:\n\n- `ngrok http file://.` to serve local files\n- `--response-header-add \"Access-Control-Allow-Origin: *\"` to enable CORS\n- `--oauth google --o"
+  },
+  {
+    "id": "npx.md_code_0",
+    "language": "bash",
+    "code": "# Run a package without installing\nnpx http-server . # Start a local web server\nnpx prettier --write . # Format code or docs\nnpx eslint . # Lint JavaScript\nnpx typescript-node script.ts # Run TypeScript directly\nnpx esbuild app.js # Bundle JavaScript\nnpx jsdoc . # Generate JavaScript docs\n\n# Run specific versions\nnpx prettier@3.2 --write . # Use prettier 3.2\n\n# Execute remote scripts (use with caution!)\nnpx github:user/repo # Run from GitHub",
+    "source_file": "npx.md",
+    "context": "ful when:\n\n- Running JavaScript-based data visualization tools\n- Converting notebooks and documents\n- Testing and formatting code\n- Running development servers\n\nHere are common npx commands:\n\n[CODE_BLOCK]\n\nWatch this introduction to npx (6 min):\n\n[![What you can do with npx (6 min)](https://i.ytimg.com/vi_webp/55WaAoZV_tQ/sddefault.webp)](https://youtu.be/55WaAoZV_tQ)"
+  },
+  {
+    "id": "ollama.md_code_0",
+    "language": "bash",
+    "code": "# List installed and available models\nollama list\n\n# Download/pin a specific model version\nollama pull gemma3:1b-it-qat\n\n# Run a one-off prompt\nollama run gemma3:1b-it-qat 'Write a haiku about data visualization'\n\n# Launch a persistent HTTP API on port 11434\nollama serve\n\n# Interact programmatically over HTTP\ncurl -X POST http://localhost:11434/api/chat \\\n -H 'Content-Type: application/json' \\\n -d '{\"model\":\"gemma3:1b-it-qat\",\"prompt\":\"Hello, world!\"}'",
+    "source_file": "ollama.md",
+    "context": "load Ollama for macOS, Linux, or Windows](https://ollama.com/) and add the binary to your `PATH`. See the full [Docs ↗](https://ollama.com/docs) for installation details and troubleshooting.\n\n[CODE_BLOCK]\n\n### Key Features\n\n- **Model management**: `list`/`pull` — Install and switch among Llama 3.3, DeepSeek-R1, Gemma 3, Mistral, Phi-4, and more.\n- **Local inference**: `run` — Execute prompts entir"
+  },
+  {
+    "id": "parsing-json.md_code_0",
+    "language": "bash",
+    "code": "# Extract specific fields from JSONL\ncat data.jsonl | jq -c 'select(.type == \"user\") | {id, name}'\n\n# Transform JSON structure\ncat data.json | jq '.items[] | {name: .name, count: .details.count}'\n\n# Filter and aggregate\ncat events.jsonl | jq -s 'group_by(.category) | map({category: .[0].category, count: length})'",
+    "source_file": "parsing-json.md",
+    "context": "cripts for automated data pipelines.\n\n**Example:** Sifting through server logs in JSON Lines format to extract error messages or aggregate metrics without launching a full-scale ETL process.\n\n[CODE_BLOCK]\n\n### JMESPath Queries\n\n[JMESPath](https://jmespath.org/) offers a declarative query language to extract and transform data from nested JSON structures without needing verbose code. It's a neat al"
+  },
+  {
+    "id": "parsing-json.md_code_1",
+    "language": "python",
+    "code": "import jmespath\n\n# Example queries\ndata = {\n \"locations\": [\n {\"name\": \"Seattle\", \"state\": \"WA\", \"info\": {\"population\": 737015}},\n {\"name\": \"Portland\", \"state\": \"OR\", \"info\": {\"population\": 652503}}\n ]\n}\n\n# Find all cities with population > 700000\ncities = jmespath.search(\"locations[?info.population > `700000`].name\", data)",
+    "source_file": "parsing-json.md",
+    "context": "specific values or filter collections based on conditions.\n\n**Example:** Extracting user emails or filtering out inactive records from a complex JSON payload received from a cloud service.\n\n[CODE_BLOCK]\n\n### Streaming with ijson\n\nLoading huge JSON files all at once can quickly exhaust system memory. [ijson](https://ijson.readthedocs.io/en/latest/) lets you stream and process JSON incrementally."
+  },
+  {
+    "id": "parsing-json.md_code_2",
+    "language": "python",
+    "code": "import ijson\n\nasync def process_large_json(filepath: str) -> list:\n \"\"\"Process a large JSON file without loading it entirely into memory.\"\"\"\n results = []\n\n with open(filepath, 'rb') as file:\n # Stream objects under the 'items' key\n parser = ijson.items(file, 'items.item')\n async for item in parser:\n if item['value'] > 100: # Process conditionally\n results.append(item)\n\n return results",
+    "source_file": "parsing-json.md",
+    "context": "y need to work with part of the data.\n\n**Example:** Processing a continuous feed from an API that returns a large JSON array, such as sensor data or event logs, while filtering on the fly.\n\n[CODE_BLOCK]\n\n### Pandas JSON Columns\n\n[Pandas](https://pandas.pydata.org/) makes it easy to work with tabular data that includes JSON strings. When you receive API data where one column holds nested JSON, fl"
+  },
+  {
+    "id": "parsing-json.md_code_3",
+    "language": "python",
+    "code": "import pandas as pd\n\n# Parse JSON strings in a column\ndf = pd.DataFrame({'json_col': ['{\"name\": \"Alice\", \"age\": 30}', '{\"name\": \"Bob\", \"age\": 25}']})\ndf['parsed'] = df['json_col'].apply(pd.json_normalize)\n\n# Normalize nested JSON columns\ndf = pd.read_csv('data.csv')\ndf_normalized = pd.json_normalize(\n df['nested_json'].apply(json.loads),\n record_path=['items'], # List of nested objects to unpack\n meta=['id', 'timestamp'] # Keep these columns from parent\n)",
+    "source_file": "parsing-json.md",
+    "context": "visualize the data using familiar DataFrame operations.\n\n**Example:** Flattening customer records stored as nested JSON in a CSV file to extract demographic details and spending patterns.\n\n[CODE_BLOCK]\n\n### SQL JSON Functions\n\n[SQL](https://en.wikipedia.org/wiki/SQL:2016) supports built-in JSON functions allow you to query and manipulate JSON stored within relational databases.\nThese are implem"
+  },
+  {
+    "id": "parsing-json.md_code_4",
+    "language": "sql",
+    "code": "SELECT\n json_extract(data, '$.name') as name,\n json_extract(data, '$.details.age') as age\nFROM users\nWHERE json_extract(data, '$.active') = true",
+    "source_file": "parsing-json.md",
+    "context": "mns.\n\n**Example:** An application that stores user settings or application logs as JSON in a SQLite database, enabling quick lookups and modifications without external JSON parsing libraries.\n\n[CODE_BLOCK]\n\n### DuckDB JSON Processing\n\n[DuckDB](https://duckdb.org/) shines when analyzing JSON/JSONL files directly, making it a powerful tool for data analytics without the overhead of loading entire dat"
+  },
+  {
+    "id": "parsing-json.md_code_5",
+    "language": "sql",
+    "code": "SELECT\n json_extract_string(data, '$.user.name') as name,\n avg(json_extract_float(data, '$.metrics.value')) as avg_value\nFROM read_json_auto('data/*.jsonl')\nGROUP BY 1\nHAVING avg_value > 100",
+    "source_file": "parsing-json.md",
+    "context": "analysis on nested data.\n\n**Example:** Performing ad-hoc analytics on streaming JSON logs from a web service, such as calculating average response times or aggregating user behavior metrics.\n\n[CODE_BLOCK]"
+  },
+  {
+    "id": "project-2.md_code_0",
+    "language": "bash",
+    "code": "curl -X POST \"https://your-app.vercel.app/api/\" \\\n -H \"Content-Type: multipart/form-data\" \\\n -F \"question=Download and unzip file abcd.zip which has a single extract.csv file inside. What is the value in the \"answer\" column of the CSV file?\" \\\n -F \"file=@abcd.zip\"",
+    "source_file": "project-2.md",
+    "context": "POST request, e.g. `POST https://your-app.vercel.app/api/` with the question as well as optional file attachments as multipart/form-data.\n\nFor example, here's how anyone can make a request:\n\n[CODE_BLOCK]\n\nThe response must be a JSON object with a single text (string) field: `answer` that can be directly entered in the assignment. For example:\n\n[CODE_BLOCK]\n\n## Deploy yo"
+  },
+  {
+    "id": "project-2.md_code_1",
+    "language": "json",
+    "code": "{\n \"answer\": \"1234567890\"\n}",
+    "source_file": "project-2.md",
+    "context": "lumn of the CSV file?\" \\\n -F \"file=@abcd.zip\"\n[CODE_BLOCK]json\n{\n \"answer\": \"1234567890\"\n}\n```\n\n## Deploy your application\n\nDeploy your application to a public URL that can be accessed by anyone. You may use any platform, including Vercel.\n\n(If you use ngrok, ensure that it is running cont"
+  },
+  {
+    "id": "project-tds-virtual-ta.md_code_0",
+    "language": "bash",
+    "code": "curl \"https://app.example.com/api/\" \\\n -H \"Content-Type: application/json\" \\\n -d \"{\\\"question\\\": \\\"Should I use gpt-4o-mini which AI proxy supports, or gpt3.5 turbo?\\\", \\\"image\\\": \\\"$(base64 -w0 project-tds-virtual-ta-q1.webp)\\\"}\"",
+    "source_file": "project-tds-virtual-ta.md",
+    "context": "cept a POST request, e.g. `POST https://app.example.com/api/` with a student question as well as optional base64 file attachments as JSON.\n\nFor example, here's how anyone can make a request:\n\n[CODE_BLOCK]\n\nThis is a [real question](https://discourse.onlinedegree.iitm.ac.in/t/ga5-question-8-clarification/155939) and uses this [screenshot](images/project-tds-virtual-ta-q1.webp):\n\n![Screenshot](image"
+  },
+  {
+    "id": "project-tds-virtual-ta.md_code_1",
+    "language": "json",
+    "code": "{\n \"answer\": \"You must use `gpt-3.5-turbo-0125`, even if the AI Proxy only supports `gpt-4o-mini`. Use the OpenAI API directly for this question.\",\n \"links\": [\n {\n \"url\": \"https://discourse.onlinedegree.iitm.ac.in/t/ga5-question-8-clarification/155939/4\",\n \"text\": \"Use the model that’s mentioned in the question.\"\n },\n {\n \"url\": \"https://discourse.onlinedegree.iitm.ac.in/t/ga5-question-8-clarification/155939/3\",\n \"text\": \"My understanding is that you just have to use a tokenizer, similar to what Prof. Anand used, to get the number of tokens and multiply that by the given rate.\"\n }\n ]\n}",
+    "source_file": "project-tds-virtual-ta.md",
+    "context": "-clarification/155939) and uses this [screenshot](images/project-tds-virtual-ta-q1.webp):\n\n![Screenshot](images/project-tds-virtual-ta-q1.webp)\n\nThe response must be a JSON object like this:\n\n[CODE_BLOCK]\n\nThe response must be sent within 30 seconds.\n\n## Evaluate your application\n\nHere are a few [sample questions and evaluation parameters](project-tds-virtual-ta-promptfoo.yaml \":ignore\"). These ar"
+  },
+  {
+    "id": "rag-cli.md_code_0",
+    "language": "bash",
+    "code": "Q=\"What does the author affectionately call the => syntax?\"\n# Answer: fat arrow\n\nQ=\"What lets you walk every child node of a ts.Node?\"\n# Answer: node.getChildren()\n\nQ=\"What are code pieces like comments and whitespace that aren’t in the AST called?\"\n# Answer: trivia\n\nQ=\"Which operator converts any value into an explicit boolean?\"\n# Answer: !!",
+    "source_file": "rag-cli.md",
+    "context": "hallucinations, and allowing you to answer domain‑specific questions without fine‑tuning.\n\nIn particular, you can answer questions that are hard to answer with a keyword search. For example:\n\n[CODE_BLOCK]\n\nYou can implement RAG entirely from your terminal, without writing a single line of application code. Below is a step‑by‑step example using the TypeScript book as a data source.\n\n### 1. Clone th"
+  },
+  {
+    "id": "rag-cli.md_code_1",
+    "language": "bash",
+    "code": "git clone --depth 1 https://github.com/basarat/typescript-book\ncd typescript-book",
+    "source_file": "rag-cli.md",
+    "context": "t RAG entirely from your terminal, without writing a single line of application code. Below is a step‑by‑step example using the TypeScript book as a data source.\n\n### 1. Clone the repository\n\n[CODE_BLOCK]\n\n- `--depth 1` fetches only the latest commit to minimize download size.\n- `cd typescript-book` moves into the project folder.\n\nYou'll now be in a new folder `typescript-book` containing the repo"
+  },
+  {
+    "id": "rag-cli.md_code_2",
+    "language": "bash",
+    "code": "(\n shopt -s globstar\n for f in **/*.md; do\n uvx --from split_markdown4gpt mdsplit4gpt \"$f\" --model gpt-4o --limit 4096 --separator \"===SPLIT===\" \\\n | sed '1s/^/===SPLIT===\\n/' \\\n | jq -R -s -c --arg file \"$f\" '\n split(\"===SPLIT===\")[1:]\n | to_entries\n | map({\n id: ($file + \"#\" + (.key | tostring)),\n content: .value\n })[]\n '\n done\n) | tee chunks.json",
+    "source_file": "rag-cli.md",
+    "context": "o minimize download size.\n- `cd typescript-book` moves into the project folder.\n\nYou'll now be in a new folder `typescript-book` containing the repo.\n\n### 2. Split Markdown files into chunks\n\n[CODE_BLOCK]\n\n- `shopt -s globstar`: lets `**/*.md` match Markdown files in all subdirectories. [bash shopt manual](https://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html)\n- `uvx --from spl"
+  },
+  {
+    "id": "rag-cli.md_code_3",
+    "language": "bash",
+    "code": "llm embed-multi typescript-book --model 3-small --store --format nl chunks.json",
+    "source_file": "rag-cli.md",
+    "context": "writes the resulting JSON array to `chunks.json` while printing it to stdout.\n\nYou'll now have a `chunks.json` that has one `{id, content}` JSON object per line.\n\n### 3. Generate embeddings\n\n[CODE_BLOCK]\n\n- `embed-multi`: computes embeddings for each entry in `chunks.json`.\n- `typescript-book`: a namespace or collection name for storage.\n- `--model 3-small`: selects the embedding model.\n- `--stor"
+  },
+  {
+    "id": "rag-cli.md_code_4",
+    "language": "bash",
+    "code": "llm collections path # shows where the collections are stored\nllm collections delete typescript-book # deletes the typescript-book collection",
+    "source_file": "rag-cli.md",
+    "context": "nd.\n- `--format nl`: input is newline‑delimited JSON. [llm CLI embed-multi](https://github.com/kerenter/llm#embed-multi)\n\nThis stores the embeddings in a collection called `typescript-book`.\n\n[CODE_BLOCK]\n\n### 4. Find similar topics\n\n[CODE_BLOCK]\n\nThis returns the 3 chunksmost similar to the question posed"
+  },
+  {
+    "id": "rag-cli.md_code_5",
+    "language": "bash",
+    "code": "llm similar typescript-book -n 3 -c \"What does the author affectionately call the => syntax?\"",
+    "source_file": "rag-cli.md",
+    "context": "-book`.\n\n[CODE_BLOCK]\n\n### 4. Find similar topics\n\n[CODE_BLOCK]\n\nThis returns the 3 chunksmost similar to the question posed.\n\n- `similar`: retrieves the top `n` most similar chunks from the embeddings store.\n- `-n 3`: return three results.\n- `-c`: the user’s"
+  },
+  {
+    "id": "rag-cli.md_code_6",
+    "language": "bash",
+    "code": "Q=\"What does the author affectionately call the => syntax?\"\nllm similar typescript-book -n 3 -c \"$Q\" \\\n | jq '.content' \\\n | llm -s \"$Q - Answer ONLY from these notes. Cite verbatim from notes.\" \\\n | uvx streamdown",
+    "source_file": "rag-cli.md",
+    "context": "ilar`: retrieves the top `n` most similar chunks from the embeddings store.\n- `-n 3`: return three results.\n- `-c`: the user’s query string.\n\n### 5. Answer a question using retrieved context\n\n[CODE_BLOCK]\n\nThis answers the question in natural language following these steps:\n\n1. Store the query in `Q`.\n2. Retrieve the top 3 matching chunks.\n3. `jq '.content'` extracts just the text snippets.\n4. Pip"
+  },
+  {
+    "id": "rest-apis.md_code_0",
+    "language": "python",
+    "code": "# /// script\n# requires-python = \">=3.13\"\n# dependencies = [\n# \"fastapi\",\n# \"uvicorn\",\n# ]\n# ///\nfrom fastapi import FastAPI, HTTPException\nfrom typing import Dict, List\n\napp = FastAPI()\n\n# Create a list of items that will act like a database\nitems: List[Dict[str, float | int | str]] = []\n\n# Create a GET endpoint that returns all items\n@app.get(\"/items\")\nasync def get_items() -> List[Dict[str, float | int | str]]:\n return items\n\n# Create a GET endpoint that returns a specific item by ID\n@app.get(\"/items/{item_id}\")\nasync def get_item(item_id: int) -> Dict[str, float | int | str]:\n if item := next((i for i in items if i[\"id\"] == item_id), None):\n return item\n raise HTTPException(status_code=404, detail=\"Item not found\")\n\n# Create a POST endpoint that creates a new item\n@app.post(\"/items\")\nasync def create_item(item: Dict[str, float | str]) -> Dict[str, float | int | str]:\n new_item = {\"id\": len(items) + 1, \"name\": item[\"name\"], \"price\": float(item[\"price\"])}\n items.append(new_item)\n return new_item\n\nif __name__ == \"__main__\":\n import uvicorn\n uvicorn.run(app, host=\"0.0.0.0\", port=8000)",
+    "source_file": "rest-apis.md",
+    "context": "nt errors (400 Bad Request, 404 Not Found)\n - `5xx`: Server errors (500 Internal Server Error)\n\nHere's a minimal REST API using FastAPI. Run this `server.py` script via `uv run server.py`:\n\n[CODE_BLOCK]\n\nTest the API with curl:\n\n```bash\n# Get all items\ncurl http://localhost:8000/items\n\n# Create an item\ncurl -X POST http://localhost:8000/items \\\n -H \"Content-Type: application/json\" \\\n -d '{\"name\""
+  },
+  {
+    "id": "rest-apis.md_code_1",
+    "language": "bash",
+    "code": "# Get all items\ncurl http://localhost:8000/items\n\n# Create an item\ncurl -X POST http://localhost:8000/items \\\n -H \"Content-Type: application/json\" \\\n -d '{\"name\": \"Book\", \"price\": 29.99}'\n\n# Get specific item\ncurl http://localhost:8000/items/1",
+    "source_file": "rest-apis.md",
+    "context": "\"price\": float(item[\"price\"])}\n items.append(new_item)\n return new_item\n\nif __name__ == \"__main__\":\n import uvicorn\n uvicorn.run(app, host=\"0.0.0.0\", port=8000)\n[CODE_BLOCK]bash\n# Get all items\ncurl http://localhost:8000/items\n\n# Create an item\ncurl -X POST http://localhost:8000/items \\\n -H \"Content-Type: application/json\" \\\n -d '{\"name\": \"Book\", \"price\": 29.99}'\n\n# Get specific item\ncurl http://localhost:8000/items/1\n```\n\nBest Practices:\n\n1. **Use Nouns for Resources**\n - Good: `/users`, `/posts`\n - Bad: `/getUsers`, `/createPost`\n2. **Version Your API**\n ```\n /api/v1/users\n /api/v2/users\n ```\n3. **Handle Errors"
+  },
+  {
+    "id": "scheduled-scraping-with-github-actions.md_code_0",
+    "language": "python",
+    "code": "import json\nimport httpx\nfrom datetime import datetime, UTC\nfrom lxml import html\nfrom typing import List, Dict\n\ndef scrape_imdb() -> List[Dict[str, str]]:\n \"\"\"Scrape IMDb Top 250 movies using httpx and lxml.\n\n Returns:\n List of dictionaries containing movie title, year, and rating.\n \"\"\"\n headers = {\"User-Agent\": \"Mozilla/5.0 (compatible; IMDbBot/1.0)\"}\n response = httpx.get(\"https://www.imdb.com/chart/top/\", headers=headers)\n response.raise_for_status()\n\n tree = html.fromstring(response.text)\n movies = []\n\n for item in tree.cssselect(\".ipc-metadata-list-summary-item\"):\n title = (\n item.cssselect(\".ipc-title__text\")[0].text_content()\n if item.cssselect(\".ipc-title__text\")\n else None\n )\n year = (\n item.cssselect(\".cli-title-metadata span\")[0].text_content()\n if item.cssselect(\".cli-title-metadata span\")\n else None\n )\n rating = (\n item.cssselect(\".ipc-rating-star\")[0].text_content()\n if item.cssselect(\".ipc-rating-star\")\n else None\n )\n\n if title and year and rating:\n movies.append({\"title\": title, \"year\": year, \"rating\": rating})\n\n return movies\n\n# Scrape data and save with timestamp\nnow = datetime.now(UTC)\nwith open(f'imdb-top250-{now.strftime(\"%Y-%m-%d\")}.json', \"a\") as f:\n f.write(json.dumps({\"timestamp\": now.isoformat(), \"movies\": scrape_imdb()}) + \"\\n\")",
+    "source_file": "scheduled-scraping-with-github-actions.md",
+    "context": "parsing\n- **Rate Limiting**: Respect website terms of service and implement delays between requests\n\nHere's a sample `scrape.py` that scrapes the IMDb Top 250 movies using httpx and lxml:\n\n[CODE_BLOCK]\n\nHere's a sample `.github/workflows/imdb-top250.yml` that runs the scraper daily and saves the data:\n\n```yaml\nname: Scrape IMDb Top 250\n\non:\n schedule:\n # Runs at 00:00 UTC every day\n - cron: \"0"
+  },
+  {
+    "id": "scheduled-scraping-with-github-actions.md_code_1",
+    "language": "yaml",
+    "code": "name: Scrape IMDb Top 250\n\non:\n schedule:\n # Runs at 00:00 UTC every day\n - cron: \"0 0 * * *\"\n workflow_dispatch: # Allow manual triggers\n\njobs:\n scrape-imdb:\n runs-on: ubuntu-latest\n permissions:\n contents: write\n\n steps:\n - name: Checkout repository\n uses: actions/checkout@v4\n\n - name: Install uv\n uses: astral-sh/setup-uv@v5\n\n - name: Run scraper\n run: | # python\n uv run --with httpx,lxml,cssselect python scrape.py\n\n - name: Commit and push changes\n run: |\n git config --local user.email \"github-actions[bot]@users.noreply.github.com\"\n git config --local user.name \"github-actions[bot]\"\n git add *.json\n git commit -m \"Update IMDb Top 250 data [skip ci]\" || exit 0\n git push",
+    "source_file": "scheduled-scraping-with-github-actions.md",
+    "context": "f.write(json.dumps({\"timestamp\": now.isoformat(), \"movies\": scrape_imdb()}) + \"\\n\")\n[CODE_BLOCK]yaml\nname: Scrape IMDb Top 250\n\non:\n schedule:\n # Runs at 00:00 UTC every day\n - cron: \"0 0 * * *\"\n workflow_dispatch: # Allow manual triggers\n\njobs:\n scrape-imdb:\n runs-on: ubuntu-latest\n permissions:\n contents: write\n\n steps:\n - name: Checkout repository\n uses: actions/checkout@v4\n\n - name: Install uv\n uses: astral-sh/setup-uv@v5\n\n - name: Run scraper\n run: | # python\n uv run --with httpx,lxml,cssselect python scrape.py\n\n - name: Commit and push changes\n run: |\n git config --local user.email \"github-actions[bot]@users.noreply.github.com\"\n git config --local user.name \"github-actions[bot]\"\n git add *.json\n git commit -m \"Update IMDb Top 250 data [skip ci]\" || exit 0\n git push\n```\n\n### Best Practices\n\n1. **Cache Dependencies**: Use GitHub's caching to speed up package installation\n2. **Handle Errors**: Implement retries and error logging\n3. **Rate Limiting**: Add delays be"
+  },
+  {
+    "id": "sqlite.md_code_0",
+    "language": "sql",
+    "code": "-- Create a table\nCREATE TABLE users (\n id INTEGER PRIMARY KEY,\n name TEXT NOT NULL,\n email TEXT UNIQUE,\n created_at DATETIME DEFAULT CURRENT_TIMESTAMP\n);\n\n-- Insert data\nINSERT INTO users (name, email) VALUES\n ('Alice', 'alice@example.com'),\n ('Bob', 'bob@example.com');\n\n-- Query data\nSELECT name, COUNT(*) as count\nFROM users\nGROUP BY name\nHAVING count > 1;\n\n-- Join tables\nSELECT u.name, o.product\nFROM users u\nLEFT JOIN orders o ON u.id = o.user_id\nWHERE o.status = 'pending';",
+    "source_file": "sqlite.md",
+    "context": "reference/current/index.html), [MongoDB](https://www.mongodb.com/docs/manual/), [Redis](https://redis.io/docs/latest/), etc. that you should know about and we may cover later.\n\nCore Concepts:\n\n[CODE_BLOCK]\n\nPython Integration:\n\n```python\nimport sqlite3\nfrom pathlib import Path\nimport pandas as pd\n\nasync def query_database(db_path: Path, query: str) -> pd.DataFrame:\n \"\"\"Execute SQL query and return"
+  },
+  {
+    "id": "sqlite.md_code_1",
+    "language": "python",
+    "code": "import sqlite3\nfrom pathlib import Path\nimport pandas as pd\n\nasync def query_database(db_path: Path, query: str) -> pd.DataFrame:\n \"\"\"Execute SQL query and return results as DataFrame.\n\n Args:\n db_path: Path to SQLite database\n query: SQL query to execute\n\n Returns:\n DataFrame with query results\n \"\"\"\n try:\n conn = sqlite3.connect(db_path)\n return pd.read_sql_query(query, conn)\n finally:\n conn.close()\n\n# Example usage\ndb = Path('data.db')\ndf = await query_database(db, '''\n SELECT date, COUNT(*) as count\n FROM events\n GROUP BY date\n''')",
+    "source_file": "sqlite.md",
+    "context": "FROM users\nGROUP BY name\nHAVING count > 1;\n\n-- Join tables\nSELECT u.name, o.product\nFROM users u\nLEFT JOIN orders o ON u.id = o.user_id\nWHERE o.status = 'pending';\n[CODE_BLOCK]python\nimport sqlite3\nfrom pathlib import Path\nimport pandas as pd\n\nasync def query_database(db_path: Path, query: str) -> pd.DataFrame:\n \"\"\"Execute SQL query and return results as DataFrame.\n\n Args:\n db_path: Path to SQLite database\n query: SQL query to execute\n\n Returns:\n DataFrame with query results\n \"\"\"\n try:\n conn = sqlite3.connect(db_path)\n return pd.read_sql_query(query, conn)\n finally:\n conn.close()\n\n# Example usage\ndb = Path('data.db')\ndf = await query_database(db, '''\n SELECT date, COUNT(*) as count\n FROM events\n GROUP BY date\n''')\n```\n\nCommon Operations:\n\n1. **Database Management**\n\n ```sql\n -- Backup database\n .backup 'backup.db'\n\n -- Import CSV\n .mode csv\n .import data.csv table_name\n\n -- Export results\n .headers on\n .mode c"
+  },
+  {
+    "id": "tds-gpt-reviewer.md_code_0",
+    "language": "markdown",
+    "code": "As a **Content Reviewer** for a high school–level course on Tools in Data Science, your job is to evaluate provided content (such as text, code snippets, or references) with a focus on correctness, clarity, and conciseness, and offer actionable feedback for improvement.\n\n1. **Check for Correctness and Consistency**\n - Verify technical and factual accuracy.\n - Ensure internal consistency without contradictions.\n2. **Check for Clarity and Approachability**\n - Ensure content is understandable for a high school student with limited prior knowledge.\n - Identify and simplify jargon or advanced concepts.\n3. **Check for Conciseness**\n - Assess if content is direct and free of unnecessary verbosity.\n - Identify areas for streamlining to enhance readability.\n4. **Provide Feedback for Improvement**\n - Offer actionable suggestions for fixing, clarifying, or reorganizing content.\n - Propose alternative phrasing if text is vague, complex, or verbose.\n\n# Steps\n\n1. Carefully read the entire content before forming conclusions.\n2. List factual inconsistencies or missing details causing confusion.\n3. Suggest simpler terms or analogies for complex language.\n4. Point out unnecessary repetition or filler text.\n5. Provide direct examples of how to improve the highlighted issues.\n\n# Output Format\n\nRespond using **Markdown** with the following structure:\n\n1. **Summary of Findings**\n - A concise paragraph outlining overall strengths and weaknesses.\n2. **Detailed Review**\n - **Correctness and Consistency**: Note factual errors or inconsistencies, suggesting corrections.\n - **Clarity and Approachability**: Identify overly advanced or unclear sections, offering simpler alternatives.\n - **Conciseness**: Highlight long or repetitive sections with suggestions for tightening the text.\n3. **Actionable Improvement Suggestions**\n - Provide specific sentences, bullet points, or rewritten examples to illustrate improvements.\n\n# Notes\n\n- Maintain a constructive review tone, not content generation.\n- Even if content is perfect, confirm with suggestions for minor improvements (e.g., adding an example or clarifying a subtle point).",
+    "source_file": "tds-gpt-reviewer.md",
+    "context": "chnical-content-reviewer).\n\nTake a look at the GPT's instructions. These were generated by the [OpenAI Prompt Generation](https://platform.openai.com/docs/guides/prompt-generation) tool.\n\n[CODE_BLOCK]\n\n## Content creation prompts\n\nIn addition, here are a few prompts used to create the content:\n\n1. **Video summaries**. Transcribe the video via [YouTube Transcript](https://youtubetranscript.com/"
+  },
+  {
+    "id": "tds-ta-instructions.md_code_0",
+    "language": "bash",
+    "code": "# Clone the course repository\ngit clone https://github.com/sanand0/tools-in-data-science-public.git\ncd tools-in-data-science-public\n\n# Create a prompt file for the TA\nPYTHONUTF8=1 uvx files-to-prompt --cxml *.md -o tds-content.xml\n# Replace the source with the URL of the course\nsed -i \"s/<source>/<source>https:\\/\\/tds.s-anand.net\\/#\\//g\" tds-content.xml",
+    "source_file": "tds-ta-instructions.md",
+    "context": "# TDS TA Instructions\n\nThe TDS TA is a virtual assistant that helps you with your doubts.\n\nIt has been trained on course content created as follows:\n\n[CODE_BLOCK]\n\nAdditionally, we visit each of the evaluation links on <https://exam.sanand.workers.dev/>, [copy it as Markdown](https://tools.s-anand.net/page2md/), and add it to the content, called `ga1.md`,"
+  },
+  {
+    "id": "tds-ta-instructions.md_code_1",
+    "language": "markdown",
+    "code": "As a Teaching Assistant (TA) for the Tools in Data Science course at IIT Madras, guide students through course-related questions.\n\n1. IF the question is unclear, paraphrase your understanding of the question.\n2. Cite all relevant sections from `tds-content.xml` or `ga*.md`. Begin with: \"According to [this reference](https://tds.s-anand.net/#/...), ...\". Cite ONLY from the relevant <source>. ALWAYS cite verbatim. Mention ALL material relevant to the question.\n3. Search online for additional answers. Share results WITH CITATION LINKS.\n4. Think step-by-step. Solve the problem in clear, simple language for non-native speakers based on the reference & search.\n5. Follow-up: Ask thoughtful questions to help students explore and learn.",
+    "source_file": "tds-ta-instructions.md",
+    "context": "m-tds-teaching-assistant).\n\nTake a look at the GPT's instructions. These were generated by the [OpenAI Prompt Generation](https://platform.openai.com/docs/guides/prompt-generation) tool.\n\n[CODE_BLOCK]"
+  },
+  {
+    "id": "transforming-images.md_code_0",
+    "language": "python",
+    "code": "# /// script\n# requires-python = \">=3.11\"\n# dependencies = [\"Pillow\"]\n# ///\n\nfrom PIL import Image, ImageEnhance, ImageFilter\n\nasync def process_image(path: str) -> Image.Image:\n \"\"\"Process an image with basic enhancements.\"\"\"\n with Image.open(path) as img:\n # Convert to RGB to ensure compatibility\n img = img.convert('RGB')\n\n # Resize maintaining aspect ratio\n img.thumbnail((800, 800))\n\n # Apply enhancements\n img = (ImageEnhance.Contrast(img)\n .enhance(1.2))\n\n return img.filter(ImageFilter.SHARPEN)\n\nif __name__ == \"__main__\":\n import asyncio\n img = asyncio.run(process_image(\"input.jpg\"))\n img.save(\"output.jpg\", quality=85)",
+    "source_file": "transforming-images.md",
+    "context": "nd generating images. It handles various formats (PNG, JPEG, GIF, etc.) and provides operations from basic resizing to complex filters.\n\nHere's a minimal example showing common operations:\n\n[CODE_BLOCK]\n\nKey features and techniques you'll learn:\n\n- **Image Loading and Saving**: Handle various formats with automatic conversion\n- **Basic Operations**: Resize, rotate, crop, and flip images\n- **Colo"
+  },
+  {
+    "id": "transforming-images.md_code_1",
+    "language": "python",
+    "code": "from PIL import Image\n\nasync def transform_image(\n path: str,\n size: tuple[int, int],\n rotation: float = 0\n) -> Image.Image:\n \"\"\"Transform image with basic operations.\"\"\"\n with Image.open(path) as img:\n # Resize with anti-aliasing\n img = img.resize(size, Image.LANCZOS)\n\n # Rotate around center\n if rotation:\n img = img.rotate(rotation, expand=True)\n\n # Auto-crop empty edges\n img = img.crop(img.getbbox())\n\n return img",
+    "source_file": "transforming-images.md",
+    "context": "multiple images efficiently\n- **Memory Management**: Process large images without memory issues\n\n### Basic Image Operations\n\nCommon operations for resizing, cropping, and rotating images:\n\n[CODE_BLOCK]\n\n### Color and Enhancement\n\nAdjust image appearance with built-in enhancement tools:\n\n```python\nfrom PIL import ImageEnhance, ImageOps\n\nasync def enhance_image(\n img: Image.Image,\n brightness: fl"
+  },
+  {
+    "id": "transforming-images.md_code_2",
+    "language": "python",
+    "code": "from PIL import ImageEnhance, ImageOps\n\nasync def enhance_image(\n img: Image.Image,\n brightness: float = 1.0,\n contrast: float = 1.0,\n saturation: float = 1.0\n) -> Image.Image:\n \"\"\"Apply color enhancements to image.\"\"\"\n enhancers = [\n (ImageEnhance.Brightness, brightness),\n (ImageEnhance.Contrast, contrast),\n (ImageEnhance.Color, saturation)\n ]\n\n for Enhancer, factor in enhancers:\n if factor != 1.0:\n img = Enhancer(img).enhance(factor)\n\n return img",
+    "source_file": "transforming-images.md",
+    "context": "rotate(rotation, expand=True)\n\n # Auto-crop empty edges\n img = img.crop(img.getbbox())\n\n return img\n[CODE_BLOCK]python\nfrom PIL import ImageEnhance, ImageOps\n\nasync def enhance_image(\n img: Image.Image,\n brightness: float = 1.0,\n contrast: float = 1.0,\n saturation: float = 1.0\n) -> Image.Image:\n \"\"\"Apply color enhancements to image.\"\"\"\n enhancers = [\n (ImageEnhance.Brightness, brightness),\n (ImageEnhance.Contrast, contrast),\n (ImageEnhance.Color, saturation)\n ]\n\n for Enhancer, factor in enhancers:\n if factor != 1.0:\n img = Enhancer(img).enhance(factor)\n\n return img\n[CODE_BLOCK]python\nfrom PIL import ImageFilter\n\ndef apply_effects(img: Image.Image) -> Image.Image:\n \"\"\"Apply various filters and eff"
+  },
+  {
+    "id": "transforming-images.md_code_3",
+    "language": "python",
+    "code": "from PIL import ImageFilter\n\ndef apply_effects(img: Image.Image) -> Image.Image:\n \"\"\"Apply various filters and effects.\"\"\"\n effects = {\n 'blur': ImageFilter.GaussianBlur(radius=2),\n 'sharpen': ImageFilter.SHARPEN,\n 'edge': ImageFilter.FIND_EDGES,\n 'emboss': ImageFilter.EMBOSS\n }\n\n return {name: img.filter(effect)\n for name, effect in effects.items()}",
+    "source_file": "transforming-images.md",
+    "context": "tion)\n ]\n\n for Enhancer, factor in enhancers:\n if factor != 1.0:\n img = Enhancer(img).enhance(factor)\n\n return img\n[CODE_BLOCK]python\nfrom PIL import ImageFilter\n\ndef apply_effects(img: Image.Image) -> Image.Image:\n \"\"\"Apply various filters and effects.\"\"\"\n effects = {\n 'blur': ImageFilter.GaussianBlur(radius=2),\n 'sharpen': ImageFilter.SHARPEN,\n 'edge': ImageFilter.FIND_EDGES,\n 'emboss': ImageFilter.EMBOSS\n }\n\n return {name: img.filter(effect)\n for name, effect in effects.items()}\n[CODE_BLOCK]python\nfrom PIL import Image, ImageDraw, ImageFont\n\nasync def add_watermark(\n img: Image.Image,\n text: str,\n font_size: int ="
+  },
+  {
+    "id": "transforming-images.md_code_4",
+    "language": "python",
+    "code": "from PIL import Image, ImageDraw, ImageFont\n\nasync def add_watermark(\n img: Image.Image,\n text: str,\n font_size: int = 30\n) -> Image.Image:\n \"\"\"Add text watermark to image.\"\"\"\n draw = ImageDraw.Draw(img)\n font = ImageFont.truetype(\"arial.ttf\", font_size)\n\n # Calculate text size and position\n text_bbox = draw.textbbox((0, 0), text, font=font)\n text_width = text_bbox[2] - text_bbox[0]\n text_height = text_bbox[3] - text_bbox[1]\n\n # Position text at bottom-right\n x = img.width - text_width - 10\n y = img.height - text_height - 10\n\n # Add text with shadow\n draw.text((x+2, y+2), text, font=font, fill='black')\n draw.text((x, y), text, font=font, fill='white')\n\n return img",
+    "source_file": "transforming-images.md",
+    "context": "r.FIND_EDGES,\n 'emboss': ImageFilter.EMBOSS\n }\n\n return {name: img.filter(effect)\n for name, effect in effects.items()}\n[CODE_BLOCK]python\nfrom PIL import Image, ImageDraw, ImageFont\n\nasync def add_watermark(\n img: Image.Image,\n text: str,\n font_size: int = 30\n) -> Image.Image:\n \"\"\"Add text watermark to image.\"\"\"\n draw = ImageDraw.Draw(img)\n font = ImageFont.truetype(\"arial.ttf\", font_size)\n\n # Calculate text size and position\n text_bbox = draw.textbbox((0, 0), text, font=font)\n text_width = text_bbox[2] - text_bbox[0]\n text_height = text_bbox[3] - text_bbox[1]\n\n # Position text at bottom-right\n x = img.width - text_width - 10\n y = img.height - text_height - 10\n\n # Add text with shadow\n draw.text((x+2, y+2), text, font=font, fill='black')\n draw.text((x, y), text, font=font, fill='white')\n\n return img\n[CODE_BLOCK]python\nfrom PIL import Image\nimport os\n\nasync def process_large_images(\n input_dir: str,\n outp"
+  },
+  {
+    "id": "transforming-images.md_code_5",
+    "language": "python",
+    "code": "from PIL import Image\nimport os\n\nasync def process_large_images(\n input_dir: str,\n output_dir: str,\n max_size: tuple[int, int]\n) -> None:\n \"\"\"Process multiple large images efficiently.\"\"\"\n os.makedirs(output_dir, exist_ok=True)\n\n for filename in os.listdir(input_dir):\n if not filename.lower().endswith(('.png', '.jpg', '.jpeg')):\n continue\n\n input_path = os.path.join(input_dir, filename)\n output_path = os.path.join(output_dir, filename)\n\n with Image.open(input_path) as img:\n # Process in chunks using thumbnail\n img.thumbnail(max_size)\n img.save(output_path, optimize=True)",
+    "source_file": "transforming-images.md",
+    "context": "font=font, fill='black')\n draw.text((x, y), text, font=font, fill='white')\n\n return img\n[CODE_BLOCK]python\nfrom PIL import Image\nimport os\n\nasync def process_large_images(\n input_dir: str,\n output_dir: str,\n max_size: tuple[int, int]\n) -> None:\n \"\"\"Process multiple large images efficiently.\"\"\"\n os.makedirs(output_dir, exist_ok=True)\n\n for filename in os.listdir(input_dir):\n if not filename.lower().endswith(('.png', '.jpg', '.jpeg')):\n continue\n\n input_path = os.path.join(input_dir, filename)\n output_path = os.path.join(output_dir, filename)\n\n with Image.open(input_path) as img:\n # Process in chunks using thumbnail\n img.thumbnail(max_size)\n img.save(output_path, optimize=True)\n```\n\nPractice with these resources:\n\n- [Pillow Documentation](https://pillow.readthedocs.io/): Complete API reference\n- [Python Image Processing Tutorial](https://realpython.com/image-processing-with"
+  },
+  {
+    "id": "transforming-images.md_code_6",
+    "language": "bash",
+    "code": "# Format conversion\nconvert input.png output.jpg\n\n# Resize image (maintains aspect ratio)\nconvert input.jpg -resize 800x600 output.jpg\n\n# Compress image quality\nconvert input.jpg -quality 85 output.jpg\n\n# Rotate image\nconvert input.jpg -rotate 90 output.jpg",
+    "source_file": "transforming-images.md",
+    "context": "for:\n\n- Batch processing large image collections\n- Complex image transformations\n- High-quality format conversion\n- Creating image thumbnails\n- Adding text and watermarks\n\nBasic Operations:\n\n[CODE_BLOCK]\n\nCommon Data Science Tasks:\n\n```bash\n# Create thumbnails for dataset preview\nconvert input.jpg -thumbnail 200x200^ -gravity center -extent 200x200 thumb.jpg\n\n# Normalize image for ML training\ncon"
+  },
+  {
+    "id": "transforming-images.md_code_7",
+    "language": "bash",
+    "code": "# Create thumbnails for dataset preview\nconvert input.jpg -thumbnail 200x200^ -gravity center -extent 200x200 thumb.jpg\n\n# Normalize image for ML training\nconvert input.jpg -normalize -strip output.jpg\n\n# Extract dominant colors\nconvert input.jpg -colors 5 -unique-colors txt:\n\n# Generate image statistics\nidentify -verbose input.jpg | grep -E \"Mean|Standard|Kurtosis\"",
+    "source_file": "transforming-images.md",
+    "context": "nput.jpg -resize 800x600 output.jpg\n\n# Compress image quality\nconvert input.jpg -quality 85 output.jpg\n\n# Rotate image\nconvert input.jpg -rotate 90 output.jpg\n[CODE_BLOCK]bash\n# Create thumbnails for dataset preview\nconvert input.jpg -thumbnail 200x200^ -gravity center -extent 200x200 thumb.jpg\n\n# Normalize image for ML training\nconvert input.jpg -normalize -strip output.jpg\n\n# Extract dominant colors\nconvert input.jpg -colors 5 -unique-colors txt:\n\n# Generate image statistics\nidentify -verbose input.jpg | grep -E \"Mean|Standard|Kurtosis\"\n[CODE_BLOCK]bash\n# Convert all images in a directory\nmogrify -format jpg *.png\n\n# Resize multiple images\nmogrify -resize 800x600 -path output/ *.jpg\n\n# Add watermark to images\nfor f in"
+  },
+  {
+    "id": "transforming-images.md_code_8",
+    "language": "bash",
+    "code": "# Convert all images in a directory\nmogrify -format jpg *.png\n\n# Resize multiple images\nmogrify -resize 800x600 -path output/ *.jpg\n\n# Add watermark to images\nfor f in *.jpg; do\n convert \"$f\" -gravity southeast -draw \"text 10,10 'Copyright'\" \"watermarked/$f\"\ndone",
+    "source_file": "transforming-images.md",
+    "context": "# Extract dominant colors\nconvert input.jpg -colors 5 -unique-colors txt:\n\n# Generate image statistics\nidentify -verbose input.jpg | grep -E \"Mean|Standard|Kurtosis\"\n[CODE_BLOCK]bash\n# Convert all images in a directory\nmogrify -format jpg *.png\n\n# Resize multiple images\nmogrify -resize 800x600 -path output/ *.jpg\n\n# Add watermark to images\nfor f in *.jpg; do\n convert \"$f\" -gravity southeast -draw \"text 10,10 'Copyright'\" \"watermarked/$f\"\ndone\n[CODE_BLOCK]bash\n# Apply image effects\nconvert input.jpg -blur 0x3 blurred.jpg\nconvert input.jpg -sharpen 0x3 sharp.jpg\nconvert input.jpg -edge 1 edges.jpg\n\n# Create image montage\nmon"
+  },
+  {
+    "id": "transforming-images.md_code_9",
+    "language": "bash",
+    "code": "# Apply image effects\nconvert input.jpg -blur 0x3 blurred.jpg\nconvert input.jpg -sharpen 0x3 sharp.jpg\nconvert input.jpg -edge 1 edges.jpg\n\n# Create image montage\nmontage *.jpg -geometry 200x200+2+2 montage.jpg\n\n# Extract image channels\nconvert input.jpg -separate channels_%d.jpg\n\n# Composite images\ncomposite overlay.png -gravity center base.jpg output.jpg",
+    "source_file": "transforming-images.md",
+    "context": "resize 800x600 -path output/ *.jpg\n\n# Add watermark to images\nfor f in *.jpg; do\n convert \"$f\" -gravity southeast -draw \"text 10,10 'Copyright'\" \"watermarked/$f\"\ndone\n[CODE_BLOCK]bash\n# Apply image effects\nconvert input.jpg -blur 0x3 blurred.jpg\nconvert input.jpg -sharpen 0x3 sharp.jpg\nconvert input.jpg -edge 1 edges.jpg\n\n# Create image montage\nmontage *.jpg -geometry 200x200+2+2 montage.jpg\n\n# Extract image channels\nconvert input.jpg -separate channels_%d.jpg\n\n# Composite images\ncomposite overlay.png -gravity center base.jpg output.jpg\n```\n\nWatch this ImageMagick tutorial (16 min):\n\n[![ImageMagick Introduction (16 min)](https://i.ytimg.com/vi_webp/wjcBOoReYc0/sddefault.webp)](https://youtu.be/wjcBOoReYc0)\n\nTools:\n\n- [Fred's ImageMa"
+  },
+  {
+    "id": "transforming-images.md_code_10",
+    "language": "bash",
+    "code": "# Check image validity\nidentify -regard-warnings input.jpg\n\n# Get detailed error information\nconvert input.jpg output.jpg 2>&1 | grep -i \"error\"\n\n# Set resource limits\nconvert -limit memory 1GB -limit map 2GB input.jpg output.jpg",
+    "source_file": "transforming-images.md",
+    "context": "ize\n2. Monitor memory usage with `-limit memory 1GB`\n3. Use `-define` for format-specific options\n4. Process in parallel with `-parallel`\n5. Use `-monitor` to track progress\n\nError Handling:\n\n[CODE_BLOCK]\n\nFor Python integration:\n\n```python\n# /// script\n# requires-python = \">=3.9\"\n# dependencies = [\"Wand\"]\n# ///\n\nfrom wand.image import Image\n\nasync def process_image(path: str) -> None:\n \"\"\"Process"
+  },
+  {
+    "id": "transforming-images.md_code_11",
+    "language": "python",
+    "code": "# /// script\n# requires-python = \">=3.9\"\n# dependencies = [\"Wand\"]\n# ///\n\nfrom wand.image import Image\n\nasync def process_image(path: str) -> None:\n \"\"\"Process image with ImageMagick via Wand.\"\"\"\n with Image(filename=path) as img:\n # Basic operations\n img.resize(800, 600)\n img.normalize()\n\n # Apply effects\n img.sharpen(radius=0, sigma=3)\n\n # Save with compression\n img.save(filename='output.jpg')",
+    "source_file": "transforming-images.md",
+    "context": "iled error information\nconvert input.jpg output.jpg 2>&1 | grep -i \"error\"\n\n# Set resource limits\nconvert -limit memory 1GB -limit map 2GB input.jpg output.jpg\n[CODE_BLOCK]python\n# /// script\n# requires-python = \">=3.9\"\n# dependencies = [\"Wand\"]\n# ///\n\nfrom wand.image import Image\n\nasync def process_image(path: str) -> None:\n \"\"\"Process image with ImageMagick via Wand.\"\"\"\n with Image(filename=path) as img:\n # Basic operations\n img.resize(800, 600)\n img.normalize()\n\n # Apply effects\n img.sharpen(radius=0, sigma=3)\n\n # Save with compression\n img.save(filename='output.jpg')\n```\n\nNote: Always install ImageMagick before using the Wand Python binding."
+  },
+  {
+    "id": "unicode.md_code_0",
+    "language": "python",
+    "code": "# Reading files with explicit encoding\nwith open('file.txt', encoding='utf-8') as f:\n text = f.read()\n\n# Handling encoding errors\nimport pandas as pd\ndf = pd.read_csv('data.csv', encoding='utf-8', errors='replace')\n\n# Detecting file encoding\nimport chardet\nwith open('unknown.txt', 'rb') as f:\n result = chardet.detect(f.read())\nprint(result['encoding'])",
+    "source_file": "unicode.md",
+    "context": "rds compatible with ASCII\n - UTF-16: Fixed-width encoding, used in Windows and Java\n - UTF-32: Fixed-width encoding, memory inefficient but simple\n\nCommon encoding issues you'll encounter:\n\n[CODE_BLOCK]\n\n[![Code Pages, Character Encoding, Unicode, UTF-8 and the BOM - Computer Stuff They Didn't Teach You #2 (17 min)](https://i.ytimg.com/vi_webp/jeIBNn5Y5fI/sddefault.webp)](https://youtu.be/jeIBNn"
+  },
+  {
+    "id": "uv.md_code_0",
+    "language": "bash",
+    "code": "# Replace python with uv. This automatically installs Python and dependencies.\nuv run script.py\n\n# Run a Python script directly from the Internet\nuv run https://example.com/script.py\n\n# Run a Python script without installing\nuvx ruff\n\n# Use a specific Python version\nuv run --python 3.11 script.py\n\n# Add dependencies to your script\nuv add httpx --script script.py\n\n# Create a virtual environment at .venv\nuv venv\n\n# Install packages to your virtual environment\nuv pip install httpx",
+    "source_file": "uv.md",
+    "context": "cution**: The `uv run` command allows for the execution of scripts and applications within the managed environment, streamlining development workflows.\n\nHere are some commonly used commands:\n\n[CODE_BLOCK]\n\nHere are some useful tools you can run with `uvx` without installation:\n\n```bash\nuvx --from jupyterlab jupyter-lab # Jupyter notebook\nuvx marimo # Interactive notebook\nuvx llm # Chat with LLMs f"
+  },
+  {
+    "id": "uv.md_code_1",
+    "language": "bash",
+    "code": "uvx --from jupyterlab jupyter-lab # Jupyter notebook\nuvx marimo # Interactive notebook\nuvx llm # Chat with LLMs from the command line\nuvx openwebui # Chat with LLMs via the browser\nuvx httpie # Make HTTP requests\nuvx datasette # Browse SQLite databases\nuvx markitdown # Convert PDF to Markdown\nuvx yt-dlp # Download YouTube videos\nuvx asciinema # Record your terminal and play it",
+    "source_file": "uv.md",
+    "context": "reate a virtual environment at .venv\nuv venv\n\n# Install packages to your virtual environment\nuv pip install httpx\n[CODE_BLOCK]bash\nuvx --from jupyterlab jupyter-lab # Jupyter notebook\nuvx marimo # Interactive notebook\nuvx llm # Chat with LLMs from the command line\nuvx openwebui # Chat with LLMs via the browser\nuvx httpie # Make HTTP requests\nuvx datasette # Browse SQLite databases\nuvx markitdown # Convert PDF to Markdown\nuvx yt-dlp # Download YouTube videos\nuvx asciinema # Record your terminal and play it\n```\n\nuv uses [inline script metadata](https://packaging.python.org/en/latest/specifications/inline-script-metadata/#inline-script-metadata) for dependencies.\nThe eliminates the need for `requirements"
+  },
+  {
+    "id": "uv.md_code_2",
+    "language": "python",
+    "code": "# /// script\n# requires-python = \">=3.11\"\n# dependencies = [\n# \"httpx\",\n# \"pandas\",\n# ]\n# ///",
+    "source_file": "uv.md",
+    "context": "g.python.org/en/latest/specifications/inline-script-metadata/#inline-script-metadata) for dependencies.\nThe eliminates the need for `requirements.txt` or virtual environments. For example:\n\n[CODE_BLOCK]\n\n[![uv - Python package and project management | Inline Script Metadata (28 min)](https://i.ytimg.com/vi_webp/igWlYl3asKw/sddefault.webp)](https://youtu.be/igWlYl3asKw?t=1240)\n\n<!-- Assessment: S"
+  },
+  {
+    "id": "vector-databases.md_code_0",
+    "language": "python",
+    "code": "# /// script\n# requires-python = \"==3.12\"\n# dependencies = [\n# \"chromadb\",\n# \"sentence-transformers\",\n# ]\n# ///\n\nimport chromadb\nfrom chromadb.utils import embedding_functions\nfrom sentence_transformers import SentenceTransformer\n\nasync def setup_vector_db():\n \"\"\"Initialize Chroma DB with an embedding function.\"\"\"\n sentence_transformer_ef = embedding_functions.SentenceTransformerEmbeddingFunction(\n model_name=\"BAAI/bge-base-en-v1.5\"\n )\n client = chromadb.PersistentClient(path=\"./vector_db\")\n collection = client.create_collection(\n name=\"documents\",\n embedding_function=sentence_transformer_ef\n )\n return collection\n\nasync def search_similar(collection, query: str, n_results: int = 3) -> list[dict]:\n \"\"\"Search for documents similar to the query.\"\"\"\n d = collection.query(query_texts=[query], n_results=n_results)\n return [\n {\"id\": id, \"text\": text, \"distance\": distance}\n for id, text, distance in zip(d[\"ids\"][0], d[\"documents\"][0], d[\"distances\"][0])\n ]\n\nasync def main():\n collection = await setup_vector_db()\n\n # Add some documents\n collection.add(\n documents=[\"Apple is a fruit\", \"Orange is citrus\", \"Computer is electronic\"],\n ids=[\"1\", \"2\", \"3\"]\n )\n\n # Search\n results = await search_similar(collection, \"fruit\")\n print(results)\n\nif __name__ == \"__main__\":\n import asyncio\n asyncio.run(main())",
+    "source_file": "vector-databases.md",
+    "context": "atabases are so hot right now. WTF are they? (3 min)](https://i.ytimg.com/vi/klTvEwg3oJ4/sddefault.jpg)](https://youtu.be/klTvEwg3oJ4)\n\n### ChromaDB\n\nHere's a minimal example using Chroma:\n\n[CODE_BLOCK]\n\n### LanceDB\n\nHere's the same example using LanceDB:\n\n```python\n# /// script\n# requires-python = \"==3.12\"\n# dependencies = [\n# \"lancedb\",\n# \"pyarrow\",\n# \"sentence-transformers\",\n# ]\n# ///\n\nimport"
+  },
+  {
+    "id": "vector-databases.md_code_1",
+    "language": "python",
+    "code": "# /// script\n# requires-python = \"==3.12\"\n# dependencies = [\n# \"lancedb\",\n# \"pyarrow\",\n# \"sentence-transformers\",\n# ]\n# ///\n\nimport lancedb\nimport pyarrow as pa\nfrom sentence_transformers import SentenceTransformer\n\nasync def setup_vector_db():\n \"\"\"Initialize LanceDB with an embedding function.\"\"\"\n model = SentenceTransformer(\"BAAI/bge-base-en-v1.5\")\n db = lancedb.connect(\"./vector_db\")\n\n # Create table with schema for documents\n table = db.create_table(\n \"documents\",\n schema=pa.schema([\n pa.field(\"id\", pa.string()),\n pa.field(\"text\", pa.string()),\n pa.field(\"vector\", pa.list_(pa.float32(), list_size=768))\n ])\n )\n return table, model\n\nasync def search_similar(table, model, query: str, n_results: int = 3) -> list[dict]:\n \"\"\"Search for documents similar to the query.\"\"\"\n query_embedding = model.encode(query)\n results = table.search(query_embedding).limit(n_results).to_list()\n return [{\"id\": r[\"id\"], \"text\": r[\"text\"], \"distance\": float(r[\"_distance\"])} for r in results]\n\nasync def main():\n table, model = await setup_vector_db()\n\n # Add some documents\n documents = [\"Apple is a fruit\", \"Orange is citrus\", \"Computer is electronic\"]\n embeddings = model.encode(documents)\n\n table.add(data=[\n {\"id\": str(i), \"text\": text, \"vector\": embedding}\n for i, (text, embedding) in enumerate(zip(documents, embeddings), 1)\n ])\n\n # Search\n results = await search_similar(table, model, \"fruit\")\n print(results)\n\nif __name__ == \"__main__\":\n import asyncio\n asyncio.run(main())",
+    "source_file": "vector-databases.md",
+    "context": "esults = await search_similar(collection, \"fruit\")\n print(results)\n\nif __name__ == \"__main__\":\n import asyncio\n asyncio.run(main())\n[CODE_BLOCK]python\n# /// script\n# requires-python = \"==3.12\"\n# dependencies = [\n# \"lancedb\",\n# \"pyarrow\",\n# \"sentence-transformers\",\n# ]\n# ///\n\nimport lancedb\nimport pyarrow as pa\nfrom sentence_transformers import SentenceTransformer\n\nasync def setup_vector_db():\n \"\"\"Initialize LanceDB with an embedding function.\"\"\"\n model = SentenceTransformer(\"BAAI/bge-base-en-v1.5\")\n db = lancedb.connect(\"./vector_db\")\n\n # Create table with schema for documents\n table = db.create_table(\n \"documents\",\n schema=pa.schema([\n pa.field(\"id\", pa.string()),\n pa.field(\"text\", pa.string()),\n pa.field(\"vector\", pa.list_(pa.float32(), list_size=768))\n ])\n )\n return table, model\n\nasync def search_similar(table, model, query: str, n_results: int = 3) -> list[dict]:\n \"\"\"Search for documents similar to the query.\"\"\"\n query_embedding = model.encode(query)\n results = table.search(query_embedding).limit(n_results).to_list()\n return [{\"id\": r[\"id\"], \"text\": r[\"text\"], \"distance\": float(r[\"_distance\"])} for r in results]\n\nasync def main():\n table, model = await setup_vector_db()\n\n # Add some documents\n documents = [\"Apple is a fruit\", \"Orange is citrus\", \"Computer is electronic\"]\n embeddings = model.encode(documents)\n\n table.add(data=[\n {\"id\": str(i), \"text\": text, \"vector\": embedding}\n for i, (text, embedding) in enumerate(zip(documents, embeddings), 1)\n ])\n\n # Search\n results = await search_similar(table, model, \"fruit\")\n print(results)\n\nif __name__ == \"__main__\":\n import asyncio\n asyncio.run(main())\n[CODE_BLOCK]python\n# /// script\n# requires-python = \"==3.12\"\n# dependencies = [\n# \"duckdb\",\n# \"sentence-transformers\",\n# ]\n# ///\n\nimport duckdb\nfrom sen"
+  },
+  {
+    "id": "vector-databases.md_code_2",
+    "language": "python",
+    "code": "# /// script\n# requires-python = \"==3.12\"\n# dependencies = [\n# \"duckdb\",\n# \"sentence-transformers\",\n# ]\n# ///\n\nimport duckdb\nfrom sentence_transformers import SentenceTransformer\n\nasync def setup_vector_db() -> tuple[duckdb.DuckDBPyConnection, SentenceTransformer]:\n \"\"\"Initialize DuckDB with VSS extension and embedding model.\"\"\"\n # Initialize model\n model = SentenceTransformer(\"BAAI/bge-base-en-v1.5\")\n vector_dim = model.get_sentence_embedding_dimension()\n\n # Setup DuckDB with VSS extension\n conn = duckdb.connect(\":memory:\")\n conn.install_extension(\"vss\")\n conn.load_extension(\"vss\")\n\n # Create table with vector column\n conn.execute(f\"\"\"\n CREATE TABLE documents (\n id VARCHAR,\n text VARCHAR,\n vector FLOAT[{vector_dim}]\n )\n \"\"\")\n\n # Create HNSW index for vector similarity search\n conn.execute(\"CREATE INDEX vector_idx ON documents USING HNSW (vector)\")\n return conn, model\n\nasync def search_similar(conn: duckdb.DuckDBPyConnection, model: SentenceTransformer,\n query: str, n_results: int = 3) -> list[dict]:\n \"\"\"Search for documents similar to query using vector similarity.\"\"\"\n # Encode query to vector\n query_vector = model.encode(query).tolist()\n\n # Search using HNSW index with explicit FLOAT[] cast\n results = conn.execute(\"\"\"\n SELECT id, text, array_distance(vector, CAST(? AS FLOAT[768])) as distance\n FROM documents\n ORDER BY array_distance(vector, CAST(? AS FLOAT[768]))\n LIMIT ?\n \"\"\", [query_vector, query_vector, n_results]).fetchall()\n\n return [{\"id\": r[0], \"text\": r[1], \"distance\": float(r[2])} for r in results]\n\nasync def main():\n conn, model = await setup_vector_db()\n\n # Add sample documents\n documents = [\"Apple is a fruit\", \"Orange is citrus\", \"Computer is electronic\"]\n embeddings = model.encode(documents).tolist()\n\n # Insert documents and vectors\n conn.executemany(\"\"\"\n INSERT INTO documents (id, text, vector)\n VALUES (?, ?, ?)\n \"\"\", [(str(i), text, embedding)\n for i, (text, embedding) in enumerate(zip(documents, embeddings), 1)])\n\n # Search similar documents\n results = await search_similar(conn, model, \"fruit\")\n print(results)\n\nif __name__ == \"__main__\":\n import asyncio\n asyncio.run(main())",
+    "source_file": "vector-databases.md",
+    "context": "esults = await search_similar(table, model, \"fruit\")\n print(results)\n\nif __name__ == \"__main__\":\n import asyncio\n asyncio.run(main())\n[CODE_BLOCK]python\n# /// script\n# requires-python = \"==3.12\"\n# dependencies = [\n# \"duckdb\",\n# \"sentence-transformers\",\n# ]\n# ///\n\nimport duckdb\nfrom sentence_transformers import SentenceTransformer\n\nasync def setup_vector_db() -> tuple[duckdb.DuckDBPyConnection, SentenceTransformer]:\n \"\"\"Initialize DuckDB with VSS extension and embedding model.\"\"\"\n # Initialize model\n model = SentenceTransformer(\"BAAI/bge-base-en-v1.5\")\n vector_dim = model.get_sentence_embedding_dimension()\n\n # Setup DuckDB with VSS extension\n conn = duckdb.connect(\":memory:\")\n conn.install_extension(\"vss\")\n conn.load_extension(\"vss\")\n\n # Create table with vector column\n conn.execute(f\"\"\"\n CREATE TABLE documents (\n id VARCHAR,\n text VARCHAR,\n vector FLOAT[{vector_dim}]\n )\n \"\"\")\n\n # Create HNSW index for vector similarity search\n conn.execute(\"CREATE INDEX vector_idx ON documents USING HNSW (vector)\")\n return conn, model\n\nasync def search_similar(conn: duckdb.DuckDBPyConnection, model: SentenceTransformer,\n query: str, n_results: int = 3) -> list[dict]:\n \"\"\"Search for documents similar to query using vector similarity.\"\"\"\n # Encode query to vector\n query_vector = model.encode(query).tolist()\n\n # Search using HNSW index with explicit FLOAT[] cast\n results = conn.execute(\"\"\"\n SELECT id, text, array_distance(vector, CAST(? AS FLOAT[768])) as distance\n FROM documents\n ORDER BY array_distance(vector, CAST(? AS FLOAT[768]))\n LIMIT ?\n \"\"\", [query_vector, query_vector, n_results]).fetchall()\n\n return [{\"id\": r[0], \"text\": r[1], \"distance\": float(r[2])} for r in results]\n\nasync def main():\n conn, model = await setup_vector_db()\n\n # Add sample documents\n documents = [\"Apple is a fruit\", \"Orange is citrus\", \"Computer is electronic\"]\n embeddings = model.encode(documents).tolist()\n\n # Insert documents and vectors\n conn.executemany(\"\"\"\n INSERT INTO documents (id, text, vector)\n VALUES (?, ?, ?)\n \"\"\", [(str(i), text, embedding)\n for i, (text, embedding) in enumerate(zip(documents, embeddings), 1)])\n\n # Search similar documents\n results = await search_similar(conn, model, \"fruit\")\n print(results)\n\nif __name__ == \"__main__\":\n import asyncio\n asyncio.run(main())\n```"
+  },
+  {
+    "id": "vercel.md_code_0",
+    "language": "text",
+    "code": "fastapi",
+    "source_file": "vercel.md",
+    "context": "s/functions/runtimes/python). [Sign-up with Vercel](https://vercel.com/signup). Create an empty `git` repo with this `api/index.py` file.\n\nTo deploy a FastAPI app, add a `requirements.txt` file with `fastapi` as a dependency.\n\n[CODE_BLOCK]\n\nAdd your FastAPI code to a file, e.g. `main.py`.\n\n```python\n# main.py\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/\")\ndef read_root():\n return {\"me"
+  },
+  {
+    "id": "vercel.md_code_1",
+    "language": "python",
+    "code": "# main.py\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/\")\ndef read_root():\n return {\"message\": \"Hello, World!\"}",
+    "source_file": "vercel.md",
+    "context": "ith this `api/index.py` file.\n\nTo deploy a FastAPI app, add a `requirements.txt` file with `fastapi` as a dependency.\n\n[CODE_BLOCK]\n\nAdd your FastAPI code to a file, e.g. `main.py`.\n\n[CODE_BLOCK]\n\nAdd a `vercel.json` file to the root of your repository.\n\n[CODE_BLOCK]\n\nOn the c"
+  },
+  {
+    "id": "vercel.md_code_2",
+    "language": "json",
+    "code": "{\n \"builds\": [{ \"src\": \"main.py\", \"use\": \"@vercel/python\" }],\n \"routes\": [{ \"src\": \"/(.*)\", \"dest\": \"main.py\" }]\n}",
+    "source_file": "vercel.md",
+    "context": "thon\n# main.py\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/\")\ndef read_root():\n return {\"message\": \"Hello, World!\"}\n[CODE_BLOCK]json\n{\n \"builds\": [{ \"src\": \"main.py\", \"use\": \"@vercel/python\" }],\n \"routes\": [{ \"src\": \"/(.*)\", \"dest\": \"main.py\" }]\n}\n```\n\nOn the command line, run:\n\n- `npx vercel` to deploy a test version\n- `npx vercel --prod` to deploy to production\n\n**Environment Variables**. Use `npx vercel env add` to add environment variables"
+  },
+  {
+    "id": "vision-models.md_code_0",
+    "language": "bash",
+    "code": "curl https://api.openai.com/v1/chat/completions \\\n -H \"Content-Type: application/json\" \\\n -H \"Authorization: Bearer $OPENAI_API_KEY\" \\\n -d '{\n \"model\": \"gpt-4o-mini\",\n \"messages\": [\n {\n \"role\": \"user\",\n \"content\": [\n {\"type\": \"text\", \"text\": \"What is in this image?\"},\n {\n \"type\": \"image_url\",\n \"detail\": \"low\",\n \"image_url\": {\"url\": \"https://upload.wikimedia.org/wikipedia/commons/3/34/Correlation_coefficient.png\"}\n }\n ]\n }\n ]\n }'",
+    "source_file": "vision-models.md",
+    "context": ".com/docs/guides/vision)\n- [Sample images used](https://drive.google.com/drive/folders/14MFc7XmGIUDU4-vbmF9305c1SSQrM-gR)\n\nHere is an example of how to analyze an image using the OpenAI API.\n\n[CODE_BLOCK]\n\nLet's break down the request:\n\n- `curl https://api.openai.com/v1/chat/completions`: The API endpoint for text generation.\n- `-H \"Content-Type: application/json\"`: The content type of the request"
+  },
+  {
+    "id": "vision-models.md_code_1",
+    "language": "bash",
+    "code": "# Download image and convert to base64 in one step\nIMAGE_BASE64=$(curl -s \"https://upload.wikimedia.org/wikipedia/commons/3/34/Correlation_coefficient.png\" | base64 -w 0)\n\n# Send to OpenAI API\ncurl https://api.openai.com/v1/chat/completions \\\n -H \"Content-Type: application/json\" \\\n -H \"Authorization: Bearer $OPENAI_API_KEY\" \\\n -d @- << EOF\n{\n \"model\": \"gpt-4o-mini\",\n \"messages\": [\n {\n \"role\": \"user\",\n \"content\": [\n {\"type\": \"text\", \"text\": \"What is in this image?\"},\n {\n \"type\": \"image_url\",\n \"image_url\": { \"url\": \"data:image/png;base64,$IMAGE_BASE64\" }\n }\n ]\n }\n ]\n}\nEOF",
+    "source_file": "vision-models.md",
+    "context": "ttps://upload.wikimedia.org/wikipedia/commons/3/34/Correlation_coefficient.png\"}`: The URL of the image.\n\nYou can send images in a [base64 encoded format](base64-image.md), too. For example:\n\n[CODE_BLOCK]"
+  },
+  {
+    "id": "web-automation-with-playwright.md_code_0",
+    "language": "python",
+    "code": "# /// script\n# dependencies = [\"playwright\"]\n# ///\n\nfrom playwright.sync_api import sync_playwright\n\ndef scrape_quotes():\n with sync_playwright() as p:\n # Channel can be \"chrome\", \"msedge\", \"chrome-beta\", \"msedge-beta\" or \"msedge-dev\".\n browser = p.chromium.launch(headless=True, channel=\"chrome\")\n page = browser.new_page()\n page.goto(\"https://quotes.toscrape.com/js/\")\n quotes = page.query_selector_all(\".quote\")\n for q in quotes:\n text = q.query_selector(\".text\").inner_text()\n author = q.query_selector(\".author\").inner_text()\n print(f\"{text} — {author}\")\n browser.close()\n\nif __name__ == \"__main__\":\n scrape_quotes()",
+    "source_file": "web-automation-with-playwright.md",
+    "context": "es via JavaScript, so a simple `requests` call gets only an empty shell ([quotes.toscrape.com](https://quotes.toscrape.com/js/)). Playwright runs the scripts and gives us the real content:\n\n[CODE_BLOCK]\n\nSave as `scraper.py` and run:\n\n[CODE_BLOCK]\n\nYou’ll see each quote plus author printed—fetched only after the JS executes."
+  },
+  {
+    "id": "web-automation-with-playwright.md_code_1",
+    "language": "bash",
+    "code": "uv run scraper.py",
+    "source_file": "web-automation-with-playwright.md",
+    "context": ".inner_text()\n author = q.query_selector(\".author\").inner_text()\n print(f\"{text} — {author}\")\n browser.close()\n\nif __name__ == \"__main__\":\n scrape_quotes()\n[CODE_BLOCK]bash\nuv run scraper.py\n```\n\nYou’ll see each quote plus author printed—fetched only after the JS executes."
+  },
+  {
+    "id": "README.md_code_0",
+    "language": "bash",
+    "code": "OPENAI_API_KEY=$AIPROXY_TOKEN uv run https://raw.githubusercontent.com/sanand0/tools-in-data-science-public/tds-2025-01/project-1/evaluate.py",
+    "source_file": "README.md",
+    "context": "py`](evaluate.py) to calculate the score.\n\nHere's how you can try it out. Run your Docker image exposing port 8000 and run this command (replacing `$AIPROXY_TOKEN` with your AI Proxy token):\n\n[CODE_BLOCK]\n\nThis [`evaluate.py`](evaluate.py) script currently work-in-progress and will be updated based on teacher & student feedback.\n\nYou're welcome to try it and share feedback on this [Project 1 Disco"
+  }
+]

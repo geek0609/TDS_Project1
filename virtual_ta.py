@@ -609,10 +609,7 @@ Guidelines:
 Answer:"""
 
     def generate_answer(self, question: str, search_results: List[Dict], image_path: str = None) -> Dict:
-        """Generate answer using advanced prompt engineering and context optimization"""
-        
-        # Analyze question intent
-        intent = self._analyze_question_intent(question)
+        """Simplified answer generation with minimal processing"""
         
         # Handle image if provided
         image_content = None
@@ -639,28 +636,55 @@ Answer:"""
             except Exception as e:
                 logger.error(f"Error loading image: {e}")
         
-        # Build dynamic context
-        context_text = self._build_dynamic_context(search_results, intent)
+        # Simple context building
+        context_parts = []
+        for result in search_results[:5]:  # Limit to top 5 results
+            if result["type"] == "discourse_topic":
+                data = result["data"]
+                context_parts.append(f"Topic: {data['title']}")
+                context_parts.append(f"Content: {data['full_content'][:800]}...")
+            elif result["type"] == "qa_pair":
+                data = result["data"]
+                context_parts.append(f"Q: {data['question']}")
+                context_parts.append(f"A: {data['answer']}")
+            elif result["type"] == "course_content":
+                data = result["data"]
+                context_parts.append(f"Course: {data['title']}")
+                context_parts.append(f"Content: {data['content'][:800]}...")
+            context_parts.append("")
         
-        # Create adaptive prompt
-        prompt_text = self._create_adaptive_prompt(question, context_text, intent)
+        context_text = "\n".join(context_parts)
         
-        # Generate answer with appropriate model configuration
+        # Simple prompt
+        prompt_text = f"""You are a helpful teaching assistant. Answer the question based on the provided context.
+
+Question: {question}
+
+Context:
+{context_text}
+
+Answer:"""
+        
+        # Generate answer with minimal configuration
         try:
-            model = genai.GenerativeModel('gemini-2.5-flash-preview-05-20')
+            # Use different models for image vs text queries
+            if image_content:
+                model = genai.GenerativeModel('gemini-2.0-flash')
+            else:
+                model = genai.GenerativeModel('gemini-2.5-flash-preview-05-20')
             
-            # Configure generation parameters based on intent
+            # Minimal generation config
             generation_config = {
-                'temperature': 0.1 if intent['confidence_required'] == 'high' else 0.3,
-                'top_p': 0.8,
-                'top_k': 40,
+                'temperature': 0.3,
                 'max_output_tokens': 1000
             }
             
             # Prepare content for the model
             if image_content:
+                # Very simple prompt for image + text to avoid safety filters
+                simple_prompt = f"Answer this question: {question}\n\nContext:\n{context_text[:1000]}\n\nAnswer:"
                 content = [
-                    prompt_text,
+                    simple_prompt,
                     {
                         'mime_type': image_content['mime_type'],
                         'data': image_content['data']
@@ -675,9 +699,9 @@ Answer:"""
             logger.error(f"Error generating answer: {e}")
             answer = "I apologize, but I'm having trouble generating an answer right now. Please try again or check the course materials directly."
         
-        # Extract and rank links
+        # Extract links
         links = []
-        for result in search_results:
+        for result in search_results[:6]:
             if result["type"] == "discourse_topic":
                 url = result["data"]["url"]
                 title = result["data"]["title"]
@@ -690,27 +714,16 @@ Answer:"""
             else:
                 continue
             
-            if url not in [l["url"] for l in links]:
-                links.append({
-                    "url": url,
-                    "text": title,
-                    "relevance": result.get("similarity", 0)
-                })
-        
-        # Sort links by relevance and limit
-        links_sorted = sorted(links, key=lambda x: x.get("relevance", 0), reverse=True)
-        clean_links = []
-        for link in links_sorted[:6]:
-            clean_links.append({
-                "url": link["url"],
-                "text": link["text"]
+            links.append({
+                "url": url,
+                "text": title
             })
         
         return {
             "answer": answer,
-            "links": clean_links,
+            "links": links,
             "search_results_count": len(search_results),
-            "intent_analysis": intent
+            "intent_analysis": self._analyze_question_intent(question)
         }
 
 # Initialize the Virtual TA

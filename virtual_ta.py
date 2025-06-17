@@ -761,9 +761,15 @@ Answer:"""
             "intent_analysis": self._analyze_question_intent(question)
         }
 
-# Initialize the Virtual TA
+# Initialize the Virtual TA lazily for Vercel
 print("🚀 Starting TDS Virtual TA...")
-virtual_ta = TDSVirtualTA()
+virtual_ta = None
+
+def get_virtual_ta():
+    global virtual_ta
+    if virtual_ta is None:
+        virtual_ta = TDSVirtualTA()
+    return virtual_ta
 
 # Create Flask app
 app = Flask(__name__)
@@ -780,10 +786,10 @@ def answer_question():
             return jsonify({'error': 'Question is required'}), 400
         
         # Retrieve more search results to ensure important links (e.g., GA5 / GA4 threads) are captured
-        search_results = virtual_ta.search(question, top_k=25)
+        search_results = get_virtual_ta().search(question, top_k=25)
         
         # Generate answer (with optional image support)
-        result = virtual_ta.generate_answer(question, search_results, image)
+        result = get_virtual_ta().generate_answer(question, search_results, image)
         
         return jsonify(result)
         
@@ -801,7 +807,7 @@ def search():
         if not query:
             return jsonify({'error': 'Query is required'}), 400
         
-        results = virtual_ta.search(query, top_k)
+        results = get_virtual_ta().search(query, top_k)
         
         return jsonify({
             'query': query,

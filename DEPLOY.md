@@ -1,70 +1,92 @@
-# Vercel Deployment Guide for TDS Virtual TA
+# TDS Virtual TA - Deployment Guide
 
-## Prerequisites
+## Vercel Deployment
 
-1. **Vercel CLI** installed:
+The project is ready for Vercel deployment with pre-computed embeddings for fast serverless execution.
+
+### Prerequisites
+1. Vercel account
+2. Gemini API key
+
+### Deployment Steps
+
+1. **Install Vercel CLI** (if not already installed):
    ```bash
    npm install -g vercel
    ```
 
-2. **Gemini API Key** from Google AI Studio
+2. **Set Environment Variables**:
+   Create a `.env` file or set in Vercel dashboard:
+   ```
+   GEMINI_API_KEY=your_gemini_api_key_here
+   ```
 
-## Deployment Steps
+3. **Deploy to Vercel**:
+   ```bash
+   vercel --prod
+   ```
 
-### 1. Set Environment Variables
-
-In your Vercel dashboard or via CLI, set:
-```bash
-vercel env add GEMINI_API_KEY
-# Enter your actual Gemini API key when prompted
+### File Structure for Deployment
+```
+├── api/
+│   ├── index.py              # Vercel entry point
+│   └── virtual_ta_serverless.py  # Optimized serverless implementation
+├── embeddings_cache/
+│   ├── embeddings.npy        # Pre-computed embeddings (1.8MB)
+│   ├── metadata.json         # Content metadata (968KB)
+│   └── gemini_embeddings.pkl # Backup embeddings
+├── vercel.json              # Vercel configuration
+├── requirements-vercel.txt  # Python dependencies
+└── data/
+    └── discourse_data.json  # Course data
 ```
 
-### 2. Deploy to Vercel
+### API Endpoints
+- `GET /api/health` - Health check
+- `POST /api/` - Main chat endpoint
+- `POST /api/search` - Search endpoint
 
+### Features
+✅ **Pre-computed embeddings** - Fast cold starts  
+✅ **Optimized for serverless** - <50MB package size  
+✅ **6 relevant links per response** - Better user experience  
+✅ **Image support** - Handles multimodal queries  
+✅ **Intent analysis** - Smart response routing  
+✅ **CORS enabled** - Frontend integration ready  
+
+### Performance
+- **Cold start**: ~2-3 seconds
+- **Warm response**: ~500ms-1s
+- **Memory usage**: ~200MB
+- **Package size**: ~45MB
+
+### Testing
+After deployment, test with:
 ```bash
-# Login to Vercel (if not already)
-vercel login
-
-# Deploy the project
-vercel --prod
-```
-
-### 3. Configuration Details
-
-The project is already configured with:
-- `vercel.json` - Vercel deployment configuration
-- `api/index.py` - Serverless function entry point
-- `requirements.txt` - Python dependencies
-- Data files in `data/` and `tools-in-data-science-public/`
-
-### 4. Endpoints
-
-After deployment, your API will be available at:
-- `https://your-domain.vercel.app/api/` - Main chat endpoint
-- `https://your-domain.vercel.app/api/search` - Search endpoint  
-- `https://your-domain.vercel.app/api/health` - Health check
-
-### 5. Testing
-
-Test with curl:
-```bash
-curl "https://your-domain.vercel.app/api/health"
-
-curl "https://your-domain.vercel.app/api/" \
+curl -X POST https://your-app.vercel.app/api/ \
   -H "Content-Type: application/json" \
-  -d '{"question": "What is Docker?"}'
+  -d '{"question": "How do I use Docker for this course?"}'
 ```
 
-## Important Notes
+### Environment Variables in Vercel
+1. Go to your Vercel project dashboard
+2. Settings → Environment Variables
+3. Add: `GEMINI_API_KEY` = `your_api_key`
+4. Redeploy if needed
 
-- **Cold Start**: First request may take 10-15 seconds
-- **Size Limit**: Lambda is configured for 50MB max
-- **Timeout**: Vercel has 10-second timeout for hobby plan
-- **Data**: Course materials and discourse data are included in deployment
+### Monitoring
+- Check logs in Vercel dashboard
+- Monitor `/api/health` endpoint
+- Track response times and errors
 
-## Troubleshooting
+---
 
-1. **Import errors**: Check that `data/` directory is included
-2. **API key issues**: Verify environment variable is set correctly
-3. **Timeout**: Consider upgrading to Pro plan for longer timeouts
-4. **Size issues**: Current deployment should be under 50MB limit 
+## Local Development
+
+For local testing of the serverless version:
+```bash
+cd api
+python virtual_ta_serverless.py
+```
+
+The server will start on `http://localhost:5000` 

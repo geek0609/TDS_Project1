@@ -120,7 +120,28 @@ class TDSVirtualTA:
         """Create embeddings for all content using Gemini"""
         print("🧠 Creating embeddings with Gemini...")
         
-        # Prepare all texts for embedding
+        # Check for cached embeddings first
+        embeddings_file = Path("embeddings_cache/embeddings.npy")
+        metadata_file = Path("embeddings_cache/metadata.json")
+        
+        if embeddings_file.exists() and metadata_file.exists():
+            print("📁 Loading cached embeddings...")
+            try:
+                self.embeddings = np.load(embeddings_file)
+                with open(metadata_file, 'r', encoding='utf-8') as f:
+                    cache_data = json.load(f)
+                    self.metadata = cache_data['items']
+                print(f"✅ Loaded cached embeddings: {self.embeddings.shape}")
+                return
+            except Exception as e:
+                print(f"⚠️ Error loading cached embeddings: {e}")
+        
+        # If on Vercel and no cache, fail gracefully
+        if os.getenv('VERCEL'):
+            print("❌ No cached embeddings found on Vercel deployment!")
+            raise RuntimeError("Cached embeddings required for Vercel deployment")
+        
+        # Prepare all texts for embedding (local development only)
         texts = []
         metadata = []
         
@@ -186,6 +207,23 @@ class TDSVirtualTA:
         self.metadata = metadata
         
         print(f"✅ Created embeddings: {self.embeddings.shape}")
+        
+        # Cache the embeddings
+        try:
+            os.makedirs("embeddings_cache", exist_ok=True)
+            np.save(embeddings_file, self.embeddings)
+            
+            cache_data = {
+                'model': 'text-embedding-004',
+                'created_at': time.time(),
+                'items': self.metadata
+            }
+            with open(metadata_file, 'w', encoding='utf-8') as f:
+                json.dump(cache_data, f, ensure_ascii=False, indent=2)
+            
+            print("💾 Cached embeddings for future use")
+        except Exception as e:
+            logger.warning(f"Could not cache embeddings: {e}")
     
     def _expand_query(self, query: str) -> List[str]:
         """Expand query with synonyms and related terms for better semantic matching"""
@@ -667,13 +705,10 @@ Answer:"""
         
         # Generate answer with minimal configuration
         try:
-            # Use different models for image vs text queries
-            if image_content:
-                model = genai.GenerativeModel('gemini-2.0-flash')
-            else:
-                model = genai.GenerativeModel('gemini-2.5-flash-preview-05-20')
+            # Use single model for all queries to avoid compatibility issues
+            model = genai.GenerativeModel('gemini-2.0-flash')
             
-            # Minimal generation config
+            # Minimal generation config with safety settings
             generation_config = {
                 'temperature': 0.3,
                 'max_output_tokens': 1000
@@ -681,8 +716,8 @@ Answer:"""
             
             # Prepare content for the model
             if image_content:
-                # Very simple prompt for image + text to avoid safety filters
-                simple_prompt = f"Answer this question: {question}\n\nContext:\n{context_text[:1000]}\n\nAnswer:"
+                # Ultra-simple prompt for image + text to avoid safety filters
+                simple_prompt = f"Question: {question}\n\nAnswer based on context:"
                 content = [
                     simple_prompt,
                     {
@@ -777,6 +812,17 @@ def search():
         logger.error(f"Error in search: {e}")
         return jsonify({'error': 'Internal server error'}), 500
 
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({
+        'message': 'TDS Virtual TA API',
+        'endpoints': {
+            'health': '/api/health',
+            'chat': '/api/ (POST)',
+            'search': '/api/search (POST)'
+        }
+    })
+
 @app.route('/api/health', methods=['GET'])
 def health():
     return jsonify({
@@ -786,6 +832,8 @@ def health():
         'optimization': 'Advanced Semantic Search + Dynamic Context Ranking'
     })
 
+# For Vercel deployment, the app needs to be available at module level
+# For local development
 if __name__ == "__main__":
     print("🚀 Starting Flask server...")
     print("✅ Ready to serve requests!")

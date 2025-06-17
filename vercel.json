@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/index.py",
+      "src": "virtual_ta.py",
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": "50mb"
@@ -12,15 +12,15 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "api/index.py"
+      "dest": "virtual_ta.py"
     },
     {
       "src": "/(.*)",
-      "dest": "api/index.py"
+      "dest": "virtual_ta.py"
     }
   ],
   "env": {
     "PYTHONPATH": "./",
-    "FLASK_APP": "api/index.py"
+    "FLASK_APP": "virtual_ta.py"
   }
 } 

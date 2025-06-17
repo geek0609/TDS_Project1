@@ -200,11 +200,22 @@ def chat():
         # Generate answer
         answer = generate_answer(question, search_results, intent)
         
-        # Extract links from search results
+        # Extract links from search results (matching main virtual_ta.py logic)
         links = []
-        for result in search_results[:3]:
-            if result['type'] == 'discourse' and result['metadata'].get('url'):
-                links.append(result['metadata']['url'])
+        for result in search_results[:6]:  # Get more links like main version
+            link_data = {}
+            if result.get('type') == 'discourse_topic':
+                link_data['url'] = result.get('data', {}).get('url', '')
+                link_data['text'] = result.get('data', {}).get('title', '')
+            elif result.get('type') == 'qa_pair':
+                link_data['url'] = result.get('topic_url', '')
+                link_data['text'] = result.get('title', '')
+            elif result.get('type') == 'course_content':
+                link_data['url'] = result.get('data', {}).get('url', '')
+                link_data['text'] = f"Course: {result.get('data', {}).get('title', '')}"
+            
+            if link_data.get('url'):
+                links.append(link_data)
         
         return jsonify({
             "answer": answer,

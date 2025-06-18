@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDS Virtual TA - Vercel API Test Report</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .test-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .test-header {
+            padding: 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .test-header.passed { border-left: 5px solid #16a34a; }
+        .test-header.failed { border-left: 5px solid #dc2626; }
+        
+        .response-content {
+            padding: 20px;
+            background: #f8f9fa;
+            font-family: monospace;
+            white-space: pre-wrap;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧪 TDS Virtual TA API Test Report</h1>
+            <p>Generated: June 18, 2025 at 11:38 AM</p>
+            <p>API: https://tds-project1-nh0zbupt1-geek0609s-projects.vercel.app</p>
+            <p>Tests: 5/5 passed | Avg Response: 1760.7ms</p>
+        </div>
+
+        <div class="test-item">
+            <div class="test-header passed">
+                <h3>Health Check - ✅ PASSED</h3>
+                <p><strong>Description:</strong> Basic health check to verify API is running and data is loaded</p>
+                <p><strong>Method:</strong> GET | <strong>Endpoint:</strong> /api/health</p>
+                <p><strong>Response Time:</strong> 326.95ms | <strong>Size:</strong> 78 bytes</p>
+                <p><strong>Expected Status:</strong> 200 | <strong>Actual Status:</strong> 200</p>
+                
+            </div>
+            
+            <div class="response-content">
+<strong>REQUEST PAYLOAD:</strong>
+None
+
+<strong>RESPONSE DATA:</strong>
+{
+  "course_files": 143,
+  "discourse_topics": 169,
+  "has_api": true,
+  "status": "healthy"
+}
+            </div>
+        </div>
+
+        <div class="test-item">
+            <div class="test-header passed">
+                <h3>Root Endpoint Info - ✅ PASSED</h3>
+                <p><strong>Description:</strong> Check root endpoint provides API information</p>
+                <p><strong>Method:</strong> GET | <strong>Endpoint:</strong> /</p>
+                <p><strong>Response Time:</strong> 244.94ms | <strong>Size:</strong> 149 bytes</p>
+                <p><strong>Expected Status:</strong> 200 | <strong>Actual Status:</strong> 200</p>
+                
+            </div>
+            
+            <div class="response-content">
+<strong>REQUEST PAYLOAD:</strong>
+None
+
+<strong>RESPONSE DATA:</strong>
+{
+  "endpoints": {
+    "ask": "/api/ask (POST)",
+    "health": "/api/health (GET)",
+    "search": "/api/search (POST)"
+  },
+  "message": "TDS Virtual TA API",
+  "status": "running"
+}
+            </div>
+        </div>
+
+        <div class="test-item">
+            <div class="test-header passed">
+                <h3>Simple Question - Docker - ✅ PASSED</h3>
+                <p><strong>Description:</strong> Test basic question answering about Docker</p>
+                <p><strong>Method:</strong> POST | <strong>Endpoint:</strong> /api/ask</p>
+                <p><strong>Response Time:</strong> 1029.29ms | <strong>Size:</strong> 2126 bytes</p>
+                <p><strong>Expected Status:</strong> 200 | <strong>Actual Status:</strong> 200</p>
+                
+            </div>
+            
+            <div class="response-content">
+<strong>REQUEST PAYLOAD:</strong>
+{
+  "question": "What is Docker?"
+}
+
+<strong>RESPONSE DATA:</strong>
+{
+  "answer": "I'm sorry, but the provided context does not contain information about Docker. Therefore, I cannot answer the question \"What is Docker?\" based on the given information.\n",
+  "links": [
+    {
+      "text": "Is it fair to consider 20% weightage of such exam which is impossible to solve in given time (i.e. ROE)",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/is-it-fair-to-consider-20-weightage-of-such-exam-which-is-impossible-to-solve-in-given-time-i-e-roe/141413"
+    },
+    {
+      "text": "GA5 Question 8 Clarification",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/ga5-question-8-clarification/155939"
+    },
+    {
+      "text": "GA1 - Development Tools - Discussion Thread [TDS Jan 2025]",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/ga1-development-tools-discussion-thread-tds-jan-2025/161083"
+    },
+    {
+      "text": "GA2 - Deployment Tools - Discussion Thread [TDS Jan 2025]",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/ga2-deployment-tools-discussion-thread-tds-jan-2025/161120"
+    },
+    {
+      "text": "Contribute to My Open-Source LLM Classroom Assignment Evaluator",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/contribute-to-my-open-source-llm-classroom-assignment-evaluator/161214"
+    },
+    {
+      "text": "Tds jan 2025 calender accesss and video lecture access in portal",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/tds-jan-2025-calender-accesss-and-video-lecture-access-in-portal/163158"
+    },
+    {
+      "text": "Project 1 - LLM-based Automation Agent - Discussion Thread [TDS Jan 2025]",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/project-1-llm-based-automation-agent-discussion-thread-tds-jan-2025/164277"
+    },
+    {
+      "text": "Live Session Agenda - 30/01/2025",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/live-session-agenda-30-01-2025/165830"
+    },
+    {
+      "text": "Best Practices for Virtual Environments and Dependency Management in Python",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/best-practices-for-virtual-environments-and-dependency-management-in-python/165922"
+    },
+    {
+      "text": "GA4 - Data Sourcing - Discussion Thread [TDS Jan 2025]",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/ga4-data-sourcing-discussion-thread-tds-jan-2025/165959"
+    }
+  ],
+  "search_results_count": 20
+}
+            </div>
+        </div>
+
+        <div class="test-item">
+            <div class="test-header passed">
+                <h3>Complex Question - Git vs GitHub - ✅ PASSED</h3>
+                <p><strong>Description:</strong> Test complex multi-part question about Git and GitHub</p>
+                <p><strong>Method:</strong> POST | <strong>Endpoint:</strong> /api/ask</p>
+                <p><strong>Response Time:</strong> 1363.32ms | <strong>Size:</strong> 1454 bytes</p>
+                <p><strong>Expected Status:</strong> 200 | <strong>Actual Status:</strong> 200</p>
+                
+            </div>
+            
+            <div class="response-content">
+<strong>REQUEST PAYLOAD:</strong>
+{
+  "question": "What's the difference between Git and GitHub? How do I use them together?"
+}
+
+<strong>RESPONSE DATA:</strong>
+{
+  "answer": "I'm sorry, but this collection of documents does not contain the answer to your question about the difference between Git and GitHub and how to use them together. The content focuses on questions and answers related to the Tools in Data Science course, specifically regarding assignments, project details, and tool usage like VS Code, FastAPI, and Google Sheets.\n",
+  "links": [
+    {
+      "text": "Course: live-session-2025-01-16",
+      "url": "https://tds.s-anand.net/#/live-session-2025-01-16"
+    },
+    {
+      "text": "Course: live-session-2025-01-20",
+      "url": "https://tds.s-anand.net/#/live-session-2025-01-20"
+    },
+    {
+      "text": "Course: live-session-2025-01-28",
+      "url": "https://tds.s-anand.net/#/live-session-2025-01-28"
+    },
+    {
+      "text": "END TERM MOCK [TDS Jan 25]",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/end-term-mock-tds-jan-25/172333"
+    },
+    {
+      "text": "Course: live-session-2025-01-21",
+      "url": "https://tds.s-anand.net/#/live-session-2025-01-21"
+    },
+    {
+      "text": "Course: live-session-2025-01-30",
+      "url": "https://tds.s-anand.net/#/live-session-2025-01-30"
+    },
+    {
+      "text": "Course: live-session-2025-02-06",
+      "url": "https://tds.s-anand.net/#/live-session-2025-02-06"
+    },
+    {
+      "text": "Graded assignment 6",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/graded-assignment-6/169283"
+    },
+    {
+      "text": "Course: live-session-2025-01-17",
+      "url": "https://tds.s-anand.net/#/live-session-2025-01-17"
+    },
+    {
+      "text": "Course: live-session-2025-01-23",
+      "url": "https://tds.s-anand.net/#/live-session-2025-01-23"
+    }
+  ],
+  "search_results_count": 20
+}
+            </div>
+        </div>
+
+        <div class="test-item">
+            <div class="test-header passed">
+                <h3>Course Question - Python Data Analysis - ✅ PASSED</h3>
+                <p><strong>Description:</strong> Test course-specific question about Python and pandas</p>
+                <p><strong>Method:</strong> POST | <strong>Endpoint:</strong> /api/ask</p>
+                <p><strong>Response Time:</strong> 5839.1ms | <strong>Size:</strong> 5034 bytes</p>
+                <p><strong>Expected Status:</strong> 200 | <strong>Actual Status:</strong> 200</p>
+                
+            </div>
+            
+            <div class="response-content">
+<strong>REQUEST PAYLOAD:</strong>
+{
+  "question": "How do I use pandas for data analysis in Python?"
+}
+
+<strong>RESPONSE DATA:</strong>
+{
+  "answer": "The context provides mentions of pandas in relation to graded assignments and project work, but doesn't offer a tutorial on how to use it.  However, I can provide a general guide on how to use pandas for data analysis in Python.\n\nPandas is a powerful and versatile library for data manipulation and analysis in Python. Here's a breakdown of how to use it:\n\n**1. Installation:**\n\n   *   If you don't have it already, install pandas using pip:\n    ```bash\n    pip install pandas\n    ```\n    or using conda:\n    ```bash\n    conda install pandas\n    ```\n\n**2. Importing pandas:**\n\n   *   Import the library into your Python script or notebook:\n\n    ```python\n    import pandas as pd\n    ```\n\n**3. Core Data Structures:**\n\n   *   **Series:** A one-dimensional labeled array capable of holding any data type.\n    ```python\n    import pandas as pd\n\n    data = [10, 20, 30, 40, 50]\n    series = pd.Series(data)\n    print(series)\n    ```\n\n   *   **DataFrame:** A two-dimensional labeled data structure with columns of potentially different types.  Think of it as a table or spreadsheet.\n    ```python\n    import pandas as pd\n\n    data = {'Name': ['Alice', 'Bob', 'Charlie', 'David'],\n            'Age': [25, 30, 28, 22],\n            'City': ['New York', 'London', 'Paris', 'Tokyo']}\n    df = pd.DataFrame(data)\n    print(df)\n    ```\n\n**4. Reading Data:**\n\n   *   Pandas can read data from various file formats:\n        *   **CSV:** `pd.read_csv(\"your_file.csv\")`\n        *   **Excel:** `pd.read_excel(\"your_file.xlsx\")`\n        *   **JSON:** `pd.read_json(\"your_file.json\")`\n        *   **SQL:** `pd.read_sql(\"SELECT * FROM your_table\", connection)`  (requires a database connection)\n\n**5. Basic Data Exploration:**\n\n   *   `df.head()`:  Displays the first 5 rows of the DataFrame.  You can specify the number of rows: `df.head(10)`\n   *   `df.tail()`: Displays the last 5 rows.\n   *   `df.info()`:  Provides a summary of the DataFrame, including data types and missing values.\n   *   `df.describe()`:  Generates descriptive statistics (mean, std, min, max, etc.) for numerical columns.\n   *   `df.shape`:  Returns the dimensions (number of rows, number of columns) of the DataFrame.\n   *   `df.columns`:  Returns the column names.\n   *   `df.index`: Returns the index (row labels).\n\n**6. Data Selection and Indexing:**\n\n   *   **Selecting columns:**\n        *   `df['column_name']`: Selects a single column.\n        *   `df[['column1', 'column2']]`: Selects multiple columns.\n   *   **Selecting rows:**\n        *   `df.loc[row_label]`: Selects a row by its label.\n        *   `df.iloc[row_index]`: Selects a row by its integer index.\n   *   **Boolean indexing (filtering):**\n        *   `df[df['column_name'] > 10]`: Selects rows where the value in 'column_name' is greater than 10.\n        *   `df[(df['column1'] == 'value') & (df['column2'] > 5)]`:  Combines multiple conditions using `&` (and), `|` (or), and `~` (not).\n\n**7. Data Cleaning:**\n\n   *   **Handling missing values:**\n        *   `df.isnull()`:  Detects missing values (returns a DataFrame of booleans).\n        *   `df.fillna(value)`:  Fills missing values with a specified value.\n        *   `df.dropna()`:  Removes rows with missing values.\n   *   **Removing duplicates:**\n        *   `df.duplicated()`: Detects duplicate rows.\n        *   `df.drop_duplicates()`: Removes duplicate rows.\n   *   **Data type conversion:**\n        *   `df['column_name",
+  "links": [
+    {
+      "text": "END TERM MOCK [TDS Jan 25]",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/end-term-mock-tds-jan-25/172333"
+    },
+    {
+      "text": "Regarding project1 for file not detecting after sending post request",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/regarding-project1-for-file-not-detecting-after-sending-post-request/167172"
+    },
+    {
+      "text": "Graded assignment 6",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/graded-assignment-6/169283"
+    },
+    {
+      "text": "Course experience and farewell post",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/course-experience-and-farewell-post/173247"
+    },
+    {
+      "text": "Course: live-session-2025-02-07",
+      "url": "https://tds.s-anand.net/#/live-session-2025-02-07"
+    },
+    {
+      "text": "Project 1 - LLM-based Automation Agent - Discussion Thread [TDS Jan 2025]",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/project-1-llm-based-automation-agent-discussion-thread-tds-jan-2025/164277"
+    },
+    {
+      "text": "GA5 - Data Preparation - Discussion Thread [TDS Jan 2025]",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/ga5-data-preparation-discussion-thread-tds-jan-2025/166576"
+    },
+    {
+      "text": "ROE instructions request",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/roe-instructions-request/168142"
+    },
+    {
+      "text": "Mock ROE 1, 2, 3, 4 [TDS Jan 2025]",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/mock-roe-1-2-3-4-tds-jan-2025/168449"
+    },
+    {
+      "text": "Project 2 - TDS Solver - Discussion Thread",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/project-2-tds-solver-discussion-thread/169029"
+    }
+  ],
+  "search_results_count": 20
+}
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

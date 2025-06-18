@@ -67,20 +67,27 @@ logs/
 # Vercel
 .vercel
 
-# Cache
-embeddings_cache/
+# Cache (keep structure but not cached files)
+embeddings_cache/*.pkl
+embeddings_cache/*.json
+!embeddings_cache/.gitkeep
 
-# Promptfoo
+# Promptfoo (keep configs but not cache)
 .promptfoo/
-/promptfoo.yaml
+promptfoo.yaml
 
 # Temp files
 temp/
-/results.html
+*.html
+!index.html
+!chat.html
+!tds_virtual_ta_chat.html
 
+# External repos (optional)
 tools-in-data-science-public/
 
-sample/
+# Sample data (keep for reference)
+# sample/
 
-
-project-tds-virtual-ta-promptfoo.yaml
+# Keep important promptfoo configs
+# project-tds-virtual-ta-promptfoo.yaml

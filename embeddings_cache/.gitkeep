@@ -1,0 +1,2 @@
+# This file ensures the embeddings_cache directory is preserved in git
+# The directory is needed for the TDS Virtual TA to cache embeddings for performance 

@@ -12,29 +12,49 @@ A fully functional Virtual Teaching Assistant for the Tools in Data Science (TDS
 
 ## Quick Start
 
-1. **Install Dependencies**:
+### Prerequisites
+- Python 3.8+
+- Git
+- Google Gemini API key (get from [Google AI Studio](https://makersuite.google.com/app/apikey))
+
+### Setup
+
+1. **Clone the Repository**:
+   ```bash
+   git clone <repository-url>
+   cd P1
+   ```
+
+2. **Install Dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-2. **Set API Key**:
+3. **Set Up Environment Variables**:
    ```bash
-   # Windows
-   set GEMINI_API_KEY=your_api_key_here
+   # Copy the example file
+   cp env.example .env
    
-   # Linux/Mac
-   export GEMINI_API_KEY=your_api_key_here
+   # Edit .env and add your API keys:
+   # GEMINI_API_KEY=your_gemini_api_key_here
+   # AIPIPE_TOKEN=your_aipipe_token_here (optional, for evaluations)
    ```
 
-3. **Run the Server**:
+4. **Run the Server**:
    ```bash
-   python virtual_ta.py
+   python simple_virtual_ta.py
    ```
 
-4. **Test the API**:
-   ```bash
-   python test_virtual_ta_api.py
-   ```
+5. **Test the Web Interface**:
+   Open `tds_virtual_ta_chat.html` in your browser or visit deployed URL
+
+### For Evaluations (Optional)
+
+Install promptfoo for testing:
+```bash
+npm install -g promptfoo
+promptfoo eval --config project-tds-virtual-ta-aipipe-working.yaml
+```
 
 ## API Usage
 

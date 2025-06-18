@@ -128,6 +128,7 @@ class TDSVirtualTA:
     
     def create_embeddings(self):
         """Create embeddings for all content using Gemini"""
+        # If cache doesn't exist, create embeddings
         print("🧠 Creating embeddings with Gemini...")
         
         # Check for cached embeddings first
@@ -145,11 +146,6 @@ class TDSVirtualTA:
                 return
             except Exception as e:
                 print(f"⚠️ Error loading cached embeddings: {e}")
-        
-        # If on Vercel and no cache, fail gracefully
-        if os.getenv('VERCEL'):
-            print("❌ No cached embeddings found on Vercel deployment!")
-            raise RuntimeError("Cached embeddings required for Vercel deployment")
         
         # Prepare all texts for embedding (local development only)
         texts = []

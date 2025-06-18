@@ -10,5 +10,5 @@ numpy==1.26.4
 Pillow==10.0.1
 tqdm==4.66.5
 # For data scraping (not strictly needed for deployment, but good for completeness)
-selenium==4.21.0
-webdriver-manager==4.0.1 
+# selenium==4.21.0
+# webdriver-manager==4.0.1 

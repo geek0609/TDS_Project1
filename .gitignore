@@ -67,6 +67,16 @@ logs/
 # Vercel
 .vercel
 
+# Cache
+embeddings_cache/
+
+# Promptfoo
+.promptfoo/
+/promptfoo.yaml
+
+# Temp files
+temp/
+/results.html
 
 tools-in-data-science-public/
 

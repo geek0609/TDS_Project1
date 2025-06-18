@@ -3,18 +3,16 @@
     "builds": [
         {
             "src": "virtual_ta.py",
-            "use": "@vercel/python",
-            "config": { "maxLambdaSize": "15mb" }
+            "use": "@vercel/python"
         }
     ],
     "routes": [
         {
-            "src": "/api/(.*)",
-            "dest": "virtual_ta.py"
-        },
-        {
             "src": "/(.*)",
-            "dest": "virtual_ta.py"
+            "dest": "/virtual_ta.py"
         }
-    ]
+    ],
+    "env": {
+        "PYTHONPATH": "/var/task"
+    }
 } 

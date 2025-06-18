@@ -1,10 +1,14 @@
 flask==3.0.0
 flask-cors==4.0.0
+gunicorn==22.0.0
 google-generativeai==0.8.3
 python-dotenv==1.0.0
-requests==2.31.0
+requests==2.32.3
 beautifulsoup4==4.12.2
 lxml==4.9.3
-numpy==1.24.3
+numpy==1.26.4
 Pillow==10.0.1
-tqdm==4.66.5 
+tqdm==4.66.5
+# For data scraping (not strictly needed for deployment, but good for completeness)
+selenium==4.21.0
+webdriver-manager==4.0.1 

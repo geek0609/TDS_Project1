@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "virtual_ta.py",
+            "use": "@vercel/python",
+            "config": { "maxLambdaSize": "15mb" }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/api/(.*)",
+            "dest": "virtual_ta.py"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "virtual_ta.py"
+        }
+    ]
+} 

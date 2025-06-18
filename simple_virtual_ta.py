@@ -1,55 +1,22 @@
 #!/usr/bin/env python3
 """
-Professional TDS Virtual TA with Advanced LLM Optimization
-Uses sophisticated semantic search, dynamic context ranking, and intelligent prompt engineering.
+Simplified TDS Virtual TA for Vercel deployment
 """
 
 import os
 import json
 import logging
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from dotenv import load_dotenv
-import time
-import re
-from collections import Counter
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Try to import optional dependencies
-try:
-    import numpy as np
-    HAS_NUMPY = True
-except ImportError:
-    HAS_NUMPY = False
-    # Mock numpy for basic operations
-    class MockNumpy:
-        def array(self, data):
-            return data
-        def zeros(self, shape):
-            if isinstance(shape, int):
-                return [0.0] * shape
-            return [0.0] * shape[0]
-        def load(self, file):
-            raise ImportError("Numpy not available for loading embeddings")
-        def save(self, file, data):
-            pass  # Skip saving
-        def linalg(self):
-            return self
-        def norm(self, data, axis=None):
-            return 1.0
-        def dot(self, a, b):
-            return 0.5
-        def any(self, data):
-            return True
-        def max(self, data, axis=None):
-            return [0.5] * len(data[0]) if axis == 0 else 0.5
-    np = MockNumpy()
-
 try:
     import google.generativeai as genai
     HAS_GENAI = True

@@ -8,7 +8,9 @@ import json
 import time
 from pathlib import Path
 
-BASE_URL = "http://localhost:5000/api"
+# Configuration
+API_BASE_URL = "https://tds-project1-9m2hp8j91-geek0609s-projects.vercel.app"
+
 TEST_CASES = [
     {
         "name": "GPT Model Question (with image)",
@@ -67,7 +69,7 @@ def wait_for_server():
     max_retries = 30
     for i in range(max_retries):
         try:
-            response = requests.get(f"{BASE_URL}/health")
+            response = requests.get(f"{API_BASE_URL}/api/health")
             if response.status_code == 200:
                 print("Server is ready")
                 return True
@@ -87,7 +89,7 @@ def run_test(test_case):
     print("="*80)
     
     try:
-        response = requests.post(f"{BASE_URL}/", json=test_case["payload"], timeout=120)
+        response = requests.post(f"{API_BASE_URL}/api/ask", json=test_case["payload"], timeout=120)
         response.raise_for_status()
         data = response.json()
 

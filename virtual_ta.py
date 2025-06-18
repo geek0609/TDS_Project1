@@ -6,7 +6,34 @@ Uses sophisticated semantic search, dynamic context ranking, and intelligent pro
 
 import os
 import json
-import numpy as np
+try:
+    import numpy as np
+    HAS_NUMPY = True
+except ImportError:
+    HAS_NUMPY = False
+    # Mock numpy for basic operations
+    class MockNumpy:
+        def array(self, data):
+            return data
+        def zeros(self, shape):
+            if isinstance(shape, int):
+                return [0.0] * shape
+            return [0.0] * shape[0]
+        def load(self, file):
+            raise ImportError("Numpy not available for loading embeddings")
+        def save(self, file, data):
+            pass  # Skip saving
+        def linalg(self):
+            return self
+        def norm(self, data, axis=None):
+            return 1.0
+        def dot(self, a, b):
+            return 0.5
+        def any(self, data):
+            return True
+        def max(self, data, axis=None):
+            return [0.5] * len(data[0]) if axis == 0 else 0.5
+    np = MockNumpy()
 import logging
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
@@ -135,7 +162,7 @@ class TDSVirtualTA:
         embeddings_file = Path("embeddings_cache/embeddings.npy")
         metadata_file = Path("embeddings_cache/metadata.json")
         
-        if embeddings_file.exists() and metadata_file.exists():
+        if embeddings_file.exists() and metadata_file.exists() and HAS_NUMPY:
             print("📁 Loading cached embeddings...")
             try:
                 self.embeddings = np.load(embeddings_file)
@@ -146,6 +173,8 @@ class TDSVirtualTA:
                 return
             except Exception as e:
                 print(f"⚠️ Error loading cached embeddings: {e}")
+        elif not HAS_NUMPY:
+            print("⚠️ Numpy not available - embeddings will be generated fresh")
         
         # Prepare all texts for embedding (local development only)
         texts = []

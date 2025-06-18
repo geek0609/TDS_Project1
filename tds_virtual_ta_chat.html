@@ -256,11 +256,17 @@
             align-items: flex-end;
         }
 
-        .chat-input {
+        .input-container {
             flex: 1;
+            position: relative;
+        }
+
+        .chat-input {
+            width: 100%;
             min-height: 50px;
             max-height: 120px;
             padding: 15px 20px;
+            padding-bottom: 50px; /* Space for image preview and controls */
             border: 2px solid #e5e5e5;
             border-radius: 25px;
             font-size: 1rem;
@@ -272,6 +278,68 @@
 
         .chat-input:focus {
             border-color: #667eea;
+        }
+
+        .input-controls {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .image-upload-btn {
+            background: none;
+            border: none;
+            color: #667eea;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.9rem;
+            transition: background 0.2s ease;
+        }
+
+        .image-upload-btn:hover {
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .image-preview {
+            display: none;
+            max-width: 200px;
+            max-height: 100px;
+            border-radius: 8px;
+            margin: 10px 0;
+            object-fit: cover;
+            border: 2px solid #e5e5e5;
+        }
+
+        .image-remove-btn {
+            background: #ef4444;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-indicator {
+            background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            display: none;
+            margin-left: 8px;
         }
 
         .send-button {
@@ -372,7 +440,7 @@
             <div class="api-selector">
                 <label>API: </label>
                 <select id="api-selector">
-                    <option value="https://tds-project1-nh0zbupt1-geek0609s-projects.vercel.app">Vercel (Hosted)</option>
+                    <option value="https://tds-project1-89mdlg7gv-geek0609s-projects.vercel.app">Vercel (Hosted)</option>
                     <option value="http://localhost:5000">Local Development</option>
                     <option value="custom">Custom URL...</option>
                 </select>
@@ -390,6 +458,7 @@
                 <h2>👋 Welcome to TDS Virtual TA!</h2>
                 <p>Ask me anything about Tools in Data Science, assignments, concepts, or course materials.</p>
                 <p>I can help you with Docker, Git, Python, data analysis, and much more!</p>
+                <p style="margin-top: 15px; color: #f59e0b;">🖼️ <strong>New:</strong> Upload images with your questions for visual analysis!</p>
             </div>
         </div>
 
@@ -404,12 +473,28 @@
 
         <div class="chat-input-container">
             <form class="chat-input-form" id="chat-form">
-                <textarea 
-                    class="chat-input" 
-                    id="chat-input" 
-                    placeholder="Type your question here... (Press Enter to send, Shift+Enter for new line)"
-                    rows="1"
-                ></textarea>
+                <div class="input-container">
+                    <textarea 
+                        class="chat-input" 
+                        id="chat-input" 
+                        placeholder="Type your question here... (Press Enter to send, Shift+Enter for new line)"
+                        rows="1"
+                    ></textarea>
+                    <img id="image-preview" class="image-preview" alt="Image preview">
+                    <div class="input-controls">
+                        <div style="display: flex; align-items: center;">
+                            <button type="button" class="image-upload-btn" id="image-upload-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                                </svg>
+                                <span id="upload-text">Add Image</span>
+                            </button>
+                            <span class="image-indicator" id="image-indicator">🖼️ Image</span>
+                            <button type="button" class="image-remove-btn" id="image-remove-btn">×</button>
+                        </div>
+                    </div>
+                    <input type="file" id="image-input" accept="image/*" style="display: none;">
+                </div>
                 <button type="submit" class="send-button" id="send-button">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -422,7 +507,7 @@
     <script>
         class TDSVirtualTAChat {
             constructor() {
-                this.apiUrl = 'https://tds-project1-nh0zbupt1-geek0609s-projects.vercel.app'; // Default to Vercel
+                this.apiUrl = 'https://tds-project1-89mdlg7gv-geek0609s-projects.vercel.app'; // Updated Vercel URL
                 this.messagesContainer = document.getElementById('chat-messages');
                 this.chatForm = document.getElementById('chat-form');
                 this.chatInput = document.getElementById('chat-input');
@@ -431,6 +516,18 @@
                 this.statusText = document.getElementById('status-text');
                 this.statusDot = document.getElementById('status-dot');
                 this.apiSelector = document.getElementById('api-selector');
+                
+                // Image-related elements
+                this.imageInput = document.getElementById('image-input');
+                this.imagePreview = document.getElementById('image-preview');
+                this.imageUploadBtn = document.getElementById('image-upload-btn');
+                this.imageRemoveBtn = document.getElementById('image-remove-btn');
+                this.imageIndicator = document.getElementById('image-indicator');
+                this.uploadText = document.getElementById('upload-text');
+                
+                // Image state
+                this.selectedImage = null;
+                this.imageBase64 = null;
 
                 this.initializeEventListeners();
                 this.checkApiStatus();
@@ -462,12 +559,25 @@
                             this.checkApiStatus();
                         } else {
                             // Revert to previous selection
-                            e.target.value = this.apiUrl.includes('vercel.app') ? 'https://tds-project1-nh0zbupt1-geek0609s-projects.vercel.app' : 'http://localhost:5000';
+                            e.target.value = this.apiUrl.includes('vercel.app') ? 'https://tds-project1-89mdlg7gv-geek0609s-projects.vercel.app' : 'http://localhost:5000';
                         }
                     } else {
                         this.apiUrl = e.target.value;
                         this.checkApiStatus();
                     }
+                });
+
+                // Image upload event listeners
+                this.imageUploadBtn.addEventListener('click', () => {
+                    this.imageInput.click();
+                });
+
+                this.imageInput.addEventListener('change', (e) => {
+                    this.handleImageUpload(e);
+                });
+
+                this.imageRemoveBtn.addEventListener('click', () => {
+                    this.removeImage();
                 });
             }
 
@@ -508,6 +618,51 @@
                 }
             }
 
+            handleImageUpload(event) {
+                const file = event.target.files[0];
+                if (!file) return;
+
+                // Check file size (limit to 5MB)
+                if (file.size > 5 * 1024 * 1024) {
+                    alert('Image file is too large. Please select an image smaller than 5MB.');
+                    return;
+                }
+
+                // Check file type
+                if (!file.type.startsWith('image/')) {
+                    alert('Please select a valid image file.');
+                    return;
+                }
+
+                this.selectedImage = file;
+
+                // Convert to base64 for preview and API
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    this.imageBase64 = e.target.result;
+                    this.showImagePreview(e.target.result);
+                };
+                reader.readAsDataURL(file);
+            }
+
+            showImagePreview(src) {
+                this.imagePreview.src = src;
+                this.imagePreview.style.display = 'block';
+                this.imageIndicator.style.display = 'inline-block';
+                this.imageRemoveBtn.style.display = 'flex';
+                this.uploadText.textContent = 'Change';
+            }
+
+            removeImage() {
+                this.selectedImage = null;
+                this.imageBase64 = null;
+                this.imagePreview.style.display = 'none';
+                this.imageIndicator.style.display = 'none';
+                this.imageRemoveBtn.style.display = 'none';
+                this.uploadText.textContent = 'Add Image';
+                this.imageInput.value = '';
+            }
+
             async sendMessage() {
                 const question = this.chatInput.value.trim();
                 if (!question) return;
@@ -515,11 +670,18 @@
                 // Disable input while processing
                 this.setInputState(false);
 
-                // Add user message
-                this.addMessage(question, 'user');
+                // Add user message with image indicator
+                this.addMessage(question, 'user', [], this.selectedImage ? '🖼️' : null);
 
-                // Clear input
+                // Prepare request payload
+                const payload = { question };
+                if (this.imageBase64) {
+                    payload.image = this.imageBase64;
+                }
+
+                // Clear input and image
                 this.chatInput.value = '';
+                this.removeImage();
                 this.autoResizeTextarea();
 
                 // Show typing indicator
@@ -532,7 +694,7 @@
                             'Content-Type': 'application/json',
                             'Accept': 'application/json',
                         },
-                        body: JSON.stringify({ question }),
+                        body: JSON.stringify(payload),
                     });
 
                     if (!response.ok) {
@@ -558,13 +720,19 @@
                 }
             }
 
-            addMessage(content, sender, links = []) {
+            addMessage(content, sender, links = [], imageIndicator = null) {
                 const messageDiv = document.createElement('div');
                 messageDiv.className = `message ${sender}`;
 
                 const avatar = document.createElement('div');
                 avatar.className = 'message-avatar';
-                avatar.textContent = sender === 'user' ? 'You' : '🤖';
+                
+                // Add image indicator to avatar if provided
+                if (imageIndicator && sender === 'user') {
+                    avatar.innerHTML = `You <span style="font-size: 0.7rem;">${imageIndicator}</span>`;
+                } else {
+                    avatar.textContent = sender === 'user' ? 'You' : '🤖';
+                }
 
                 const messageContent = document.createElement('div');
                 messageContent.className = 'message-content';

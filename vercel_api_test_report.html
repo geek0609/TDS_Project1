@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TDS Virtual TA - Vercel API Test Report</title>
+    <title>TDS Virtual TA - Enhanced Vercel API Test Report</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -55,15 +55,26 @@
             white-space: pre-wrap;
             font-size: 0.9rem;
         }
+        
+        .image-indicator {
+            background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🧪 TDS Virtual TA API Test Report</h1>
-            <p>Generated: June 18, 2025 at 11:38 AM</p>
-            <p>API: https://tds-project1-nh0zbupt1-geek0609s-projects.vercel.app</p>
-            <p>Tests: 5/5 passed | Avg Response: 1760.7ms</p>
+            <h1>🧪 TDS Virtual TA Enhanced API Test Report</h1>
+            <p>Generated: June 18, 2025 at 06:17 PM</p>
+            <p>API: https://tds-project1-89mdlg7gv-geek0609s-projects.vercel.app</p>
+            <p>Tests: 6/6 passed | Avg Response: 4572.0ms</p>
+            <p style="margin-top: 10px; color: #fbbf24;">✨ Now with Image Processing Support ✨</p>
         </div>
 
         <div class="test-item">
@@ -71,7 +82,7 @@
                 <h3>Health Check - ✅ PASSED</h3>
                 <p><strong>Description:</strong> Basic health check to verify API is running and data is loaded</p>
                 <p><strong>Method:</strong> GET | <strong>Endpoint:</strong> /api/health</p>
-                <p><strong>Response Time:</strong> 326.95ms | <strong>Size:</strong> 78 bytes</p>
+                <p><strong>Response Time:</strong> 4008.81ms | <strong>Size:</strong> 78 bytes</p>
                 <p><strong>Expected Status:</strong> 200 | <strong>Actual Status:</strong> 200</p>
                 
             </div>
@@ -95,7 +106,7 @@ None
                 <h3>Root Endpoint Info - ✅ PASSED</h3>
                 <p><strong>Description:</strong> Check root endpoint provides API information</p>
                 <p><strong>Method:</strong> GET | <strong>Endpoint:</strong> /</p>
-                <p><strong>Response Time:</strong> 244.94ms | <strong>Size:</strong> 149 bytes</p>
+                <p><strong>Response Time:</strong> 4255.64ms | <strong>Size:</strong> 149 bytes</p>
                 <p><strong>Expected Status:</strong> 200 | <strong>Actual Status:</strong> 200</p>
                 
             </div>
@@ -122,7 +133,7 @@ None
                 <h3>Simple Question - Docker - ✅ PASSED</h3>
                 <p><strong>Description:</strong> Test basic question answering about Docker</p>
                 <p><strong>Method:</strong> POST | <strong>Endpoint:</strong> /api/ask</p>
-                <p><strong>Response Time:</strong> 1029.29ms | <strong>Size:</strong> 2126 bytes</p>
+                <p><strong>Response Time:</strong> 5617.01ms | <strong>Size:</strong> 3116 bytes</p>
                 <p><strong>Expected Status:</strong> 200 | <strong>Actual Status:</strong> 200</p>
                 
             </div>
@@ -135,16 +146,8 @@ None
 
 <strong>RESPONSE DATA:</strong>
 {
-  "answer": "I'm sorry, but the provided context does not contain information about Docker. Therefore, I cannot answer the question \"What is Docker?\" based on the given information.\n",
+  "answer": "While the provided context doesn't directly define Docker, it does give some clues and context around its use in the course. Based on the context, here's what we can infer about Docker:\n\n*   **Deployment Tool:** Docker is related to deployment, as indicated by the \"GA2 - Deployment Tools - Discussion Thread.\"\n*   **Containerization:** The course involves containerizing applications, as mentioned in the \"Course experience and farewell post.\" This suggests Docker is used for creating and managing containers.\n*   **Dockerfile:** A `Dockerfile` is essential for the projects, and its presence and correct naming (Dockerfile, not dockerfile) are critical for project evaluation. This file likely contains instructions for building a Docker image.\n*   **Docker Image:** Students are required to create and potentially publish Docker images to Docker Hub.\n*   **Automated Processes:** Docker is used to automate application deployment, as mentioned in the \"Course experience and farewell post.\"\n*   **Dependency Management:** Docker helps manage dependencies, as suggested by the comment about installing CUDA libraries and sentence-transformers within a Docker image.\n\nIn summary, based on the context, Docker is a tool used for containerizing applications, managing dependencies, and automating deployment processes within the course. A Dockerfile is used to create Docker images, which can then be deployed.\n",
   "links": [
-    {
-      "text": "Is it fair to consider 20% weightage of such exam which is impossible to solve in given time (i.e. ROE)",
-      "url": "https://discourse.onlinedegree.iitm.ac.in/t/is-it-fair-to-consider-20-weightage-of-such-exam-which-is-impossible-to-solve-in-given-time-i-e-roe/141413"
-    },
-    {
-      "text": "GA5 Question 8 Clarification",
-      "url": "https://discourse.onlinedegree.iitm.ac.in/t/ga5-question-8-clarification/155939"
-    },
     {
       "text": "GA1 - Development Tools - Discussion Thread [TDS Jan 2025]",
       "url": "https://discourse.onlinedegree.iitm.ac.in/t/ga1-development-tools-discussion-thread-tds-jan-2025/161083"
@@ -154,28 +157,36 @@ None
       "url": "https://discourse.onlinedegree.iitm.ac.in/t/ga2-deployment-tools-discussion-thread-tds-jan-2025/161120"
     },
     {
-      "text": "Contribute to My Open-Source LLM Classroom Assignment Evaluator",
-      "url": "https://discourse.onlinedegree.iitm.ac.in/t/contribute-to-my-open-source-llm-classroom-assignment-evaluator/161214"
-    },
-    {
-      "text": "Tds jan 2025 calender accesss and video lecture access in portal",
-      "url": "https://discourse.onlinedegree.iitm.ac.in/t/tds-jan-2025-calender-accesss-and-video-lecture-access-in-portal/163158"
-    },
-    {
       "text": "Project 1 - LLM-based Automation Agent - Discussion Thread [TDS Jan 2025]",
       "url": "https://discourse.onlinedegree.iitm.ac.in/t/project-1-llm-based-automation-agent-discussion-thread-tds-jan-2025/164277"
     },
     {
-      "text": "Live Session Agenda - 30/01/2025",
-      "url": "https://discourse.onlinedegree.iitm.ac.in/t/live-session-agenda-30-01-2025/165830"
+      "text": "IMPORTANT: Dockerfile submitted as dockerfile rest everything is working fine",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/important-dockerfile-submitted-as-dockerfile-rest-everything-is-working-fine/167415"
     },
     {
-      "text": "Best Practices for Virtual Environments and Dependency Management in Python",
-      "url": "https://discourse.onlinedegree.iitm.ac.in/t/best-practices-for-virtual-environments-and-dependency-management-in-python/165922"
+      "text": "Project 1 Submission Marked as FAIL Despite Having Dockerfile & Image",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/project-1-submission-marked-as-fail-despite-having-dockerfile-image/167471"
     },
     {
-      "text": "GA4 - Data Sourcing - Discussion Thread [TDS Jan 2025]",
-      "url": "https://discourse.onlinedegree.iitm.ac.in/t/ga4-data-sourcing-discussion-thread-tds-jan-2025/165959"
+      "text": "Tds-official-Project1-discrepencies",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/tds-official-project1-discrepencies/171141"
+    },
+    {
+      "text": "Project 1 discrepancy regarding mit license",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/project-1-discrepancy-regarding-mit-license/171485"
+    },
+    {
+      "text": "END TERM MOCK [TDS Jan 25]",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/end-term-mock-tds-jan-25/172333"
+    },
+    {
+      "text": "Course experience and farewell post",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/course-experience-and-farewell-post/173247"
+    },
+    {
+      "text": "Course: archive",
+      "url": "https://tds.s-anand.net/#/archive"
     }
   ],
   "search_results_count": 20
@@ -188,7 +199,7 @@ None
                 <h3>Complex Question - Git vs GitHub - ✅ PASSED</h3>
                 <p><strong>Description:</strong> Test complex multi-part question about Git and GitHub</p>
                 <p><strong>Method:</strong> POST | <strong>Endpoint:</strong> /api/ask</p>
-                <p><strong>Response Time:</strong> 1363.32ms | <strong>Size:</strong> 1454 bytes</p>
+                <p><strong>Response Time:</strong> 5105.92ms | <strong>Size:</strong> 3943 bytes</p>
                 <p><strong>Expected Status:</strong> 200 | <strong>Actual Status:</strong> 200</p>
                 
             </div>
@@ -201,47 +212,47 @@ None
 
 <strong>RESPONSE DATA:</strong>
 {
-  "answer": "I'm sorry, but this collection of documents does not contain the answer to your question about the difference between Git and GitHub and how to use them together. The content focuses on questions and answers related to the Tools in Data Science course, specifically regarding assignments, project details, and tool usage like VS Code, FastAPI, and Google Sheets.\n",
+  "answer": "Okay, based on the provided context, here's the difference between Git and GitHub and how they are used together, along with relevant information from the course materials:\n\n**Git vs. GitHub**\n\n*   **Git:** Git is a distributed version control system. It's software that runs locally on your computer. It tracks changes to your files over time, allowing you to revert to previous versions, collaborate with others, and manage different versions of your code. Think of it as a detailed history log for your project.\n\n*   **GitHub:** GitHub is a web-based platform that provides hosting for Git repositories. It's a place online where you can store your Git repositories, collaborate with others on projects, and manage your code. GitHub provides a graphical interface and additional features like issue tracking, pull requests, and project management tools that make collaboration easier.\n\n**How to Use Git and GitHub Together**\n\n1.  **Local Development with Git:** You use Git on your local machine to track changes to your code. You create a repository (a `.git` folder) in your project directory. You then use Git commands (like `add`, `commit`, `push`, `pull`) to manage your changes.\n\n2.  **Remote Repository on GitHub:** You create a repository on GitHub. This is a remote repository that serves as a central location for your project.\n\n3.  **Connecting Local and Remote Repositories:** You connect your local Git repository to your remote GitHub repository. This is typically done using the `git remote add origin <repository URL>` command.\n\n4.  **Pushing Changes to GitHub:** When you've made changes locally and committed them with Git, you use the `git push` command to upload your changes to the remote repository on GitHub. This makes your code accessible to others and provides a backup of your work.\n\n5.  **Pulling Changes from GitHub:** When others have made changes to the remote repository on GitHub, you use the `git pull` command to download those changes to your local repository. This keeps your local code synchronized with the latest version on GitHub.\n\n**In the context of the TDS project:**\n\n*   The TDS project requires you to use GitHub for version control and code storage (A3 from live-session-2025-01-20).\n*   A publicly accessible GitHub repository is a grading requirement (A10 from live-session-2025-01-28).\n*   The course will provide support for Git and GitHub, including creating a repository in a future session (A9 from live-session-2025-01-28).\n\nIn essence, Git is the tool, and GitHub is the place where you store and share your Git-managed projects.\n",
   "links": [
     {
-      "text": "Course: live-session-2025-01-16",
-      "url": "https://tds.s-anand.net/#/live-session-2025-01-16"
+      "text": "END TERM MOCK [TDS Jan 25]",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/end-term-mock-tds-jan-25/172333"
     },
     {
       "text": "Course: live-session-2025-01-20",
       "url": "https://tds.s-anand.net/#/live-session-2025-01-20"
     },
     {
+      "text": "Course: live-session-2025-01-21",
+      "url": "https://tds.s-anand.net/#/live-session-2025-01-21"
+    },
+    {
       "text": "Course: live-session-2025-01-28",
       "url": "https://tds.s-anand.net/#/live-session-2025-01-28"
     },
     {
-      "text": "END TERM MOCK [TDS Jan 25]",
-      "url": "https://discourse.onlinedegree.iitm.ac.in/t/end-term-mock-tds-jan-25/172333"
+      "text": "Course: live-session-2025-01-23",
+      "url": "https://tds.s-anand.net/#/live-session-2025-01-23"
     },
     {
-      "text": "Course: live-session-2025-01-21",
-      "url": "https://tds.s-anand.net/#/live-session-2025-01-21"
+      "text": "Course: live-session-2025-01-29",
+      "url": "https://tds.s-anand.net/#/live-session-2025-01-29"
     },
     {
       "text": "Course: live-session-2025-01-30",
       "url": "https://tds.s-anand.net/#/live-session-2025-01-30"
     },
     {
-      "text": "Course: live-session-2025-02-06",
-      "url": "https://tds.s-anand.net/#/live-session-2025-02-06"
+      "text": "URGENT ATTN REQ: technical discrepancy and inconsistency in the evaluation scripts of graded assignment and project 2",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2/173172"
     },
     {
-      "text": "Graded assignment 6",
-      "url": "https://discourse.onlinedegree.iitm.ac.in/t/graded-assignment-6/169283"
+      "text": "Course experience and farewell post",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/course-experience-and-farewell-post/173247"
     },
     {
-      "text": "Course: live-session-2025-01-17",
-      "url": "https://tds.s-anand.net/#/live-session-2025-01-17"
-    },
-    {
-      "text": "Course: live-session-2025-01-23",
-      "url": "https://tds.s-anand.net/#/live-session-2025-01-23"
+      "text": "Course: live-session-2025-01-16",
+      "url": "https://tds.s-anand.net/#/live-session-2025-01-16"
     }
   ],
   "search_results_count": 20
@@ -254,7 +265,7 @@ None
                 <h3>Course Question - Python Data Analysis - ✅ PASSED</h3>
                 <p><strong>Description:</strong> Test course-specific question about Python and pandas</p>
                 <p><strong>Method:</strong> POST | <strong>Endpoint:</strong> /api/ask</p>
-                <p><strong>Response Time:</strong> 5839.1ms | <strong>Size:</strong> 5034 bytes</p>
+                <p><strong>Response Time:</strong> 4365.92ms | <strong>Size:</strong> 2945 bytes</p>
                 <p><strong>Expected Status:</strong> 200 | <strong>Actual Status:</strong> 200</p>
                 
             </div>
@@ -267,11 +278,15 @@ None
 
 <strong>RESPONSE DATA:</strong>
 {
-  "answer": "The context provides mentions of pandas in relation to graded assignments and project work, but doesn't offer a tutorial on how to use it.  However, I can provide a general guide on how to use pandas for data analysis in Python.\n\nPandas is a powerful and versatile library for data manipulation and analysis in Python. Here's a breakdown of how to use it:\n\n**1. Installation:**\n\n   *   If you don't have it already, install pandas using pip:\n    ```bash\n    pip install pandas\n    ```\n    or using conda:\n    ```bash\n    conda install pandas\n    ```\n\n**2. Importing pandas:**\n\n   *   Import the library into your Python script or notebook:\n\n    ```python\n    import pandas as pd\n    ```\n\n**3. Core Data Structures:**\n\n   *   **Series:** A one-dimensional labeled array capable of holding any data type.\n    ```python\n    import pandas as pd\n\n    data = [10, 20, 30, 40, 50]\n    series = pd.Series(data)\n    print(series)\n    ```\n\n   *   **DataFrame:** A two-dimensional labeled data structure with columns of potentially different types.  Think of it as a table or spreadsheet.\n    ```python\n    import pandas as pd\n\n    data = {'Name': ['Alice', 'Bob', 'Charlie', 'David'],\n            'Age': [25, 30, 28, 22],\n            'City': ['New York', 'London', 'Paris', 'Tokyo']}\n    df = pd.DataFrame(data)\n    print(df)\n    ```\n\n**4. Reading Data:**\n\n   *   Pandas can read data from various file formats:\n        *   **CSV:** `pd.read_csv(\"your_file.csv\")`\n        *   **Excel:** `pd.read_excel(\"your_file.xlsx\")`\n        *   **JSON:** `pd.read_json(\"your_file.json\")`\n        *   **SQL:** `pd.read_sql(\"SELECT * FROM your_table\", connection)`  (requires a database connection)\n\n**5. Basic Data Exploration:**\n\n   *   `df.head()`:  Displays the first 5 rows of the DataFrame.  You can specify the number of rows: `df.head(10)`\n   *   `df.tail()`: Displays the last 5 rows.\n   *   `df.info()`:  Provides a summary of the DataFrame, including data types and missing values.\n   *   `df.describe()`:  Generates descriptive statistics (mean, std, min, max, etc.) for numerical columns.\n   *   `df.shape`:  Returns the dimensions (number of rows, number of columns) of the DataFrame.\n   *   `df.columns`:  Returns the column names.\n   *   `df.index`: Returns the index (row labels).\n\n**6. Data Selection and Indexing:**\n\n   *   **Selecting columns:**\n        *   `df['column_name']`: Selects a single column.\n        *   `df[['column1', 'column2']]`: Selects multiple columns.\n   *   **Selecting rows:**\n        *   `df.loc[row_label]`: Selects a row by its label.\n        *   `df.iloc[row_index]`: Selects a row by its integer index.\n   *   **Boolean indexing (filtering):**\n        *   `df[df['column_name'] > 10]`: Selects rows where the value in 'column_name' is greater than 10.\n        *   `df[(df['column1'] == 'value') & (df['column2'] > 5)]`:  Combines multiple conditions using `&` (and), `|` (or), and `~` (not).\n\n**7. Data Cleaning:**\n\n   *   **Handling missing values:**\n        *   `df.isnull()`:  Detects missing values (returns a DataFrame of booleans).\n        *   `df.fillna(value)`:  Fills missing values with a specified value.\n        *   `df.dropna()`:  Removes rows with missing values.\n   *   **Removing duplicates:**\n        *   `df.duplicated()`: Detects duplicate rows.\n        *   `df.drop_duplicates()`: Removes duplicate rows.\n   *   **Data type conversion:**\n        *   `df['column_name",
+  "answer": "The provided context contains mentions of pandas in the following ways:\n\n*   **General Use:** The mock exam description mentions that the TDS GPT Assistant has access to all course materials, implying pandas is a relevant tool covered in the course.\n*   **Code Example:** A code snippet shows pandas being used to read a JSON file, sort the data, and write it back to a JSON file. This demonstrates a practical application of pandas for data manipulation.\n*   **Graded Assignment:** Mentions a graded assignment (GA6) related to data analysis, suggesting pandas is likely used in the assignment.\n*   **Course Experience:** A student mentions using skills from various courses, including Python development, and implies that pandas is relevant to the overall data science workflow.\n*   **Data Analysis with SQL:** Mentions using SQL with Python, implying pandas could be used to handle the data retrieved from SQL queries.\n\nWhile the context doesn't provide a direct tutorial on *how* to use pandas, it strongly suggests that pandas is a core tool for data analysis within the course. To learn how to use pandas, you should refer to the course content modules, live session transcriptions, and graded assignments. The following resources from the provided context would be helpful:\n\n*   **Tools in Data Science Playlist:** This playlist likely contains videos demonstrating how to use pandas.\n*   **Graded Assignment 6:** Reviewing the assignment and any associated materials will provide practical examples of pandas usage.\n*   **The code example** provides a basic example of reading, manipulating, and writing data with pandas.\n\nIn summary, the context confirms that pandas is important for data analysis in the course, and the best way to learn is by studying the course materials directly.\n",
   "links": [
     {
       "text": "END TERM MOCK [TDS Jan 25]",
       "url": "https://discourse.onlinedegree.iitm.ac.in/t/end-term-mock-tds-jan-25/172333"
+    },
+    {
+      "text": "Course: archive",
+      "url": "https://tds.s-anand.net/#/archive"
     },
     {
       "text": "Regarding project1 for file not detecting after sending post request",
@@ -286,28 +301,91 @@ None
       "url": "https://discourse.onlinedegree.iitm.ac.in/t/course-experience-and-farewell-post/173247"
     },
     {
-      "text": "Course: live-session-2025-02-07",
-      "url": "https://tds.s-anand.net/#/live-session-2025-02-07"
+      "text": "Course: README",
+      "url": "https://tds.s-anand.net/#/README"
+    },
+    {
+      "text": "Course: convert-html-to-markdown",
+      "url": "https://tds.s-anand.net/#/convert-html-to-markdown"
+    },
+    {
+      "text": "Course: convert-pdfs-to-markdown",
+      "url": "https://tds.s-anand.net/#/convert-pdfs-to-markdown"
+    },
+    {
+      "text": "Course: cors",
+      "url": "https://tds.s-anand.net/#/cors"
+    },
+    {
+      "text": "Course: data-analysis-with-sql",
+      "url": "https://tds.s-anand.net/#/data-analysis-with-sql"
+    }
+  ],
+  "search_results_count": 20
+}
+            </div>
+        </div>
+
+        <div class="test-item">
+            <div class="test-header passed">
+                <h3>Image Question - GPT Model Choice - ✅ PASSED<span class="image-indicator">🖼️ IMAGE TEST</span></h3>
+                <p><strong>Description:</strong> Test question with image support from YAML test case</p>
+                <p><strong>Method:</strong> POST | <strong>Endpoint:</strong> /api/ask</p>
+                <p><strong>Response Time:</strong> 4078.68ms | <strong>Size:</strong> 2280 bytes</p>
+                <p><strong>Expected Status:</strong> 200 | <strong>Actual Status:</strong> 200</p>
+                
+            </div>
+            
+            <div class="response-content">
+<strong>REQUEST PAYLOAD:</strong>
+{
+  "question": "The question asks to use gpt-3.5-turbo-0125 model but the ai-proxy provided by Anand sir only supports gpt-4o-mini. So should we just use gpt-4o-mini or use the OpenAI API for gpt3.5 turbo?",
+  "image": "project-tds-virtual-ta-q1.webp"
+}
+
+<strong>RESPONSE DATA:</strong>
+{
+  "answer": "Based on the context, the question is about which model to use for a graded assignment (GA5 Question 8). The question specifies `gpt-3.5-turbo-0125`, but the AI proxy provided by Anand sir only supports `gpt-4o-mini`.\n\nThe context includes a student's observation that `gpt-3.5-turbo-0125` and `gpt-4o-mini` give different token counts. The response to the student is: \"Use the model that\u2019s mentioned in the question.\"\n\nTherefore, the answer is: **You should use the OpenAI API for gpt-3.5-turbo-0125, as that is the model specified in the question.** Using the proxy with `gpt-4o-mini` would be incorrect, even if it's more convenient, because the question explicitly requires `gpt-3.5-turbo-0125`.\n",
+  "links": [
+    {
+      "text": "GA5 Question 8 Clarification",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/ga5-question-8-clarification/155939"
+    },
+    {
+      "text": "Course: project-tds-virtual-ta",
+      "url": "https://tds.s-anand.net/#/project-tds-virtual-ta"
     },
     {
       "text": "Project 1 - LLM-based Automation Agent - Discussion Thread [TDS Jan 2025]",
       "url": "https://discourse.onlinedegree.iitm.ac.in/t/project-1-llm-based-automation-agent-discussion-thread-tds-jan-2025/164277"
     },
     {
-      "text": "GA5 - Data Preparation - Discussion Thread [TDS Jan 2025]",
-      "url": "https://discourse.onlinedegree.iitm.ac.in/t/ga5-data-preparation-discussion-thread-tds-jan-2025/166576"
+      "text": "GA3 - Large Language Models - Discussion Thread [TDS Jan 2025]",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/ga3-large-language-models-discussion-thread-tds-jan-2025/163247"
     },
     {
-      "text": "ROE instructions request",
-      "url": "https://discourse.onlinedegree.iitm.ac.in/t/roe-instructions-request/168142"
+      "text": "URGENT ATTN REQ: technical discrepancy and inconsistency in the evaluation scripts of graded assignment and project 2",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/urgent-attn-req-technical-discrepancy-and-inconsistency-in-the-evaluation-scripts-of-graded-assignment-and-project-2/173172"
     },
     {
-      "text": "Mock ROE 1, 2, 3, 4 [TDS Jan 2025]",
-      "url": "https://discourse.onlinedegree.iitm.ac.in/t/mock-roe-1-2-3-4-tds-jan-2025/168449"
+      "text": "Course: live-session-2025-01-29",
+      "url": "https://tds.s-anand.net/#/live-session-2025-01-29"
     },
     {
-      "text": "Project 2 - TDS Solver - Discussion Thread",
-      "url": "https://discourse.onlinedegree.iitm.ac.in/t/project-2-tds-solver-discussion-thread/169029"
+      "text": "Course: live-session-2025-01-30",
+      "url": "https://tds.s-anand.net/#/live-session-2025-01-30"
+    },
+    {
+      "text": "Course: project-1",
+      "url": "https://tds.s-anand.net/#/project-1"
+    },
+    {
+      "text": "Regarding project1 for file not detecting after sending post request",
+      "url": "https://discourse.onlinedegree.iitm.ac.in/t/regarding-project1-for-file-not-detecting-after-sending-post-request/167172"
+    },
+    {
+      "text": "Course: live-session-2025-01-28",
+      "url": "https://tds.s-anand.net/#/live-session-2025-01-28"
     }
   ],
   "search_results_count": 20

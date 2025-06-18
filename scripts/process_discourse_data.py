@@ -43,11 +43,6 @@ def clean_html(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
-def build_url(title: str, topic_id: int) -> str:
-    slug = re.sub(r"[^a-z0-9\- ]", "", title.lower()).replace(" ", "-")
-    return f"https://discourse.onlinedegree.iitm.ac.in/t/{slug}/{topic_id}"
-
-
 def process_topic_file(path: Path) -> Dict:
     """Process a single Discourse topic JSON file."""
     with open(path, "r", encoding="utf-8") as f:
@@ -55,7 +50,15 @@ def process_topic_file(path: Path) -> Dict:
 
     topic_id = data.get("topic_id") or data.get("id")
     title = data.get("title", f"Topic {topic_id}")
-    url = build_url(title, topic_id)
+    
+    # Get slug from data, fallback to title, then sanitize
+    slug = data.get("slug") or data.get("topic_slug")
+    if not slug:
+        slug = re.sub(r"[^a-zA-Z0-9]+", "-", title).strip("-").lower()
+    if slug:
+        slug = re.sub(r'-+', '-', slug)
+
+    url = f"https://discourse.onlinedegree.iitm.ac.in/t/{slug}/{topic_id}"
 
     posts = data.get("post_stream", {}).get("posts", [])
     full_content_parts: List[str] = []

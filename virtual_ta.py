@@ -72,10 +72,20 @@ class TDSVirtualTA:
                     topic_id = raw_topic.get("topic_id") or raw_topic.get("id")
                     if topic_id is None or topic_id in existing_ids:
                         continue
+                        
+                    # Correctly get slug: from data first, then fallback to title
                     title = raw_topic.get("title", f"Topic {topic_id}")
+                    slug = raw_topic.get("slug") or raw_topic.get("topic_slug")
+                    if not slug:
+                        slug = re.sub(r"[^a-zA-Z0-9]+", "-", title).strip("-").lower()
+                    
+                    # Sanitize slug from either source to ensure it's clean
+                    if slug:
+                        slug = re.sub(r'-+', '-', slug)
+
                     posts = raw_topic.get("post_stream", {}).get("posts", [])
                     full_content = "\n\n".join(p.get("cooked", "") for p in posts)
-                    url = f"https://discourse.onlinedegree.iitm.ac.in/t/{title.replace(' ', '-').lower()}/{topic_id}"
+                    url = f"https://discourse.onlinedegree.iitm.ac.in/t/{slug}/{topic_id}"
                     self.discourse_data["topics"].append({
                         "topic_id": topic_id,
                         "title": title,
@@ -583,54 +593,18 @@ class TDSVirtualTA:
 
 Your primary goal is to provide accurate, helpful answers based ONLY on the provided context from course materials and forum discussions."""
         
-        # Adaptive instructions based on intent
-        if intent['is_about_future']:
-            specific_instructions = """
-CRITICAL: This question asks about future information. You must:
-1. Check if the context contains specific information about the future date/event mentioned
-2. If NO specific information is found, clearly state: "I don't have information about [specific future topic] in the current course materials"
-3. Do NOT speculate or provide general information about similar past events
-4. Be honest about the limitations of your knowledge"""
-        
-        elif intent['requires_specific_info']:
-            specific_instructions = """
-This question requires specific information. You must:
-1. Look for exact details, numbers, dates, or specific procedures in the context
-2. Quote specific information directly when available
-3. If specific details are missing, clearly state what information is not available
-4. Prioritize accuracy over completeness"""
-        
-        elif intent['needs_technical_details']:
-            specific_instructions = """
-This is a technical question. You must:
-1. Provide precise technical information from the context
-2. Include specific commands, configurations, or procedures when available
-3. Explain technical concepts clearly but accurately
-4. Reference official documentation or course materials when mentioned"""
-        
-        elif intent['is_troubleshooting']:
-            specific_instructions = """
-This is a troubleshooting question. You must:
-1. Identify the specific problem from the context
-2. Provide step-by-step solutions if available in the context
-3. Suggest checking official resources if the solution isn't complete
-4. Be practical and actionable in your advice"""
-        
-        else:
-            specific_instructions = """
+        # This function is now a stub, returning a simplified generic prompt.
+        # The complex logic has been removed to rely on embedding quality.
+        specific_instructions = """
 Provide a comprehensive answer by:
 1. Using all relevant information from the context
 2. Organizing your response clearly
 3. Being helpful and supportive in tone
 4. Acknowledging any limitations in the available information"""
         
-        confidence_instruction = ""
-        if intent['confidence_required'] == 'high':
-            confidence_instruction = "\nIMPORTANT: This question requires high confidence. Only provide information you can verify from the context."
-        
         return f"""{base_instructions}
 
-{specific_instructions}{confidence_instruction}
+{specific_instructions}
 
 Question: {question}
 
@@ -676,25 +650,47 @@ Answer:"""
         
         # Simple context building
         context_parts = []
-        for result in search_results[:5]:  # Limit to top 5 results
-            if result["type"] == "discourse_topic":
-                data = result["data"]
-                context_parts.append(f"Topic: {data['title']}")
-                context_parts.append(f"Content: {data['full_content'][:800]}...")
-            elif result["type"] == "qa_pair":
-                data = result["data"]
-                context_parts.append(f"Q: {data['question']}")
-                context_parts.append(f"A: {data['answer']}")
-            elif result["type"] == "course_content":
-                data = result["data"]
-                context_parts.append(f"Course: {data['title']}")
-                context_parts.append(f"Content: {data['content'][:800]}...")
+        link_candidates = []
+        # Increase the number of results used for context to provide more info to the LLM
+        for result in search_results[:20]:
+            r_type = result.get("type")
+            # Fallback: some legacy cached entries may not have a nested `data` dict
+            payload = result.get("data", result)
+            # if no explicit type but url/title present treat generically
+            if not r_type and payload.get("url"):
+                link_candidates.append({"url": payload.get("url"), "text": payload.get("title", payload.get("url"))})
+                continue
+            if r_type in ("discourse_topic", "discourse"):
+                title = payload.get("title", "(untitled)")
+                content = payload.get("full_content") or payload.get("content") or ""
+                url = payload.get("url")
+                context_parts.append(f"Topic: {title}")
+                context_parts.append(f"Content: {content[:800]}...")
+                link_candidates.append({"url": url, "text": title})
+            elif r_type == "qa_pair":
+                context_parts.append(f"Q: {payload.get('question','')}")
+                context_parts.append(f"A: {payload.get('answer','')}")
+                link_candidates.append({"url": result.get("topic_url"), "text": result.get("title")})
+            elif r_type in ("course_content", "course"):
+                title = payload.get("title", "Course material")
+                content = payload.get("content", "")
+                url = payload.get("url")
+                if not url:
+                    # Build canonical course content URL using slug derived from id or file metadata
+                    file_name = payload.get("id") or payload.get("metadata", {}).get("file")
+                    if file_name:
+                        slug = re.sub(r"\.md$", "", file_name)
+                        url = f"https://tds.s-anand.net/#/{slug}"
+                context_parts.append(f"Course: {title}")
+                context_parts.append(f"Content: {content[:800]}...")
+                link_candidates.append({"url": url, "text": f"Course: {title}"})
             context_parts.append("")
-        
+
         context_text = "\n".join(context_parts)
         
         # Simple prompt
         prompt_text = f"""You are a helpful teaching assistant. Answer the question based on the provided context.
+The context is extensive, so read it carefully to find the most relevant information.
 
 Question: {question}
 
@@ -736,29 +732,14 @@ Answer:"""
         
         # Extract links
         links = []
-        for result in search_results[:6]:
-            if result["type"] == "discourse_topic":
-                url = result["data"]["url"]
-                title = result["data"]["title"]
-            elif result["type"] == "qa_pair":
-                url = result["topic_url"]
-                title = result["title"]
-            elif result["type"] == "course_content":
-                url = result["data"]["url"]
-                title = f"Course: {result['data']['title']}"
-            else:
-                continue
-            
-            links.append({
-                "url": url,
-                "text": title
-            })
+        for link in link_candidates[:25]:
+            if link and link.get("url") and link not in links:
+                links.append(link)
         
         return {
             "answer": answer,
             "links": links,
             "search_results_count": len(search_results),
-            "intent_analysis": self._analyze_question_intent(question)
         }
 
 # Initialize the Virtual TA lazily for Vercel
@@ -786,7 +767,7 @@ def answer_question():
             return jsonify({'error': 'Question is required'}), 400
         
         # Retrieve more search results to ensure important links (e.g., GA5 / GA4 threads) are captured
-        search_results = get_virtual_ta().search(question, top_k=25)
+        search_results = get_virtual_ta().search(question, top_k=50)
         
         # Generate answer (with optional image support)
         result = get_virtual_ta().generate_answer(question, search_results, image)
@@ -835,7 +816,7 @@ def health():
         'status': 'healthy',
         'model': 'Gemini 2.5 Flash Preview',
         'embeddings': 'Text Embedding 004',
-        'optimization': 'Advanced Semantic Search + Dynamic Context Ranking'
+        'optimization': 'Advanced Semantic Search'
     })
 
 # For Vercel deployment, the app needs to be available at module level
